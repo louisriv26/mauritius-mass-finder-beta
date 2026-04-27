@@ -1,0 +1,45 @@
+MAURITIUS MASS FINDER v17.2 — FINAL RELEASE GATE VERDICT
+
+Verdict: PASS WITH CAUTIONS
+
+Exact counts:
+- 383 total rows
+- 47 parishes
+- 117 sites
+- 378 Mass rows
+- 5 other/ambiguous rows hidden by default
+- 0 duplicate technical keys
+- 0 invalid days
+- 0 invalid times
+- 0 missing coordinates
+
+Blocking issues found:
+- French onboarding contained mixed-language wording: “Utiliser Near Me”.
+- Stale internal onboarding storage key still referenced v17.1.
+
+Fixes made:
+- Corrected French onboarding wording to “Utiliser Près de moi”.
+- Updated onboarding local-storage key from mmf_onboarding_v17_1_done to mmf_onboarding_v17_2_done.
+- Re-ran release validation.
+- Rebuilt GitHub Pages-ready package.
+
+Validation passed:
+- Data counts passed.
+- Duplicate technical key check passed.
+- Day/time validity passed.
+- Coordinate presence passed.
+- JSON/CSV/fallback row alignment passed.
+- JavaScript syntax passed.
+- Service-worker cache version check passed.
+- Manifest/icon presence passed.
+- Search regression terms returned sensible results.
+- French translation object now has no detected mixed-language issue for the checked high-risk labels.
+- Zip integrity passed.
+
+Non-blocking issues / cautions:
+- 51 sites use approximate locality-level coordinates rather than exact church-door coordinates. Distance sorting works, but some distances remain approximate.
+- Live device testing on the final GitHub Pages URL is still required after upload, especially for iPhone home-screen update behavior and geolocation permissions.
+
+Final recommendation:
+- Use the rebuilt release-gate-passed package for deployment.
+- After uploading to GitHub Pages, test on one iPhone and one Android device before wider sharing.

@@ -1,0 +1,92 @@
+Mauritius Mass Finder v17.2 — Public Release Hardening Edition
+Generated: 2026-04-25
+
+Final verdict: READY FOR PUBLIC SHARING
+
+1. Baseline integrity
+PASS — total rows: 383
+PASS — parishes: 47
+PASS — sites: 117
+PASS — Mass rows: 378
+PASS — other/ambiguous rows: 5
+PASS — strict Masses-only default preserved
+PASS — GitHub Pages structure preserved
+
+2. Data and technical validation
+PASS — duplicate technical keys: 0
+PASS — invalid days/times: 0
+PASS — missing/invalid coordinates: 0
+PASS — explicit Vigil rows marked: 78
+PASS — Sunday-obligation rows: 183
+PASS — no inferred Vigil rows introduced
+PASS — no non-Vigil Saturday rows marked as Sunday obligation
+
+3. Regression checks
+PASS — Notre-Dame search no longer depends on stopword removal and does not return all rows
+PASS — accent, hyphen, Saint/St normalization retained
+PASS — repeated parish/site disambiguation retained
+PASS — main parish churches do not show false “Sub-parish of …” labels
+PASS — Masses-only default excludes the 5 other/ambiguous rows
+PASS — Include other celebrations displays the 5 rows separately with explicit badges
+PASS — My Churches local storage logic retained
+PASS — source links, directions, and correction reporting retained
+
+4. Sunday/Vigil hardening
+PASS — Saturday evening Vigil Masses remain included in Sunday-obligation mode
+PASS — Sunday Masses, Saturday Vigil Masses, and Weekday Masses now have clearer badge treatment
+PASS — special rules and qualifiers remain visible before user decision
+PASS — no weekday Mass is implied to fulfil Sunday obligation
+
+5. Bilingual EN/FR audit
+PASS — About, Help, FAQ, What’s New, update banner, correction flow, empty states, onboarding, and modal text use translation keys
+PASS — live EN↔FR switching retained
+PASS — v17.2 What’s New content updated in both languages
+PASS — trust and exceptional-event caution updated in both languages
+
+6. PWA/version hardening
+PASS — APP_VERSION updated to 17.2
+PASS — version.json updated to 17.2
+PASS — manifest.json and manifest.webmanifest updated to 17.2
+PASS — service-worker cache updated to mmf-v17.2-public-release-hardening
+PASS — old caches are cleared on activation
+PASS — update banner refresh flow retained
+PASS — .nojekyll included
+PASS — offline fallback retained
+
+7. Syntax and package checks
+PASS — app.js JavaScript syntax check
+PASS — service-worker.js JavaScript syntax check
+PASS — validate-release.js passed
+PASS — zip integrity passed
+
+Blocking issues: none.
+Non-blocking issues: none identified in this hardening pass.
+Future enhancements:
+- Later exact church-door coordinate refinement where coordinates are approximate.
+- Later deeper parish-by-parish re-verification against live diocesan pages when the diocese changes schedules.
+
+Release decision: v17.2 is ready for public sharing.
+PASS — row count — 383
+PASS — parish count
+PASS — site count
+PASS — Mass rows — 378
+PASS — other/ambiguous rows — 5
+PASS — duplicate technical keys — 0
+PASS — valid day/time
+PASS — coordinates present
+PASS — v17.2 version constant
+PASS — service worker cache v17.2
+PASS — manifest icons
+PASS — version.json v17.2
+PASS — Sunday obligation quick filter label
+PASS — Vigil data model fields
+PASS — explicit Vigil rows marked — 78
+PASS — no inferred vigil rows
+PASS — no non-vigil Saturday marked Sunday obligation
+PASS — Notre-Dame stopwords preserved
+PASS — Sunday/weekday badge labels
+
+
+Release-gate correction:
+- Corrected French onboarding label from 'Near Me' to 'Près de moi'.
+- Updated onboarding local-storage key from v17.1 to v17.2 to remove stale internal version reference.
