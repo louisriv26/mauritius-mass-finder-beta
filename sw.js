@@ -1,8 +1,8 @@
-const CACHE='mmf-v17.2-public-release-hardening';
-const SHELL=['./','index.html','app.js','config.js','manifest.json','manifest.webmanifest','icon.svg','icons/icon-192.png','icons/icon-512.png','icons/icon-maskable-192.png','icons/icon-maskable-512.png','version.json'];
+const CACHE='mmf-v21-4-metadata-integrity-cleanup';
+const SHELL=['./','index.html','app.js','config.js','manifest.json','icon.svg','icons/icon-192.png','icons/icon-512.png','icons/icon-maskable-192.png','icons/icon-maskable-512.png','version.json','fallback-data.js'];
 const DATA_PATHS=['/data/masses.json','/data/masses.csv','/fallback-data.js'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(SHELL)).then(()=>self.skipWaiting())));
-self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
+self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE && k.startsWith('mmf-')).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener('message',e=>{if(e.data&&e.data.type==='SKIP_WAITING') self.skipWaiting();});
 function pathKey(url){ return url.origin + url.pathname; }
 self.addEventListener('fetch',e=>{

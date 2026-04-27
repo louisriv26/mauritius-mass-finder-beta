@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mauritius Mass Finder v17.2 / Trouver une Messe à Maurice</title>
+<title>Mauritius Mass Finder v21.4 / Trouver une Messe à Maurice</title>
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#7b2f2f">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
@@ -23,7 +23,7 @@
   <div class="quickGrid">
     <button class="quickCard primaryQuick" id="qaNow" type="button"><div class="quickIcon">⏰</div><div class="quickTitle" data-i18n="qaNowTitle">Find a Mass now</div><div class="quickText" data-i18n="qaNowText">Next available Masses, sorted by time.</div></button>
     <button class="quickCard" id="qaNear" type="button"><div class="quickIcon">📍</div><div class="quickTitle" data-i18n="qaNearTitle">Near me</div><div class="quickText" data-i18n="qaNearText">Use your location and sort nearby results.</div></button>
-    <button class="quickCard" id="qaSunday" type="button"><div class="quickIcon">☀️</div><div class="quickTitle" data-i18n="qaSundayTitle">Sunday obligation</div><div class="quickText" data-i18n="qaSundayText">Show Sunday Masses and Saturday Vigil Masses that count for Sunday.</div></button>
+    <button class="quickCard" id="qaSunday" type="button"><div class="quickIcon">☀️</div><div class="quickTitle" data-i18n="qaSundayTitle">Sunday obligation</div><div class="quickText" data-i18n="qaSundayText">Show Sunday Masses and Saturday Masses from 15:30 onward.</div></button>
     <button class="quickCard" id="qaFav" type="button"><div class="quickIcon">⭐</div><div class="quickTitle" data-i18n="qaFavTitle">My Churches</div><div class="quickText" data-i18n="qaFavText">Open your saved churches quickly.</div></button>
   </div>
 </section>
@@ -50,7 +50,7 @@
 <section id="notice"></section>
 <section id="results"></section>
 <details class="aboutBox" id="aboutPanel"><summary data-i18n="aboutTitle">About this app</summary><div data-i18n-html="aboutHtml"><p>A simple Catholic Mass finder for Mauritius, built for fast mobile use.</p></div><div class="helpBox" id="howUpdatePanel" role="region" data-i18n-aria-label="howUpdateTitle" aria-label="How to update"><div data-i18n-html="howUpdateHtml"></div></div><p class="aboutMeta"><span data-i18n="versionWord">Version</span> <span id="aboutVersion"></span></p></details>
-<details class="aboutBox" id="whatsNewPanel"><summary data-i18n="whatNewTitle">What’s new in v17.2</summary><div data-i18n-html="whatNewHtml"><ul><li>Smarter search.</li></ul></div></details>
+<details class="aboutBox" id="whatsNewPanel"><summary data-i18n="whatNewTitle">What’s new in v21.4</summary><div data-i18n-html="whatNewHtml"><ul><li>Smarter search.</li></ul></div></details>
 <footer data-i18n="footerNote">Sources are linked on each result. Always verify special services directly with the parish when timing is critical.</footer>
 <div class="versionFooter" id="versionFooter"></div><div class="versionFooter footerTools"><button class="inlineHelpBtn" id="helpBtn" type="button" data-i18n="helpLink" data-i18n-aria-label="helpTitle">Help</button><button class="inlineHelpBtn" id="howUpdateBtn" type="button" data-i18n="howUpdateLink" data-i18n-aria-label="howUpdateTitle">How to update</button></div>
 </div><div class="modalOverlay" id="helpModal" role="dialog" aria-modal="true" aria-labelledby="helpModalTitle" hidden>
