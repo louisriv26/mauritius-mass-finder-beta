@@ -1,8 +1,0 @@
-{
-  "version": "21.4",
-  "name": "Mauritius Mass Finder v21.4",
-  "date": "2026-04-26",
-  "last_verified": "2026-04-26",
-  "release": "v21.4 Metadata & Integrity Cleanup",
-  "notes": "Aligns release metadata, manifests, fallback data, cache/versioning, and config references while preserving the Saturday Masses from 15:30 Sunday-obligation rule."
-}
