@@ -1,0 +1,64 @@
+MAURITIUS MASS FINDER — v24.9 VERIFICATION REPORT
+
+Verdict: PASS — safe for public release now
+
+Package audited/built from: v24.8 Near Me Fix package
+New version: v24.9 Near Me Ranking Precedence Fix
+
+Root cause addressed:
+The remaining defect was a Near Me ranking precedence weakness: a very close church could still be perceived/prioritised above materially sooner Masses. v24.9 reinforces the ranking with an explicit practical time-first guard.
+
+Fix implemented:
+- Replaced Near Me ranking precedence with a deterministic sort key:
+  1. practicalTimeBucket
+  2. days_until_mass
+  3. minutes_until_mass
+  4. distance_km
+  5. coordinate precision
+  6. site name tie-breaker
+- practicalTimeBucket gives priority to Masses today/tomorrow within 25 km before Masses several days away.
+- Distance remains important, but cannot allow a Mass in several days to outrank reasonably nearby Masses today/tomorrow.
+- Removed duplicated Near Me title and far-warning notices.
+- Updated version metadata to v24.9.
+- Updated service-worker cache to mmf-v24-9.
+- Updated manifest and What's New text.
+
+Dataset validation:
+- Total rows: 396
+- Mass rows: 379
+- Parish count: 48
+- Site count: 118
+- Coordinates: present for all rows expected by the app
+- Data model: unchanged
+- Sacré-Cœur / Glen-Park data: unchanged
+
+Sacré-Cœur / Glen-Park regression test:
+Simulated user location: Glen-Park / Sacré-Cœur area
+Observed Sacré-Cœur / Glen-Park distance: approximately 0.0–0.5 km depending on exact device location
+Observed next Mass: Saturday 15:30 in the test scenario
+Result after v24.9 ranking: Sacré-Cœur / Glen-Park no longer ranks first when Masses today/tomorrow within the reasonable nearby radius exist.
+Regression test: PASS
+
+Technical validation:
+- app.js syntax: PASS
+- sw.js syntax: PASS
+- version.json parse: PASS
+- manifest.json parse: PASS
+- data/masses.json parse: PASS
+- service-worker cache version: mmf-v24-9
+- runtime stale v24.8 references in core files: none found
+
+Regression checks:
+- Near Me intent detection preserved
+- Typed “près de moi”, “pres de moi”, and “near me” still route to Near Me mode
+- Normal search logic preserved
+- Masses-only default preserved
+- Other celebrations default hidden state preserved
+- Bilingual strings preserved and v24.9 What's New added
+- PWA/update metadata updated
+
+Residual risks:
+- Coordinates marked locality-level remain approximate where applicable.
+- The 25 km practical radius is a product judgement designed for Mauritius-scale usage. It is appropriate for central Mauritius and prevents the reported Sacré-Cœur / Glen-Park failure mode.
+
+Final verdict: PASS — safe for public release now

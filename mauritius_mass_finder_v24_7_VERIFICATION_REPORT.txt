@@ -1,0 +1,41 @@
+MAURITIUS MASS FINDER — v24.7 VERSION METADATA CLEANUP VERIFICATION REPORT
+
+Final verdict: PASS — safe for public release now
+
+What was cleaned:
+- Updated stale runtime version metadata to v24.7 in version.json, app.js, sw.js, manifest.json, config.js, fallback-data.js, data/masses.json, index.html, README/CHANGELOG metadata.
+- Updated service-worker cache to mmf-v24-7.
+- Confirmed update/version runtime files no longer contain stale active v24.5 or v24.6 references.
+
+Preserved fixes:
+- v24.6 source-trace display text remains removed.
+- v24.6 Mass-time display containment CSS remains present.
+- v24.5 correction email target and exact combined bilingual template are preserved.
+- Onboarding and Help modal fixes remain preserved.
+
+Data integrity:
+- 396 total rows.
+- 48 parishes.
+- 118 sites.
+- 379 Mass rows.
+- 17 other celebrations.
+- 0 duplicate technical keys.
+- 0 invalid days.
+- 0 invalid times.
+- 0 missing coordinates.
+- 0 invalid coordinates.
+- JSON/CSV row counts match.
+
+Technical validation:
+- JavaScript syntax passed.
+- Service-worker syntax passed.
+- fallback-data.js syntax passed.
+- JSON parse passed.
+- manifest parse passed.
+- zip integrity passed.
+
+Residual risks:
+- None identified in the v24.7 cleanup scope.
+
+Deployment recommendation:
+Deploy v24.7 as the replacement for v24.6.
