@@ -1,0 +1,15 @@
+{
+  "version": "24.8",
+  "name": "Mauritius Mass Finder v24.8",
+  "release_name": "Near Me Ranking Fix",
+  "release": "v24.8 Near Me Ranking Fix",
+  "build_date": "2026-04-27",
+  "date": "2026-04-27",
+  "last_verified": "2026-04-27",
+  "data_version": "2026-04-27",
+  "cache_version": "mmf-v24-8",
+  "minimum_supported_cache": "mmf-v22-0",
+  "update_message_en": "A new version of Mauritius Mass Finder is available.",
+  "update_message_fr": "Une nouvelle version de Trouver une Messe à Maurice est disponible.",
+  "notes": "Near Me ranking fix: typed phrases such as près de moi and near me now trigger geolocation mode, location-unavailable states are non-misleading, and nearby results rank by soonest upcoming Mass first, then distance."
+}

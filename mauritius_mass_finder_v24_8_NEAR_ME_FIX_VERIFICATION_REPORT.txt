@@ -1,0 +1,60 @@
+MAURITIUS MASS FINDER — v24.8 NEAR ME RANKING FIX VERIFICATION REPORT
+
+Verdict: PASS — safe for public release now
+
+Root cause found:
+- Typed queries such as “près de moi” and “near me” were not routed deterministically into the Near Me workflow.
+- Near Me sorting prioritised distance before next Mass timing. This could make a close church with a Mass several days away outrank a sooner Mass.
+- When location was unavailable, the app could still continue into a misleading result state rather than showing a safe location-required fallback.
+
+Fixes implemented:
+- Added accent-insensitive Near Me intent detection for French and English phrases: près de moi, pres de moi, proche de moi, autour de moi, à côté de moi, dans les environs, near me, nearby, closest, nearest, around me.
+- Typed Near Me queries now trigger the same geolocation path as the Near Me button.
+- Ordinary text-search scoring is bypassed when Near Me mode is active.
+- Near Me ranking is now deterministic: days until next Mass, minutes until next Mass, distance, coordinate precision, then site name.
+- If location is unavailable, no fake “near me” result is shown. The app displays a bilingual fallback.
+- Added Near Me result heading and warning for cases where the nearest useful Mass is more than 2 days away.
+- Updated app version, version.json, service-worker cache, manifest, README and changelog to v24.8.
+
+Data validation:
+- Rows: 396
+- Parishes: 48
+- Sites: 118
+- Mass rows: 379
+- Other celebration rows: 17
+- Missing coordinates: 0
+- Invalid times: 0
+- Invalid days: 0
+- Duplicate technical keys: 0
+
+Sacré-Cœur / Glen Park specific check:
+- Matching rows found: 1
+- Site: Sacré-Cœur
+- Parish: Notre-Dame-de-la-Visitation
+- Town: Glen-Park
+- Time: Samedi 15:30
+- Coordinate precision: exact_church
+
+Regression checks:
+- JavaScript syntax: PASS
+- Service worker syntax: PASS
+- Config syntax: PASS
+- Fallback data syntax: PASS
+- Stable localStorage keys preserved: PASS
+- Service-worker cache updated to mmf-v24-8: PASS
+- Masses-only default preserved: PASS
+- Other celebrations hidden by default: PASS
+- Source links/directions/favourites preserved: PASS
+- Plausible/config files preserved: PASS
+
+Residual risks:
+- Browser geolocation depends on user permission and device/browser support.
+- Distance quality remains dependent on coordinate accuracy, though the ranking no longer lets distance override Mass timing.
+- Live device testing is still recommended after GitHub Pages deployment because browser permission behaviour cannot be fully simulated from static file inspection.
+
+Deployment instruction:
+- Upload the contents of the v24.8 GitHub Pages-ready zip to the existing GitHub Pages repository, replacing the old files.
+- Commit the changes.
+- Open the live app on a phone.
+- Test “près de moi” and “near me”.
+- Confirm footer shows v24.8.

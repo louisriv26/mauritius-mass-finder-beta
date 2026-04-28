@@ -1,0 +1,129 @@
+MAURITIUS MASS FINDER v24.1 — SEARCH AND UPDATE HARDENING EDITION
+Final verification report
+Date: 2026-04-27
+
+VERDICT
+PASS WITH CAUTION — safe for soft/public release with minor known issues.
+
+BASELINE USED
+- Source package: mauritius_mass_finder_v23_3_search_intelligence_hardening_github_pages_ready.zip
+- Build objective: v24.1 consolidation and hardening release.
+- Database rows preserved from the validated baseline; no diocesan re-scrape was performed in this build.
+
+FILES CHANGED
+- version.json
+- manifest.json
+- config.js
+- sw.js
+- app.js
+- index.html
+- data/masses.json metadata
+- fallback-data.js metadata
+- README.md
+- CHANGELOG.md
+- admin/release-gate-legacy-scan.sh
+- v24.1 verification report added
+- obsolete older validation reports removed from the deployable package
+
+VERSIONING / UPDATE FIXES
+- Canonical app version set to 24.1.
+- version.json updated as the single external version source.
+- service-worker cache updated to mmf-v24-1.
+- version.json fetch is cache-busted and requested with no-store.
+- stable user preference keys preserved:
+  - mmf_my_churches
+  - mmf_language
+  - mmf_onboarding_done
+  - mmf_location_permission_hint_seen
+- runtime legacy-reference gate added and passed.
+
+SEARCH IMPROVEMENTS / PRESERVATION
+- v23.3 search hardening preserved:
+  - accent-insensitive search
+  - Saint/St normalization
+  - apostrophe/hyphen normalization
+  - conservative typo tolerance
+  - deterministic relevance ranking
+  - capped and de-duplicated suggestions
+- Empty-token / stopword bug protection preserved: stopword-only queries do not return all rows.
+- Notre-Dame search-risk class remains protected because Notre and Dame are not stopwords.
+
+ANALYTICS READINESS
+- config.js now contains a Plausible-compatible analytics configuration.
+- Analytics remains disabled by default.
+- The app works if analytics is disabled or blocked.
+- Event tracking is restricted to safe, high-level event names.
+- No precise location, saved-church list, account identifier, or personal Mass attendance data is tracked.
+
+BILINGUAL AUDIT
+- English/French runtime translation structure preserved.
+- About, Help, Update, What’s New, privacy, analytics, Sunday-obligation wording, onboarding, empty-state and result-card labels remain translation-object driven.
+- v24.1 “What’s New” text updated in English and French.
+- No known hardcoded English-only modal remains from the inspected runtime strings.
+
+DATA INTEGRITY RESULT
+- Total rows: 396
+- Parishes: 48
+- Sites: 118
+- Mass rows: 379
+- Other celebrations: 17
+- Duplicate technical keys: 0
+- Invalid days: 0
+- Invalid times: 0
+- Invalid coordinates: 0
+- Missing required source links: 0
+
+REGRESSION CHECKS PASSED
+- JavaScript syntax check passed.
+- Service worker syntax check passed.
+- version.json JSON validation passed.
+- manifest.json JSON validation passed.
+- data/masses.json JSON validation passed.
+- fallback-data.js syntax preserved.
+- GitHub Pages package zip integrity passed.
+- Legacy runtime reference scan passed.
+- Masses-only default logic preserved.
+- Include other celebrations toggle preserved.
+- My Churches storage key preserved.
+- Language preference storage key preserved.
+- Near Me/distance functionality preserved.
+- Find next Mass 7-day behaviour preserved.
+- Source links and directions links preserved.
+- Service-worker cache updated to v24.1.
+
+SATURDAY / SUNDAY OBLIGATION WORDING
+- Help and FAQ wording updated to avoid unsupported “confirmed Vigil” overclaiming.
+- Saturday Masses from 15:30 onward are described as weekend/Sunday-obligation planning support.
+- The app no longer explains this as an absolute pastoral/legal claim in the help text.
+
+KNOWN RESIDUAL RISKS / ASSUMPTIONS
+1. This build did not perform a fresh official diocesan parish re-scrape; it preserves the current validated database.
+2. Browser-level live testing on a physical iPhone/Android device was not performed in this environment.
+3. Plausible analytics is prepared but not active until siteId/domain details are configured.
+4. Service-worker update behaviour was statically verified and hardened, but final confirmation requires deployment to GitHub Pages.
+
+FINAL DECISION
+PASS WITH CAUTION — safe for deployment/soft public release. The caution is limited to needing final live-device verification after upload to GitHub Pages.
+
+PLAUSIBLE ANALYTICS CONFIGURATION
+- Enabled: yes
+- Provider: Plausible
+- Plausible site ID / domain used in script: louisriv26.github.io
+- Public app path tracked: /mauritius-mass-finder/
+- Endpoint: https://plausible.io/js/script.js
+- No exact GPS location, saved churches, names, emails, or Mass attendance is tracked by this app.
+
+v24.1 VALIDATION SUMMARY
+- Rows: 396
+- Parishes: 48
+- Sites: 118
+- Mass rows: 379
+- Other celebrations: 17
+- Duplicate technical keys: 0
+- Invalid days/times/coordinates: 0
+- JavaScript syntax: passed
+- JSON validity: passed
+- Service-worker cache: mmf-v24-1
+- Analytics: enabled via config.js for louisriv26.github.io
+
+Verdict: PASS WITH CAUTION — deploy and verify script installation in Plausible after GitHub Pages update.
