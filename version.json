@@ -1,0 +1,15 @@
+{
+  "version": "24.5",
+  "name": "Mauritius Mass Finder v24.5",
+  "release_name": "Correction Email and UX Bugfix Edition",
+  "release": "v24.5 Exact Correction Template Compliance Edition",
+  "build_date": "2026-04-27",
+  "date": "2026-04-27",
+  "last_verified": "2026-04-27",
+  "data_version": "2026-04-27",
+  "cache_version": "mmf-v24-5",
+  "minimum_supported_cache": "mmf-v22-0",
+  "update_message_en": "A new version of Mauritius Mass Finder is available.",
+  "update_message_fr": "Une nouvelle version de Trouver une Messe à Maurice est disponible.",
+  "notes": "Correction email flow now uses the exact combined bilingual body template required by the release gate, while preserving correction email integration, onboarding, Help modal alignment, search intelligence, analytics, bilingual UI, PWA/offline support, and full dataset integrity."
+}
