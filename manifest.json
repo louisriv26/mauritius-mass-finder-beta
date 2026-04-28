@@ -1,7 +1,7 @@
 {
-  "name": "Mauritius Mass Finder v24.5",
+  "name": "Mauritius Mass Finder v24.7",
   "short_name": "Mass Finder",
-  "description": "Find Catholic Mass times quickly anywhere in Mauritius. v24.5 Exact Correction Template Compliance Edition.",
+  "description": "Find Catholic Mass times quickly anywhere in Mauritius. v24.7 version metadata cleanup; preserves result-card cleanup and time display fix.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
@@ -35,5 +35,5 @@
       "purpose": "maskable"
     }
   ],
-  "version": "24.5"
+  "version": "24.7"
 }

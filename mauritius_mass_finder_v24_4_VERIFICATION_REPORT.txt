@@ -1,0 +1,71 @@
+MAURITIUS MASS FINDER v24.4 — CORRECTION EMAIL AND UX BUGFIX VERIFICATION REPORT
+
+Verdict: PASS — safe for public release now
+
+Baseline
+- Built from v24.3 Search Intelligence Hardening package.
+- Dataset preserved.
+- Search intelligence, premium UI, bilingual mode, analytics, update detection, PWA/offline behavior, My Churches, Near Me, source links, and Sunday-obligation logic preserved.
+
+Implemented fixes
+1. Correction email flow
+- Report correction / Signaler une correction now targets mauritiusmassfinder@gmail.com.
+- The mail agent opens through mailto.
+- Subject is language-aware:
+  - EN: Correction for Mauritius Mass Finder
+  - FR: Correction pour Mauritius Mass Finder
+- Body is pre-filled with a structured correction template and the selected entry details:
+  - Church / Église
+  - Town / Ville
+  - Issue found / Problème constaté
+  - Correct information / Information correcte
+  - Source
+  - Additional comments / Commentaires
+  - Parish, day/time, category, maps link, app version
+- Clipboard copy is attempted first where supported and secure; mailto still opens if clipboard copy is unavailable or blocked.
+
+2. Onboarding quick-tip text bug
+- Cleaned the Save My Churches onboarding step.
+- Removed malformed HTML entity display and duplicated/squiggly text.
+- EN now says: Tap Save to keep your favourite churches.
+- FR now says: Touchez Enregistrer pour garder vos églises préférées.
+
+3. Help modal close button alignment
+- Reworked Help modal close button CSS.
+- Button now uses inline-flex centering, fixed minimum width, padding, nowrap text, border-box sizing, and non-shrinking layout.
+- This prevents Close / Fermer from drifting outside the rounded button box on narrow mobile screens.
+
+Versioning
+- APP_VERSION updated to 24.4.
+- version.json updated to v24.4.
+- manifest updated to v24.4.
+- service-worker cache updated to mmf-v24-4.
+- config updated with REPORT_EMAIL = mauritiusmassfinder@gmail.com.
+- data and fallback metadata updated to v24.4.
+- runtime legacy-reference gate passed.
+
+Validation checks
+- JavaScript syntax: passed.
+- JSON parse: passed for version.json, manifest.json, and data/masses.json.
+- fallback-data.js structure: checked through VM wrapper.
+- Legacy runtime references to v24.3: none found in runtime files.
+- Release gate legacy scan: passed.
+- Zip integrity: passed after packaging.
+
+Dataset integrity
+- Rows: 396
+- Parishes: 48
+- Sites: 118
+- Mass rows: 379
+- Other celebration rows: 17
+- Duplicate technical keys: 0
+- Invalid time formats: 0
+- Missing/invalid coordinates: 0
+
+Residual risks / assumptions
+- Mailto behavior depends on the user having a configured mail app/browser mail handler.
+- Clipboard copy may be blocked by browser security rules; this is handled gracefully because mailto still opens.
+- Exact visual verification on every iPhone model is not possible in this environment, but the CSS fix addresses the root alignment cause.
+
+Final verdict
+PASS — safe for public release now

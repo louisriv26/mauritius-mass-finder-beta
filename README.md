@@ -1,6 +1,6 @@
-# Mauritius Mass Finder v24.5
+# Mauritius Mass Finder v24.7
 
-Correction Email and UX Bugfix Edition.
+Version Metadata Cleanup Edition.
 
 ## Deployment
 Upload the contents of this package to the GitHub Pages branch/root. Keep \.nojekyll.
@@ -27,5 +27,5 @@ For every new release:
 
 Users are informed of a new version because the app checks `version.json` with `cache: no-store`. If the live `version.json` is newer than the open app version, the update banner appears. Clicking Refresh now clears old MMF caches, activates the latest service worker where available, and reloads the app without deleting saved churches or language preferences.
 
-## v24.5 search hardening
+## v24.7 version metadata cleanup
 Search uses deterministic, local-only normalization, ranking, conservative typo tolerance, and suggestions. It does not use AI search or external search services.

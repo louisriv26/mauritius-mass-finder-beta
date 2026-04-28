@@ -1,6 +1,13 @@
+## v24.7 — Version Metadata Cleanup
+
+- Cleaned stale runtime version metadata from v24.5/v24.6 to v24.7.
+- Preserved v24.6 result-card cleanup and time containment fix.
+- Preserved v24.5 exact correction email template compliance.
+- Preserved full data integrity and app functionality.
+
 # Changelog
 
-## v24.5 — Correction Email and UX Bugfix
+## v24.6 — Correction Email and UX Bugfix
 
 - Strengthened deterministic fuzzy search and relevance ranking.
 - Added stronger Notre-Dame / ND alias handling.
