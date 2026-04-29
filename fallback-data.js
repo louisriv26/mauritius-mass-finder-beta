@@ -1,9 +1,9 @@
 window.MMF_FALLBACK_DATA = {
   "meta": {
     "app": "Mauritius Mass Finder",
-    "version": "v24.9-near-me-ranking-precedence-fix",
-    "generated_at": "2026-04-27T17:00:00+04:00",
-    "source": "v24.9 near me ranking precedence fix release; Mass row data preserved from the validated baseline.",
+    "version": "v24.10-fast-win-ux-release",
+    "generated_at": "2026-04-28T19:30:00+04:00",
+    "source": "v24.10 Fast-Win UX Release; Mass row data preserved from validated baseline.",
     "row_count": 396,
     "parish_count": 48,
     "site_count": 118,
@@ -12,9 +12,9 @@ window.MMF_FALLBACK_DATA = {
     "notes": "Metadata and integrity cleanup; preserves the Saturday Masses from 15:30 Sunday-obligation rule and user-facing trust strip.",
     "coordinate_update": "Coordinates and coordinate precision preserved from the validated coordinate-complete dataset where available.",
     "directions_update": "Directions use precise coordinates or rich text query fallback according to the preserved data.",
-    "app_version":"24.9",
-    "release":"v24.9 Near Me Ranking Precedence Fix",
-    "last_verified":"2026-04-27",
+    "app_version": "24.10",
+    "release": "v24.10 Fast-Win UX Release",
+    "last_verified": "2026-04-28",
     "sunday_obligation_rule": "Sunday Masses and Saturday Masses from 15:30 onward.",
     "sunday_obligation_rows": 188
   },

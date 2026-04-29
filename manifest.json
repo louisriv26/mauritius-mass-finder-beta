@@ -1,7 +1,7 @@
 {
-  "name": "Mauritius Mass Finder v24.9",
+  "name": "Mauritius Mass Finder v24.10",
   "short_name": "Mass Finder",
-  "description": "Find Catholic Mass times quickly anywhere in Mauritius. v24.9 fixes Near Me ranking precedence so upcoming Mass timing outranks raw proximity.",
+  "description": "Find Catholic Mass times quickly anywhere in Mauritius. v24.10 adds native sharing, time-of-day filtering, compact mobile quick cards, and corrected French location notice.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
@@ -35,5 +35,5 @@
       "purpose": "maskable"
     }
   ],
-  "version": "24.9"
+  "version": "24.10"
 }
