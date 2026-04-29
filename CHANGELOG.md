@@ -1,6 +1,6 @@
 # Mauritius Mass Finder Changelog
 
-## v24.10 — Fast-Win UX Release
+## v24.11 — Fast-Win UX Release
 
 - Added native Web Share API with clipboard fallback.
 - Added time-of-day filter: Morning, Afternoon, Evening.

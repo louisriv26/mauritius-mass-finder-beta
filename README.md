@@ -1,6 +1,6 @@
-# Mauritius Mass Finder v24.10
+# Mauritius Mass Finder v24.11
 
-Fast-Win UX Release for GitHub Pages.
+French Near Me Translation Fix for GitHub Pages.
 
 ## What is included
 

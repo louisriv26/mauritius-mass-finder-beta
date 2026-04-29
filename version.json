@@ -1,15 +1,15 @@
 {
-  "version": "24.10",
-  "name": "Mauritius Mass Finder v24.10",
-  "release_name": "Fast-Win UX Release",
-  "release": "v24.10 Fast-Win UX Release",
-  "build_date": "2026-04-28",
-  "date": "2026-04-28",
-  "last_verified": "2026-04-28",
-  "data_version": "2026-04-28",
-  "cache_version": "mmf-v24-10",
-  "minimum_supported_cache": "mmf-v24-10",
+  "version": "24.11",
+  "name": "Mauritius Mass Finder v24.11",
+  "release_name": "French Near Me Translation Fix",
+  "release": "v24.11 French Near Me Translation Fix",
+  "build_date": "2026-04-29",
+  "date": "2026-04-29",
+  "last_verified": "2026-04-29",
+  "data_version": "2026-04-29",
+  "cache_version": "mmf-v24-11",
+  "minimum_supported_cache": "mmf-v24-11",
   "update_message_en": "A new version of Mauritius Mass Finder is available.",
   "update_message_fr": "Une nouvelle version de Trouver une Messe à Maurice est disponible.",
-  "notes": "Fast-win UX release: native Web Share API with clipboard fallback, time-of-day filtering, compact mobile quick cards, corrected French location notice, and preserved Near Me ranking precedence."
+  "notes": "Bugfix release: fixes French translation for the Near Me results heading, preserving native sharing, time-of-day filtering, compact mobile quick cards, corrected French location notice, and Near Me ranking precedence."
 }
