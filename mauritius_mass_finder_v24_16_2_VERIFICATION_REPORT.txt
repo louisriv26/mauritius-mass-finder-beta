@@ -1,0 +1,50 @@
+Mauritius Mass Finder v24.16.2 — Verification Report
+
+Verdict: PASS — safe to deploy.
+
+Root cause fixed:
+The previous Next Mass badge used elapsed minutes to decide whether to display Today/Aujourd’hui. A Mass less than 24 hours away but falling on the next civil calendar day could therefore be labelled Today/Aujourd’hui incorrectly.
+
+Fix implemented:
+- Added civil-date based next occurrence calculation.
+- Added calendarDaysUntil() and relativeDayLabel().
+- Next/near result day badge now compares the Mass occurrence date to today’s local calendar date, not to a 24-hour duration bucket.
+- Added EN label: Tomorrow.
+- Added FR label: Demain.
+- Preserved relative duration display such as “in 23h45 / dans 23 h 45 min”.
+
+Expected behavior after fix:
+- If it is Thursday 16:30 and the next Mass is Friday 16:15, the app may show “dans 23 h 45 min”, but the date badge shows “Demain”, not “Aujourd’hui”.
+- Same-day future Masses still show Today / Aujourd’hui.
+- Masses two or more civil days away show In n day(s) / Dans n jour(s).
+
+Validation passed:
+- JavaScript syntax: PASS
+- Service worker syntax: PASS
+- App version: 24.16.2
+- Service-worker cache: mmf-v24-16-2
+- Rows: 396
+- Parish IDs: 48
+- Site IDs: 118
+- Mass rows: 379
+- Other celebration rows: 17
+- Invalid times: 0
+- Invalid days: 0
+- Missing/invalid coordinates: 0
+- Duplicate technical keys: 0
+- JSON/fallback row count alignment: PASS
+
+Regression preserved:
+- v24.16.1 Saturday obligation badge fix preserved.
+- Sticky Help close control preserved.
+- Bottom Help close button preserved.
+- Masses-only default preserved.
+- Bilingual EN/FR mode preserved.
+- My Churches preserved.
+- Near Me / Next Mass logic preserved, with corrected civil-date label.
+
+Residual risk:
+- This fix relies on the user device’s local date/time. For Mauritius users this is correct. If a user abroad opens the app, the date label follows the device calendar, not Mauritius server time. This is acceptable for the current static app architecture but could be refined later by forcing Indian/Mauritius timezone calculation.
+
+Final decision:
+Deploy v24.16.2. Do not deploy v24.16.1 if this Next Mass label issue matters for public trust.

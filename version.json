@@ -1,16 +1,16 @@
 {
-  "version": "24.16.1",
+  "version": "24.16.2",
   "name": "Mauritius Mass Finder",
-  "release_name": "Saturday Obligation Badge Fix",
-  "release": "v24.16.1 Saturday Obligation Badge Fix",
+  "release_name": "Civil-Date Next Mass Fix",
+  "release": "v24.16.2 Civil-Date Next Mass Fix",
   "build_date": "2026-05-01",
   "date": "2026-05-01",
   "last_verified": "2026-05-01",
   "data_version": "2026-04-29",
-  "cache_version": "mmf-v24-16-1",
-  "minimum_supported_cache": "mmf-v24-16-1",
+  "cache_version": "mmf-v24-16-2",
+  "minimum_supported_cache": "mmf-v24-16-2",
   "update_message_en": "A new version of Mauritius Mass Finder is available.",
   "update_message_fr": "Une nouvelle version de Trouver une Messe à Maurice est disponible.",
   "notes": "Fixes semantically duplicate recurring-rule display, hardens bilingual rule rendering, and preserves the earlier validated search, mobile, update, data, and trust improvements.",
-  "app_version": "24.16.1"
+  "app_version": "24.16.2"
 }
