@@ -1,15 +1,16 @@
 {
-  "version": "24.14.1",
+  "version": "24.15",
   "name": "Mauritius Mass Finder",
-  "release_name": "Optimized User Guide Release",
-  "release": "v24.14.1 Optimized User Guide Release",
+  "release_name": "Semantic Rule Cleanup",
+  "release": "v24.15 Semantic Rule Cleanup",
   "build_date": "2026-05-01",
   "date": "2026-05-01",
   "last_verified": "2026-05-01",
   "data_version": "2026-04-29",
-  "cache_version": "mmf-v24-14-1",
-  "minimum_supported_cache": "mmf-v24-14-1",
+  "cache_version": "mmf-v24-15",
+  "minimum_supported_cache": "mmf-v24-15",
   "update_message_en": "A new version of Mauritius Mass Finder is available.",
   "update_message_fr": "Une nouvelle version de Trouver une Messe à Maurice est disponible.",
-  "notes": "Optimized user guide release: adds clearer bilingual search guidance, search examples, improved onboarding, better no-result guidance, metadata cleanup, and preserves validated data integrity, semantic time search, My Churches, Near Me, update flow, and PWA/offline support."
+  "notes": "Fixes semantically duplicate recurring-rule display, hardens bilingual rule rendering, and preserves the earlier validated search, mobile, update, data, and trust improvements.",
+  "app_version": "24.15"
 }

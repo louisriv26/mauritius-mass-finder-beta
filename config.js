@@ -1,4 +1,4 @@
-// Mauritius Mass Finder v24.14.1 configuration
+// Mauritius Mass Finder v24.15 configuration
 window.MASS_FINDER_CONFIG = window.MASS_FINDER_CONFIG || {
   DATA_JSON_URL: './data/masses.json',
   GOOGLE_SHEET_CSV_URL: '',

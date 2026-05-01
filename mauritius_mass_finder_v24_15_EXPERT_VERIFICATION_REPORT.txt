@@ -1,0 +1,105 @@
+Mauritius Mass Finder v24.15 — Expert Verification Report
+Generated: 2026-05-01
+
+FINAL VERDICT: PASS
+
+1. Baseline used
+- Active baseline: v24.14.2 bilingual rule fix package supplied for this task.
+- v24.12.2: no separate v24.12.2 package was present in the workspace. Preservation was therefore checked from available project records and from the v24.14.2 runtime feature set.
+
+2. v24.12.2 preservation checklist result
+Preserved / verified in v24.15:
+- validated 396-row database structure;
+- 48 parishes;
+- 118 sites;
+- 379 Mass rows;
+- 17 other-celebration rows;
+- zero missing coordinates;
+- semantic time search examples and logic retained;
+- time-of-day filter retained;
+- last verified / trust messaging retained;
+- mobile search and no-result guidance retained;
+- Near Me practical radius retained at 12 km;
+- next Mass search across the coming 7 days retained;
+- bilingual EN/FR toggle retained;
+- My Churches retained;
+- Native Web Share API retained;
+- update banner / version check structure retained;
+- PWA/service-worker structure retained;
+- fallback data retained and matched against data/masses.json.
+
+3. Exact fixes made in v24.15
+- Added semantic duplicate-rule normalization for displayed rule badges and notes.
+- Suppressed equivalent duplicate display such as:
+  - Last Friday only
+  - Last Friday of the month only
+- Hardened recurring-rule translation for first/second/third/last Friday and Sunday variants.
+- Standardized “Last Friday of the month only” to the same display meaning as “Last Friday only”.
+- Reordered rule display so the principal special rule is shown first, then any non-duplicate qualifier/language/context.
+- Prevented notes from being displayed when their normalized meaning has already appeared as a badge.
+- Updated app runtime version to 24.15.
+- Updated service-worker cache to mmf-v24-15.
+- Updated version.json, manifest, README, changelog, fallback-data metadata, and package naming.
+
+4. Data validation
+- Rows: 396
+- Parishes: 48
+- Sites: 118
+- Mass rows: 379
+- Other celebrations: 17
+- Invalid times: 0
+- Invalid days: 0
+- Duplicate technical keys: 0
+- Missing/invalid coordinates: 0
+- Literal undefined/null user-facing data: 0
+
+5. Duplicate-rule cleanup result
+- Confirmed high-risk duplicate case exists in data: Saint-Joseph Friday 17:30 has both “Last Friday only” and “Last Friday of the month only”.
+- v24.15 suppresses the duplicate at display level using semantic canonicalization.
+- Notes with the same normalized meaning are also suppressed.
+
+6. Bilingual QA result
+- English and French runtime strings preserved.
+- French “Nouveautés” text corrected.
+- Friday/Sunday recurring-rule translation logic retained and strengthened.
+- Exposition/Adoration translation logic retained.
+- Language toggle architecture unchanged.
+
+7. Stale-version search result
+Runtime files checked:
+- index.html
+- app.js
+- config.js
+- manifest.json
+- sw.js
+- version.json
+- fallback-data.js
+- data/masses.json
+
+Result: PASS — no stale v24.12/v24.13/v24.14 runtime references found.
+
+8. JavaScript syntax result
+- app.js passed node --check.
+
+9. JSON/CSV/fallback validation result
+- data/masses.json parsed successfully.
+- fallback-data.js parsed successfully.
+- fallback dataset matches data/masses.json exactly.
+- CSV row count matches JSON row count: 396.
+
+10. Service-worker/cache validation result
+- Cache updated to mmf-v24-15.
+- Service-worker syntax structure preserved.
+- Version metadata updated to v24.15.
+
+11. Zip integrity result
+- GitHub Pages-ready zip: built and zip-tested.
+- Full package zip: built and zip-tested.
+
+12. Residual risks
+- v24.12.2 could not be directly package-diffed because the separate package was not available in the workspace.
+- The fix is display-level semantic deduplication; underlying source fields remain preserved to avoid data loss.
+- Some rows legitimately show both recurrence and context, e.g. “Third Friday only” plus “Sick Mass every third Friday of the month”. This is intentional because one is recurrence and the other is service context.
+
+13. Final release verdict
+PASS — v24.15 is safe to deploy.

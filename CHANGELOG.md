@@ -1,9 +1,8 @@
 # Changelog
 
-## v24.14.1 — Optimized User Guide Release
-- Added a clearer bilingual task-based user guide explaining broader search by place, time words, exact time, and combined queries.
-- Added a search hint under the search bar.
-- Updated first-use onboarding with practical search examples.
-- Improved no-result and Near Me explanatory wording.
-- Updated version metadata, manifest version, fallback metadata, and service-worker cache label.
-- Preserved validated data integrity, semantic time search, My Churches, Near Me, native share, update flow, and PWA/offline support.
+## v24.15 — Semantic Rule Cleanup
+
+- Fixed semantically duplicate recurrence-rule display.
+- Hardened bilingual display of Friday/Sunday and exposition/adoration rules.
+- Preserved full validated data counts and runtime features from the v24.14.2 baseline.
+- Checked v24.12.2 preservation from available project records because no separate v24.12.2 package was available in the workspace.
