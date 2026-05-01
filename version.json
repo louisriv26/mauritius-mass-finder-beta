@@ -1,15 +1,15 @@
 {
-  "version": "24.11",
-  "name": "Mauritius Mass Finder v24.11",
-  "release_name": "French Near Me Translation Fix",
-  "release": "v24.11 French Near Me Translation Fix",
-  "build_date": "2026-04-29",
-  "date": "2026-04-29",
-  "last_verified": "2026-04-29",
+  "version": "24.14.1",
+  "name": "Mauritius Mass Finder",
+  "release_name": "Optimized User Guide Release",
+  "release": "v24.14.1 Optimized User Guide Release",
+  "build_date": "2026-05-01",
+  "date": "2026-05-01",
+  "last_verified": "2026-05-01",
   "data_version": "2026-04-29",
-  "cache_version": "mmf-v24-11",
-  "minimum_supported_cache": "mmf-v24-11",
+  "cache_version": "mmf-v24-14-1",
+  "minimum_supported_cache": "mmf-v24-14-1",
   "update_message_en": "A new version of Mauritius Mass Finder is available.",
   "update_message_fr": "Une nouvelle version de Trouver une Messe à Maurice est disponible.",
-  "notes": "Bugfix release: fixes French translation for the Near Me results heading, preserving native sharing, time-of-day filtering, compact mobile quick cards, corrected French location notice, and Near Me ranking precedence."
+  "notes": "Optimized user guide release: adds clearer bilingual search guidance, search examples, improved onboarding, better no-result guidance, metadata cleanup, and preserves validated data integrity, semantic time search, My Churches, Near Me, update flow, and PWA/offline support."
 }

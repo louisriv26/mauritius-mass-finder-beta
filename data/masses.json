@@ -1,19 +1,19 @@
 {
   "meta": {
     "app": "Mauritius Mass Finder",
-    "version": "v24.11-fast-win-ux-release",
+    "version": "v24.14-user-guide-release",
     "generated_at": "2026-04-29T19:30:00+04:00",
-    "source": "v24.11 Fast-Win UX Release; Mass row data preserved from validated baseline.",
+    "source": "v24.14 Optimized User Guide Release; Mass row data preserved from the validated baseline.",
     "row_count": 396,
     "parish_count": 48,
     "site_count": 118,
     "mass_rows": 379,
     "other_rows": 17,
-    "notes": "Deterministic fuzzy search, synonym normalization, ranked results, filter-aware empty states, suggestions, update flow, analytics enabled, bilingual consistency, release gates, and Mass data integrity preserved.",
+    "notes": "User guide release: clearer bilingual search guidance, search examples, onboarding improvements, no-result guidance, and validated Mass data integrity preserved.",
     "coordinate_update": "Coordinates and coordinate precision preserved from the validated coordinate-complete dataset where available.",
     "directions_update": "Directions use precise coordinates or rich text query fallback according to the preserved data.",
-    "app_version": "24.11",
-    "release": "v24.11 Fast-Win UX Release",
+    "app_version": "24.14",
+    "release": "v24.14 Optimized User Guide Release",
     "last_verified": "2026-04-29",
     "sunday_obligation_rule": "Sunday Masses and Saturday Masses from 15:30 onward.",
     "sunday_obligation_rows": 188
@@ -61,7 +61,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Lundi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0002",
@@ -105,7 +106,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0003",
@@ -149,7 +151,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0004",
@@ -193,7 +196,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Célébration at Chapelle du Montmartre",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0005",
@@ -237,7 +241,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Samedi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0006",
@@ -281,7 +286,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 11:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0007",
@@ -325,7 +331,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0008",
@@ -369,7 +376,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0009",
@@ -413,7 +421,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 08:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0010",
@@ -457,7 +466,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 10:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0011",
@@ -501,7 +511,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Messe ou célébration",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0012",
@@ -545,7 +556,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Exposition du Saint-Sacrement at 17:15 followed by Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0013",
@@ -589,7 +601,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0014",
@@ -633,7 +646,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0015",
@@ -677,7 +691,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 09:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0016",
@@ -721,7 +736,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0017",
@@ -765,7 +781,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0018",
@@ -809,7 +826,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Jeudi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0019",
@@ -853,7 +871,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Adoration at 09:30",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0020",
@@ -897,7 +916,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0021",
@@ -941,7 +961,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0022",
@@ -985,7 +1006,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 08:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0023",
@@ -1029,7 +1051,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 10:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0024",
@@ -1073,7 +1096,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Adoration at 17:30",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0025",
@@ -1117,7 +1141,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0026",
@@ -1161,7 +1186,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 09:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0027",
@@ -1205,7 +1231,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0028",
@@ -1249,7 +1276,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 08:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0029",
@@ -1293,7 +1321,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0030",
@@ -1337,7 +1366,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0031",
@@ -1381,7 +1411,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 08:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0032",
@@ -1425,7 +1456,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 09:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0033",
@@ -1469,7 +1501,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Lundi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0034",
@@ -1513,7 +1546,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0035",
@@ -1557,7 +1591,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Jeudi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0036",
@@ -1601,7 +1636,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0037",
@@ -1645,7 +1681,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 18:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0038",
@@ -1689,7 +1726,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0039",
@@ -1733,7 +1771,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0040",
@@ -1777,7 +1816,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 09:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0041",
@@ -1821,7 +1861,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 18:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0042",
@@ -1865,7 +1906,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0043",
@@ -1909,7 +1951,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0044",
@@ -1953,7 +1996,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0045",
@@ -1997,7 +2041,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 07:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0046",
@@ -2041,7 +2086,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Lundi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0047",
@@ -2085,7 +2131,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0048",
@@ -2129,7 +2176,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Jeudi 18:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0049",
@@ -2173,7 +2221,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0050",
@@ -2217,7 +2266,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 09:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0051",
@@ -2261,7 +2311,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Lundi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0052",
@@ -2305,7 +2356,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0053",
@@ -2349,7 +2401,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0054",
@@ -2393,7 +2446,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Jeudi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0055",
@@ -2437,7 +2491,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0056",
@@ -2481,7 +2536,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 11:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0057",
@@ -2525,7 +2581,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0058",
@@ -2569,7 +2626,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 07:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0059",
@@ -2613,7 +2671,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 10:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0060",
@@ -2657,7 +2716,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Lundi 17:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0061",
@@ -2701,7 +2761,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0062",
@@ -2745,7 +2806,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0063",
@@ -2789,7 +2851,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Jeudi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0064",
@@ -2833,7 +2896,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 11:15 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0065",
@@ -2877,7 +2941,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0066",
@@ -2921,7 +2986,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0067",
@@ -2965,7 +3031,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 09:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0068",
@@ -3009,7 +3076,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "3rd and 4th Wednesday of the month",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0069",
@@ -3053,7 +3121,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0070",
@@ -3097,7 +3166,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Célébration de la Parole",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0071",
@@ -3141,7 +3211,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0072",
@@ -3185,7 +3256,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0073",
@@ -3229,7 +3301,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0074",
@@ -3273,7 +3346,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Followed by one hour of Eucharistic adoration",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0075",
@@ -3317,7 +3391,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0076",
@@ -3361,7 +3436,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0077",
@@ -3405,7 +3481,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 09:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0078",
@@ -3449,7 +3526,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Lundi 06:45 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0079",
@@ -3493,7 +3571,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 06:45 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0080",
@@ -3537,7 +3616,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 06:45 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0081",
@@ -3581,7 +3661,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 06:45 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0082",
@@ -3625,7 +3706,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0083",
@@ -3669,7 +3751,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 06:45 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0084",
@@ -3713,7 +3796,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 10:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0085",
@@ -3757,7 +3841,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0086",
@@ -3801,7 +3886,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 08:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0087",
@@ -3845,7 +3931,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Lundi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0088",
@@ -3889,7 +3976,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0089",
@@ -3933,7 +4021,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0090",
@@ -3977,7 +4066,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Jeudi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0091",
@@ -4021,7 +4111,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "First Friday exposition 07:00-12:00",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0092",
@@ -4065,7 +4156,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Samedi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0093",
@@ -4109,7 +4201,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0094",
@@ -4153,7 +4246,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0095",
@@ -4197,7 +4291,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 09:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0096",
@@ -4241,7 +4336,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "First Friday only",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0097",
@@ -4285,7 +4381,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 17:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0098",
@@ -4329,7 +4426,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0099",
@@ -4373,7 +4471,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 08:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0100",
@@ -4417,7 +4516,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Lundi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0101",
@@ -4461,7 +4561,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0102",
@@ -4505,7 +4606,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0103",
@@ -4549,7 +4651,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Célébration de la Parole",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0104",
@@ -4593,7 +4696,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0105",
@@ -4637,7 +4741,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0106",
@@ -4681,7 +4786,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0107",
@@ -4725,7 +4831,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 08:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0108",
@@ -4769,7 +4876,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 10:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0109",
@@ -4813,7 +4921,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Lundi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0110",
@@ -4857,7 +4966,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0111",
@@ -4901,7 +5011,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0112",
@@ -4945,7 +5056,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Jeudi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0113",
@@ -4989,7 +5101,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Celebration by laity",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0114",
@@ -5033,7 +5146,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 10:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0115",
@@ -5077,7 +5191,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Samedi 16:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0116",
@@ -5121,7 +5236,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0117",
@@ -5165,7 +5281,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 07:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0118",
@@ -5209,7 +5326,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 09:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0119",
@@ -5253,7 +5371,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 10:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0120",
@@ -5297,7 +5416,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Lundi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0121",
@@ -5341,7 +5461,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0122",
@@ -5385,7 +5506,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0123",
@@ -5429,7 +5551,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 12:10 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0124",
@@ -5473,7 +5596,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0125",
@@ -5517,7 +5641,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0126",
@@ -5561,7 +5686,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 09:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0127",
@@ -5605,7 +5731,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Samedi 16:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0128",
@@ -5649,7 +5776,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Lundi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0129",
@@ -5693,7 +5821,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0130",
@@ -5737,7 +5866,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0131",
@@ -5781,7 +5911,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Jeudi 12:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0132",
@@ -5825,7 +5956,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0133",
@@ -5869,7 +6001,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0134",
@@ -5913,7 +6046,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0135",
@@ -5957,7 +6091,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 09:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0136",
@@ -6001,7 +6136,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Lundi 11:15 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0137",
@@ -6045,7 +6181,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0138",
@@ -6089,7 +6226,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0139",
@@ -6133,7 +6271,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Jeudi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0140",
@@ -6177,7 +6316,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0141",
@@ -6221,7 +6361,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0142",
@@ -6265,7 +6406,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0143",
@@ -6309,7 +6451,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 09:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0144",
@@ -6353,7 +6496,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0145",
@@ -6397,7 +6541,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Lundi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0146",
@@ -6441,7 +6586,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0147",
@@ -6485,7 +6631,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Jeudi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0148",
@@ -6529,7 +6676,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0149",
@@ -6573,7 +6721,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Samedi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0150",
@@ -6617,7 +6766,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 08:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0151",
@@ -6661,7 +6811,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0152",
@@ -6705,7 +6856,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0153",
@@ -6749,7 +6901,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 09:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0154",
@@ -6793,7 +6946,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0155",
@@ -6837,7 +6991,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0156",
@@ -6881,7 +7036,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 07:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0157",
@@ -6925,7 +7081,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Except first Friday; then Mass at 18:00 after exposition",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0158",
@@ -6969,7 +7126,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "First Friday only",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0159",
@@ -7013,7 +7171,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Lundi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0160",
@@ -7057,7 +7216,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0161",
@@ -7101,7 +7261,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0162",
@@ -7145,7 +7306,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0163",
@@ -7189,7 +7351,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 18:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0164",
@@ -7233,7 +7396,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0165",
@@ -7277,7 +7441,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 09:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0166",
@@ -7321,7 +7486,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Every two weeks",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0167",
@@ -7365,7 +7531,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0168",
@@ -7409,7 +7576,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 08:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0169",
@@ -7453,7 +7621,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Lundi 06:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0170",
@@ -7497,7 +7666,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 06:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0171",
@@ -7541,7 +7711,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 06:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0172",
@@ -7585,7 +7756,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Jeudi 06:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0173",
@@ -7629,7 +7801,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 06:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0174",
@@ -7673,7 +7846,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 11:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0175",
@@ -7717,7 +7891,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0176",
@@ -7761,7 +7936,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 06:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0177",
@@ -7805,7 +7981,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 08:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0178",
@@ -7849,7 +8026,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 09:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0179",
@@ -7893,7 +8071,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 17:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0180",
@@ -7937,7 +8116,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 18:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0181",
@@ -7981,7 +8161,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0182",
@@ -8025,7 +8206,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0183",
@@ -8069,7 +8251,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 18:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0184",
@@ -8113,7 +8296,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Jeudi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0185",
@@ -8157,7 +8341,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0186",
@@ -8201,7 +8386,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 09:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0187",
@@ -8245,7 +8431,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Friday 10:30 — Mass. Adoration at 09:30 is separate hidden row.",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0188",
@@ -8289,7 +8476,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0189",
@@ -8333,7 +8521,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0190",
@@ -8377,7 +8566,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0191",
@@ -8421,7 +8611,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0192",
@@ -8465,7 +8656,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0193",
@@ -8509,7 +8701,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 09:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0194",
@@ -8553,7 +8746,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0195",
@@ -8597,7 +8791,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0196",
@@ -8641,7 +8836,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0197",
@@ -8685,7 +8881,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0198",
@@ -8729,7 +8926,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 18:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0199",
@@ -8773,7 +8971,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0200",
@@ -8817,7 +9016,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0201",
@@ -8861,7 +9061,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Lundi 11:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0202",
@@ -8905,7 +9106,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0203",
@@ -8949,7 +9151,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0204",
@@ -8993,7 +9196,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Jeudi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0205",
@@ -9037,7 +9241,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 18:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0206",
@@ -9081,7 +9286,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0207",
@@ -9125,7 +9331,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 09:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0208",
@@ -9169,7 +9376,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 09:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0209",
@@ -9213,7 +9421,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0210",
@@ -9257,7 +9466,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 11:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0211",
@@ -9301,7 +9511,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 11:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0212",
@@ -9345,7 +9556,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 08:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0213",
@@ -9389,7 +9601,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0214",
@@ -9433,7 +9646,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0215",
@@ -9477,7 +9691,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 09:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0216",
@@ -9521,7 +9736,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0217",
@@ -9565,7 +9781,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Sick Mass every third Friday of the month at 10:00",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0218",
@@ -9609,7 +9826,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0219",
@@ -9653,7 +9871,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0220",
@@ -9697,7 +9916,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 09:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0221",
@@ -9741,7 +9961,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0222",
@@ -9785,7 +10006,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Lundi 07:15 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0223",
@@ -9829,7 +10051,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 07:15 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0224",
@@ -9873,7 +10096,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 07:15 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0225",
@@ -9917,7 +10141,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Jeudi 07:15 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0226",
@@ -9961,7 +10186,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 07:15 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0227",
@@ -10005,7 +10231,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0228",
@@ -10049,7 +10276,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 07:45 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0229",
@@ -10093,7 +10321,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0230",
@@ -10137,7 +10366,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Friday 17:30 — Mass on the last Friday of the month at Saint-Joseph",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0231",
@@ -10181,7 +10411,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0232",
@@ -10225,7 +10456,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0233",
@@ -10269,7 +10501,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Lundi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0234",
@@ -10313,7 +10546,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0235",
@@ -10357,7 +10591,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 11:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0236",
@@ -10401,7 +10636,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 07:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0237",
@@ -10445,7 +10681,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 09:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0238",
@@ -10489,7 +10726,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 08:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0239",
@@ -10533,7 +10771,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 11:15 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0240",
@@ -10577,7 +10816,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0241",
@@ -10621,7 +10861,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 09:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0242",
@@ -10665,7 +10906,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Lundi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0243",
@@ -10709,7 +10951,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Third Friday only",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0244",
@@ -10753,7 +10996,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0245",
@@ -10797,7 +11041,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 09:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0246",
@@ -10841,7 +11086,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 17:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0247",
@@ -10885,7 +11131,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "First Friday only",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0248",
@@ -10929,7 +11176,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0249",
@@ -10973,7 +11221,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0250",
@@ -11017,7 +11266,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0251",
@@ -11061,7 +11311,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 08:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0252",
@@ -11105,7 +11356,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0253",
@@ -11149,7 +11401,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0254",
@@ -11193,7 +11446,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 08:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0255",
@@ -11237,7 +11491,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Lundi 06:15 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0256",
@@ -11281,7 +11536,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 06:15 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0257",
@@ -11325,7 +11581,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 06:15 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0258",
@@ -11369,7 +11626,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Jeudi 06:15 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0259",
@@ -11413,7 +11671,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 06:15 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0260",
@@ -11457,7 +11716,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0261",
@@ -11501,7 +11761,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 08:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0262",
@@ -11545,7 +11806,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Lundi 18:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0263",
@@ -11589,7 +11851,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0264",
@@ -11633,7 +11896,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 10:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0265",
@@ -11677,7 +11941,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Lundi 18:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0266",
@@ -11721,7 +11986,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0267",
@@ -11765,7 +12031,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0268",
@@ -11809,7 +12076,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0269",
@@ -11853,7 +12121,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0270",
@@ -11897,7 +12166,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 08:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0271",
@@ -11941,7 +12211,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Sunday 10:00 at Saints-Anges-Gardiens — English on first Sunday of the month",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0272",
@@ -11985,7 +12256,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 06:45 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0273",
@@ -12029,7 +12301,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 12:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0274",
@@ -12073,7 +12346,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0275",
@@ -12117,7 +12391,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 08:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0276",
@@ -12161,7 +12436,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Sunday 10:00 — except first Sunday of the month, in English",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0277",
@@ -12205,7 +12481,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass; site label harmonised with Chapelle Saint-Georges",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0278",
@@ -12249,7 +12526,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 18:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0279",
@@ -12293,7 +12571,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0280",
@@ -12337,7 +12616,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 08:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0281",
@@ -12381,7 +12661,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 18:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0282",
@@ -12425,7 +12706,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0283",
@@ -12469,7 +12751,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Lundi 11:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0284",
@@ -12513,7 +12796,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0285",
@@ -12557,7 +12841,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0286",
@@ -12601,7 +12886,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0287",
@@ -12645,7 +12931,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 09:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0288",
@@ -12689,7 +12976,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Lundi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0289",
@@ -12733,7 +13021,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0290",
@@ -12777,7 +13066,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 07:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0291",
@@ -12821,7 +13111,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 17:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0292",
@@ -12865,7 +13156,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0293",
@@ -12909,7 +13201,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 09:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0294",
@@ -12953,7 +13246,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 11:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0295",
@@ -12997,7 +13291,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0296",
@@ -13041,7 +13336,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0297",
@@ -13085,7 +13381,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Samedi 16:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0298",
@@ -13129,7 +13426,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0299",
@@ -13173,7 +13471,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 11:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0300",
@@ -13217,7 +13516,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0301",
@@ -13261,7 +13561,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 09:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0302",
@@ -13305,7 +13606,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 17:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0303",
@@ -13349,7 +13651,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 08:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0304",
@@ -13393,7 +13696,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "First Sunday only",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0305",
@@ -13437,7 +13741,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 18:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0306",
@@ -13481,7 +13786,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 18:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0307",
@@ -13525,7 +13831,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0308",
@@ -13569,7 +13876,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 09:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0309",
@@ -13613,7 +13921,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Second Sunday only",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0310",
@@ -13657,7 +13966,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Lundi 10:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0311",
@@ -13701,7 +14011,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0312",
@@ -13745,7 +14056,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0313",
@@ -13789,7 +14101,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0314",
@@ -13833,7 +14146,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0315",
@@ -13877,7 +14191,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Lundi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0316",
@@ -13921,7 +14236,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Third Saturday only",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0317",
@@ -13965,7 +14281,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0318",
@@ -14009,7 +14326,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 09:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0319",
@@ -14053,7 +14371,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0320",
@@ -14097,7 +14416,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0321",
@@ -14141,7 +14461,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0322",
@@ -14185,7 +14506,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0323",
@@ -14229,7 +14551,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Jeudi 17:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0324",
@@ -14273,7 +14596,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0325",
@@ -14317,7 +14641,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 17:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0326",
@@ -14361,7 +14686,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 07:45 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0327",
@@ -14405,7 +14731,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0328",
@@ -14449,7 +14776,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 17:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0329",
@@ -14493,7 +14821,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 09:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0330",
@@ -14537,7 +14866,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Lundi 11:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0331",
@@ -14581,7 +14911,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0332",
@@ -14625,7 +14956,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0333",
@@ -14669,7 +15001,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Jeudi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0334",
@@ -14713,7 +15046,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 17:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0335",
@@ -14757,7 +15091,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0336",
@@ -14801,7 +15136,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0337",
@@ -14845,7 +15181,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 09:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0338",
@@ -14889,7 +15226,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 08:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0339",
@@ -14933,7 +15271,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0340",
@@ -14977,7 +15316,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0341",
@@ -15021,7 +15361,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 08:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0342",
@@ -15065,7 +15406,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 09:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0343",
@@ -15109,7 +15451,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 18:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0344",
@@ -15153,7 +15496,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0345",
@@ -15197,7 +15541,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0346",
@@ -15241,7 +15586,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0347",
@@ -15285,7 +15631,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0348",
@@ -15329,7 +15676,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 08:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0349",
@@ -15373,7 +15721,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 17:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0350",
@@ -15417,7 +15766,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0351",
@@ -15461,7 +15811,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 10:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0352",
@@ -15505,7 +15856,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 09:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0353",
@@ -15549,7 +15901,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 07:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0354",
@@ -15593,7 +15946,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 09:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0355",
@@ -15637,7 +15991,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0356",
@@ -15681,7 +16036,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 09:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0357",
@@ -15725,7 +16081,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0358",
@@ -15769,7 +16126,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Lundi 18:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0359",
@@ -15813,7 +16171,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0360",
@@ -15857,7 +16216,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 18:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0361",
@@ -15901,7 +16261,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Jeudi 06:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0362",
@@ -15945,7 +16306,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 18:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0363",
@@ -15989,7 +16351,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0364",
@@ -16033,7 +16396,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 09:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0365",
@@ -16077,7 +16441,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0366",
@@ -16121,7 +16486,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 07:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0367",
@@ -16165,7 +16531,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Jeudi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0368",
@@ -16209,7 +16576,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0369",
@@ -16253,7 +16621,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Vendredi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0370",
@@ -16297,7 +16666,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Second Friday only",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0371",
@@ -16341,7 +16711,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0372",
@@ -16385,7 +16756,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 09:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0373",
@@ -16429,7 +16801,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 17:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0374",
@@ -16473,7 +16846,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "First Friday only",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0375",
@@ -16517,7 +16891,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0376",
@@ -16561,7 +16936,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 07:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0377",
@@ -16605,7 +16981,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Listed as 'dans les quartiers' on source page",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0378",
@@ -16649,7 +17026,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0379",
@@ -16693,7 +17071,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mercredi 17:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0380",
@@ -16737,7 +17116,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 09:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0381",
@@ -16781,7 +17161,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Mardi 07:00 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0382",
@@ -16825,7 +17206,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "First Friday exposition at 09:00",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0383",
@@ -16869,7 +17251,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Dimanche 07:30 — Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-0384",
@@ -16913,7 +17296,8 @@
       "vigil_label_fr": "Compte pour l’obligation dominicale",
       "sunday_obligation_eligible": true,
       "source_text_excerpt": "Vigil Mass",
-      "data_status": "rebuilt_from_official-source-traced_baseline"
+      "data_status": "rebuilt_from_official-source-traced_baseline",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-add-001",
@@ -16957,7 +17341,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Friday 18:30 — Adoration only",
-      "data_status": "source_reconciled_update_ledger"
+      "data_status": "source_reconciled_update_ledger",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-add-002",
@@ -17001,7 +17386,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Wednesday 19:00 — temps de prière",
-      "data_status": "source_reconciled_update_ledger"
+      "data_status": "source_reconciled_update_ledger",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-add-003",
@@ -17045,7 +17431,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Thursday 17:30 — temps de prière",
-      "data_status": "source_reconciled_update_ledger"
+      "data_status": "source_reconciled_update_ledger",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-add-004",
@@ -17089,7 +17476,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "First Tuesday 17:00 — Adoration",
-      "data_status": "source_reconciled_update_ledger"
+      "data_status": "source_reconciled_update_ledger",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-add-005",
@@ -17133,7 +17521,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "First Friday 10:00 — Adoration followed by Mass; exact Mass time not separately stated",
-      "data_status": "source_reconciled_update_hotfix"
+      "data_status": "source_reconciled_update_hotfix",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-add-006",
@@ -17177,7 +17566,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "First Friday 17:00 — Exposition du Saint Sacrement before Mass",
-      "data_status": "source_reconciled_update_ledger"
+      "data_status": "source_reconciled_update_ledger",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-add-007",
@@ -17221,7 +17611,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Friday 09:30 — Adoration before 10:30 Mass",
-      "data_status": "source_reconciled_update_ledger"
+      "data_status": "source_reconciled_update_ledger",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-add-008",
@@ -17265,7 +17656,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Friday 17:30 — Adoration before Mass",
-      "data_status": "source_reconciled_update_ledger"
+      "data_status": "source_reconciled_update_ledger",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-add-009",
@@ -17309,7 +17701,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Friday 17:00 — Adoration / exposition before Mass",
-      "data_status": "source_reconciled_update_ledger"
+      "data_status": "source_reconciled_update_ledger",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-add-010",
@@ -17353,7 +17746,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Thursday 06:30 — Célébration de la Parole",
-      "data_status": "source_reconciled_update_ledger"
+      "data_status": "source_reconciled_update_ledger",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-add-011",
@@ -17397,7 +17791,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Official diocesan Région Sud Sacré-Coeur page for Rivière-des-Anguilles: 'Prière et chapelet au Sacré-Cœur tous les vendredis à partir de 17h30 suivis de la messe, sauf les 1ers vendredi du mois.' Staged correction ledger records this hidden non-Mass item as Friday 17:00 adoration/exposition before Mass for the Saint-Pierre / Rivière-des-Anguilles context.",
-      "data_status": "ledger_supported_by_official_riviere_des_anguilles_context"
+      "data_status": "ledger_supported_by_official_riviere_des_anguilles_context",
+      "last_verified": "2026-04-26"
     },
     {
       "id": "row-add-012",
@@ -17441,7 +17836,8 @@
       "vigil_label_fr": "",
       "sunday_obligation_eligible": false,
       "source_text_excerpt": "Tuesday 06:30 — messe ou célébration",
-      "data_status": "source_reconciled_update_ledger"
+      "data_status": "source_reconciled_update_ledger",
+      "last_verified": "2026-04-26"
     }
   ]
 }

@@ -1,16 +1,7 @@
-# Mauritius Mass Finder v24.11
+# Mauritius Mass Finder v24.14.1
 
-French Near Me Translation Fix for GitHub Pages.
+GitHub Pages-ready static web app.
 
-## What is included
+Deploy the contents of this package to the repository root. The app runs from `index.html`, uses `data/masses.json` as the live data file, and falls back to embedded data if the live file is unavailable.
 
-- Native Web Share API with clipboard fallback.
-- Time-of-day filter: Morning, Afternoon, Evening.
-- Compact mobile quick cards for smaller screens.
-- Correct French location notice.
-- Preserved validated Mass dataset: 396 rows, 48 parishes, 118 sites.
-- PWA/offline support, bilingual EN/FR mode, My Churches, Near Me, source links, update flow.
-
-## Deployment
-
-Upload the contents of this package to the GitHub Pages repository root.
+Main release change: optimized bilingual user guide, search examples, onboarding, and no-result guidance.
