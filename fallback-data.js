@@ -1,9 +1,9 @@
 window.MMF_FALLBACK_DATA = {
   "meta": {
     "app": "Mauritius Mass Finder",
-    "version": "v24.15-semantic-rule-cleanup",
+    "version": "v24.16.1-semantic-rule-cleanup",
     "generated_at": "2026-04-29T19:30:00+04:00",
-    "source": "v24.15 Semantic Rule Cleanup Release; Mass row data preserved from the validated baseline.",
+    "source": "v24.16.1 Saturday Obligation Badge Fix Release; Mass row data preserved from the validated baseline.",
     "row_count": 396,
     "parish_count": 48,
     "site_count": 118,
@@ -12,8 +12,8 @@ window.MMF_FALLBACK_DATA = {
     "notes": "Bug-fix release: removes semantically duplicate qualifier/special-rule/note display and strengthens bilingual rendering of recurring-rule labels.",
     "coordinate_update": "Coordinates and coordinate precision preserved from the validated coordinate-complete dataset where available.",
     "directions_update": "Directions use precise coordinates or rich text query fallback according to the preserved data.",
-    "app_version": "24.15",
-    "release": "v24.15 Semantic Rule Cleanup",
+    "app_version": "24.16.1",
+    "release": "v24.16.1 Saturday Obligation Badge Fix",
     "last_verified": "2026-05-01",
     "sunday_obligation_rule": "Sunday Masses and Saturday Masses from 15:30 onward.",
     "sunday_obligation_rows": 188
