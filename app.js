@@ -1,6 +1,6 @@
 (() => {
 'use strict';
-const APP_VERSION = '24.16.2';
+const APP_VERSION = '24.17.6';
 const RELEASE_VERIFIED_DATE_EN = '1 May 2026';
 const RELEASE_VERIFIED_DATE_FR = '1 mai 2026';
 const DAYS = ['Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche'];
@@ -22,13 +22,13 @@ const T = {
     navHome:'Home', navSearch:'Search', navNear:'Near me', navFav:'My Churches', myChurches:'My Churches', navMore:'More',
     aboutTitle:'About this app', aboutText:'A simple Catholic Mass finder for Mauritius, built for fast mobile use.', aboutHtml:'<p>A simple Catholic Mass finder for Mauritius, built for fast mobile use.</p><p><b>Purpose:</b> help users find a suitable Mass quickly by day, parish, area, saved church, or nearby location.</p><p><b>Data:</b> the database is based on the project’s reconciled diocesan parish data and includes source links on each result.</p><p><b>Important:</b> Mass times can change. When timing is critical, verify directly with the parish using the source link.</p><p><b>Privacy:</b> location is used only on your device to sort nearby results. It is not stored by this app.</p><p><b>Analytics:</b> This app may use privacy-friendly analytics to understand general usage. It does not need an account and does not collect personal Mass attendance, saved churches, or precise location.</p>', mainNavigation:'Main navigation', languageLabel:'Language', quickActionsLabel:'Quick actions', nextUsefulMass:'Next useful Mass', shareTitle:'Mauritius Mass Finder', reportSubject:'Correction for Mauritius Mass Finder', versionWord:'Version', share:'Share', shareText:'Mass at {site}, {day} {time}. Directions: {url}', shareCopied:'Mass details copied. You can paste them into WhatsApp or a message.', qaShareTitle:'Share app', qaShareText:'Send the app link by WhatsApp, Messages, or email.', shareApp:'Share app', appShareText:'Find a Catholic Mass quickly anywhere in Mauritius.', appShareCopied:'App link copied.',
     sundayNotice:'Showing Sunday Masses and Saturday Masses from 15:30 onward.',
-    searchPlaceholder:'Search place, time, or church…', searchLabel:'Search by place, time, parish, church, or town', searchHint:'Try: “evening Mass Curepipe”', searchSuggestionsLabel:'Suggestions', recentSearchesLabel:'Recent searches', clearRecentSearches:'Clear recent searches', analyticsDisclosure:'This app may use privacy-friendly analytics to understand general usage. It does not need an account and does not collect personal Mass attendance, saved churches, or precise location.', dayFilterLabel:'Filter by day', regionFilterLabel:'Filter by region', modeFilterLabel:'Filter by Masses only or include other celebrations', anyDay:'Any day', allRegions:'All regions', timeOfDayFilterLabel:'Filter by time of day', allDay:'All day', morning:'Morning', afternoon:'Afternoon', evening:'Evening', semanticMorningNotice:'Showing morning Masses', semanticAfternoonNotice:'Showing afternoon Masses', semanticEveningNotice:'Showing evening Masses', verifiedLabel:'Verified', verificationNeeded:'Verification needed', massesOnly:'Masses only', includeOther:'Include other celebrations',
+    searchPlaceholder:'Search place, time, or church…', searchLabel:'Search by place, time, parish, church, or town', searchHint:'Try: “evening Mass Curepipe”', searchSuggestionsLabel:'Suggestions', searchUnderstoodLabel:'Search understood', chipTomorrow:'Tomorrow', chipToday:'Today', chipNearMe:'Near me', chipEnglish:'English', chipOtherCelebrations:'Other celebrations', chipAfter:'After {time}', recentSearchesLabel:'Recent searches', clearRecentSearches:'Clear recent searches', analyticsDisclosure:'This app may use privacy-friendly analytics to understand general usage. It does not need an account and does not collect personal Mass attendance, saved churches, or precise location.', dayFilterLabel:'Filter by day', regionFilterLabel:'Filter by region', modeFilterLabel:'Filter by Masses only or include other celebrations', anyDay:'Any day', allRegions:'All regions', timeOfDayFilterLabel:'Filter by time of day', allDay:'All day', morning:'Morning', afternoon:'Afternoon', evening:'Evening', semanticMorningNotice:'Showing morning Masses', semanticAfternoonNotice:'Showing afternoon Masses', semanticEveningNotice:'Showing evening Masses', verifiedLabel:'Verified', verificationNeeded:'Verification needed', massesOnly:'Masses only', includeOther:'Include other celebrations',
     findNext:'Find next Mass', useLocation:'Use my location', favouritesOnly:'My Churches only', clear:'Clear', loading:'Loading data…',
     updateTitle:'Update the database without rebuilding', updateA:'<b>Option A:</b> edit <code>data/masses.json</code> in GitHub and commit. The app fetches it on launch.', updateB:'<b>Option B:</b> publish a Google Sheet as CSV and paste the published CSV URL in <code>config.js</code>.', fallbackNote:'The app falls back to the embedded full database if the live file is unavailable.', footerNote:'Sources are linked on each result. Always verify special services directly with the parish when timing is critical.',
     rowWord:'', rows:'', parishes:'Parishes', sites:'Churches & chapels', massRows:'Masses', other:'Other celebrations', showing:'', results:'results found', trustStrip:'{parishes} parishes · {sites} churches & chapels · verified {date}',
-    noResult:'No Mass found.', noResultHint:'Try a nearby town, a simpler church name, “evening Mass”, “messe du soir”, or clear your filters.', noResultNextHint:'No upcoming Mass found with the current filters. Try a nearby town, a simpler name, or clear filters.', noResultOtherHint:'Some non-Mass celebrations may be hidden. Turn on “Include other celebrations” if needed.', noResultFilters:'Results exist, but your filters are hiding them.', activeFiltersLabel:'Active filters', clearFiltersAction:'Clear filters', didYouMean:'Did you mean', searchExamples:'Try: evening Mass Curepipe, morning Mass Port Louis, 18h Quatre Bornes, Saint Jean.', favEmptyTitle:'You haven’t saved any churches yet.', favEmptyHint:'You have not saved any churches yet. Tap ❤️ / Save on a church to add it here.', favEmptySearch:'Search now', favEmptyNear:'Show nearby Masses', vigilBadge:'Vigil Mass', vigilNotice:'Sunday obligation mode includes Sunday Masses and Saturday Masses from 15:30 onward.', nextNotice:'Showing the next available Masses across the coming 7 days, sorted by soonest time.', locationNotice:'Showing nearby Masses first. Wider results may appear if few are available.', favNotice:'Showing My Churches only.', otherNotice:'Other celebrations are shown separately and are not mixed into Masses-only results.',
+    noResult:'No Mass found.', noResultHint:'Try a nearby town, a simpler church name, “evening Mass”, “messe du soir”, or clear your filters.', nearNoMatchHint:'No nearby Mass matches all your filters. Try removing the time, day, or place filter.', noResultNextHint:'No upcoming Mass found with the current filters. Try a nearby town, a simpler name, or clear filters.', noResultOtherHint:'Some non-Mass celebrations may be hidden. Turn on “Include other celebrations” if needed.', noResultFilters:'Results exist, but your filters are hiding them.', activeFiltersLabel:'Active filters', clearFiltersAction:'Clear filters', didYouMean:'Did you mean', searchExamples:'Try: evening Mass Curepipe, morning Mass Port Louis, 18h Quatre Bornes, Saint Jean.', favEmptyTitle:'You haven’t saved any churches yet.', favEmptyHint:'You have not saved any churches yet. Tap ❤️ / Save on a church to add it here.', favEmptySearch:'Search now', favEmptyNear:'Show nearby Masses', vigilBadge:'Vigil Mass', vigilNotice:'Sunday obligation mode includes Sunday Masses and Saturday Masses from 15:30 onward.', nextNotice:'Showing the next available Masses across the coming 7 days, sorted by soonest time.', locationNotice:'Showing nearby Masses first. Wider results may appear if few are available.', favNotice:'Showing My Churches only.', otherNotice:'Other celebrations are shown separately and are not mixed into Masses-only results.',
     parish:'Parish', today:'Today', tomorrow:'Tomorrow', inDays:'In {n} day(s)', distanceExact:'{n} km', distanceApprox:'~{n} km', directions:'Directions', source:'Official source', favouriteOn:'★ My Church', favouriteOff:'☆ Save church', reportCorrection:'Report correction',
-    dataLiveJson:'Database loaded', dataGoogle:'Live database loaded', dataFallback:'Offline database loaded', copied:'Correction template copied and email opened.', locationAsk:'Use your location to show nearby Masses. Your location is not stored.', locationDenied:'Location is not available. You can still search by church, area, parish, or use directions from a result card.', locationUnsupported:'Location is not available. You can still search by church, area, parish, or use directions from a result card.', correction:'Correction', checkEntry:'Please check this Mass Finder entry:', dayTime:'Day/time', serviceMass:'Mass', serviceOther:'Other celebration', updateAvailable:'A new version is available', updateText:'Refresh to use the latest version. If the old version remains, close and reopen the app.', updateRefresh:'Refresh now', updateDismiss:'Later', lastVerified:'Last verified', verifiedNote:'Mass times can change. Check the official source for feast days, funerals, cyclones, holidays, or recent parish changes.', howUpdateLink:'How to update', howUpdateTitle:'How to update the app', howUpdateHtml:'<h3>How to update the app</h3><p>If a new version is available:</p><ol><li>Tap “Refresh / Update” if the banner appears.</li><li>If the app does not update, close it completely and reopen it.</li><li>On iPhone, swipe up and close the app from the app switcher, then reopen it.</li><li>If it is still stuck on an old version, remove the home-screen shortcut and install it again from the latest link.</li></ol><p>Your saved churches should normally remain saved.</p>', sundayObligationBadge:'Counts for Sunday obligation', sundayMassBadge:'Sunday Mass', weekdayMassBadge:'Weekday Mass', specialRuleBadge:'Special rule', otherCelebrationBadge:'Other celebration / ambiguous', vigilInferredBadge:'Counts for Sunday obligation', whatNewTitle:'What’s new in v24.16.2', whatNewHtml:'<ul><li>Fixed Next Mass date labels so tomorrow’s Mass is shown as Tomorrow, not Today, when it is less than 24 hours away.</li><li>Preserved the v24.16.1 Saturday obligation badge and sticky Help fixes.</li><li>Kept data, search, bilingual, mobile, update and trust improvements intact.</li></ul>', helpLink:'Help', helpTitle:'Help Center / User Guide', helpHtml:'<h3>Find a Mass quickly</h3><p>Use simple words. You can search by place, time, or both together.</p><h4>Search by place</h4><p>Try a town, parish, or church name: <b>Curepipe</b>, <b>Quatre Bornes</b>, <b>Port Louis</b>, <b>Saint Jean</b>, <b>Sacré Coeur</b>.</p><h4>Search by time</h4><p>Try natural words: <b>evening Mass</b>, <b>morning Mass</b>, <b>afternoon Mass</b>, <b>messe du soir</b>, <b>messe du matin</b>.</p><h4>Combine place and time</h4><p>Try: <b>evening Mass Curepipe</b>, <b>morning Mass Port Louis</b>, <b>messe du soir Quatre Bornes</b>.</p><h4>Use an exact time</h4><p>Try: <b>18:00</b>, <b>18h</b>, <b>6pm</b>, or <b>07:30</b>.</p><h4>Spelling tips</h4><p>You do not need accents. <b>Sacre Coeur</b> can find <b>Sacré-Cœur</b>. You can type <b>Saint</b> or <b>St</b>. Partial names often work.</p><h3>Near Me / Next Mass</h3><p>Tap <b>Next Mass near you</b> or <b>Near me</b> and allow location access. The app shows upcoming Masses, with nearby options first. Distances marked with <b>~</b> are approximate.</p><h3>My Churches</h3><p>Tap <b>Save church</b> to keep a church in <b>My Churches</b>. Tap again to remove it.</p><h3>Share the app</h3><p>Tap <b>Share app</b> to send the link by WhatsApp, Messages, or email.</p><h3>Other celebrations</h3><p>By default, the app shows Masses only. Turn on <b>Include other celebrations</b> to also show items such as adoration, prayer services, or other non-Mass celebrations.</p><h3>Accuracy and source information</h3><p>Each result includes an official source link where available. Mass times can change for feast days, funerals, cyclones, public holidays, or parish updates. When timing is critical, check the source or contact the parish.</p><h3>Report a correction</h3><p>On any result, tap <b>Report correction</b>. The app prepares the church, parish, day, time, and source details so a correction can be sent easily.</p><h3>Updating the app</h3><p>If an update banner appears, tap <b>Refresh now</b>. If the old version remains, close the app completely and reopen it. Your saved churches should normally remain saved.</p>', close:'Close', onboardingSkip:'Skip', onboardingNext:'Next', onboardingDone:'Got it', onboarding1Title:'Find a Mass in seconds', onboarding1Text:'Try simple searches like Curepipe, evening Mass, messe du matin, or 18h.', onboarding2Title:'Combine time and place', onboarding2Text:'Try evening Mass Quatre Bornes or messe du soir Curepipe to narrow results faster.', onboarding3Title:'Use Near Me and save churches', onboarding3Text:'Allow location to find nearby Masses, and save your regular churches in My Churches.', approximateLabel:'Approximate distance', exactLabel:'Distance', townLabel:'Town', categoryLabelText:'Category', mapsLabel:'Maps', appVersionLabel:'App version', correctionPrompt:'Correction needed', nearPrecisionNote:'Nearby results are prioritised within about 12 km where available. Distances marked ~ are approximate.', trustNote:'Mass times can change. Check the official source for feast days, funerals, cyclones, holidays, or recent parish changes. Report a correction if something looks wrong.'
+    dataLiveJson:'Database loaded', dataGoogle:'Live database loaded', dataFallback:'Offline database loaded', copied:'Correction template copied and email opened.', locationAsk:'Use your location to show nearby Masses. Your location is not stored.', locationDenied:'Location access is needed for Near Me. You can still search by place, parish, or time.', locationUnsupported:'Location is not available. You can still search by church, area, parish, or use directions from a result card.', correction:'Correction', checkEntry:'Please check this Mass Finder entry:', dayTime:'Day/time', serviceMass:'Mass', serviceOther:'Other celebration', updateAvailable:'A new version is available', updateText:'Refresh to use the latest version. If the old version remains, close and reopen the app.', updateRefresh:'Refresh now', updateDismiss:'Later', lastVerified:'Last verified', verifiedNote:'Mass times can change. Check the official source for feast days, funerals, cyclones, holidays, or recent parish changes.', howUpdateLink:'How to update', howUpdateTitle:'How to update the app', howUpdateHtml:'<h3>How to update the app</h3><p>If a new version is available:</p><ol><li>Tap “Refresh / Update” if the banner appears.</li><li>If the app does not update, close it completely and reopen it.</li><li>On iPhone, swipe up and close the app from the app switcher, then reopen it.</li><li>If it is still stuck on an old version, remove the home-screen shortcut and install it again from the latest link.</li></ol><p>Your saved churches should normally remain saved.</p>', sundayObligationBadge:'Counts for Sunday obligation', sundayMassBadge:'Sunday Mass', weekdayMassBadge:'Weekday Mass', specialRuleBadge:'Special rule', otherCelebrationBadge:'Other celebration / ambiguous', vigilInferredBadge:'Counts for Sunday obligation', whatNewTitle:'What’s new in v24.17.6', whatNewHtml:'<ul><li>Fixed around/about/vers/environ/autour so they mean around the requested time, not after it.</li><li>Preserved after/après as lower-bound time intent.</li><li>Added before/avant as upper-bound time intent.</li><li>Preserved exact-time ranking, Near Me ranking, bilingual intent parsing, and place preservation.</li></ul>', helpLink:'Help', helpTitle:'Help Center / User Guide', helpHtml:'<h3>Find a Mass quickly</h3><p>Use simple words. You can search by place, time, or both together.</p><h4>Search by place</h4><p>Try a town, parish, or church name: <b>Curepipe</b>, <b>Quatre Bornes</b>, <b>Port Louis</b>, <b>Saint Jean</b>, <b>Sacré Coeur</b>.</p><h4>Search by time</h4><p>Try natural words: <b>evening Mass</b>, <b>morning Mass</b>, <b>afternoon Mass</b>, <b>messe du soir</b>, <b>messe du matin</b>.</p><h4>Combine place and time</h4><p>Try: <b>evening Mass Curepipe</b>, <b>morning Mass Port Louis</b>, <b>messe du soir Quatre Bornes</b>.</p><h4>Use an exact time</h4><p>Try: <b>18:00</b>, <b>18h</b>, <b>6pm</b>, or <b>07:30</b>.</p><h4>Spelling tips</h4><p>You do not need accents. <b>Sacre Coeur</b> can find <b>Sacré-Cœur</b>. You can type <b>Saint</b> or <b>St</b>. Partial names often work.</p><h3>Near Me / Next Mass</h3><p>Tap <b>Next Mass near you</b> or <b>Near me</b> and allow location access. The app shows upcoming Masses, with nearby options first. Distances marked with <b>~</b> are approximate.</p><h3>My Churches</h3><p>Tap <b>Save church</b> to keep a church in <b>My Churches</b>. Tap again to remove it.</p><h3>Share the app</h3><p>Tap <b>Share app</b> to send the link by WhatsApp, Messages, or email.</p><h3>Other celebrations</h3><p>By default, the app shows Masses only. Turn on <b>Include other celebrations</b> to also show items such as adoration, prayer services, or other non-Mass celebrations.</p><h3>Accuracy and source information</h3><p>Each result includes an official source link where available. Mass times can change for feast days, funerals, cyclones, public holidays, or parish updates. When timing is critical, check the source or contact the parish.</p><h3>Report a correction</h3><p>On any result, tap <b>Report correction</b>. The app prepares the church, parish, day, time, and source details so a correction can be sent easily.</p><h3>Updating the app</h3><p>If an update banner appears, tap <b>Refresh now</b>. If the old version remains, close the app completely and reopen it. Your saved churches should normally remain saved.</p>', close:'Close', onboardingSkip:'Skip', onboardingNext:'Next', onboardingDone:'Got it', onboarding1Title:'Find a Mass in seconds', onboarding1Text:'Try simple searches like Curepipe, evening Mass, messe du matin, or 18h.', onboarding2Title:'Combine time and place', onboarding2Text:'Try evening Mass Quatre Bornes or messe du soir Curepipe to narrow results faster.', onboarding3Title:'Use Near Me and save churches', onboarding3Text:'Allow location to find nearby Masses, and save your regular churches in My Churches.', approximateLabel:'Approximate distance', exactLabel:'Distance', townLabel:'Town', categoryLabelText:'Category', mapsLabel:'Maps', appVersionLabel:'App version', correctionPrompt:'Correction needed', nearPrecisionNote:'Nearby results are prioritised within about 12 km where available. Distances marked ~ are approximate.', trustNote:'Mass times can change. Check the official source for feast days, funerals, cyclones, holidays, or recent parish changes. Report a correction if something looks wrong.'
   },
   fr: {
     appTitle:'Trouver une Messe à Maurice',
@@ -42,13 +42,13 @@ const T = {
     navHome:'Accueil', navSearch:'Recherche', navNear:'Près de moi', navFav:'Mes églises', myChurches:'Mes églises', navMore:'Plus',
     aboutTitle:'À propos de cette application', aboutText:'Une application simple pour trouver rapidement les messes à Maurice sur mobile.', aboutHtml:'<p>Une application simple pour trouver rapidement les messes à Maurice sur mobile.</p><p><b>Objectif :</b> aider les utilisateurs à trouver rapidement une messe par jour, paroisse, région, église sauvegardée ou position proche.</p><p><b>Données :</b> la base repose sur les données diocésaines réconciliées du projet et chaque résultat contient un lien source.</p><p><b>Important :</b> les horaires peuvent changer. Lorsque l’horaire est critique, vérifiez directement auprès de la paroisse avec le lien source.</p><p><b>Confidentialité :</b> votre position sert uniquement sur votre appareil à trier les résultats proches. Elle n’est pas enregistrée par cette application.</p><p><b>Statistiques :</b> Cette application peut utiliser des statistiques anonymes et agrégées pour comprendre l’utilisation générale, par exemple les visites et les fonctions utilisées. Elle ne collecte pas votre nom, vos églises enregistrées ni votre position précise.</p>', mainNavigation:'Navigation principale', languageLabel:'Langue', quickActionsLabel:'Actions rapides', nextUsefulMass:'Prochaine messe utile', shareTitle:'Trouver une Messe à Maurice', reportSubject:'Correction pour Mauritius Mass Finder', versionWord:'Version', share:'Partager', shareText:'Messe à {site}, {day} {time}. Itinéraire : {url}', shareCopied:'Les détails de la messe ont été copiés. Vous pouvez les coller dans WhatsApp ou un message.', qaShareTitle:'Partager l’application', qaShareText:'Envoyez le lien par WhatsApp, Messages ou e-mail.', shareApp:'Partager l’application', appShareText:'Trouvez rapidement une messe catholique à Maurice.', appShareCopied:'Lien de l’application copié.',
     sundayNotice:'Affichage des messes du dimanche et des messes du samedi à partir de 15h30.',
-    searchPlaceholder:'Rechercher lieu, horaire ou église…', searchLabel:'Rechercher par lieu, horaire, paroisse, église ou ville', searchHint:'Essayez : « messe du soir Curepipe »', searchSuggestionsLabel:'Suggestions', recentSearchesLabel:'Recherches récentes', clearRecentSearches:'Effacer les recherches récentes', analyticsDisclosure:'Cette application peut utiliser des statistiques respectueuses de la vie privée pour comprendre l’usage général. Elle ne nécessite pas de compte et ne collecte pas votre participation personnelle aux messes, vos églises enregistrées ni votre position précise.', dayFilterLabel:'Filtrer par jour', regionFilterLabel:'Filtrer par région', modeFilterLabel:'Filtrer par messes seulement ou inclure les autres célébrations', anyDay:'Tous les jours', allRegions:'Toutes les régions', timeOfDayFilterLabel:'Filtrer par moment de la journée', allDay:'Toute la journée', morning:'Matin', afternoon:'Après-midi', evening:'Soir', semanticMorningNotice:'Affichage des messes du matin', semanticAfternoonNotice:'Affichage des messes de l’après-midi', semanticEveningNotice:'Affichage des messes du soir', verifiedLabel:'Vérifié', verificationNeeded:'Vérification nécessaire', massesOnly:'Messes seulement', includeOther:'Inclure les autres célébrations',
+    searchPlaceholder:'Rechercher lieu, horaire ou église…', searchLabel:'Rechercher par lieu, horaire, paroisse, église ou ville', searchHint:'Essayez : « messe du soir Curepipe »', searchSuggestionsLabel:'Suggestions', searchUnderstoodLabel:'Recherche comprise', chipTomorrow:'Demain', chipToday:'Aujourd’hui', chipNearMe:'Près de moi', chipEnglish:'Anglais', chipOtherCelebrations:'Autres célébrations', chipAfter:'Après {time}', recentSearchesLabel:'Recherches récentes', clearRecentSearches:'Effacer les recherches récentes', analyticsDisclosure:'Cette application peut utiliser des statistiques respectueuses de la vie privée pour comprendre l’usage général. Elle ne nécessite pas de compte et ne collecte pas votre participation personnelle aux messes, vos églises enregistrées ni votre position précise.', dayFilterLabel:'Filtrer par jour', regionFilterLabel:'Filtrer par région', modeFilterLabel:'Filtrer par messes seulement ou inclure les autres célébrations', anyDay:'Tous les jours', allRegions:'Toutes les régions', timeOfDayFilterLabel:'Filtrer par moment de la journée', allDay:'Toute la journée', morning:'Matin', afternoon:'Après-midi', evening:'Soir', semanticMorningNotice:'Affichage des messes du matin', semanticAfternoonNotice:'Affichage des messes de l’après-midi', semanticEveningNotice:'Affichage des messes du soir', verifiedLabel:'Vérifié', verificationNeeded:'Vérification nécessaire', massesOnly:'Messes seulement', includeOther:'Inclure les autres célébrations',
     findNext:'Trouver la prochaine messe', useLocation:'Utiliser ma position', favouritesOnly:'Mes églises seulement', clear:'Effacer', loading:'Chargement des données…',
     updateTitle:'Mettre à jour la base sans reconstruire', updateA:'<b>Option A :</b> modifiez <code>data/masses.json</code> dans GitHub et validez. L’application le charge au démarrage.', updateB:'<b>Option B :</b> publiez une feuille Google en CSV et collez l’URL CSV publiée dans <code>config.js</code>.', fallbackNote:'L’application utilise la base intégrée si le fichier en direct n’est pas disponible.', footerNote:'Les sources sont liées sur chaque résultat. Vérifiez toujours les services spéciaux directement avec la paroisse lorsque l’horaire est critique.',
     rowWord:'', rows:'', parishes:'Paroisses', sites:'Églises et chapelles', massRows:'Messes', other:'Autres célébrations', showing:'', results:'résultats', trustStrip:'{parishes} paroisses · {sites} églises et chapelles · vérifié {date}',
     noResult:'Aucune messe trouvée.', noResultHint:'Essayez une ville proche, un nom d’église plus simple, « messe du soir », « evening Mass », ou effacez les filtres.', noResultNextHint:'Aucune prochaine messe trouvée avec les filtres actuels. Essayez une ville proche, un nom plus simple, ou effacez les filtres.', noResultOtherHint:'Certaines célébrations hors messe peuvent être masquées. Activez « Inclure les autres célébrations » si nécessaire.', noResultFilters:'Des résultats existent, mais vos filtres les masquent.', activeFiltersLabel:'Filtres actifs', clearFiltersAction:'Effacer les filtres', didYouMean:'Voulez-vous dire', searchExamples:'Essayez : messe du soir Curepipe, messe du matin Port Louis, 18h Quatre Bornes, Saint Jean.', favEmptyTitle:'Vous n’avez encore enregistré aucune église.', favEmptyHint:'Vous n’avez pas encore enregistré d’églises. Appuyez sur ❤️ / Enregistrer sur une église pour l’ajouter ici.', favEmptySearch:'Rechercher maintenant', favEmptyNear:'Afficher les messes proches', vigilBadge:'Messe anticipée', vigilNotice:'Le mode obligation dominicale inclut les messes du dimanche et les messes du samedi à partir de 15h30.', nextNotice:'Affichage des prochaines messes disponibles sur les 7 prochains jours, triées par horaire.', locationNotice:'Les messes proches sont affichées en premier. Des résultats plus éloignés peuvent apparaître s’il y a peu d’options.', favNotice:'Affichage de mes églises seulement.', otherNotice:'Les autres célébrations sont affichées séparément et ne sont pas mélangées aux résultats “messes seulement”.',
     parish:'Paroisse', today:'Aujourd’hui', tomorrow:'Demain', inDays:'Dans {n} jour(s)', distanceExact:'{n} km', distanceApprox:'~{n} km', directions:'Itinéraire', source:'Source officielle', favouriteOn:'★ Mon église', favouriteOff:'☆ Sauvegarder', reportCorrection:'Signaler une correction',
-    dataLiveJson:'Base chargée', dataGoogle:'Base en direct chargée', dataFallback:'Base hors ligne chargée', copied:'Modèle copié et e-mail ouvert.', locationAsk:'Utilisez votre position pour afficher les messes proches. Votre position n’est pas enregistrée.', locationDenied:'La localisation n’est pas disponible. Vous pouvez chercher par église, région, paroisse, ou utiliser l’itinéraire depuis une fiche.', locationUnsupported:'La localisation n’est pas disponible. Vous pouvez chercher par église, région, paroisse, ou utiliser l’itinéraire depuis une fiche.', correction:'Correction', checkEntry:'Veuillez vérifier cette entrée du Mass Finder :', dayTime:'Jour/heure', serviceMass:'Messe', serviceOther:'Autre célébration', updateAvailable:'Une nouvelle version est disponible', updateText:'Actualisez pour utiliser la dernière version. Si l’ancienne version reste affichée, fermez puis rouvrez l’application.', updateRefresh:'Actualiser', updateDismiss:'Plus tard', lastVerified:'Dernière vérification', verifiedNote:'Les horaires peuvent changer. Vérifiez la source officielle en cas de fêtes, funérailles, cyclones, jours fériés ou changement paroissial récent.', howUpdateLink:'Comment mettre à jour', howUpdateTitle:'Comment mettre l’application à jour', howUpdateHtml:'<h3>Comment mettre l’application à jour</h3><p>Si une nouvelle version est disponible :</p><ol><li>Appuyez sur « Actualiser / Mettre à jour » si la bannière apparaît.</li><li>Si l’application ne se met pas à jour, fermez-la complètement puis rouvrez-la.</li><li>Sur iPhone, fermez l’application depuis le sélecteur d’applications, puis rouvrez-la.</li><li>Si l’ancienne version reste bloquée, supprimez le raccourci de l’écran d’accueil et réinstallez-le avec le dernier lien.</li></ol><p>Vos églises enregistrées devraient normalement rester sauvegardées.</p>', sundayObligationBadge:'Obligation dominicale', sundayMassBadge:'Messe du dimanche', weekdayMassBadge:'Messe de semaine', specialRuleBadge:'Règle spéciale', otherCelebrationBadge:'Autre célébration / ambigu', vigilInferredBadge:'Obligation dominicale', whatNewTitle:'Nouveautés v24.16.2', whatNewHtml:'<ul><li>Correction des libellés de prochaine messe : une messe de demain est affichée comme Demain, et non Aujourd’hui, même si elle est dans moins de 24 heures.</li><li>Préservation des corrections v24.16.1 : badge d’obligation dominicale du samedi et bouton Fermer sticky dans l’aide.</li><li>Maintien des améliorations données, recherche, bilingue, mobile, mise à jour et confiance.</li></ul>', helpLink:'Aide', helpTitle:'Centre d’aide / Guide d’utilisation', helpHtml:'<h3>Trouver une messe rapidement</h3><p>Utilisez des mots simples. Vous pouvez chercher par lieu, par moment, ou les deux ensemble.</p><h4>Rechercher par lieu</h4><p>Essayez une ville, une paroisse ou une église : <b>Curepipe</b>, <b>Quatre Bornes</b>, <b>Port Louis</b>, <b>Saint Jean</b>, <b>Sacré Cœur</b>.</p><h4>Rechercher par horaire</h4><p>Essayez des mots simples : <b>messe du soir</b>, <b>messe du matin</b>, <b>messe de l’après-midi</b>, <b>evening Mass</b>, <b>morning Mass</b>.</p><h4>Combiner lieu et horaire</h4><p>Essayez : <b>messe du soir Curepipe</b>, <b>messe du matin Port Louis</b>, <b>evening Mass Quatre Bornes</b>.</p><h4>Utiliser une heure précise</h4><p>Essayez : <b>18h</b>, <b>18:00</b>, <b>6pm</b> ou <b>07:30</b>.</p><h4>Conseils d’écriture</h4><p>Les accents ne sont pas obligatoires. <b>Sacre Coeur</b> peut trouver <b>Sacré-Cœur</b>. Vous pouvez écrire <b>Saint</b> ou <b>St</b>. Un nom partiel suffit souvent.</p><h3>Près de moi / Prochaine messe</h3><p>Appuyez sur <b>Prochaine messe près de vous</b> ou <b>Près de moi</b> et autorisez la localisation. L’application affiche les prochaines messes, avec les options proches en priorité. Les distances avec <b>~</b> sont approximatives.</p><h3>Mes églises</h3><p>Appuyez sur <b>Sauvegarder</b> pour garder une église dans <b>Mes églises</b>. Appuyez à nouveau pour la retirer.</p><h3>Partager l’application</h3><p>Appuyez sur <b>Partager l’application</b> pour envoyer le lien par WhatsApp, Messages ou e-mail.</p><h3>Autres célébrations</h3><p>Par défaut, l’application affiche uniquement les messes. Activez <b>Inclure les autres célébrations</b> pour voir aussi des adorations, temps de prière ou autres célébrations qui ne sont pas des messes.</p><h3>Exactitude et sources</h3><p>Chaque résultat contient un lien vers la source officielle lorsqu’elle est disponible. Les horaires peuvent changer en cas de fêtes, funérailles, cyclones, jours fériés ou changement paroissial. Lorsque l’horaire est important, vérifiez la source ou contactez la paroisse.</p><h3>Signaler une correction</h3><p>Sur un résultat, appuyez sur <b>Signaler une correction</b>. L’application prépare les détails de l’église, de la paroisse, du jour, de l’heure et de la source.</p><h3>Mettre à jour l’application</h3><p>Si une bannière de mise à jour apparaît, appuyez sur <b>Actualiser</b>. Si l’ancienne version reste affichée, fermez complètement l’application puis rouvrez-la. Vos églises enregistrées devraient normalement rester sauvegardées.</p>', close:'Fermer', onboardingSkip:'Passer', onboardingNext:'Suivant', onboardingDone:'Compris', onboarding1Title:'Trouver une messe en quelques secondes', onboarding1Text:'Essayez des recherches simples comme Curepipe, messe du soir, morning Mass ou 18h.', onboarding2Title:'Combiner horaire et lieu', onboarding2Text:'Essayez messe du soir Quatre Bornes ou evening Mass Curepipe pour cibler plus vite.', onboarding3Title:'Utiliser Près de moi et Mes églises', onboarding3Text:'Autorisez la localisation pour trouver les messes proches et sauvegardez vos églises habituelles.', approximateLabel:'Distance approximative', exactLabel:'Distance', townLabel:'Localité', categoryLabelText:'Catégorie', mapsLabel:'Cartes', appVersionLabel:'Version de l’application', correctionPrompt:'Correction à apporter', nearPrecisionNote:'Les résultats proches sont priorisés autour de 12 km lorsque possible. Les distances avec ~ sont approximatives.', trustNote:'Les horaires peuvent changer. Vérifiez la source officielle en cas de fêtes, funérailles, cyclones, jours fériés ou changement paroissial récent. Signalez une correction si une information semble incorrecte.'
+    dataLiveJson:'Base chargée', dataGoogle:'Base en direct chargée', dataFallback:'Base hors ligne chargée', copied:'Modèle copié et e-mail ouvert.', locationAsk:'Utilisez votre position pour afficher les messes proches. Votre position n’est pas enregistrée.', locationDenied:'La localisation est nécessaire pour « près de moi ». Vous pouvez toujours rechercher par lieu, paroisse ou horaire.', locationUnsupported:'La localisation n’est pas disponible. Vous pouvez chercher par église, région, paroisse, ou utiliser l’itinéraire depuis une fiche.', correction:'Correction', checkEntry:'Veuillez vérifier cette entrée du Mass Finder :', dayTime:'Jour/heure', serviceMass:'Messe', serviceOther:'Autre célébration', updateAvailable:'Une nouvelle version est disponible', updateText:'Actualisez pour utiliser la dernière version. Si l’ancienne version reste affichée, fermez puis rouvrez l’application.', updateRefresh:'Actualiser', updateDismiss:'Plus tard', lastVerified:'Dernière vérification', verifiedNote:'Les horaires peuvent changer. Vérifiez la source officielle en cas de fêtes, funérailles, cyclones, jours fériés ou changement paroissial récent.', howUpdateLink:'Comment mettre à jour', howUpdateTitle:'Comment mettre l’application à jour', howUpdateHtml:'<h3>Comment mettre l’application à jour</h3><p>Si une nouvelle version est disponible :</p><ol><li>Appuyez sur « Actualiser / Mettre à jour » si la bannière apparaît.</li><li>Si l’application ne se met pas à jour, fermez-la complètement puis rouvrez-la.</li><li>Sur iPhone, fermez l’application depuis le sélecteur d’applications, puis rouvrez-la.</li><li>Si l’ancienne version reste bloquée, supprimez le raccourci de l’écran d’accueil et réinstallez-le avec le dernier lien.</li></ol><p>Vos églises enregistrées devraient normalement rester sauvegardées.</p>', sundayObligationBadge:'Obligation dominicale', sundayMassBadge:'Messe du dimanche', weekdayMassBadge:'Messe de semaine', specialRuleBadge:'Règle spéciale', otherCelebrationBadge:'Autre célébration / ambigu', vigilInferredBadge:'Obligation dominicale', whatNewTitle:'Nouveautés v24.17.6', whatNewHtml:'<ul><li>Correction de around/about/vers/environ/autour : ces mots signifient autour de l’heure demandée, pas après cette heure.</li><li>Après/apres/after restent un filtre à partir de l’heure indiquée.</li><li>Avant/before devient un filtre avant l’heure indiquée.</li><li>Le classement Près de moi, les heures précises, le bilingue et les lieux sont conservés.</li></ul>', helpLink:'Aide', helpTitle:'Centre d’aide / Guide d’utilisation', helpHtml:'<h3>Trouver une messe rapidement</h3><p>Utilisez des mots simples. Vous pouvez chercher par lieu, par moment, ou les deux ensemble.</p><h4>Rechercher par lieu</h4><p>Essayez une ville, une paroisse ou une église : <b>Curepipe</b>, <b>Quatre Bornes</b>, <b>Port Louis</b>, <b>Saint Jean</b>, <b>Sacré Cœur</b>.</p><h4>Rechercher par horaire</h4><p>Essayez des mots simples : <b>messe du soir</b>, <b>messe du matin</b>, <b>messe de l’après-midi</b>, <b>evening Mass</b>, <b>morning Mass</b>.</p><h4>Combiner lieu et horaire</h4><p>Essayez : <b>messe du soir Curepipe</b>, <b>messe du matin Port Louis</b>, <b>evening Mass Quatre Bornes</b>.</p><h4>Utiliser une heure précise</h4><p>Essayez : <b>18h</b>, <b>18:00</b>, <b>6pm</b> ou <b>07:30</b>.</p><h4>Conseils d’écriture</h4><p>Les accents ne sont pas obligatoires. <b>Sacre Coeur</b> peut trouver <b>Sacré-Cœur</b>. Vous pouvez écrire <b>Saint</b> ou <b>St</b>. Un nom partiel suffit souvent.</p><h3>Près de moi / Prochaine messe</h3><p>Appuyez sur <b>Prochaine messe près de vous</b> ou <b>Près de moi</b> et autorisez la localisation. L’application affiche les prochaines messes, avec les options proches en priorité. Les distances avec <b>~</b> sont approximatives.</p><h3>Mes églises</h3><p>Appuyez sur <b>Sauvegarder</b> pour garder une église dans <b>Mes églises</b>. Appuyez à nouveau pour la retirer.</p><h3>Partager l’application</h3><p>Appuyez sur <b>Partager l’application</b> pour envoyer le lien par WhatsApp, Messages ou e-mail.</p><h3>Autres célébrations</h3><p>Par défaut, l’application affiche uniquement les messes. Activez <b>Inclure les autres célébrations</b> pour voir aussi des adorations, temps de prière ou autres célébrations qui ne sont pas des messes.</p><h3>Exactitude et sources</h3><p>Chaque résultat contient un lien vers la source officielle lorsqu’elle est disponible. Les horaires peuvent changer en cas de fêtes, funérailles, cyclones, jours fériés ou changement paroissial. Lorsque l’horaire est important, vérifiez la source ou contactez la paroisse.</p><h3>Signaler une correction</h3><p>Sur un résultat, appuyez sur <b>Signaler une correction</b>. L’application prépare les détails de l’église, de la paroisse, du jour, de l’heure et de la source.</p><h3>Mettre à jour l’application</h3><p>Si une bannière de mise à jour apparaît, appuyez sur <b>Actualiser</b>. Si l’ancienne version reste affichée, fermez complètement l’application puis rouvrez-la. Vos églises enregistrées devraient normalement rester sauvegardées.</p>', close:'Fermer', onboardingSkip:'Passer', onboardingNext:'Suivant', onboardingDone:'Compris', onboarding1Title:'Trouver une messe en quelques secondes', onboarding1Text:'Essayez des recherches simples comme Curepipe, messe du soir, morning Mass ou 18h.', onboarding2Title:'Combiner horaire et lieu', onboarding2Text:'Essayez messe du soir Quatre Bornes ou evening Mass Curepipe pour cibler plus vite.', onboarding3Title:'Utiliser Près de moi et Mes églises', onboarding3Text:'Autorisez la localisation pour trouver les messes proches et sauvegardez vos églises habituelles.', approximateLabel:'Distance approximative', exactLabel:'Distance', townLabel:'Localité', categoryLabelText:'Catégorie', mapsLabel:'Cartes', appVersionLabel:'Version de l’application', correctionPrompt:'Correction à apporter', nearPrecisionNote:'Les résultats proches sont priorisés autour de 12 km lorsque possible. Les distances avec ~ sont approximatives.', trustNote:'Les horaires peuvent changer. Vérifiez la source officielle en cas de fêtes, funérailles, cyclones, jours fériés ou changement paroissial récent. Signalez une correction si une information semble incorrecte.'
   }
 };
 let DATA = [];
@@ -127,17 +127,26 @@ const NEAR_ME_PATTERNS = ['pres de moi','proche de moi','autour de moi','a cote 
 function isNearMeIntent(raw){ const q=norm(raw); return !!q && NEAR_ME_PATTERNS.some(p=>q===p || q.includes(p)); }
 function coordinateRank(r){ return isExactCoord(r) ? 0 : 1; }
 const NEAR_ME_REASONABLE_RADIUS_KM = 12;
-function nearSortKey(r){
+function nearSortKey(r, intent=null){
   const delta=nextDelta(r);
   const distance=userPos ? (distKm(userPos.lat,userPos.lon,r.latitude,r.longitude) ?? 9999) : 9999;
   const days=Math.floor(delta/1440);
   // Hard precedence guard: a Mass today/tomorrow within a reasonable nearby radius
   // must outrank a very close church whose next Mass is several days away.
   const practicalTimeBucket = (days <= 1 && distance <= NEAR_ME_REASONABLE_RADIUS_KM) ? 0 : 1;
-  return {practicalTimeBucket, days, minutes:delta, distance, precision:coordinateRank(r), name:siteDisplayName(r)};
+  const rowMinutes = mins(r.time_24h);
+  const hasExact = !!(intent && intent.exactTime && intent.afterMinutes == null && intent.beforeMinutes == null);
+  const exactDelta = hasExact ? Math.abs(rowMinutes - intent.exactTime.minutes) : 9999;
+  // Exact-time Near Me queries should respect the requested clock time, but not
+  // promote a distant future result above a practical today/tomorrow option.
+  const exactDayBucket = hasExact ? (days <= 1 ? 0 : (days <= 3 ? 1 : 2)) : 0;
+  return {practicalTimeBucket, exactDayBucket, exactDelta, days, minutes:delta, distance, precision:coordinateRank(r), name:siteDisplayName(r)};
 }
-function compareNearResults(a,b){
-  const ka=nearSortKey(a), kb=nearSortKey(b);
+function compareNearResults(a,b,intent=null){
+  const ka=nearSortKey(a,intent), kb=nearSortKey(b,intent);
+  if(intent && intent.exactTime && intent.afterMinutes == null && intent.beforeMinutes == null){
+    return (ka.exactDayBucket-kb.exactDayBucket)||(ka.exactDelta-kb.exactDelta)||(ka.practicalTimeBucket-kb.practicalTimeBucket)||(ka.days-kb.days)||(ka.minutes-kb.minutes)||(ka.distance-kb.distance)||(ka.precision-kb.precision)||ka.name.localeCompare(kb.name);
+  }
   return (ka.practicalTimeBucket-kb.practicalTimeBucket)||(ka.days-kb.days)||(ka.minutes-kb.minutes)||(ka.distance-kb.distance)||(ka.precision-kb.precision)||ka.name.localeCompare(kb.name);
 }
 function queryVariants(raw){
@@ -487,6 +496,252 @@ function queryWithoutSemanticTime(raw){
   patterns.forEach(rx => { s = s.replace(rx, ' '); });
   return s.replace(/\s+/g,' ').trim();
 }
+
+function parseExactTime(raw){
+  const text = String(raw || '').replace(/[’']/g,"'");
+  const n = norm(text);
+  if(/\b(noon|midi)\b/.test(n)) return {minutes:720, label:'12:00', matchText:(text.match(/\b(noon|midi)\b/i)||[''])[0]};
+  if(/\b(midnight|minuit)\b/.test(n)) return {minutes:0, label:'00:00', matchText:(text.match(/\b(midnight|minuit)\b/i)||[''])[0]};
+  // AM/PM with optional minutes must be parsed before generic 24-hour colon/dot formats.
+  const m12min = text.match(/\b(1[0-2]|0?[1-9])\s*[:\.]\s*([0-5]\d)\s*(a\.?m\.?|p\.?m\.?)\b/i);
+  if(m12min){
+    let h = parseInt(m12min[1],10), m = parseInt(m12min[2],10);
+    const ap = m12min[3].toLowerCase().replace(/\./g,'');
+    if(ap === 'pm' && h < 12) h += 12;
+    if(ap === 'am' && h === 12) h = 0;
+    return {minutes:h*60+m, label:String(h).padStart(2,'0')+':'+String(m).padStart(2,'0'), matchText:m12min[0]};
+  }
+  const m12 = text.match(/\b(1[0-2]|0?[1-9])\s*(a\.?m\.?|p\.?m\.?)\b/i);
+  if(m12){
+    let h = parseInt(m12[1],10);
+    const ap = m12[2].toLowerCase().replace(/\./g,'');
+    if(ap === 'pm' && h < 12) h += 12;
+    if(ap === 'am' && h === 12) h = 0;
+    return {minutes:h*60, label:String(h).padStart(2,'0')+':00', matchText:m12[0]};
+  }
+  const m24 = text.match(/\b([01]?\d|2[0-3])\s*(?:h|:|\.)\s*([0-5]\d)?\b/i);
+  if(m24){
+    const h = parseInt(m24[1],10), m = m24[2] ? parseInt(m24[2],10) : 0;
+    return {minutes:h*60+m, label:String(h).padStart(2,'0')+':'+String(m).padStart(2,'0'), matchText:m24[0]};
+  }
+  return null;
+}
+function parseTimeModifier(raw){
+  const n = norm(raw || '');
+  // Exact/around/after/before are semantic modifiers, not place-search words.
+  // Around/about/vers/environ/autour must not become an after/lower-bound filter.
+  if(/\b(after|apres|apres)\b/.test(n)) return 'after';
+  if(/\b(before|avant)\b/.test(n)) return 'before';
+  if(/\b(around|about|vers|environ|autour|autour de)\b/.test(n)) return 'around';
+  if(/\b(at|a|à)\b/.test(n)) return 'exact';
+  return null;
+}
+function parseAfterTime(raw){
+  const exact = parseExactTime(raw);
+  return (exact && parseTimeModifier(raw) === 'after') ? exact.minutes : null;
+}
+function parseBeforeTime(raw){
+  const exact = parseExactTime(raw);
+  return (exact && parseTimeModifier(raw) === 'before') ? exact.minutes : null;
+}
+function parseDayIntent(raw){
+  const q = norm(raw || '');
+  if(/\b(tonight|ce soir)\b/.test(q)) return 'today';
+  const pairs = [
+    ['today','today'],['aujourd hui','today'],['aujourdhui','today'],
+    ['tomorrow','tomorrow'],['demain','tomorrow'],
+    ['monday','Lundi'],['lundi','Lundi'],
+    ['tuesday','Mardi'],['mardi','Mardi'],
+    ['wednesday','Mercredi'],['mercredi','Mercredi'],
+    ['thursday','Jeudi'],['jeudi','Jeudi'],
+    ['friday','Vendredi'],['vendredi','Vendredi'],
+    ['saturday','Samedi'],['samedi','Samedi'],
+    ['sunday','Dimanche'],['dimanche','Dimanche']
+  ];
+  for(const [term,val] of pairs){
+    const k = norm(term);
+    if(q === k || q.includes(' '+k+' ') || q.startsWith(k+' ') || q.endsWith(' '+k)) return val;
+  }
+  return '';
+}
+function isOtherCelebrationIntent(raw){
+  const q = norm(raw || '');
+  return /\b(adoration|exposition|priere|prayer|temps de priere|celebration)\b/.test(q);
+}
+function languageIntent(raw){
+  const q = norm(raw || '');
+  if(/\b(mass in english|english mass|in english|messe en anglais|en anglais|anglais|english)\b/.test(q)) return 'english';
+  if(/\b(mass in french|french mass|in french|messe en francais|en francais|francais|french)\b/.test(q)) return 'french';
+  return '';
+}
+function isEnglishIntent(raw){ return languageIntent(raw) === 'english'; }
+function removeNearMePhrases(raw){
+  let s = String(raw || ' ');
+  const patterns = [
+    /\b(near me|nearby|closest|nearest|around me|close to me|next to me)\b/gi,
+    /\b(près de moi|pres de moi|proche de moi|autour de moi|a cote de moi|dans les environs|autour d[’' ]?ici|à proximité|a proximite)\b/gi
+  ];
+  patterns.forEach(rx => { s = s.replace(rx, ' '); });
+  return s.replace(/\s+/g,' ').trim();
+}
+function stripIntentPhrases(raw){
+  let s = String(raw || ' ');
+  const phrasePatterns = [
+    /\b(mass in english|english mass|in english|messe en anglais|en anglais)\b/gi,
+    /\b(mass in french|french mass|in french|messe en fran[çc]ais|en fran[çc]ais)\b/gi,
+    /\b(near me|nearby|closest|nearest|around me|close to me|next to me)\b/gi,
+    /\b(près de moi|pres de moi|proche de moi|autour de moi|a cote de moi|dans les environs|autour d[’' ]?ici|à proximité|a proximite)\b/gi,
+    /\b(today evening|tonight|ce soir)\b/gi,
+    /\b(morning mass|afternoon mass|evening mass|night mass|messe du matin|messe de l[’' ]après-midi|messe de l[’' ]apres-midi|messe du soir)\b/gi,
+    /\b(temps de prière|temps de priere)\b/gi
+  ];
+  phrasePatterns.forEach(rx => { s = s.replace(rx, ' '); });
+  return s.replace(/\s+/g,' ').trim();
+}
+function removeExactTimeText(raw){
+  let s = String(raw || ' ');
+  const patterns = [
+    /\b(1[0-2]|0?[1-9])\s*[:\.]\s*([0-5]\d)\s*(a\.?m\.?|p\.?m\.?)\b/gi,
+    /\b(1[0-2]|0?[1-9])\s*(a\.?m\.?|p\.?m\.?)\b/gi,
+    /\b([01]?\d|2[0-3])\s*(?:h|:|\.)\s*([0-5]\d)?\b/gi,
+    /\b(noon|midi|midnight|minuit)\b/gi
+  ];
+  patterns.forEach(rx => { s = s.replace(rx, ' '); });
+  return s.replace(/\s+/g,' ').trim();
+}
+function removeResidualConnectorTokens(raw){
+  const CONNECTOR_TOKENS = new Set(['at','around','about','near','for','a','à','vers','environ','autour','pour','in','en','de','du','des','le','la','l','the','after','apres','après','before','avant']);
+  const SERVICE_TOKENS = new Set(['mass','masses','messe','messes','catholic','catholique','church','eglise','église','parish','paroisse','service','services','celebration','célébration','chapel','chapelle','next','now','prochaine','prochain','maintenant']);
+  const TIME_DAY_TOKENS = new Set(['today','tomorrow','aujourdhui','demain','monday','tuesday','wednesday','thursday','friday','saturday','sunday','lundi','mardi','mercredi','jeudi','vendredi','samedi','dimanche','morning','matin','matinee','afternoon','evening','night','soir','soiree','apres-midi','apres','midi','pm','am','english','anglais','french','francais']);
+  return String(raw || '')
+    .split(/\s+/)
+    .filter(token => {
+      const stripped = token.replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}]+$/gu, '');
+      const key = norm(stripped);
+      if(!key) return false;
+      if(CONNECTOR_TOKENS.has(key) || SERVICE_TOKENS.has(key) || TIME_DAY_TOKENS.has(key)) return false;
+      return true;
+    })
+    .join(' ')
+    .replace(/\s+/g,' ')
+    .trim();
+}
+function cleanIntentQuery(raw, intent){
+  let s = stripIntentPhrases(raw);
+  s = removeExactTimeText(s);
+  const patterns = [
+    /\b(today|tomorrow|monday|tuesday|wednesday|thursday|friday|saturday|sunday|aujourd[’' ]?hui|aujourdhui|demain|lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche)\b/gi,
+    /\b(morning|matin|matinée|matinee|afternoon|après-midi|apres-midi|après midi|apres midi|evening|night|soir|soirée|soiree)\b/gi,
+    /\b(english|anglais|french|fran[çc]ais)\b/gi,
+    /\b(adoration|exposition|prière|priere|prayer|celebration|célébration)\b/gi
+  ];
+  patterns.forEach(rx => { s = s.replace(rx, ' '); });
+  const cleaned = removeResidualConnectorTokens(s);
+  return searchKey(cleaned) ? cleaned : '';
+}
+function parseSearchIntent(raw){
+  const rawQuery = String(raw || '');
+  const normalizedQuery = norm(rawQuery);
+  const locationIntent = isNearMeIntent(rawQuery);
+  const exact = parseExactTime(rawQuery);
+  const timeModifier = exact ? (parseTimeModifier(rawQuery) || 'exact') : null;
+  const afterMinutes = parseAfterTime(rawQuery);
+  const beforeMinutes = parseBeforeTime(rawQuery);
+  const day = parseDayIntent(rawQuery);
+  let bucket = exact ? '' : (semanticTimeBucket(rawQuery) || (afterMinutes != null && afterMinutes >= 17*60 ? 'evening' : ''));
+  if(/\b(tonight|ce soir)\b/.test(normalizedQuery)) bucket = 'evening';
+  const lang = languageIntent(rawQuery);
+  const english = lang === 'english';
+  const other = isOtherCelebrationIntent(rawQuery);
+  const now = /\b(now|maintenant|next|prochaine|prochain)\b/.test(normalizedQuery);
+  const intent = {
+    raw: rawQuery,
+    rawQuery,
+    normalizedQuery,
+    locationIntent,
+    residualText: locationIntent ? removeNearMePhrases(rawQuery) : rawQuery,
+    dayIntent: day,
+    timeBucketIntent: bucket,
+    exactTimeIntent: exact,
+    exactTimeMinutes: exact ? exact.minutes : null,
+    languageIntent: lang,
+    serviceType: 'mass',
+    placeIntent: '',
+    otherDetectedIntents: {otherCelebration: other, now},
+    day,
+    bucket,
+    exactTime: exact,
+    timeModifier,
+    afterMinutes,
+    beforeMinutes,
+    near: locationIntent,
+    english,
+    language: lang,
+    other,
+    now,
+    consumedPhrases: [],
+    consumedTokens: []
+  };
+  intent.cleanQuery = cleanIntentQuery(rawQuery, intent);
+  intent.residualPlaceText = intent.cleanQuery;
+  intent.placeIntent = intent.cleanQuery;
+  return intent;
+}
+function intentChipLabels(intent){
+  const chips = [];
+  if(!intent || !norm(intent.raw)) return chips;
+  if(intent.day === 'today') chips.push(tr('chipToday'));
+  else if(intent.day === 'tomorrow') chips.push(tr('chipTomorrow'));
+  else if(intent.day && DAYS.includes(intent.day)) chips.push(dayLabel(intent.day));
+  if(intent.bucket) chips.push(tr(intent.bucket));
+  if(intent.afterMinutes != null && intent.exactTime) chips.push(tr('chipAfter',{time:intent.exactTime.label}));
+  else if(intent.exactTime) chips.push(intent.exactTime.label);
+  if(intent.near) chips.push(tr('chipNearMe'));
+  if(intent.english) chips.push(tr('chipEnglish'));
+  if(intent.other) chips.push(tr('chipOtherCelebrations'));
+  if(intent.cleanQuery) chips.push(intent.cleanQuery);
+  return [...new Set(chips.filter(Boolean))].slice(0,6);
+}
+function rowMatchesIntent(r, intent){
+  if(!intent) return true;
+  if(intent.day === 'today' && calendarDaysUntil(r) !== 0) return false;
+  if(intent.day === 'tomorrow' && calendarDaysUntil(r) !== 1) return false;
+  if(DAYS.includes(intent.day) && !(intent.day === 'Dimanche' ? isSundayFilterMatch(r) : r.day_of_week === intent.day)) return false;
+  if(intent.bucket && getTimeBucket(r.time_24h) !== intent.bucket) return false;
+  if(intent.afterMinutes != null && mins(r.time_24h) < intent.afterMinutes) return false;
+  if(intent.beforeMinutes != null && mins(r.time_24h) > intent.beforeMinutes) return false;
+  if(intent.exactTime && intent.afterMinutes == null && intent.beforeMinutes == null && Math.abs(mins(r.time_24h) - intent.exactTime.minutes) > 60) return false;
+  if(intent.language === 'english' || intent.english){
+    const text = searchKey([r.language,r.qualifier,r.special_rule,r.notes,r.display_category].join(' '));
+    if(!/\b(english|anglais)\b/.test(text)) return false;
+  }
+  if(intent.language === 'french'){
+    const text = searchKey([r.language,r.qualifier,r.special_rule,r.notes,r.display_category].join(' '));
+    if(!/\b(french|francais|français)\b/.test(text)) return false;
+  }
+  if(intent.other && r.is_mass_only_visible) return false;
+  return true;
+}
+function intentRankBoost(r, intent){
+  if(!intent) return 0;
+  let score = 0;
+  if(intent.cleanQuery){
+    const placeScore = searchScore(r, intent.cleanQuery);
+    score += placeScore * 4;
+    if(searchKey(siteDisplayName(r)) === searchKey(intent.cleanQuery)) score += 1000;
+    if(searchKey(r.parish_label || r.parish_name) === searchKey(intent.cleanQuery)) score += 800;
+    if(searchKey(r.town) === searchKey(intent.cleanQuery)) score += 600;
+  }
+  if(intent.day) score += 180;
+  if(intent.exactTime && intent.afterMinutes == null && intent.beforeMinutes == null) score += Math.max(0, 180 - Math.abs(mins(r.time_24h) - intent.exactTime.minutes));
+  if(intent.bucket) score += 120;
+  if(intent.english) score += 90;
+  // Distance ranking for Near Me is intentionally handled only by compareNearResults().
+  // Do not add a direct distance boost here, because it can push a very close
+  // far-future Mass above a more practically useful Mass today/tomorrow.
+  if(intent.now || nextMode) score += Math.max(0, 240 - nextDelta(r)/15);
+  return score;
+}
 function formatVerifiedDate(raw){
   const v = String(raw || '').trim();
   if(!v) return tr('verificationNeeded');
@@ -511,25 +766,41 @@ function relativeText(delta){
 }
 function distKm(a,b,c,d){ if([a,b,c,d].some(x=>x==null || Number.isNaN(x))) return null; const R=6371, rad=x=>x*Math.PI/180; const dLat=rad(c-a), dLon=rad(d-b); const h=Math.sin(dLat/2)**2+Math.cos(rad(a))*Math.cos(rad(c))*Math.sin(dLon/2)**2; return 2*R*Math.asin(Math.sqrt(h)); }
 function filtered(){
-  const rawQ=$('q').value, semanticBucket=semanticTimeBucket(rawQ), effectiveQ=queryWithoutSemanticTime(rawQ), day=$('day').value, region=$('region').value, mode=$('mode').value, timeOfDay=($('timeOfDay') ? $('timeOfDay').value : '') || semanticBucket;
+  const rawQ=$('q').value;
+  const intent=parseSearchIntent(rawQ);
+  const effectiveQ=intent.cleanQuery;
+  const selectedDay=$('day').value, region=$('region').value, mode=$('mode').value, selectedTimeOfDay=($('timeOfDay') ? $('timeOfDay').value : '');
+  const timeOfDay = selectedTimeOfDay || intent.bucket;
   let arr = DATA.filter(r=>r.is_active);
   let searchScoreCache = null;
   if(nearMode && !userPos) return [];
-  if(mode === 'mass') arr = arr.filter(r=>r.is_mass_only_visible);
+  const includeOtherByIntent = intent.other && norm(rawQ);
+  if(mode === 'mass' && !includeOtherByIntent) arr = arr.filter(r=>r.is_mass_only_visible);
   if(favOnly) arr = arr.filter(r=>favs.has(r.site_uid));
-  if(norm(effectiveQ) && !nearMode){
+  if(norm(effectiveQ)){
     searchScoreCache = new Map();
     arr = arr.filter(r=>{ const s=searchScore(r, effectiveQ); searchScoreCache.set(r,s); return s >= 30; });
   }
-  if(day && !nextMode) arr = arr.filter(r=> day === 'Dimanche' ? isSundayFilterMatch(r) : r.day_of_week === day);
+  arr = arr.filter(r=>rowMatchesIntent(r, intent));
+  if(selectedDay && !nextMode) arr = arr.filter(r=> selectedDay === 'Dimanche' ? isSundayFilterMatch(r) : r.day_of_week === selectedDay);
   if(region) arr = arr.filter(r=>r.region === region);
   if(timeOfDay) arr = arr.filter(r=>getTimeBucket(r.time_24h) === timeOfDay);
   if(quickMode === 'sundayMorning') arr = arr.filter(r=>isSundayFilterMatch(r));
+  const nearActive = (nearMode || intent.near) && userPos;
   arr.sort((a,b)=>{
-    if(norm(effectiveQ) && !nearMode){ const sb=searchScoreCache?.get(b) ?? searchScore(b, effectiveQ), sa=searchScoreCache?.get(a) ?? searchScore(a, effectiveQ); if(sb!==sa) return sb-sa; }
-    if(($('day').value === 'Dimanche' || quickMode === 'sundayMorning') && !nearMode && !nextMode){ const nd=nextDelta(a)-nextDelta(b); if(nd) return nd; const va=isVigilMass(a)?0:1, vb=isVigilMass(b)?0:1; if(va!==vb) return va-vb; }
-    if(nearMode && userPos){ return compareNearResults(a,b); }
-    if(nextMode){ const nd = nextDelta(a)-nextDelta(b); if(nd) return nd; }
+    if(nearActive){
+      const nearOrder = compareNearResults(a,b,intent);
+      if(nearOrder) return nearOrder;
+      const ib = intentRankBoost(b,intent), ia = intentRankBoost(a,intent);
+      if(ib !== ia) return ib - ia;
+      if(norm(effectiveQ)){ const sb=searchScoreCache?.get(b) ?? searchScore(b, effectiveQ), sa=searchScoreCache?.get(a) ?? searchScore(a, effectiveQ); if(sb!==sa) return sb-sa; }
+      return (DAYIDX[a.day_of_week]-DAYIDX[b.day_of_week]) || (mins(a.time_24h)-mins(b.time_24h)) || a.site_name.localeCompare(b.site_name);
+    }
+    const ib = intentRankBoost(b,intent), ia = intentRankBoost(a,intent);
+    if(ib !== ia) return ib - ia;
+    if(norm(effectiveQ)){ const sb=searchScoreCache?.get(b) ?? searchScore(b, effectiveQ), sa=searchScoreCache?.get(a) ?? searchScore(a, effectiveQ); if(sb!==sa) return sb-sa; }
+    if((selectedDay === 'Dimanche' || quickMode === 'sundayMorning') && !nextMode){ const nd=nextDelta(a)-nextDelta(b); if(nd) return nd; const va=isVigilMass(a)?0:1, vb=isVigilMass(b)?0:1; if(va!==vb) return va-vb; }
+    if(nextMode || intent.now){ const nd = nextDelta(a)-nextDelta(b); if(nd) return nd; }
     return (DAYIDX[a.day_of_week]-DAYIDX[b.day_of_week]) || (mins(a.time_24h)-mins(b.time_24h)) || a.site_name.localeCompare(b.site_name);
   });
   return arr;
@@ -624,14 +895,20 @@ function renderStats(){
 }
 function renderNotice(){
   const notices=[];
+  const raw = $('q')?.value || '';
+  const intent = parseSearchIntent(raw);
+  const chips = intentChipLabels(intent);
+  if(chips.length){
+    notices.push('<div class="notice ok searchIntentNotice"><b>'+esc(tr('searchUnderstoodLabel'))+':</b> <span class="intentChips">'+chips.map(c=>'<span class="badge">'+esc(c)+'</span>').join(' ')+'</span></div>');
+  }
   if(nextMode) notices.push('<div class="notice ok">'+esc(tr('nextNotice'))+'</div>');
   if(nearMode && userPos) notices.push('<div class="notice ok">'+esc(tr('locationNotice'))+'</div>');
   if(nearMode && userPos) notices.push('<div class="notice warn">'+esc(tr('nearPrecisionNote'))+'</div>');
   if(locationErrorKey) notices.push('<div class="notice warn">'+esc(tr(locationErrorKey))+'</div>');
   if(favOnly) notices.push('<div class="notice ok">'+esc(tr('favNotice'))+'</div>');
-  const semanticBucket = semanticTimeBucket($('q')?.value || '');
-  const semanticKey = semanticTimeNoticeKey(semanticBucket);
+  const semanticKey = semanticTimeNoticeKey(intent.bucket);
   if(semanticKey && !($('timeOfDay')?.value)) notices.push('<div class="notice ok">'+esc(tr(semanticKey))+'</div>');
+  if(intent.other && $('mode')?.value !== 'all') notices.push('<div class="notice warn">'+esc(tr('noResultOtherHint'))+'</div>');
   if(quickMode === 'sundayMorning' || $('day').value === 'Dimanche') notices.push('<div class="notice ok">'+esc(tr('sundayNotice'))+'</div>');
   if(($('mode').value==='all')) notices.push('<div class="notice warn">'+esc(tr('otherNotice'))+'</div>');
   $('notice').innerHTML = notices.join('');
@@ -806,6 +1083,17 @@ function renderNextHero(){
   $('heroShare')?.addEventListener('click',()=>shareAction(r));
   $('heroShowNext')?.addEventListener('click',()=>showNext());
 }
+function noResultHintForIntent(intent){
+  if(locationErrorKey) return tr('locationDenied');
+  if(intent?.near && !userPos) return tr('nearNoLocationText');
+  if(intent?.near && userPos) return tr('nearNoMatchHint');
+  if(intent?.english) return currentLang === 'fr' ? 'Aucune messe en anglais trouvée pour cette recherche. Les informations de langue peuvent être incomplètes ; essayez une recherche plus large.' : 'No English Mass found for this search. Language information may be incomplete; try broadening your search.';
+  if(intent?.other && $('mode')?.value !== 'all') return tr('noResultOtherHint');
+  if(intent?.bucket === 'evening') return currentLang === 'fr' ? 'Aucune messe du soir trouvée pour cette recherche. Essayez de retirer “soir” ou d’élargir le lieu.' : 'No evening Mass found for this search. Try removing “evening” or broadening the place.';
+  if(intent?.bucket === 'morning') return currentLang === 'fr' ? 'Aucune messe du matin trouvée pour cette recherche. Essayez de retirer “matin” ou d’élargir le lieu.' : 'No morning Mass found for this search. Try removing “morning” or broadening the place.';
+  if(intent?.exactTime) return currentLang === 'fr' ? 'Aucune messe trouvée autour de cet horaire. Essayez une heure proche ou retirez l’heure.' : 'No Mass found around that time. Try a nearby time or remove the time.';
+  return tr(nextMode ? 'noResultNextHint' : 'noResultHint');
+}
 function render(){
   updateStaticText();
   const arr=filtered(); renderStats(); renderNotice(); renderNextHero();
@@ -830,7 +1118,8 @@ function render(){
     }
     empty.appendChild(el('div',{},tr('noResult')));
     const rawQ=$('q')?.value || '';
-    const effectiveQ=queryWithoutSemanticTime(rawQ);
+    const intent=parseSearchIntent(rawQ);
+    const effectiveQ=intent.cleanQuery;
     const hasQuery=!!norm(effectiveQ || rawQ);
     const baseMode=$('mode')?.value || 'mass';
     let preFilterMatches=[];
@@ -850,8 +1139,7 @@ function render(){
       empty.appendChild(el('div',{class:'small'},tr('noResultFilters')));
       empty.appendChild(el('div',{class:'small'},tr('activeFiltersLabel')+': '+activeFilters.join(' · ')));
     } else {
-      const hintKey = nextMode ? 'noResultNextHint' : (locationErrorKey ? 'locationDenied' : 'noResultHint');
-      empty.appendChild(el('div',{class:'small'},tr(hintKey)));
+      empty.appendChild(el('div',{class:'small'},noResultHintForIntent(intent)));
       if(hasQuery){
         const suggestions=buildSuggestions(effectiveQ || rawQ);
         if(suggestions.length){
@@ -901,7 +1189,7 @@ function render(){
     else if(r.is_mass_only_visible){ badges.appendChild(el('span',{class:'badge mass','aria-label':tr('weekdayMassBadge')},tr('weekdayMassBadge'))); }
     if(!r.is_mass_only_visible){ badges.appendChild(el('span',{class:'badge warn','aria-label':tr('otherCelebrationBadge')},tr('otherCelebrationBadge'))); }
     badges.appendChild(el('span',{class:'badge '+(r.is_mass_only_visible?'mass':'')},categoryLabel(r)));
-    if(nextMode || nearMode){ badges.appendChild(el('span',{class:'badge'}, relativeDayLabel(r))); }
+    if(nextMode || nearMode || ['today','tomorrow'].includes(parseSearchIntent($('q')?.value || '').day) || parseSearchIntent($('q')?.value || '').now){ badges.appendChild(el('span',{class:'badge'}, relativeDayLabel(r))); }
     appendUniqueRuleBadge(badges, seenRuleTexts, r.special_rule, 'badge warn', tr('specialRuleBadge'));
     appendUniqueRuleBadge(badges, seenRuleTexts, r.qualifier, 'badge', '');
     if(r.language && !/^fr$/i.test(String(r.language).trim())) appendUniqueRuleBadge(badges, seenRuleTexts, r.language, 'badge', tr('languageLabel'));
@@ -969,13 +1257,8 @@ function showNext(){ trackEvent('next_mass_used'); nextMode=true; nearMode=false
 function showSunday(){ nextMode=false; nearMode=false; quickMode='sundayMorning'; favOnly=false; showAllResults=false; syncFavButton(); $('day').value='Dimanche'; $('mode').value='mass'; setActiveNav('navHome'); render(); scrollToResults(); }
 function syncFavButton(){ $('favOnlyBtn')?.classList.toggle('primary', favOnly); }
 function resetFiltersForNearMe(){
-  const day=$('day'), region=$('region'), mode=$('mode'), q=$('q');
-  if(day) day.value='';
-  if(region) region.value='';
-  if($('timeOfDay')) $('timeOfDay').value='';
-  if(mode) mode.value='mass';
-  if(q) q.value='';
-  nextMode=false; quickMode=''; favOnly=false; showAllResults=false; syncFavButton(); setActiveNav('navNear');
+  // Near Me is additive. Do not clear query, day, region, time, mode, language, or saved-church filters.
+  nextMode=false; quickMode=''; showAllResults=false; syncFavButton(); setActiveNav('navNear');
 }
 function showFavs(){ favOnly=true; nextMode=false; nearMode=false; quickMode=''; showAllResults=false; syncFavButton(); setActiveNav('navFav'); render(); scrollToResults(); }
 function ensureLocationPrompt(){
@@ -1022,9 +1305,9 @@ function showNear(){
   panel.scrollIntoView({behavior:'smooth', block:'center'});
 }
 
-$('q')?.addEventListener('input',()=>{ if(isNearMeIntent($('q').value)){ showNear(); renderSearchAssist(false); return; } nextMode=false; nearMode=false; locationErrorKey=''; quickMode=''; showAllResults=false; render(); renderSearchAssist(true); });
+$('q')?.addEventListener('input',()=>{ if(isNearMeIntent($('q').value)){ nextMode=false; quickMode=''; showAllResults=false; showNear(); render(); renderSearchAssist(false); return; } nextMode=false; nearMode=false; locationErrorKey=''; quickMode=''; showAllResults=false; render(); renderSearchAssist(true); });
 $('q')?.addEventListener('focus',()=>renderSearchAssist(true));
-$('q')?.addEventListener('keydown',e=>{ if(e.key==='Enter'){ if(isNearMeIntent($('q').value)){ e.preventDefault(); showNear(); renderSearchAssist(false); return; } saveRecentSearch($('q').value); trackEvent('search_used'); renderSearchAssist(false); } });
+$('q')?.addEventListener('keydown',e=>{ if(e.key==='Enter'){ if(isNearMeIntent($('q').value)){ e.preventDefault(); saveRecentSearch($('q').value); showNear(); renderSearchAssist(false); return; } saveRecentSearch($('q').value); trackEvent('search_used'); renderSearchAssist(false); } });
 ['day','region','timeOfDay','mode'].forEach(id => $(id).addEventListener('input',()=>{ nextMode=false; quickMode=''; showAllResults=false; render(); }));
 $('nextBtn').addEventListener('click',()=>showNext());
 $('clearBtn').addEventListener('click',()=>{ ['q','day','region','timeOfDay'].forEach(id=>{ if($(id)) $(id).value=''; }); $('mode').value='mass'; nextMode=true; nearMode=false; quickMode=''; favOnly=false; showAllResults=false; userPos=null; locationErrorKey=''; syncFavButton(); setActiveNav('navHome'); render(); });
@@ -1139,6 +1422,6 @@ function registerServiceWorker(){
 window.addEventListener('load',()=>{ initAnalytics(); registerServiceWorker(); checkForUpdate(); setInterval(checkForUpdate, 30*60*1000); });
 document.addEventListener('visibilitychange',()=>{ if(!document.hidden) checkForUpdate(); });
 initModals();
-window.MMF = {render, filtered, getData:()=>DATA, setLang, version:APP_VERSION, buildMapsQuery, siteDisplayName, searchMatchesRow, searchKey, searchScore, isNearMeIntent, compareNearResults, nearSortKey, buildSuggestions, isVigilMass, vigilStatus, isSundayFilterMatch, getTimeBucket, checkForUpdate};
+window.MMF = {render, filtered, getData:()=>DATA, setLang, version:APP_VERSION, buildMapsQuery, siteDisplayName, searchMatchesRow, searchKey, searchScore, parseSearchIntent, parseTimeModifier, intentChipLabels, isNearMeIntent, removeNearMePhrases, compareNearResults, nearSortKey, buildSuggestions, isVigilMass, vigilStatus, isSundayFilterMatch, getTimeBucket, checkForUpdate};
 loadData();
 })();
