@@ -1,4 +1,4 @@
-const CACHE='mmf-v24-23-1';
+const CACHE='mmf-v24-23-3';
 const SHELL=['./','index.html','app.js','config.js','manifest.json','icon.svg','icons/icon-192.png','icons/icon-512.png','icons/icon-maskable-192.png','icons/icon-maskable-512.png','version.json','fallback-data.js'];
 const DATA_PATHS=['/data/masses.json','/data/masses.csv','/fallback-data.js'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(SHELL)).then(()=>self.skipWaiting())));

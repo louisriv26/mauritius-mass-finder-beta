@@ -1,8 +1,8 @@
 {
-  "version": "24.23.1",
-  "release_name": "Release Correction & Verification",
+  "version": "24.23.3",
+  "release_name": "Release Metadata Alignment Patch",
   "build": "2026-05-02",
   "data_version": "2026-05-02",
-  "cache_version": "mmf-v24-23-1",
-  "notes": "Corrects coordinate precision display/navigation logic, normalises release metadata, and cleans the deployable package while preserving deterministic coordinate data."
+  "cache_version": "mmf-v24-23-3",
+  "notes": "Aligns data metadata with the release identity while preserving corrected coordinate precision logic and deterministic coordinate data."
 }

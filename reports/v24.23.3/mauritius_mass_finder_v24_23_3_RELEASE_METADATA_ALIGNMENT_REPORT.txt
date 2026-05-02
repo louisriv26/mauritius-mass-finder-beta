@@ -1,0 +1,31 @@
+Mauritius Mass Finder v24.23.3 — Release Metadata Alignment Report
+
+Scope
+- Baseline: v24.23.2 Release Discipline Patch.
+- Objective: correct stale v24.23.1 metadata in data/masses.json and fallback data while preserving all schedules, coordinates, precision logic, and app behavior.
+
+Changes made
+- Updated data/masses.json meta.version/app_version/release/release_name/cache_version/minimum_supported_cache to v24.23.3 / mmf-v24-23-3.
+- Regenerated fallback-data.js from corrected data/masses.json.
+- Updated runtime version/cache metadata to v24.23.3.
+- Removed prior release report folder and generated only current v24.23.3 reports.
+
+Validation
+- Rows: 396
+- Unique sites: 118
+- Unique parishes: 48
+- Mass rows: 379
+- Other rows: 17
+- Missing coordinates: 0
+- Invalid coordinate ranges: 0
+- Invalid precision labels: 0
+- Precision summary: {'approximate': 64, 'google_maps_place': 41, 'exact_church_building': 13}
+- JS syntax: PASS
+- Stale v24.23.1/v24.23.2 runtime references: NONE
+
+Precision rule preserved
+- Only exact_door with coordinate_confidence >= 0.90 is treated as exact by app logic.
+- exact_church_building, google_maps_place, and approximate remain approximate for distance/directions presentation.
+
+Release verdict
+PASS — v24.23.3 is the corrected release identity build.
