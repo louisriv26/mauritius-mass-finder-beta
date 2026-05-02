@@ -1,9 +1,9 @@
 window.MMF_FALLBACK_DATA = {
   "meta": {
     "app": "Mauritius Mass Finder",
-    "version": "v24.20-bottom-band-stability",
+    "version": "v24.20.1-emergency-layout-fix",
     "generated_at": "2026-04-29T19:30:00+04:00",
-    "source": "v24.20 Bottom Band Stability; Mass row data preserved from validated baseline.",
+    "source": "v24.20.1 Emergency Layout Fix; Mass row data preserved from validated baseline.",
     "row_count": 396,
     "parish_count": 48,
     "site_count": 118,
@@ -12,8 +12,8 @@ window.MMF_FALLBACK_DATA = {
     "notes": "Edge-case hardening release: Help close button, quick-card tablet layout, and result-card sharing clarity corrected. Mass row data preserved from the validated baseline.",
     "coordinate_update": "Coordinates and coordinate precision preserved from the validated coordinate-complete dataset where available.",
     "directions_update": "Directions use precise coordinates or rich text query fallback according to the preserved data.",
-    "app_version": "24.20",
-    "release": "v24.20 Bottom Band Stability",
+    "app_version": "24.20.1",
+    "release": "v24.20.1 Emergency Layout Fix",
     "last_verified": "2026-05-01",
     "sunday_obligation_rule": "Sunday Masses and Saturday Masses from 15:30 onward.",
     "sunday_obligation_rows": 188

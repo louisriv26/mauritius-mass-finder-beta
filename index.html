@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mauritius Mass Finder v24.20</title>
+<title>Mauritius Mass Finder v24.20.1</title>
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#7b2f2f">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
@@ -52,7 +52,7 @@ body{background:radial-gradient(circle at 8% -8%,rgba(111,44,44,.13),transparent
 .toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%) translateY(14px);z-index:120;background:#241814;color:#fff;border-radius:999px;padding:11px 16px;font-weight:800;box-shadow:0 14px 36px rgba(31,24,20,.25);opacity:0;pointer-events:none;transition:opacity .18s ease,transform .18s ease}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 #helpClose{min-width:44px;width:44px;padding:10px;font-size:24px;line-height:1}
 
-/* v24.20 bottom navigation regression fix: keep the mobile bottom band anchored to the viewport, not to page content. */
+/* v24.20.1 bottom navigation regression fix: keep the mobile bottom band anchored to the viewport, not to page content. */
 :root{--bottom-nav-reserve:104px}
 html,body{height:auto;min-height:100%;overflow-x:hidden}
 body{padding-bottom:calc(var(--bottom-nav-reserve) + env(safe-area-inset-bottom))}
@@ -73,6 +73,46 @@ body > .bottomNav .bottomNavInner{transform:none!important}
 @supports (height:100dvh){body{min-height:100dvh}}
 @supports (-webkit-touch-callout:none){body > .bottomNav{position:fixed!important;bottom:0!important}}
 .toast{bottom:calc(var(--bottom-nav-reserve) + 10px + env(safe-area-inset-bottom))!important}
+
+
+/* v24.20.1 emergency real-device layout fix: top-layer menu + hardened bottom navigation. */
+.hero{overflow:visible!important}
+.overflowMenuWrap{position:static!important}
+body > .overflowMenu, .overflowMenu{
+  position:fixed!important;
+  top:72px;
+  right:12px;
+  left:auto!important;
+  min-width:min(224px, calc(100vw - 24px));
+  max-width:calc(100vw - 24px);
+  z-index:2147483600!important;
+  background:#fff!important;
+  color:var(--ink)!important;
+  border:1px solid rgba(232,221,213,.98)!important;
+  border-radius:18px!important;
+  box-shadow:0 18px 45px rgba(31,24,20,.28)!important;
+  padding:8px!important;
+  overflow:visible!important;
+  transform:none!important;
+  contain:none!important;
+}
+body > .overflowMenu[hidden], .overflowMenu[hidden]{display:none!important}
+body > .overflowMenu button{display:block;width:100%;min-height:44px;text-align:left}
+body > .bottomNav{
+  position:fixed!important;
+  inset:auto 0 0 0!important;
+  top:auto!important;
+  z-index:2147483000!important;
+  transform:translate3d(0,0,0)!important;
+  translate:none!important;
+  will-change:transform;
+  contain:none!important;
+  backface-visibility:hidden;
+  -webkit-transform:translate3d(0,0,0)!important;
+}
+body > .bottomNav, body > .bottomNav *{max-height:none}
+main,.wrap{padding-bottom:calc(120px + env(safe-area-inset-bottom))!important}
+@media(max-width:390px){body > .overflowMenu{top:68px;right:8px;min-width:min(216px, calc(100vw - 16px));max-width:calc(100vw - 16px)}.heroControls{gap:12px!important}.menuButton{min-width:44px!important;min-height:44px!important}}
 
 </style>
 </head>
@@ -117,7 +157,7 @@ body > .bottomNav .bottomNavInner{transform:none!important}
 <section id="notice"></section>
 <section id="results"></section>
 <details class="aboutBox" id="aboutPanel"><summary data-i18n="aboutTitle">About this app</summary><div data-i18n-html="aboutHtml"><p>A simple Catholic Mass finder for Mauritius, built for fast mobile use.</p></div><div class="helpBox" id="howUpdatePanel" role="region" data-i18n-aria-label="howUpdateTitle" aria-label="How to update"><div data-i18n-html="howUpdateHtml"></div></div><p class="aboutMeta"><span data-i18n="versionWord">Version</span> <span id="aboutVersion"></span></p></details>
-<details class="aboutBox" id="whatsNewPanel"><summary data-i18n="whatNewTitle">What’s new in v24.20</summary><div data-i18n-html="whatNewHtml"><ul><li>Bottom navigation stability and Share UX refinement: the bottom band remains anchored during scrolling, and the app-level Share control is now in a clear menu.</li></ul></div></details>
+<details class="aboutBox" id="whatsNewPanel"><summary data-i18n="whatNewTitle">What’s new in v24.20.1</summary><div data-i18n-html="whatNewHtml"><ul><li>Bottom navigation stability and Share UX refinement: the bottom band remains anchored during scrolling, and the app-level Share control is now in a clear menu.</li></ul></div></details>
 <footer data-i18n="footerNote">Sources are linked on each result. Always verify special services directly with the parish when timing is critical.</footer>
 <div class="versionFooter" id="versionFooter"></div><div class="versionFooter footerTools"><button class="inlineHelpBtn" id="helpBtn" type="button" data-i18n="helpLink" data-i18n-aria-label="helpTitle">Help</button><button class="inlineHelpBtn" id="howUpdateBtn" type="button" data-i18n="howUpdateLink" data-i18n-aria-label="howUpdateTitle">How to update</button><button class="inlineHelpBtn" id="shareAppBtn" type="button" data-i18n="shareApp" data-i18n-aria-label="shareApp">Share app</button></div>
 </div><div class="modalOverlay" id="helpModal" role="dialog" aria-modal="true" aria-labelledby="helpModalTitle" hidden>

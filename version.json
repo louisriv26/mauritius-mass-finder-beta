@@ -1,16 +1,16 @@
 {
-  "version": "24.20",
+  "version": "24.20.1",
   "name": "Mauritius Mass Finder",
-  "release_name": "Share UX Refactor + Bottom Band Stability Fix",
-  "release": "v24.20 Share UX Refactor",
+  "release_name": "Emergency Layout Fix",
+  "release": "v24.20.1 Emergency Layout Fix",
   "build_date": "2026-05-02",
   "date": "2026-05-02",
   "last_verified": "2026-05-01",
   "data_version": "2026-04-29",
-  "cache_version": "mmf-v24-20",
-  "minimum_supported_cache": "mmf-v24-20",
+  "cache_version": "mmf-v24-20-1",
+  "minimum_supported_cache": "mmf-v24-20-1",
   "update_message_en": "A new version of Mauritius Mass Finder is available.",
   "update_message_fr": "Une nouvelle version de Trouver une Messe à Maurice est disponible.",
-  "notes": "Share UX release: replaces the ambiguous icon-only header Share control with a clear top-right menu, preserves result-card sharing, keeps the bottom navigation stability fix, and leaves the database unchanged.",
-  "app_version": "24.20"
+  "notes": "Emergency real-device layout fix: promotes the top-right menu above clipping containers and hardens the bottom navigation against mobile viewport scroll drift.",
+  "app_version": "24.20.1"
 }
