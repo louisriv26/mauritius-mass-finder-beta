@@ -1,24 +1,22 @@
 {
   "meta": {
     "app": "Mauritius Mass Finder",
-    "version": "24.20.1",
+    "version": "v24.19.1-ambiguous-time-ux",
     "generated_at": "2026-04-29T19:30:00+04:00",
-    "source": "v24.20.1 Emergency Layout Fix; Mass row data preserved from validated clean baseline.",
+    "source": "v24.19.1 Ambiguous Time UX; Mass row data preserved from validated clean baseline.",
     "row_count": 396,
     "parish_count": 48,
     "site_count": 118,
     "mass_rows": 379,
     "other_rows": 17,
-    "notes": "Emergency real-device layout fix: top-layer menu and bottom navigation stability hardening.",
+    "notes": "Edge-case hardening release: Help close button, quick-card tablet layout, and result-card sharing clarity corrected. Mass row data preserved from the validated baseline.",
     "coordinate_update": "Coordinates and coordinate precision preserved from the validated coordinate-complete dataset where available.",
     "directions_update": "Directions use precise coordinates or rich text query fallback according to the preserved data.",
-    "app_version": "24.20.1",
-    "release": "v24.20.1 Emergency Layout Fix",
+    "app_version": "24.19.1",
+    "release": "v24.19.1 Ambiguous Time UX",
     "last_verified": "2026-05-01",
     "sunday_obligation_rule": "Sunday Masses and Saturday Masses from 15:30 onward.",
-    "sunday_obligation_rows": 188,
-    "release_name": "Emergency Layout Fix",
-    "cache_version": "mmf-v24-20-1"
+    "sunday_obligation_rows": 188
   },
   "rows": [
     {

@@ -1,0 +1,85 @@
+Mauritius Mass Finder v24.19.1 — Ambiguous Time UX Correction Verification Report
+
+Verdict: PASS — v24.19.1 ambiguous time UX correction safe to deploy.
+
+Baseline
+- Built from v24.19 Edge-case Hardening.
+- Dataset preserved.
+- No app architecture, layout, quick-card, sharing, Help modal, Near Me, Sunday-obligation, My Churches, or PWA behavioural scope changes were intentionally introduced.
+
+Implemented corrections
+1. Dynamic ambiguous around-time message
+- around 6 -> 6am / 6pm guidance
+- around 7 -> 7am / 7pm guidance
+- about 8 -> 8am / 8pm guidance
+- vers 7 -> 7h / 19h guidance
+- environ 8 -> 8h / 20h guidance
+
+2. Ambiguous-time action chips
+- around/about/vers/environ bare-hour searches now generate two explicit suggestion chips.
+- Chips are wired through data-ambiguous-time and applySearchText(), so selecting one replaces the search with an explicit query.
+
+3. Bare before/after guidance
+- before 8 / after 5 / avant 8 / après 5 are detected as ambiguous bare-hour searches.
+- English and French guidance is dynamic.
+- Explicit forms remain supported: before 8am, after 5pm, avant 8h, après 17h.
+
+4. Special handling for 12
+- around 12 / about 12 / before 12 / after 12 / vers 12 / avant 12 / après 12 now show noon/midnight guidance rather than confusing 12am/12pm wording.
+
+Preserved v24.19 fixes
+- Mardi Gras stoplist preserved.
+- Late-day Today empty state preserved.
+- Far-away location warning preserved.
+- v24.18.1 UX corrections preserved.
+
+Static validation
+- APP_VERSION: 24.19.1
+- version.json: 24.19.1
+- manifest version: 24.19.1
+- service-worker cache: mmf-v24-19-1
+- JavaScript syntax: PASS
+- JSON parsing: PASS
+- CSV parsing: PASS
+- Zip integrity: PASS
+
+Data validation
+- JSON rows: 396
+- CSV rows: 396
+- Parish count: 48
+- Site count: 118
+- Missing coordinates: 0
+
+Scenario validation covered
+- around 6
+- around 7
+- about 8
+- vers 7
+- environ 8
+- around 6pm
+- around 18h
+- vers 18h
+- before 8
+- after 5
+- avant 8
+- après 5
+- before 8am
+- after 5pm
+- avant 8h
+- après 17h
+- around 12
+- about 12
+- vers 12
+- before 12
+- after 12
+- mardi gras
+- messe mardi
+- late-day Today empty state logic
+- far-away warning logic
+
+Residual notes
+- Full live-browser rendering was not used as a release gate in this environment; validation was performed by source inspection, syntax checks, data checks, version checks, and targeted scenario logic checks.
+- No blocking issue found.
+
+Final verdict
+PASS — v24.19.1 ambiguous time UX correction safe to deploy.
