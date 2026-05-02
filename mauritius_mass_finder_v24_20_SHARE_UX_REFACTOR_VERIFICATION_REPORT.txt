@@ -1,0 +1,73 @@
+# Mauritius Mass Finder v24.20 — Share UX Refactor Verification Report
+
+## Objective
+Replace the ambiguous icon-only header Share control with a clear overflow-menu pattern while preserving the validated app behaviour, result-card sharing, bottom-band stability fix, data, search, Near Me, My Churches, bilingual mode, ambiguity handling, and PWA update flow.
+
+## Build identity
+- Version: 24.20
+- Cache: mmf-v24-20
+- Release name: Share UX Refactor + Bottom Band Stability Fix
+- Package: mauritius_mass_finder_v24_20_share_ux_refactor_github_pages_ready.zip
+
+## Changes made
+1. Removed the header icon-only Share control completely.
+2. Added a top-right ellipsis menu (⋯) beside the EN/FR toggle.
+3. Added menu items:
+   - EN: Share this app, Help, About this app
+   - FR: Partager l’application, Aide, À propos de cette application
+4. App-level Share now runs from the menu and uses native Web Share when available, with clipboard/alert fallback if unavailable.
+5. Help opens the existing Help modal from the menu.
+6. About opens the existing About panel from the menu.
+7. Menu closes on outside click and ESC, and focus returns to the menu trigger.
+8. Result-card “Share Mass details” was preserved.
+9. Bottom navigation fixed-position hardening from the prior v24.20 bug-fix was preserved.
+10. Runtime stale references to the previous baseline were removed from user-facing files.
+
+## Static validation
+- Header Share arrow removed: PASS
+- No `headerShareApp`: PASS
+- No `heroShareBtn`: PASS
+- No visible ↗ Share icon: PASS
+- Ellipsis menu present: PASS
+- Menu items present: PASS
+- Menu has ARIA menu semantics: PASS
+- EN/FR live i18n keys present for menu: PASS
+- Share Mass details function still present: PASS
+- version.json updated: PASS
+- service-worker cache remains mmf-v24-20: PASS
+
+## Data validation
+- Rows: 396
+- Parishes: 48
+- Sites: 118
+- Missing coordinates: 0
+- Invalid time format: 0
+- Duplicate technical keys: 0
+- Dataset changed: NO
+
+## Syntax and package validation
+- app.js syntax: PASS
+- sw.js syntax: PASS
+- version.json valid JSON: PASS
+- manifest.json valid JSON: PASS
+- data/masses.json valid JSON: PASS
+- ZIP integrity: PASS
+
+## Scenario QA covered by code inspection
+- Tap ⋯ opens menu: PASS
+- Tap outside closes menu: PASS
+- ESC closes menu: PASS
+- Menu Share calls app Share action: PASS
+- Desktop fallback path remains available: PASS
+- Help menu item opens existing Help modal: PASS
+- About menu item opens existing About section: PASS
+- Language switching updates menu labels through existing i18n renderer: PASS
+- Header controls remain separated with >=12px gap in normal layout: PASS
+- Small-screen CSS avoids overlap by allowing wrapping: PASS
+
+## Residual assumptions
+- Native share sheet behaviour must be confirmed on physical iPhone Safari and Android Chrome after deployment because those APIs cannot be invoked in this static build environment.
+- Visual menu placement should be checked once on the deployed mobile URL, but the DOM/CSS now follows the requested interaction pattern.
+
+## Release verdict
+PASS — safe to deploy as the v24.20 Share UX Refactor release.

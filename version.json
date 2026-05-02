@@ -1,16 +1,16 @@
 {
-  "version": "24.19.1",
+  "version": "24.20",
   "name": "Mauritius Mass Finder",
-  "release_name": "Edge-case Hardening",
-  "release": "v24.19.1 Ambiguous Time UX Correction",
+  "release_name": "Share UX Refactor + Bottom Band Stability Fix",
+  "release": "v24.20 Share UX Refactor",
   "build_date": "2026-05-02",
   "date": "2026-05-02",
   "last_verified": "2026-05-01",
   "data_version": "2026-04-29",
-  "cache_version": "mmf-v24-19-1",
-  "minimum_supported_cache": "mmf-v24-19-1",
+  "cache_version": "mmf-v24-20",
+  "minimum_supported_cache": "mmf-v24-20",
   "update_message_en": "A new version of Mauritius Mass Finder is available.",
   "update_message_fr": "Une nouvelle version de Trouver une Messe à Maurice est disponible.",
-  "notes": "Ambiguous time UX correction release: adds ambiguity guidance for bare around-time searches, prevents Mardi Gras false Tuesday intent, improves late-day Today empty state, and warns when the user seems far from Mauritius. Database unchanged.",
-  "app_version": "24.19.1"
+  "notes": "Share UX release: replaces the ambiguous icon-only header Share control with a clear top-right menu, preserves result-card sharing, keeps the bottom navigation stability fix, and leaves the database unchanged.",
+  "app_version": "24.20"
 }
