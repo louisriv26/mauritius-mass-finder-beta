@@ -1,0 +1,54 @@
+# Mauritius Mass Finder v24.20.4 Header Simplification Compliance Cleanup — Verification Report
+
+## Verdict
+PASS — safe to deploy after live-phone confirmation
+
+## Baseline
+- Source package: mauritius_mass_finder_v24_20_3_header_simplification_github_pages_ready.zip
+- Rebuilt version: v24.20.4
+- Cache: mmf-v24-20-4
+
+## Changes made
+- Changed bottom app-share English copy from “Share app” to “Share this app”.
+- Preserved French app-share copy: “Partager l’application”.
+- Corrected stale runtime metadata wording from “Stability Recovery Release” to “Header Simplification Compliance Cleanup”.
+- Updated version and cache references to v24.20.4 / mmf-v24-20-4.
+
+## Data preservation
+- PASS — 396 rows preserved.
+- PASS — 48 parish identifiers preserved.
+- PASS — 118 site identifiers preserved.
+- PASS — 379 Mass rows preserved.
+- PASS — 17 other/non-Mass celebration rows preserved.
+- PASS — no schedule-row editing was performed.
+
+## Exact compliance gates
+- PASS — English bottom app-share label is “Share this app”.
+- PASS — French bottom app-share label is “Partager l’application”.
+- PASS — runtime files contain no stale “Share app” app-label reference.
+- PASS — runtime files contain no stale “Stability Recovery Release” reference.
+- PASS — version.json version is 24.20.4.
+- PASS — service-worker cache is mmf-v24-20-4.
+
+## Header gates
+- PASS — no top-header Share / Partager control restored.
+- PASS — no ellipsis header menu restored.
+- PASS — EN/FR toggle preserved.
+- PASS — no intentional header layout or bottom-band layout change was made.
+
+## Share gates
+- PASS — bottom app share remains wired to shareAppAction.
+- PASS — Web Share API path remains present.
+- PASS — clipboard fallback remains present.
+- PASS — fallback messages remain “Link copied” / “Lien copié”.
+- PASS — result-card share action remains wired to shareAction(row).
+- PASS — result-card share text still includes Mass-specific site, parish, day, time, source, directions, and app link.
+
+## Regression gates
+- PASS — search, filter, Near Me, Next Mass, My Churches, Help/About, update banner, language persistence, and bottom-band functions were not structurally changed.
+- PASS — JavaScript syntax check passed for app.js and sw.js.
+- PASS — JSON parse check passed for version.json, manifest.json, data/masses.json, and fallback-data.js payload.
+- PASS — zip integrity check passed.
+
+## Residual limitation
+- Live-phone confirmation is still required before claiming final public release, especially for native share-sheet behaviour, installed-PWA update behaviour, and small-screen header rendering.

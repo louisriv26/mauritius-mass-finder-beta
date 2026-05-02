@@ -1,16 +1,16 @@
 {
-  "version": "24.20.2",
+  "version": "24.20.4",
   "name": "Mauritius Mass Finder",
-  "release_name": "Edge-case Hardening",
-  "release": "v24.20.2 Stability Recovery Release",
+  "release_name": "Header Simplification Compliance Cleanup",
+  "release": "v24.20.4 Header Simplification Compliance Cleanup",
   "build_date": "2026-05-02",
   "date": "2026-05-02",
   "last_verified": "2026-05-01",
   "data_version": "2026-04-29",
-  "cache_version": "mmf-v24-20-2",
-  "minimum_supported_cache": "mmf-v24-20-2",
+  "cache_version": "mmf-v24-20-4",
+  "minimum_supported_cache": "mmf-v24-20-4",
   "update_message_en": "A new version of Mauritius Mass Finder is available.",
   "update_message_fr": "Une nouvelle version de Trouver une Messe à Maurice est disponible.",
-  "notes": "Ambiguous time UX correction release: adds ambiguity guidance for bare around-time searches, prevents Mardi Gras false Tuesday intent, improves late-day Today empty state, and warns when the user seems far from Mauritius. Database unchanged.",
-  "app_version": "24.20.2"
+  "notes": "Header simplification release. Top-header Share removed; app-level sharing retained in the lower help area; result-card Mass sharing, update flow, bottom navigation, search, filters, Near Me, Next Mass, My Churches, and bilingual mode preserved.",
+  "app_version": "24.20.4"
 }
