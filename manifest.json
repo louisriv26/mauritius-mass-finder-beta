@@ -1,7 +1,7 @@
 {
   "name": "Mauritius Mass Finder",
   "short_name": "Mass Finder",
-  "description": "Find a Catholic Mass quickly anywhere in Mauritius.",
+  "description": "Mauritius Mass Finder with precision-gated church coordinates and explicit confidence metadata.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
@@ -35,5 +35,5 @@
       "purpose": "maskable"
     }
   ],
-  "version": "24.20.4"
+  "version": "24.23.1"
 }

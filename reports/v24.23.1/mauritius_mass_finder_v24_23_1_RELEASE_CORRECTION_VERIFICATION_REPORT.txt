@@ -1,0 +1,54 @@
+Mauritius Mass Finder v24.23.1 — Release Correction & Verification Report
+
+Scope
+- Baseline: v24.23.0 deterministic coordinate resolution package.
+- Objective: correct release blockers found during independent verification and produce a clean GitHub Pages-ready package.
+
+Corrections applied
+1. Version normalization
+   - version.json updated to 24.23.1.
+   - manifest.json updated to 24.23.1.
+   - index.html visible version/title references updated to v24.23.1.
+   - app.js APP_VERSION updated to 24.23.1.
+   - sw.js cache updated to mmf-v24-23-1.
+   - data/fallback metadata updated to 24.23.1.
+
+2. Coordinate precision logic corrected
+   - Only coordinate_precision === exact_door with coordinate_confidence >= 0.90 is treated as exact.
+   - exact_church_building, google_maps_place, and approximate all display approximate distance with '~'.
+   - Non-exact coordinates use text-query Google Maps directions fallback instead of being treated as precise destinations.
+
+3. Deployable package cleaned
+   - Old v24.21/v24.22/v24.23 root audit artifacts and intermediate worklists removed from the deployable root.
+   - Current report only retained under reports/v24.23.1/.
+
+Data integrity validation
+- Rows preserved: 396
+- Unique sites preserved: 118
+- Unique parish UIDs preserved: 48
+- Mass rows: 379
+- Other/ambiguous rows: 17
+- Missing coordinates: 0
+- Invalid coordinate ranges: 0
+- Invalid coordinate precision labels: 0
+
+Site-level coordinate precision after correction
+- exact_door: 0
+- exact_church_building: 13
+- google_maps_place: 41
+- approximate: 64
+
+Validation checks
+- CSV / JSON row-count alignment: PASS
+- fallback-data.js equality with masses.json: PASS
+- JavaScript syntax check: PASS
+- Service worker syntax check: PASS
+- Runtime legacy v24.23.0/cache references removed from deployable files: PASS
+- Strict exact-door-only logic: PASS
+- Zip integrity: PASS
+
+Release verdict
+PASS — v24.23.1 is the corrected deployable release.
+
+Residual limitation
+This release does not add new coordinates. It corrects the release consistency and truthfulness of the coordinate precision logic. Exact-door remains 0 because no site currently has entrance-level verification evidence strong enough to label it exact_door.
