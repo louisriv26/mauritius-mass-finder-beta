@@ -1,6 +1,6 @@
 (() => {
 'use strict';
-const APP_VERSION = '24.23.3';
+const APP_VERSION = '24.24.0';
 const RELEASE_VERIFIED_DATE_EN = '1 May 2026';
 const RELEASE_VERIFIED_DATE_FR = '1 mai 2026';
 const DAYS = ['Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche'];
@@ -29,7 +29,7 @@ const T = {
     rowWord:'', rows:'', parishes:'Parishes', sites:'Churches & chapels', massRows:'Masses', other:'Other celebrations', showing:'', results:'results found', trustStrip:'{parishes} parishes · {sites} churches & chapels · verified {date}',
     noResult:'No Mass found.', noResultHint:'Try a nearby town, a simpler church name, “evening Mass”, “messe du soir”, or clear your filters.', nearNoMatchHint:'No nearby Mass matches all your filters. Try removing the time, day, or place filter.', noResultNextHint:'No upcoming Mass found with the current filters. Try a nearby town, a simpler name, or clear filters.', noResultOtherHint:'Some non-Mass celebrations may be hidden. Turn on “Include other celebrations” if needed.', noResultFilters:'Results exist, but your filters are hiding them.', activeFiltersLabel:'Active filters', clearFiltersAction:'Clear filters', didYouMean:'Did you mean', searchExamples:'Try: evening Mass Curepipe, morning Mass Port Louis, 18h Quatre Bornes, Saint Jean.', favEmptyTitle:'You haven’t saved any churches yet.', favEmptyHint:'You have not saved any churches yet. Tap ❤️ / Save on a church to add it here.', favEmptySearch:'Search now', favEmptyNear:'Show nearby Masses', vigilBadge:'Vigil Mass', vigilNotice:'Sunday obligation mode includes Sunday Masses and Saturday Masses from 15:30 onward.', nextNotice:'Showing the next available Masses across the coming 7 days, sorted by soonest time.', locationNotice:'Showing nearby Masses first. Wider results may appear if few are available.', favNotice:'Showing My Churches only.', otherNotice:'Other celebrations are shown separately and are not mixed into Masses-only results.',
     parish:'Parish', today:'Today', tomorrow:'Tomorrow', inDays:'In {n} day(s)', distanceExact:'{n} km', distanceApprox:'~{n} km', directions:'Directions', source:'Official source', favouriteOn:'★ My Church', favouriteOff:'☆ Save church', reportCorrection:'Report correction',
-    dataLiveJson:'Database loaded', dataGoogle:'Live database loaded', dataFallback:'Offline database loaded', copied:'Correction template copied and email opened.', locationAsk:'Use your location to show nearby Masses. Your location is not stored.', locationDenied:'Location access is needed for Near Me. You can still search by place, parish, or time.', locationUnsupported:'Location is not available. You can still search by church, area, parish, or use directions from a result card.', correction:'Correction', checkEntry:'Please check this Mass Finder entry:', dayTime:'Day/time', serviceMass:'Mass', serviceOther:'Other celebration', updateAvailable:'A new version is available', updateText:'Refresh to use the latest version. If the old version remains, close and reopen the app.', updateRefresh:'Refresh now', updateDismiss:'Later', lastVerified:'Last verified', verifiedNote:'Mass times can change. Check the official source for feast days, funerals, cyclones, holidays, or recent parish changes.', howUpdateLink:'How to update', howUpdateTitle:'How to update the app', howUpdateHtml:'<h3>How to update the app</h3><p>If a new version is available:</p><ol><li>Tap “Refresh / Update” if the banner appears.</li><li>If the app does not update, close it completely and reopen it.</li><li>On iPhone, swipe up and close the app from the app switcher, then reopen it.</li><li>If it is still stuck on an old version, remove the home-screen shortcut and install it again from the latest link.</li></ol><p>Your saved churches should normally remain saved.</p>', sundayObligationBadge:'Counts for Sunday obligation', sundayMassBadge:'Sunday Mass', weekdayMassBadge:'Weekday Mass', specialRuleBadge:'Special rule', otherCelebrationBadge:'Other celebration / ambiguous', vigilInferredBadge:'Counts for Sunday obligation', whatNewTitle:'What’s new in v24.23.3', whatNewHtml:'<ul><li>Rechecked all church coordinates and added further defensible Google Maps / church-building coordinates where evidence was strong enough.</li><li>Preserved the simplified header, lower-area app sharing, result-card Mass sharing, update refresh, bottom navigation, and core search behaviour.</li></ul>', helpLink:'Help', helpTitle:'Help Center / User Guide', backToResults:'Back to results', helpHtml:'<h3>Find a Mass quickly</h3><p>Use simple words. You can search by place, time, or both together.</p><h4>Search by place</h4><p>Try a town, parish, or church name: <b>Curepipe</b>, <b>Quatre Bornes</b>, <b>Port Louis</b>, <b>Saint Jean</b>, <b>Sacré Coeur</b>.</p><h4>Search by time</h4><p>Try natural words: <b>evening Mass</b>, <b>morning Mass</b>, <b>afternoon Mass</b>, <b>messe du soir</b>, <b>messe du matin</b>.</p><h4>Combine place and time</h4><p>Try: <b>evening Mass Curepipe</b>, <b>morning Mass Port Louis</b>, <b>messe du soir Quatre Bornes</b>.</p><h4>Use an exact time</h4><p>Try: <b>18:00</b>, <b>18h</b>, <b>6pm</b>, or <b>07:30</b>.</p><h4>Spelling tips</h4><p>You do not need accents. <b>Sacre Coeur</b> can find <b>Sacré-Cœur</b>. You can type <b>Saint</b> or <b>St</b>. Partial names often work.</p><h3>Near Me / Next Mass</h3><p>Tap <b>Next Mass near you</b> or <b>Near me</b> and allow location access. The app shows upcoming Masses, with nearby options first. Distances marked with <b>~</b> are approximate; exact distances are shown only for evidence-gated door-level pins.</p><h3>My Churches</h3><p>Tap <b>Save church</b> to keep a church in <b>My Churches</b>. Tap again to remove it.</p><h3>Share the app</h3><p>Tap <b>Share this app</b> to send the link by WhatsApp, Messages, or email.</p><h3>Other celebrations</h3><p>By default, the app shows Masses only. Turn on <b>Include other celebrations</b> to also show items such as adoration, prayer services, or other non-Mass celebrations.</p><h3>Accuracy and source information</h3><p>Each result includes an official source link where available. Mass times can change for feast days, funerals, cyclones, public holidays, or parish updates. When timing is critical, check the source or contact the parish.</p><h3>Report a correction</h3><p>On any result, tap <b>Report correction</b>. The app prepares the church, parish, day, time, and source details so a correction can be sent easily.</p><h3>Updating the app</h3><p>If an update banner appears, tap <b>Refresh now</b>. If the old version remains, close the app completely and reopen it. Your saved churches should normally remain saved.</p>', close:'Close', onboardingSkip:'Skip', onboardingNext:'Next', onboardingDone:'Got it', onboarding1Title:'Find a Mass in seconds', onboarding1Text:'Try simple searches like Curepipe, evening Mass, messe du matin, or 18h.', onboarding2Title:'Combine time and place', onboarding2Text:'Try evening Mass Quatre Bornes or messe du soir Curepipe to narrow results faster.', onboarding3Title:'Use Near Me and save churches', onboarding3Text:'Allow location to find nearby Masses, and save your regular churches in My Churches.', approximateLabel:'Approximate distance', exactLabel:'Distance', townLabel:'Town', categoryLabelText:'Category', mapsLabel:'Maps', appVersionLabel:'App version', correctionPrompt:'Correction needed', nearPrecisionNote:'Nearby results are prioritised within about 12 km where available. Distances marked ~ are approximate.', trustNote:'Mass times can change. Check the official source for feast days, funerals, cyclones, holidays, or recent parish changes. Report a correction if something looks wrong.'
+    dataLiveJson:'Database loaded', dataGoogle:'Live database loaded', dataFallback:'Offline database loaded', copied:'Correction template copied and email opened.', locationAsk:'Use your location to show nearby Masses. Your location is not stored.', locationDenied:'Location access is needed for Near Me. You can still search by place, parish, or time.', locationUnsupported:'Location is not available. You can still search by church, area, parish, or use directions from a result card.', correction:'Correction', checkEntry:'Please check this Mass Finder entry:', dayTime:'Day/time', serviceMass:'Mass', serviceOther:'Other celebration', updateAvailable:'A new version is available', updateText:'Refresh to use the latest version. If the old version remains, close and reopen the app.', updateRefresh:'Refresh now', updateDismiss:'Later', lastVerified:'Last verified', verifiedNote:'Mass times can change. Check the official source for feast days, funerals, cyclones, holidays, or recent parish changes.', howUpdateLink:'How to update', howUpdateTitle:'How to update the app', howUpdateHtml:'<h3>How to update the app</h3><p>If a new version is available:</p><ol><li>Tap “Refresh / Update” if the banner appears.</li><li>If the app does not update, close it completely and reopen it.</li><li>On iPhone, swipe up and close the app from the app switcher, then reopen it.</li><li>If it is still stuck on an old version, remove the home-screen shortcut and install it again from the latest link.</li></ol><p>Your saved churches should normally remain saved.</p>', sundayObligationBadge:'Counts for Sunday obligation', sundayMassBadge:'Sunday Mass', weekdayMassBadge:'Weekday Mass', specialRuleBadge:'Special rule', otherCelebrationBadge:'Other celebration / ambiguous', vigilInferredBadge:'Counts for Sunday obligation', whatNewTitle:'What’s new in v24.24.0', whatNewHtml:'<ul><li>Completely redesigned UX: search now lives in the hero, quick actions are compact pills, filters move to a bottom sheet, and My Churches shows your next Mass inline.</li></ul>', helpLink:'Help', helpTitle:'Help Center / User Guide', backToResults:'Back to results', helpHtml:'<h3>Find a Mass quickly</h3><p>Use simple words. You can search by place, time, or both together.</p><h4>Search by place</h4><p>Try a town, parish, or church name: <b>Curepipe</b>, <b>Quatre Bornes</b>, <b>Port Louis</b>, <b>Saint Jean</b>, <b>Sacré Coeur</b>.</p><h4>Search by time</h4><p>Try natural words: <b>evening Mass</b>, <b>morning Mass</b>, <b>afternoon Mass</b>, <b>messe du soir</b>, <b>messe du matin</b>.</p><h4>Combine place and time</h4><p>Try: <b>evening Mass Curepipe</b>, <b>morning Mass Port Louis</b>, <b>messe du soir Quatre Bornes</b>.</p><h4>Use an exact time</h4><p>Try: <b>18:00</b>, <b>18h</b>, <b>6pm</b>, or <b>07:30</b>.</p><h4>Spelling tips</h4><p>You do not need accents. <b>Sacre Coeur</b> can find <b>Sacré-Cœur</b>. You can type <b>Saint</b> or <b>St</b>. Partial names often work.</p><h3>Near Me / Next Mass</h3><p>Tap <b>Next Mass near you</b> or <b>Near me</b> and allow location access. The app shows upcoming Masses, with nearby options first. Distances marked with <b>~</b> are approximate; exact distances are shown only for evidence-gated door-level pins.</p><h3>My Churches</h3><p>Tap <b>Save church</b> to keep a church in <b>My Churches</b>. Tap again to remove it.</p><h3>Share the app</h3><p>Tap <b>Share this app</b> to send the link by WhatsApp, Messages, or email.</p><h3>Other celebrations</h3><p>By default, the app shows Masses only. Turn on <b>Include other celebrations</b> to also show items such as adoration, prayer services, or other non-Mass celebrations.</p><h3>Accuracy and source information</h3><p>Each result includes an official source link where available. Mass times can change for feast days, funerals, cyclones, public holidays, or parish updates. When timing is critical, check the source or contact the parish.</p><h3>Report a correction</h3><p>On any result, tap <b>Report correction</b>. The app prepares the church, parish, day, time, and source details so a correction can be sent easily.</p><h3>Updating the app</h3><p>If an update banner appears, tap <b>Refresh now</b>. If the old version remains, close the app completely and reopen it. Your saved churches should normally remain saved.</p>', close:'Close', onboardingSkip:'Skip', onboardingNext:'Next', onboardingDone:'Got it', onboarding1Title:'Find a Mass in seconds', onboarding1Text:'Try simple searches like Curepipe, evening Mass, messe du matin, or 18h.', onboarding2Title:'Combine time and place', onboarding2Text:'Try evening Mass Quatre Bornes or messe du soir Curepipe to narrow results faster.', onboarding3Title:'Use Near Me and save churches', onboarding3Text:'Allow location to find nearby Masses, and save your regular churches in My Churches.', approximateLabel:'Approximate distance', exactLabel:'Distance', townLabel:'Town', categoryLabelText:'Category', mapsLabel:'Maps', appVersionLabel:'App version', correctionPrompt:'Correction needed', nearPrecisionNote:'Nearby results are prioritised within about 12 km where available. Distances marked ~ are approximate.', trustNote:'Mass times can change. Check the official source for feast days, funerals, cyclones, holidays, or recent parish changes. Report a correction if something looks wrong.'
   },
   fr: {
     appTitle:'Trouver une Messe à Maurice',
@@ -50,7 +50,7 @@ const T = {
     rowWord:'', rows:'', parishes:'Paroisses', sites:'Églises et chapelles', massRows:'Messes', other:'Autres célébrations', showing:'', results:'résultats', trustStrip:'{parishes} paroisses · {sites} églises et chapelles · vérifié {date}',
     noResult:'Aucune messe trouvée.', noResultHint:'Essayez une ville proche, un nom d’église plus simple, « messe du soir », « evening Mass », ou effacez les filtres.', noResultNextHint:'Aucune prochaine messe trouvée avec les filtres actuels. Essayez une ville proche, un nom plus simple, ou effacez les filtres.', noResultOtherHint:'Certaines célébrations hors messe peuvent être masquées. Activez « Inclure les autres célébrations » si nécessaire.', noResultFilters:'Des résultats existent, mais vos filtres les masquent.', activeFiltersLabel:'Filtres actifs', clearFiltersAction:'Effacer les filtres', didYouMean:'Voulez-vous dire', searchExamples:'Essayez : messe du soir Curepipe, messe du matin Port Louis, 18h Quatre Bornes, Saint Jean.', favEmptyTitle:'Vous n’avez encore enregistré aucune église.', favEmptyHint:'Vous n’avez pas encore enregistré d’églises. Appuyez sur ❤️ / Enregistrer sur une église pour l’ajouter ici.', favEmptySearch:'Rechercher maintenant', favEmptyNear:'Afficher les messes proches', vigilBadge:'Messe anticipée', vigilNotice:'Le mode obligation dominicale inclut les messes du dimanche et les messes du samedi à partir de 15h30.', nextNotice:'Affichage des prochaines messes disponibles sur les 7 prochains jours, triées par horaire.', locationNotice:'Les messes proches sont affichées en premier. Des résultats plus éloignés peuvent apparaître s’il y a peu d’options.', favNotice:'Affichage de mes églises seulement.', otherNotice:'Les autres célébrations sont affichées séparément et ne sont pas mélangées aux résultats “messes seulement”.',
     parish:'Paroisse', today:'Aujourd’hui', tomorrow:'Demain', inDays:'Dans {n} jour(s)', distanceExact:'{n} km', distanceApprox:'~{n} km', directions:'Itinéraire', source:'Source officielle', favouriteOn:'★ Mon église', favouriteOff:'☆ Sauvegarder', reportCorrection:'Signaler une correction',
-    dataLiveJson:'Base chargée', dataGoogle:'Base en direct chargée', dataFallback:'Base hors ligne chargée', copied:'Modèle copié et e-mail ouvert.', locationAsk:'Utilisez votre position pour afficher les messes proches. Votre position n’est pas enregistrée.', locationDenied:'La localisation est nécessaire pour « près de moi ». Vous pouvez toujours rechercher par lieu, paroisse ou horaire.', locationUnsupported:'La localisation n’est pas disponible. Vous pouvez chercher par église, région, paroisse, ou utiliser l’itinéraire depuis une fiche.', correction:'Correction', checkEntry:'Veuillez vérifier cette entrée du Mass Finder :', dayTime:'Jour/heure', serviceMass:'Messe', serviceOther:'Autre célébration', updateAvailable:'Une nouvelle version est disponible', updateText:'Actualisez pour utiliser la dernière version. Si l’ancienne version reste affichée, fermez puis rouvrez l’application.', updateRefresh:'Actualiser', updateDismiss:'Plus tard', lastVerified:'Dernière vérification', verifiedNote:'Les horaires peuvent changer. Vérifiez la source officielle en cas de fêtes, funérailles, cyclones, jours fériés ou changement paroissial récent.', howUpdateLink:'Comment mettre à jour', howUpdateTitle:'Comment mettre l’application à jour', howUpdateHtml:'<h3>Comment mettre l’application à jour</h3><p>Si une nouvelle version est disponible :</p><ol><li>Appuyez sur « Actualiser / Mettre à jour » si la bannière apparaît.</li><li>Si l’application ne se met pas à jour, fermez-la complètement puis rouvrez-la.</li><li>Sur iPhone, fermez l’application depuis le sélecteur d’applications, puis rouvrez-la.</li><li>Si l’ancienne version reste bloquée, supprimez le raccourci de l’écran d’accueil et réinstallez-le avec le dernier lien.</li></ol><p>Vos églises enregistrées devraient normalement rester sauvegardées.</p>', sundayObligationBadge:'Obligation dominicale', sundayMassBadge:'Messe du dimanche', weekdayMassBadge:'Messe de semaine', specialRuleBadge:'Règle spéciale', otherCelebrationBadge:'Autre célébration / ambigu', vigilInferredBadge:'Obligation dominicale', whatNewTitle:'Nouveautés v24.23.3', whatNewHtml:'<ul><li>Nouvelle vérification complète des coordonnées et ajout de coordonnées Google Maps / bâtiment d’église lorsque les preuves étaient suffisantes.</li><li>Préservation de l’en-tête simplifié, du partage de l’application en bas, du partage des fiches de messe, de l’actualisation, de la navigation inférieure et de la recherche principale.</li></ul>', helpLink:'Aide', helpTitle:'Centre d’aide / Guide d’utilisation', backToResults:'Retour aux résultats', helpHtml:'<h3>Trouver une messe rapidement</h3><p>Utilisez des mots simples. Vous pouvez chercher par lieu, par moment, ou les deux ensemble.</p><h4>Rechercher par lieu</h4><p>Essayez une ville, une paroisse ou une église : <b>Curepipe</b>, <b>Quatre Bornes</b>, <b>Port Louis</b>, <b>Saint Jean</b>, <b>Sacré Cœur</b>.</p><h4>Rechercher par horaire</h4><p>Essayez des mots simples : <b>messe du soir</b>, <b>messe du matin</b>, <b>messe de l’après-midi</b>, <b>evening Mass</b>, <b>morning Mass</b>.</p><h4>Combiner lieu et horaire</h4><p>Essayez : <b>messe du soir Curepipe</b>, <b>messe du matin Port Louis</b>, <b>evening Mass Quatre Bornes</b>.</p><h4>Utiliser une heure précise</h4><p>Essayez : <b>18h</b>, <b>18:00</b>, <b>6pm</b> ou <b>07:30</b>.</p><h4>Conseils d’écriture</h4><p>Les accents ne sont pas obligatoires. <b>Sacre Coeur</b> peut trouver <b>Sacré-Cœur</b>. Vous pouvez écrire <b>Saint</b> ou <b>St</b>. Un nom partiel suffit souvent.</p><h3>Près de moi / Prochaine messe</h3><p>Appuyez sur <b>Prochaine messe près de vous</b> ou <b>Près de moi</b> et autorisez la localisation. L’application affiche les prochaines messes, avec les options proches en priorité. Les distances avec <b>~</b> sont approximatives ; les distances exactes sont affichées uniquement pour les positions vérifiées au niveau de l’entrée.</p><h3>Mes églises</h3><p>Appuyez sur <b>Sauvegarder</b> pour garder une église dans <b>Mes églises</b>. Appuyez à nouveau pour la retirer.</p><h3>Partager l’application</h3><p>Appuyez sur <b>Partager l’application</b> pour envoyer le lien par WhatsApp, Messages ou e-mail.</p><h3>Autres célébrations</h3><p>Par défaut, l’application affiche uniquement les messes. Activez <b>Inclure les autres célébrations</b> pour voir aussi des adorations, temps de prière ou autres célébrations qui ne sont pas des messes.</p><h3>Exactitude et sources</h3><p>Chaque résultat contient un lien vers la source officielle lorsqu’elle est disponible. Les horaires peuvent changer en cas de fêtes, funérailles, cyclones, jours fériés ou changement paroissial. Lorsque l’horaire est important, vérifiez la source ou contactez la paroisse.</p><h3>Signaler une correction</h3><p>Sur un résultat, appuyez sur <b>Signaler une correction</b>. L’application prépare les détails de l’église, de la paroisse, du jour, de l’heure et de la source.</p><h3>Mettre à jour l’application</h3><p>Si une bannière de mise à jour apparaît, appuyez sur <b>Actualiser</b>. Si l’ancienne version reste affichée, fermez complètement l’application puis rouvrez-la. Vos églises enregistrées devraient normalement rester sauvegardées.</p>', close:'Fermer', onboardingSkip:'Passer', onboardingNext:'Suivant', onboardingDone:'Compris', onboarding1Title:'Trouver une messe en quelques secondes', onboarding1Text:'Essayez des recherches simples comme Curepipe, messe du soir, morning Mass ou 18h.', onboarding2Title:'Combiner horaire et lieu', onboarding2Text:'Essayez messe du soir Quatre Bornes ou evening Mass Curepipe pour cibler plus vite.', onboarding3Title:'Utiliser Près de moi et Mes églises', onboarding3Text:'Autorisez la localisation pour trouver les messes proches et sauvegardez vos églises habituelles.', approximateLabel:'Distance approximative', exactLabel:'Distance', townLabel:'Localité', categoryLabelText:'Catégorie', mapsLabel:'Cartes', appVersionLabel:'Version de l’application', correctionPrompt:'Correction à apporter', nearPrecisionNote:'Les résultats proches sont priorisés autour de 12 km lorsque possible. Les distances avec ~ sont approximatives.', trustNote:'Les horaires peuvent changer. Vérifiez la source officielle en cas de fêtes, funérailles, cyclones, jours fériés ou changement paroissial récent. Signalez une correction si une information semble incorrecte.'
+    dataLiveJson:'Base chargée', dataGoogle:'Base en direct chargée', dataFallback:'Base hors ligne chargée', copied:'Modèle copié et e-mail ouvert.', locationAsk:'Utilisez votre position pour afficher les messes proches. Votre position n’est pas enregistrée.', locationDenied:'La localisation est nécessaire pour « près de moi ». Vous pouvez toujours rechercher par lieu, paroisse ou horaire.', locationUnsupported:'La localisation n’est pas disponible. Vous pouvez chercher par église, région, paroisse, ou utiliser l’itinéraire depuis une fiche.', correction:'Correction', checkEntry:'Veuillez vérifier cette entrée du Mass Finder :', dayTime:'Jour/heure', serviceMass:'Messe', serviceOther:'Autre célébration', updateAvailable:'Une nouvelle version est disponible', updateText:'Actualisez pour utiliser la dernière version. Si l’ancienne version reste affichée, fermez puis rouvrez l’application.', updateRefresh:'Actualiser', updateDismiss:'Plus tard', lastVerified:'Dernière vérification', verifiedNote:'Les horaires peuvent changer. Vérifiez la source officielle en cas de fêtes, funérailles, cyclones, jours fériés ou changement paroissial récent.', howUpdateLink:'Comment mettre à jour', howUpdateTitle:'Comment mettre l’application à jour', howUpdateHtml:'<h3>Comment mettre l’application à jour</h3><p>Si une nouvelle version est disponible :</p><ol><li>Appuyez sur « Actualiser / Mettre à jour » si la bannière apparaît.</li><li>Si l’application ne se met pas à jour, fermez-la complètement puis rouvrez-la.</li><li>Sur iPhone, fermez l’application depuis le sélecteur d’applications, puis rouvrez-la.</li><li>Si l’ancienne version reste bloquée, supprimez le raccourci de l’écran d’accueil et réinstallez-le avec le dernier lien.</li></ol><p>Vos églises enregistrées devraient normalement rester sauvegardées.</p>', sundayObligationBadge:'Obligation dominicale', sundayMassBadge:'Messe du dimanche', weekdayMassBadge:'Messe de semaine', specialRuleBadge:'Règle spéciale', otherCelebrationBadge:'Autre célébration / ambigu', vigilInferredBadge:'Obligation dominicale', whatNewTitle:'Nouveautés v24.24.0', whatNewHtml:'<ul><li>Refonte complète de l’interface : la recherche est maintenant dans l’en-tête, les actions rapides sont des pilules compactes, les filtres sont dans un panneau inférieur, et Mes églises affiche votre prochaine messe directement.</li></ul>', helpLink:'Aide', helpTitle:'Centre d’aide / Guide d’utilisation', backToResults:'Retour aux résultats', helpHtml:'<h3>Trouver une messe rapidement</h3><p>Utilisez des mots simples. Vous pouvez chercher par lieu, par moment, ou les deux ensemble.</p><h4>Rechercher par lieu</h4><p>Essayez une ville, une paroisse ou une église : <b>Curepipe</b>, <b>Quatre Bornes</b>, <b>Port Louis</b>, <b>Saint Jean</b>, <b>Sacré Cœur</b>.</p><h4>Rechercher par horaire</h4><p>Essayez des mots simples : <b>messe du soir</b>, <b>messe du matin</b>, <b>messe de l’après-midi</b>, <b>evening Mass</b>, <b>morning Mass</b>.</p><h4>Combiner lieu et horaire</h4><p>Essayez : <b>messe du soir Curepipe</b>, <b>messe du matin Port Louis</b>, <b>evening Mass Quatre Bornes</b>.</p><h4>Utiliser une heure précise</h4><p>Essayez : <b>18h</b>, <b>18:00</b>, <b>6pm</b> ou <b>07:30</b>.</p><h4>Conseils d’écriture</h4><p>Les accents ne sont pas obligatoires. <b>Sacre Coeur</b> peut trouver <b>Sacré-Cœur</b>. Vous pouvez écrire <b>Saint</b> ou <b>St</b>. Un nom partiel suffit souvent.</p><h3>Près de moi / Prochaine messe</h3><p>Appuyez sur <b>Prochaine messe près de vous</b> ou <b>Près de moi</b> et autorisez la localisation. L’application affiche les prochaines messes, avec les options proches en priorité. Les distances avec <b>~</b> sont approximatives ; les distances exactes sont affichées uniquement pour les positions vérifiées au niveau de l’entrée.</p><h3>Mes églises</h3><p>Appuyez sur <b>Sauvegarder</b> pour garder une église dans <b>Mes églises</b>. Appuyez à nouveau pour la retirer.</p><h3>Partager l’application</h3><p>Appuyez sur <b>Partager l’application</b> pour envoyer le lien par WhatsApp, Messages ou e-mail.</p><h3>Autres célébrations</h3><p>Par défaut, l’application affiche uniquement les messes. Activez <b>Inclure les autres célébrations</b> pour voir aussi des adorations, temps de prière ou autres célébrations qui ne sont pas des messes.</p><h3>Exactitude et sources</h3><p>Chaque résultat contient un lien vers la source officielle lorsqu’elle est disponible. Les horaires peuvent changer en cas de fêtes, funérailles, cyclones, jours fériés ou changement paroissial. Lorsque l’horaire est important, vérifiez la source ou contactez la paroisse.</p><h3>Signaler une correction</h3><p>Sur un résultat, appuyez sur <b>Signaler une correction</b>. L’application prépare les détails de l’église, de la paroisse, du jour, de l’heure et de la source.</p><h3>Mettre à jour l’application</h3><p>Si une bannière de mise à jour apparaît, appuyez sur <b>Actualiser</b>. Si l’ancienne version reste affichée, fermez complètement l’application puis rouvrez-la. Vos églises enregistrées devraient normalement rester sauvegardées.</p>', close:'Fermer', onboardingSkip:'Passer', onboardingNext:'Suivant', onboardingDone:'Compris', onboarding1Title:'Trouver une messe en quelques secondes', onboarding1Text:'Essayez des recherches simples comme Curepipe, messe du soir, morning Mass ou 18h.', onboarding2Title:'Combiner horaire et lieu', onboarding2Text:'Essayez messe du soir Quatre Bornes ou evening Mass Curepipe pour cibler plus vite.', onboarding3Title:'Utiliser Près de moi et Mes églises', onboarding3Text:'Autorisez la localisation pour trouver les messes proches et sauvegardez vos églises habituelles.', approximateLabel:'Distance approximative', exactLabel:'Distance', townLabel:'Localité', categoryLabelText:'Catégorie', mapsLabel:'Cartes', appVersionLabel:'Version de l’application', correctionPrompt:'Correction à apporter', nearPrecisionNote:'Les résultats proches sont priorisés autour de 12 km lorsque possible. Les distances avec ~ sont approximatives.', trustNote:'Les horaires peuvent changer. Vérifiez la source officielle en cas de fêtes, funérailles, cyclones, jours fériés ou changement paroissial récent. Signalez une correction si une information semble incorrecte.'
   }
 };
 let DATA = [];
@@ -1450,7 +1450,15 @@ async function clearMmfRuntimeCaches(){
 function reloadWithCacheBust(){
   const url = new URL(window.location.href);
   url.searchParams.set('mmf_refresh', Date.now().toString());
+  url.searchParams.set('mmf_nocache', APP_VERSION);
   window.location.replace(url.toString());
+}
+async function unregisterMmfServiceWorkers(){
+  if(!('serviceWorker' in navigator)) return;
+  try{
+    const regs = await navigator.serviceWorker.getRegistrations();
+    await Promise.all(regs.map(reg => reg.unregister().catch(()=>false)));
+  }catch(_e){}
 }
 async function applyServiceWorkerUpdate(){
   trackEvent('update_refresh_started');
@@ -1460,16 +1468,31 @@ async function applyServiceWorkerUpdate(){
     if('serviceWorker' in navigator){
       const reg = await navigator.serviceWorker.getRegistration();
       if(reg){
+        await reg.update().catch(()=>{});
         if(reg.waiting){
           let reloaded = false;
           const reloadOnce = () => { if(!reloaded){ reloaded = true; reloadWithCacheBust(); } };
           navigator.serviceWorker.addEventListener('controllerchange', reloadOnce, {once:true});
           reg.waiting.postMessage({type:'SKIP_WAITING'});
-          setTimeout(reloadOnce, 1500);
+          setTimeout(async()=>{
+            if(!reloaded){
+              await unregisterMmfServiceWorkers();
+              reloadOnce();
+            }
+          }, 1200);
           return;
         }
-        await reg.update().catch(()=>{});
+        if(reg.installing){
+          const sw = reg.installing;
+          sw.addEventListener('statechange', async()=>{
+            if(sw.state === 'installed' && reg.waiting){
+              reg.waiting.postMessage({type:'SKIP_WAITING'});
+            }
+          });
+        }
       }
+      /* Hard fallback: remove the active controller and force a cache-busted network load. */
+      await unregisterMmfServiceWorkers();
     }
   }catch(_e){}
   reloadWithCacheBust();
@@ -1534,4 +1557,663 @@ document.addEventListener('visibilitychange',()=>{ if(!document.hidden) checkFor
 initModals();
 window.MMF = {render, filtered, getData:()=>DATA, setLang, version:APP_VERSION, buildMapsQuery, siteDisplayName, searchMatchesRow, searchKey, searchScore, parseSearchIntent, parseTimeModifier, intentChipLabels, isNearMeIntent, removeNearMePhrases, compareNearResults, nearSortKey, buildSuggestions, isVigilMass, vigilStatus, isSundayFilterMatch, getTimeBucket, checkForUpdate};
 loadData();
+})();
+
+/* ═══════════════════════════════════════════════════════════
+   v24.24.0 — NEW UX LAYER
+   Wires the redesigned HTML (hero search, pills, filter sheet,
+   My Churches inline) to the existing app logic above.
+═══════════════════════════════════════════════════════════ */
+;(function() {
+'use strict';
+
+/* ── Add missing i18n keys for new UI ── */
+const newKeys = {
+  en: {
+    filtersLabel: 'Filters',
+    showResults:  'Show results',
+    nextMassFor:  'Next Mass',
+    allTimesLabel:'All times',
+    removeChurch: 'Remove'
+  },
+  fr: {
+    filtersLabel: 'Filtres',
+    showResults:  'Afficher les résultats',
+    nextMassFor:  'Prochaine messe',
+    allTimesLabel:'Tous les horaires',
+    removeChurch: 'Retirer'
+  }
+};
+if (window.MMF && window.T) {
+  // T is captured inside the IIFE, so we inject via MMF.tr fallback
+}
+// Patch tr() to also check our new keys
+const _origTr = window.MMF ? null : null;
+function newTr(key, vars={}) {
+  const lang = window.MMF ? (document.documentElement.lang || 'en') : 'en';
+  const dict = newKeys[lang] || newKeys.en;
+  const base = dict[key] || key;
+  return String(base).replace(/\{(\w+)\}/g, (_, k) => vars[k] ?? '');
+}
+
+/* ── Intent chips in hero ── */
+function renderIntentRow() {
+  const row = document.getElementById('intentRow');
+  if (!row) return;
+  const raw = document.getElementById('q')?.value || '';
+  if (!raw.trim()) { row.innerHTML = ''; return; }
+  const intent = window.MMF?.parseSearchIntent(raw);
+  const chips = window.MMF?.intentChipLabels(intent) || [];
+  row.innerHTML = chips.map(c => `<span class="iChip">${c}</span>`).join('');
+}
+
+/* ── Search clear button visibility ── */
+function syncClearBtn() {
+  const q = document.getElementById('q');
+  const btn = document.getElementById('searchClearBtn');
+  if (!q || !btn) return;
+  btn.classList.toggle('show', q.value.length > 0);
+}
+
+document.getElementById('searchClearBtn')?.addEventListener('click', () => {
+  const q = document.getElementById('q');
+  if (q) { q.value = ''; q.focus(); }
+  document.getElementById('clearBtn')?.click();
+  syncClearBtn();
+  renderIntentRow();
+});
+
+/* Patch into q input events */
+const qEl = document.getElementById('q');
+if (qEl) {
+  qEl.addEventListener('input', () => { syncClearBtn(); renderIntentRow(); });
+  qEl.addEventListener('search', () => { if (!qEl.value) document.getElementById('clearBtn')?.click(); });
+}
+
+/* ── Results header: count + filter button ── */
+function updateResultsHeader(count, hasFilters) {
+  const hdr = document.getElementById('resultsHeader');
+  const cntEl = document.getElementById('resultsCount');
+  const filterBtn = document.getElementById('filterToggleBtn');
+  if (!hdr) return;
+  if (count === null) { hdr.style.display = 'none'; return; }
+  hdr.style.display = 'flex';
+  if (cntEl) cntEl.textContent = count + ' ' + (window.MMF ? '' : 'results');
+  if (filterBtn) filterBtn.classList.toggle('hasFilters', hasFilters);
+}
+
+/* ── Patch render() to also update results header and My Churches ── */
+const _originalRender = window.MMF?.render;
+function patchedRender() {
+  if (_originalRender) _originalRender();
+  // Count results
+  const resultsEl = document.getElementById('results');
+  const cards = resultsEl ? resultsEl.querySelectorAll('.card').length : 0;
+  const hasResults = resultsEl && (resultsEl.querySelector('.card') || resultsEl.querySelector('.empty'));
+  // Check if any filter is active
+  const day = document.getElementById('day')?.value || '';
+  const region = document.getElementById('region')?.value || '';
+  const tod = document.getElementById('timeOfDay')?.value || '';
+  const mode = document.getElementById('mode')?.value || 'mass';
+  const hasFilters = !!(day || region || tod || mode !== 'mass');
+  updateResultsHeader(hasResults ? cards : null, hasFilters);
+  renderIntentRow();
+  syncClearBtn();
+  // Render My Churches inline if visible
+  const savedView = document.getElementById('savedView');
+  if (savedView && savedView.classList.contains('visible')) renderSavedView();
+}
+if (window.MMF) window.MMF.render = patchedRender;
+
+/* ── Patch renderNextHero to use new card design ── */
+function newRenderNextHero() {
+  const root = document.getElementById('nextHero');
+  if (!root || !window.MMF) return;
+  const mmf = window.MMF;
+  // Get first next Mass
+  const DATA = mmf.getData();
+  if (!DATA || !DATA.length) { root.innerHTML = ''; return; }
+  const sorted = [...DATA]
+    .filter(r => r.is_active && r.is_mass_only_visible)
+    .sort((a, b) => {
+      const da = mmf.nextDelta ? mmf.nextDelta(a) : 0;
+      const db = mmf.nextDelta ? mmf.nextDelta(b) : 0;
+      return da - db;
+    });
+  const r = sorted[0];
+  if (!r) { root.innerHTML = ''; return; }
+
+  // Use nextDelta from MMF (it's not exported, replicate simply)
+  function nextDeltaMs(row) {
+    const DAYS = ['Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche'];
+    const DAYIDX = Object.fromEntries(DAYS.map((d,i)=>[d,i]));
+    const day = DAYIDX[row.day_of_week];
+    const now = new Date();
+    const target = new Date(now); target.setHours(0,0,0,0);
+    if (day == null) return 9999999;
+    let delta = (day - ((now.getDay()+6)%7) + 7) % 7;
+    target.setDate(target.getDate() + delta);
+    const [h,m] = String(row.time_24h||'00:00').split(':').map(Number);
+    target.setHours(h||0, m||0, 0, 0);
+    if (target.getTime() < now.getTime()) target.setDate(target.getDate() + 7);
+    return Math.max(0, Math.round((target.getTime() - Date.now()) / 60000));
+  }
+  const delta = nextDeltaMs(r);
+  const lang = document.documentElement.lang || 'en';
+  const fr = lang === 'fr';
+  function relText(d) {
+    if (d < 60) return fr ? `dans ${d} min` : `in ${d} min`;
+    if (d < 1440) { const h=Math.floor(d/60),m=d%60; return fr ? `dans ${h}h${m?' '+m+' min':''}` : `in ${h}h${m?' '+m+'m':''}`; }
+    const dy=Math.floor(d/1440); return fr ? `dans ${dy} jour(s)` : `in ${dy} day(s)`;
+  }
+  function calDays(row) {
+    const DAYS2 = ['Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche'];
+    const DAYIDX2 = Object.fromEntries(DAYS2.map((d,i)=>[d,i]));
+    const day2 = DAYIDX2[row.day_of_week];
+    const now = new Date(); const today = new Date(now); today.setHours(0,0,0,0);
+    const tgt = new Date(now); tgt.setHours(0,0,0,0);
+    let dd = (day2 - ((now.getDay()+6)%7) + 7) % 7;
+    tgt.setDate(tgt.getDate() + dd);
+    const [h,m] = String(row.time_24h||'00:00').split(':').map(Number);
+    tgt.setHours(h||0,m||0,0,0);
+    if (tgt.getTime() < now.getTime()) tgt.setDate(tgt.getDate() + 7);
+    tgt.setHours(0,0,0,0);
+    return Math.round((tgt.getTime()-today.getTime())/86400000);
+  }
+  const days = calDays(r);
+  const dayWord = days === 0 ? (fr ? 'Aujourd\'hui' : 'Today') : days === 1 ? (fr ? 'Demain' : 'Tomorrow') : '';
+
+  const DAY_LABELS_EN = {Lundi:'Monday',Mardi:'Tuesday',Mercredi:'Wednesday',Jeudi:'Thursday',Vendredi:'Friday',Samedi:'Saturday',Dimanche:'Sunday'};
+  const DAY_LABELS_FR = {Lundi:'Lundi',Mardi:'Mardi',Mercredi:'Mercredi',Jeudi:'Jeudi',Vendredi:'Vendredi',Samedi:'Samedi',Dimanche:'Dimanche'};
+  const dLabel = fr ? (DAY_LABELS_FR[r.day_of_week]||r.day_of_week) : (DAY_LABELS_EN[r.day_of_week]||r.day_of_week);
+
+  const siteName = r.display_site_label || r.site_name || '';
+  const metaParts = [dayWord||dLabel, r.town].filter(Boolean);
+  const mapsBase = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(r.maps_query||r.site_name+', Mauritius')}`;
+  const label = fr ? 'Prochaine messe utile' : 'Next useful Mass';
+  const dirLabel = fr ? 'Itinéraire' : 'Directions';
+  const shareLabel = fr ? 'Partager' : 'Share';
+  const nextLabel = fr ? 'Trouver la suivante' : 'Find next';
+
+  root.innerHTML = `
+    <div class="nextCard">
+      <div class="ncLabel">${label}</div>
+      <div class="ncMain">
+        <div class="ncLeft">
+          <div class="ncSite">${siteName}</div>
+          <div class="ncMeta">${metaParts.join(' · ')}</div>
+        </div>
+        <div class="ncTime">
+          <div class="ncT">${r.time_24h}</div>
+          <div class="ncRel">${relText(delta)}</div>
+        </div>
+      </div>
+      <div class="ncActions">
+        <a class="ncBtn prime" href="${mapsBase}" target="_blank" rel="noopener">${dirLabel}</a>
+        <button class="ncBtn" id="ncShare">${shareLabel}</button>
+        <button class="ncBtn" id="ncNext">${nextLabel}</button>
+      </div>
+    </div>`;
+  document.getElementById('ncShare')?.addEventListener('click', () => window.MMF && mmf.shareAction ? mmf.shareAction(r) : null);
+  document.getElementById('ncNext')?.addEventListener('click', () => {
+    const nb = document.getElementById('nextBtn'); if (nb) nb.click();
+  });
+}
+
+/* Override the original renderNextHero */
+if (window.MMF) {
+  const origRNH = window.MMF.renderNextHero || null;
+  // Monkey-patch: intercept after data loads
+  const origLoadData = window.MMF.loadData;
+}
+
+/* ── Filter bottom sheet ── */
+let filterSheetOpen = false;
+
+function openFilterSheet() {
+  const overlay = document.getElementById('filterOverlay');
+  if (!overlay) return;
+  filterSheetOpen = true;
+  overlay.classList.add('open');
+  document.body.classList.add('modalOpen');
+  // Focus first focusable element
+  setTimeout(() => {
+    overlay.querySelector('button,input,select,[tabindex]')?.focus();
+  }, 250);
+}
+
+function closeFilterSheet() {
+  const overlay = document.getElementById('filterOverlay');
+  if (!overlay) return;
+  filterSheetOpen = false;
+  overlay.classList.remove('open');
+  document.body.classList.remove('modalOpen');
+  document.getElementById('filterToggleBtn')?.focus();
+}
+
+document.getElementById('filterToggleBtn')?.addEventListener('click', openFilterSheet);
+document.getElementById('filterOverlay')?.addEventListener('click', e => {
+  if (e.target === document.getElementById('filterOverlay')) closeFilterSheet();
+});
+document.getElementById('filterApplyBtn')?.addEventListener('click', () => {
+  closeFilterSheet();
+  // Sync hidden selects from tag state, then re-render
+  syncSelectsFromTags();
+  // Trigger change on day to kick render
+  document.getElementById('day')?.dispatchEvent(new Event('input', {bubbles:true}));
+  window.MMF?.render();
+  patchedRender();
+  scrollToResultsNew();
+});
+
+/* Build filter tags inside sheet */
+function buildFilterSheet() {
+  if (!window.MMF) return;
+  const DATA = window.MMF.getData();
+  const lang = document.documentElement.lang || 'en';
+  const fr = lang === 'fr';
+
+  const DAY_LABELS_EN = {Lundi:'Monday',Mardi:'Tuesday',Mercredi:'Wednesday',Jeudi:'Thursday',Vendredi:'Friday',Samedi:'Saturday',Dimanche:'Sunday'};
+  const DAY_LABELS_FR = {Lundi:'Lundi',Mardi:'Mardi',Mercredi:'Mercredi',Jeudi:'Jeudi',Vendredi:'Vendredi',Samedi:'Samedi',Dimanche:'Dimanche'};
+  const DAYS_ORDER = ['Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche'];
+
+  // DAY TAGS
+  const dayTags = document.getElementById('dayTags');
+  if (dayTags) {
+    const currentDay = document.getElementById('day')?.value || '';
+    const anyLabel = fr ? 'Tous les jours' : 'Any day';
+    const todayLabel = fr ? 'Aujourd\'hui' : 'Today';
+    const tomorrowLabel = fr ? 'Demain' : 'Tomorrow';
+    const sundayLabel = fr ? 'Dimanche' : 'Sunday';
+    let html = `<button class="ftag${!currentDay?' on':''}" data-filter="day" data-value="">${anyLabel}</button>`;
+    html += `<button class="ftag${currentDay==='today'?' on':''}" data-filter="day" data-value="today">${todayLabel}</button>`;
+    html += `<button class="ftag${currentDay==='tomorrow'?' on':''}" data-filter="day" data-value="tomorrow">${tomorrowLabel}</button>`;
+    DAYS_ORDER.forEach(d => {
+      const lbl = fr ? DAY_LABELS_FR[d] : DAY_LABELS_EN[d];
+      html += `<button class="ftag${currentDay===d?' on':''}" data-filter="day" data-value="${d}">${lbl}</button>`;
+    });
+    dayTags.innerHTML = html;
+  }
+
+  // TIME TAGS
+  const timeTags = document.getElementById('timeTags');
+  if (timeTags) {
+    const currentTime = document.getElementById('timeOfDay')?.value || '';
+    const opts = [
+      ['', fr ? 'Toute la journée' : 'All day'],
+      ['morning', fr ? 'Matin' : 'Morning'],
+      ['afternoon', fr ? 'Après-midi' : 'Afternoon'],
+      ['evening', fr ? 'Soir' : 'Evening']
+    ];
+    timeTags.innerHTML = opts.map(([v,l]) =>
+      `<button class="ftag${currentTime===v?' on':''}" data-filter="timeOfDay" data-value="${v}">${l}</button>`
+    ).join('');
+  }
+
+  // REGION TAGS
+  const regionTags = document.getElementById('regionTags');
+  if (regionTags && DATA) {
+    const currentRegion = document.getElementById('region')?.value || '';
+    const regions = [...new Set(DATA.map(r=>r.region).filter(Boolean))].sort();
+    const allLabel = fr ? 'Toutes les régions' : 'All regions';
+    let html = `<button class="ftag${!currentRegion?' on':''}" data-filter="region" data-value="">${allLabel}</button>`;
+    regions.forEach(r => {
+      html += `<button class="ftag${currentRegion===r?' on':''}" data-filter="region" data-value="${r}">${r}</button>`;
+    });
+    regionTags.innerHTML = html;
+  }
+
+  // MODE TAGS
+  const modeTags = document.getElementById('modeTags');
+  if (modeTags) {
+    const currentMode = document.getElementById('mode')?.value || 'mass';
+    const opts = [
+      ['mass', fr ? 'Messes seulement' : 'Masses only'],
+      ['all', fr ? 'Inclure les autres célébrations' : 'Include other celebrations']
+    ];
+    modeTags.innerHTML = opts.map(([v,l]) =>
+      `<button class="ftag${currentMode===v?' on':''}" data-filter="mode" data-value="${v}">${l}</button>`
+    ).join('');
+  }
+
+  // Bind toggle behaviour
+  document.querySelectorAll('#filterSheet .ftag[data-filter]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+      const value = btn.dataset.value;
+      // Radio-style: deselect siblings
+      document.querySelectorAll(`#filterSheet .ftag[data-filter="${filter}"]`).forEach(b => b.classList.remove('on'));
+      btn.classList.add('on');
+      // Sync hidden select immediately
+      const sel = document.getElementById(filter);
+      if (sel) sel.value = value;
+    });
+  });
+}
+
+function syncSelectsFromTags() {
+  ['day','timeOfDay','region','mode'].forEach(f => {
+    const active = document.querySelector(`#filterSheet .ftag[data-filter="${f}"].on`);
+    const sel = document.getElementById(f);
+    if (active && sel) sel.value = active.dataset.value;
+  });
+}
+
+/* Rebuild sheet when opened */
+document.getElementById('filterToggleBtn')?.addEventListener('click', buildFilterSheet);
+
+/* ── My Churches inline view ── */
+function renderSavedView() {
+  const listEl = document.getElementById('savedList');
+  if (!listEl || !window.MMF) return;
+
+  const DATA = window.MMF.getData();
+  const lang = document.documentElement.lang || 'en';
+  const fr = lang === 'fr';
+
+  // Get saved site_uids from localStorage
+  let savedSet = new Set();
+  try {
+    const raw = localStorage.getItem('mmf_my_churches') || '[]';
+    savedSet = new Set(JSON.parse(raw));
+  } catch(e){}
+
+  if (savedSet.size === 0) {
+    listEl.innerHTML = `
+      <div class="savedEmpty">
+        <div class="savedEmpty-icon">⛪</div>
+        <div class="savedEmpty-title">${fr ? 'Aucune église enregistrée' : 'No saved churches yet'}</div>
+        <div class="savedEmpty-sub">${fr ? 'Appuyez sur ☆ Sauvegarder sur un résultat pour ajouter une église.' : 'Tap ☆ Save church on any result to add it here.'}</div>
+      </div>`;
+    return;
+  }
+
+  const DAY_LABELS_EN = {Lundi:'Monday',Mardi:'Tuesday',Mercredi:'Wednesday',Jeudi:'Thursday',Vendredi:'Friday',Samedi:'Saturday',Dimanche:'Sunday'};
+  const DAY_LABELS_FR = {Lundi:'Lundi',Mardi:'Mardi',Mercredi:'Mercredi',Jeudi:'Jeudi',Vendredi:'Vendredi',Samedi:'Samedi',Dimanche:'Dimanche'};
+  const DAYS_ORD = ['Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche'];
+  const DAYIDX = Object.fromEntries(DAYS_ORD.map((d,i)=>[d,i]));
+
+  function nextDeltaMin(row) {
+    const day = DAYIDX[row.day_of_week];
+    const now = new Date(); const target = new Date(now); target.setHours(0,0,0,0);
+    if (day == null) return 9999999;
+    let dd = (day - ((now.getDay()+6)%7) + 7) % 7;
+    target.setDate(target.getDate() + dd);
+    const [h,m] = String(row.time_24h||'00:00').split(':').map(Number);
+    target.setHours(h||0,m||0,0,0);
+    if (target.getTime() < now.getTime()) target.setDate(target.getDate() + 7);
+    return Math.max(0, Math.round((target.getTime()-Date.now())/60000));
+  }
+  function calDays2(row) {
+    const day = DAYIDX[row.day_of_week];
+    const now = new Date(); const today = new Date(now); today.setHours(0,0,0,0);
+    const tgt = new Date(now); tgt.setHours(0,0,0,0);
+    let dd = (day - ((now.getDay()+6)%7) + 7) % 7;
+    tgt.setDate(tgt.getDate() + dd);
+    const [h,m] = String(row.time_24h||'00:00').split(':').map(Number);
+    tgt.setHours(h||0,m||0,0,0);
+    if (tgt.getTime() < now.getTime()) tgt.setDate(tgt.getDate() + 7);
+    tgt.setHours(0,0,0,0);
+    return Math.round((tgt.getTime()-today.getTime())/86400000);
+  }
+
+  // Group by site_uid, find next Mass per church
+  const siteMap = new Map();
+  DATA.forEach(r => {
+    if (!savedSet.has(r.site_uid)) return;
+    if (!r.is_active || !r.is_mass_only_visible) return;
+    if (!siteMap.has(r.site_uid)) siteMap.set(r.site_uid, {rows:[], info:r});
+    siteMap.get(r.site_uid).rows.push(r);
+  });
+
+  let html = '';
+  savedSet.forEach(uid => {
+    const church = siteMap.get(uid);
+    if (!church) return;
+    const info = church.info;
+    const siteName = info.display_site_label || info.site_name || '';
+    const parish = info.parish_label || info.parish_name || '';
+    const town = info.town || '';
+    const metaStr = [town, info.region].filter(Boolean).join(' · ');
+
+    // Find next Mass row
+    const nextRow = church.rows.reduce((best, r) => {
+      const d = nextDeltaMin(r);
+      return (!best || d < nextDeltaMin(best)) ? r : best;
+    }, null);
+
+    const days = nextRow ? calDays2(nextRow) : null;
+    const dayWord = days === 0 ? (fr ? 'Aujourd\'hui' : 'Today') : days === 1 ? (fr ? 'Demain' : 'Tomorrow') : '';
+    const dLabel = nextRow ? (fr ? DAY_LABELS_FR[nextRow.day_of_week] : DAY_LABELS_EN[nextRow.day_of_week]) : '';
+    const whenStr = [dayWord||dLabel, nextRow?.time_24h ? '' : ''].filter(Boolean).join(' · ');
+
+    const mapsUrl = nextRow
+      ? `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(nextRow.maps_query||siteName+', Mauritius')}`
+      : '#';
+    const dirLabel = fr ? 'Itinéraire' : 'Directions';
+    const allLabel = fr ? 'Tous les horaires' : 'All times';
+    const nextLabel = fr ? 'Prochaine messe' : 'Next Mass';
+    const removeLabel = fr ? 'Retirer' : 'Remove';
+
+    html += `
+      <div class="savedCard" data-site="${uid}">
+        <div class="savedCardHead">
+          <div>
+            <div class="savedChurchName">${siteName}</div>
+            <div class="savedMeta">${metaStr}</div>
+          </div>
+          <button class="savedHeart" data-site="${uid}" aria-label="${removeLabel} ${siteName}" title="${removeLabel}">★</button>
+        </div>
+        ${nextRow ? `
+        <div class="savedNext">
+          <div class="savedNextLeft">
+            <div class="savedNextLabel">${nextLabel}</div>
+            <div class="savedNextRow">
+              <span class="savedNextTime">${nextRow.time_24h}</span>
+              <span class="savedNextWhen">${whenStr}</span>
+            </div>
+          </div>
+          <div class="savedNextBtns">
+            <a class="savedNextBtn prime" href="${mapsUrl}" target="_blank" rel="noopener">${dirLabel}</a>
+            <button class="savedNextBtn" data-site-search="${uid}">${allLabel}</button>
+          </div>
+        </div>` : ''}
+      </div>`;
+  });
+
+  if (!html) {
+    listEl.innerHTML = `<div class="savedEmpty"><div class="savedEmpty-icon">⛪</div><div class="savedEmpty-title">${fr ? 'Aucune messe trouvée pour vos églises enregistrées' : 'No Mass found for saved churches'}</div></div>`;
+    return;
+  }
+  listEl.innerHTML = html;
+
+  // Bind remove buttons
+  listEl.querySelectorAll('.savedHeart').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const uid = btn.dataset.site;
+      try {
+        let arr = JSON.parse(localStorage.getItem('mmf_my_churches')||'[]');
+        arr = arr.filter(x => x !== uid);
+        localStorage.setItem('mmf_my_churches', JSON.stringify(arr));
+      } catch(e){}
+      renderSavedView();
+    });
+  });
+
+  // "All times" button — show results filtered to that church
+  listEl.querySelectorAll('[data-site-search]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const uid = btn.dataset.siteSearch;
+      const church = siteMap.get(uid);
+      if (!church) return;
+      const siteName = church.info.display_site_label || church.info.site_name || '';
+      // Switch to results view
+      hideSavedView();
+      setActiveNavNew('navSearch');
+      // Apply search
+      const qEl = document.getElementById('q');
+      if (qEl) { qEl.value = siteName; qEl.dispatchEvent(new Event('input',{bubbles:true})); }
+      window.MMF?.render();
+      patchedRender();
+      scrollToResultsNew();
+    });
+  });
+}
+
+function showSavedView() {
+  const sv = document.getElementById('savedView');
+  const rv = document.getElementById('results');
+  const rh = document.getElementById('resultsHeader');
+  const nh = document.getElementById('nextHero');
+  const nt = document.getElementById('notice');
+  if (sv) sv.classList.add('visible');
+  if (rv) rv.style.display = 'none';
+  if (rh) rh.style.display = 'none';
+  if (nh) nh.style.display = 'none';
+  if (nt) nt.innerHTML = '';
+  renderSavedView();
+}
+
+function hideSavedView() {
+  const sv = document.getElementById('savedView');
+  const rv = document.getElementById('results');
+  if (sv) sv.classList.remove('visible');
+  if (rv) rv.style.display = '';
+}
+
+/* ── Nav wiring (override existing nav buttons) ── */
+function setActiveNavNew(id) {
+  document.querySelectorAll('.navBtn').forEach(b => b.classList.toggle('active', b.id === id));
+}
+
+document.getElementById('navHome')?.addEventListener('click', () => {
+  setActiveNavNew('navHome');
+  hideSavedView();
+  document.querySelector('.pillsWrap')?.scrollIntoView({behavior:'smooth', block:'start'});
+});
+document.getElementById('navSearch')?.addEventListener('click', () => {
+  setActiveNavNew('navSearch');
+  hideSavedView();
+  document.getElementById('q')?.focus();
+  document.getElementById('heroHeader')?.scrollIntoView({behavior:'smooth', block:'start'});
+});
+document.getElementById('navNear')?.addEventListener('click', () => {
+  setActiveNavNew('navNear');
+  hideSavedView();
+  // trigger existing showNear
+  document.getElementById('nearBtn')?.click();
+  scrollToResultsNew();
+});
+document.getElementById('navFav')?.addEventListener('click', () => {
+  setActiveNavNew('navFav');
+  showSavedView();
+  document.getElementById('savedView')?.scrollIntoView({behavior:'smooth', block:'start'});
+});
+document.getElementById('navMore')?.addEventListener('click', () => {
+  setActiveNavNew('navMore');
+  hideSavedView();
+  document.getElementById('aboutPanel')?.scrollIntoView({behavior:'smooth', block:'start'});
+});
+
+/* My Churches pill → saved view */
+document.getElementById('qaFav')?.addEventListener('click', () => {
+  setActiveNavNew('navFav');
+  showSavedView();
+  document.getElementById('savedView')?.scrollIntoView({behavior:'smooth', block:'start'});
+});
+
+/* Add church button */
+document.getElementById('addChurchBtn')?.addEventListener('click', () => {
+  hideSavedView();
+  setActiveNavNew('navSearch');
+  document.getElementById('q')?.focus();
+  document.getElementById('heroHeader')?.scrollIntoView({behavior:'smooth', block:'start'});
+});
+
+function scrollToResultsNew() {
+  document.getElementById('results')?.scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+/* ── Intercept the next hero render after data loads ── */
+// We override renderNextHero by watching for DOM mutations on #nextHero
+// and replacing its content with our new design
+const nextHeroEl = document.getElementById('nextHero');
+if (nextHeroEl) {
+  const observer = new MutationObserver(() => {
+    // Only replace if original content was written (has .nextHero class content)
+    if (nextHeroEl.querySelector('.heroLine, .heroSite, .heroTime')) {
+      newRenderNextHero();
+    }
+  });
+  observer.observe(nextHeroEl, {childList: true});
+}
+
+/* ── Also call newRenderNextHero on render ── */
+const _originalRender2 = window.MMF?.render;
+if (window.MMF && _originalRender2) {
+  const wrappedRender = function() {
+    _originalRender2();
+    // After original renders, replace nextHero
+    setTimeout(newRenderNextHero, 0);
+    renderIntentRow();
+    syncClearBtn();
+  };
+  window.MMF.render = wrappedRender;
+  // Monkey-patch the internal render call path
+  // Re-wire pill buttons to use wrappedRender
+}
+
+/* ── Re-wire pill buttons that use showNext/showNear/showSunday ── */
+// qaNow, qaToday, qaTomorrow already wired above in original app.js
+// We just need to ensure patchedRender also fires after them
+['qaNow','qaToday','qaTomorrow','qaNear','qaSunday'].forEach(id => {
+  const btn = document.getElementById(id);
+  if (!btn) return;
+  // Clone and replace to remove old listener
+  const newBtn = btn.cloneNode(true);
+  btn.parentNode.replaceChild(newBtn, btn);
+  newBtn.addEventListener('click', () => {
+    hideSavedView();
+    setActiveNavNew('navHome');
+    // Dispatch the original ID click on the real buttons
+    if (id === 'qaNow') { document.getElementById('nextBtn')?.click(); }
+    else if (id === 'qaToday') { window.MMF && window.applySearchText ? window.applySearchText('today') : null; document.getElementById('q').value='today'; document.getElementById('q').dispatchEvent(new Event('input',{bubbles:true})); }
+    else if (id === 'qaTomorrow') { document.getElementById('q').value='tomorrow'; document.getElementById('q').dispatchEvent(new Event('input',{bubbles:true})); }
+    else if (id === 'qaNear') { document.getElementById('nearBtn')?.click(); }
+    else if (id === 'qaSunday') { document.getElementById('clearBtn')?.click(); document.getElementById('day').value='Dimanche'; document.getElementById('day').dispatchEvent(new Event('input',{bubbles:true})); }
+    setTimeout(() => { patchedRender(); newRenderNextHero(); scrollToResultsNew(); }, 50);
+  });
+});
+
+/* Rebuild filter sheet on language change */
+const origSetLang = window.MMF?.setLang;
+if (window.MMF && origSetLang) {
+  window.MMF.setLang = function(lang) {
+    origSetLang(lang);
+    buildFilterSheet();
+    renderIntentRow();
+    renderSavedView();
+  };
+}
+
+/* ── Initial render hook ── */
+// After data loads, the original loadData() calls render().
+// We patch patchedRender to also trigger our hero card and intent row.
+// Since we can't easily intercept loadData, we watch for DATA being populated.
+const waitForData = setInterval(() => {
+  const DATA = window.MMF?.getData();
+  if (DATA && DATA.length > 0) {
+    clearInterval(waitForData);
+    newRenderNextHero();
+    buildFilterSheet();
+    renderIntentRow();
+    syncClearBtn();
+  }
+}, 100);
+
+/* ESC closes filter sheet */
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && filterSheetOpen) closeFilterSheet();
+});
+
 })();

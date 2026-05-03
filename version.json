@@ -1,8 +1,8 @@
 {
-  "version": "24.23.3",
-  "release_name": "Release Metadata Alignment Patch",
+  "version": "24.24.0",
+  "release_name": "PWA Update Flow Release Clean",
   "build": "2026-05-02",
   "data_version": "2026-05-02",
-  "cache_version": "mmf-v24-23-3",
-  "notes": "Aligns data metadata with the release identity while preserving corrected coordinate precision logic and deterministic coordinate data."
+  "cache_version": "mmf-v24-24-0",
+  "notes": "Fixed the update refresh loop so tapping Refresh / Actualiser reliably loads the latest version. This cleanup release preserves the v24.23 coordinate data and PWA update-flow hardening."
 }

@@ -1,7 +1,7 @@
 {
-  "name": "Mauritius Mass Finder",
+  "name": "Mauritius Mass Finder v24.24.0",
   "short_name": "Mass Finder",
-  "description": "Mauritius Mass Finder with precision-gated church coordinates and explicit confidence metadata.",
+  "description": "Find Catholic Mass times quickly anywhere in Mauritius.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
@@ -35,5 +35,5 @@
       "purpose": "maskable"
     }
   ],
-  "version": "24.23.3"
+  "version": "24.24.0"
 }
