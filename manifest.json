@@ -1,8 +1,8 @@
 {
-  "name": "Mauritius Mass Finder v24.24.0",
+  "name": "Mauritius Mass Finder",
   "short_name": "Mass Finder",
-  "description": "Find Catholic Mass times quickly anywhere in Mauritius.",
-  "start_url": "./index.html",
+  "description": "Find a Catholic Mass quickly anywhere in Mauritius.",
+  "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "background_color": "#fbf7f2",
@@ -35,5 +35,5 @@
       "purpose": "maskable"
     }
   ],
-  "version": "24.24.0"
+  "version": "24.24.5"
 }

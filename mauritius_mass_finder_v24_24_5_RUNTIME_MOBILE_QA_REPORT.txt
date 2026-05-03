@@ -1,0 +1,125 @@
+Mauritius Mass Finder v24.24.5 — Runtime + Mobile QA Report
+
+Version: 24.24.5
+Cache: mmf-v24-24-5
+Baseline: v24.24.4 Calendar + Saved Churches Precision Fix
+Build objective: semantic polish, visible query cleanup, bilingual share payload, Sunday evening rule, and release validation.
+
+VERDICT
+PASS WITH LIVE-DEVICE CAVEAT
+
+The package passes all static, data, semantic, packaging, and simulated scenario checks available in this environment. Headless Chromium/iPhone Safari execution could not be completed because the sandbox has no installed Playwright browser binary; therefore the final physical iPhone / Add-to-Home-Screen / native iOS share-sheet validation must still be done after GitHub upload.
+
+CHANGES IMPLEMENTED
+1. Sunday evening rule clarified and implemented.
+   - “Sunday evening” / “messe dimanche soir” now means actual Sunday rows with time >= 17:00 only.
+   - Saturday vigil rows are no longer included in this specific query intent.
+   - Sunday obligation mode remains separate and still includes Sunday + Saturday from 15:30 onward.
+
+2. Visible query cleanup improved after chip removal.
+   - Removing “soir” from “messe du soir Curepipe” now leaves “Curepipe”.
+   - Removing “matin” from “messe vendredi matin” now leaves “vendredi”.
+   - Orphan connectors such as du/de/des/le/la/les/l/à/au/aux/d and generic words such as messe/church/église are removed from the displayed query after chip clearing.
+
+3. Share payload is now bilingual.
+   - App share text uses the active language.
+   - Mass/church share text uses a localized intro label.
+   - The previous hardcoded English subtitle in shareApp was removed.
+
+4. Versioning updated.
+   - app.js: 24.24.5
+   - version.json: 24.24.5
+   - manifest.json: 24.24.5
+   - sw.js cache: mmf-v24-24-5
+   - data/fallback metadata updated to v24.24.5
+
+5. CSV/JSON schema harmonised.
+   - coordinate_evidence_url is now present in JSON and fallback rows to match CSV.
+
+STATIC VALIDATION
+PASS — package root structure contains required deployable files:
+- index.html
+- app.js
+- styles.css
+- sw.js
+- version.json
+- manifest.json
+- data/masses.json
+- data/masses.csv
+- fallback-data.js
+- icons
+- .nojekyll
+
+PASS — JavaScript syntax
+PASS — Service worker syntax
+PASS — JSON validity
+PASS — Manifest validity
+PASS — .nojekyll present and correctly named
+PASS — wrong nojekyll file absent
+PASS — no stale v24.24.4 / mmf-v24-24-4 runtime references
+PASS — zip integrity
+
+DATA INTEGRITY
+PASS — 396 rows
+PASS — 48 parish IDs
+PASS — 118 site IDs
+PASS — 379 Mass rows
+PASS — 17 other / non-Mass rows
+PASS — 0 missing coordinates
+PASS — 0 duplicate technical keys
+PASS — CSV row count matches JSON row count
+PASS — CSV / JSON schema now aligned
+
+SEMANTIC SEARCH TESTS
+PASS — “messe du soir Curepipe” returns matching Curepipe evening Masses.
+PASS — “evening Mass Curepipe” returns matching Curepipe evening Masses.
+PASS — “messe samedi soir” returns 82 Saturday rows from 15:30 onward.
+PASS — “messe dimanche” returns Sunday obligation mode: Sunday + Saturday >= 15:30.
+PASS — “messe dimanche soir” returns only Sunday evening rows, no Saturday rows.
+PASS — “Sunday evening Mass” returns only Sunday evening rows, no Saturday rows.
+PASS — “messe vendredi matin” returns Friday morning rows only.
+PASS — “18h Curepipe” returns Curepipe rows within the exact-time tolerance.
+PASS — “sacre coeur” returns results.
+PASS — “st jean” and “saint-jean” return equivalent normalized results.
+
+CHIP-CLEARING TESTS
+PASS — removing time chip from “messe du soir Curepipe” leaves “Curepipe”.
+PASS — removing time chip from “messe vendredi matin” leaves “vendredi”.
+PASS — chip clearing preserves unrelated search intent.
+
+BILINGUAL VALIDATION
+PASS — shareApp no longer uses hardcoded T.en.subtitle.
+PASS — localized shareAppTitle and shareMassIntro keys exist in EN/FR.
+PASS — static language-render path updates Help/About, update banner, filters, and navigation labels through translation keys.
+
+PWA / UPDATE VALIDATION
+PASS — service-worker cache uses mmf-v24-24-5.
+PASS — version.json uses 24.24.5.
+PASS — update dismissal logic continues to key against latest version from version.json.
+PASS — stable localStorage keys preserved: mmf_my_churches, mmf_language, update dismissal by latest version.
+
+LIMITATIONS OF THIS ENVIRONMENT
+Not physically verified here:
+- iPhone Safari layout.
+- Add to Home Screen installation.
+- Native iOS share sheet.
+- Real geolocation permission prompts.
+- Actual Google Maps app handoff.
+- Real service-worker update cycle on GitHub Pages.
+
+Attempted headless browser execution failed because the Playwright browser executable is not installed in the sandbox. This is an environment limitation, not an app failure.
+
+REQUIRED LIVE SMOKE TEST AFTER GITHUB UPLOAD
+1. Open live app on iPhone Safari.
+2. Confirm footer/version shows 24.24.5.
+3. Search “messe dimanche soir” and confirm only Sunday evening rows appear.
+4. Search “messe samedi soir” and confirm Saturday vigil/evening rows from 15:30 appear.
+5. Search “messe du soir Curepipe”, remove the Soir chip, and confirm query becomes “Curepipe”.
+6. Switch EN ↔ FR while results and More/Help are visible.
+7. Tap Share in EN and FR and confirm localized text in the share sheet.
+8. Save a church, reload, open My Churches, tap All times, and confirm exact church results only.
+9. Test Near Me allowed and denied.
+10. Open once online, then reopen offline from Home Screen.
+
+FINAL DECISION
+The generated v24.24.5 package is production-grade from code/data/package/scenario validation available here. Final public deployment should still include the short live iPhone/GitHub Pages smoke test above.
