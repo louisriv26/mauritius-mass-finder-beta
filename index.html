@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Mauritius Mass Finder v25.0.9</title>
+<title>Mauritius Mass Finder v26.0.1</title>
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#6f2c2c">
 <meta name="description" content="Find a Catholic Mass quickly anywhere in Mauritius.">
@@ -53,7 +53,7 @@
     <section id="modeHero" aria-live="polite"></section>
     <div class="headLine" id="resultsHead">
       <div><div class="contextLabel" id="contextLabel"></div><div class="resultCount" id="resultCount"></div></div>
-      <button class="btn" id="openFilters" type="button">⚙ <span data-t="filters">Filters</span></button>
+      <button class="btn" id="openFilters" type="button" aria-haspopup="dialog" aria-controls="filterSheet" aria-expanded="false">⚙ <span data-t="filters">Filters</span></button>
     </div>
     <section id="results" class="resultsGrid" aria-live="polite"></section>
     <section id="morePanel" class="morePanel" hidden></section>
@@ -62,7 +62,7 @@
 </div>
 
 <div class="sheetBackdrop" id="sheetBackdrop"></div>
-<section class="sheet" id="filterSheet" aria-label="Filters" aria-modal="true" role="dialog">
+<section class="sheet" id="filterSheet" aria-label="Filters" aria-modal="true" aria-hidden="true" role="dialog" tabindex="-1">
   <div class="grab"></div>
   <div class="sheetHead"><h2 id="filterTitle">Filters</h2><button class="btn icon" id="closeFilters" type="button">×</button></div>
   <div class="filterGroup"><div class="filterLabel" id="dayLabel">Day</div><div class="tagRow" id="dayTags"></div></div>

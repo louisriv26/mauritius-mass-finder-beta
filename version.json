@@ -1,1 +1,8 @@
-{"version":"25.0.9","release_name":"Metadata Consistency Gate","build":"2026-05-03","data_version":"2026-05-03","cache_version":"mmf-v25-0-9","notes":"Aligns runtime, data and fallback metadata after gated validation while preserving v25 UX state, filter, Near Me and cache improvements."}
+{
+  "version": "26.0.1",
+  "release_name": "About Section Fix Release",
+  "build": "2026-05-03",
+  "data_version": "2026-05-03",
+  "cache_version": "mmf-v26-0-1",
+  "notes": "Adds a proper bilingual About section and preserves modal focus/touch handling, unified state, data, search, location, PWA update and offline behavior."
+}
