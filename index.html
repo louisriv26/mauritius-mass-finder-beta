@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Mauritius Mass Finder</title>
+<title>Mauritius Mass Finder v25.0.3</title>
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#6f2c2c">
 <meta name="description" content="Find a Catholic Mass quickly anywhere in Mauritius.">
@@ -33,17 +33,17 @@
       <input id="searchInput" autocomplete="off" inputmode="search" placeholder="evening Mass Curepipe, 18h, Saint Jean…">
       <button id="clearSearch" type="button">Clear</button>
     </div>
+    <div class="searchHint" id="searchHint">Try: evening Mass Curepipe</div>
     <div class="intentChips" id="intentChips" aria-live="polite"></div>
   </header>
 
   <div class="quickScroller" id="quickScroller">
     <nav class="quickRow" id="quickRow" aria-label="Quick actions">
-      <button class="pill primary" data-action="next" type="button">⚡ <span data-t="quickNext">Next Mass</span></button>
       <button class="pill" data-action="today" type="button"><span data-t="quickToday">Today</span></button>
       <button class="pill" data-action="tomorrow" type="button"><span data-t="quickTomorrow">Tomorrow</span></button>
+      <button class="pill" data-action="evening" type="button">🌙 <span data-t="quickEvening">Evening</span></button>
       <button class="pill" data-action="near" type="button">📍 <span data-t="quickNear">Near me</span></button>
-      <button class="pill" data-action="sunday" type="button">☀️ <span data-t="quickSunday">Sunday</span></button>
-      <button class="pill" data-action="saved" type="button">⭐ <span data-t="quickSaved">My Churches</span></button>
+      <button class="pill secondary" data-action="saved" type="button">⭐ <span data-t="quickSaved">My Churches</span></button>
     </nav>
     <div class="scrollCue" id="quickScrollCue" aria-hidden="true">→</div>
   </div>
@@ -74,11 +74,10 @@
 
 <div class="updateBanner" id="updateBanner"><div><b id="updateTitle">New version available</b><div id="updateText">Update to get the latest version.</div><button class="linkBtn" id="updateHelp" type="button">Having trouble updating?</button></div><button class="btn primary" id="updateRefresh" type="button">Update now</button><button class="btn" id="updateDismiss" type="button">Later</button></div>
 <div class="toast" id="toast" role="status"></div>
-<nav class="bottomNav" aria-label="Main navigation"><div class="bottomNavInner">
+<nav class="bottomNav" aria-label="Main navigation"><div class="bottomNavInner compactNav">
   <button class="navBtn active" data-nav="home" type="button"><span>🏠</span><span data-t="navHome">Home</span></button>
-  <button class="navBtn" data-nav="search" type="button"><span>🔍</span><span data-t="navSearch">Search</span></button>
-  <button class="navBtn" data-nav="near" type="button"><span>📍</span><span data-t="navNear">Near me</span></button>
   <button class="navBtn" data-nav="saved" type="button"><span>⭐</span><span data-t="navSaved">My Churches</span></button>
+  <button class="navBtn" data-nav="near" type="button"><span>📍</span><span data-t="navNear">Near me</span></button>
   <button class="navBtn" data-nav="more" type="button"><span>⋯</span><span data-t="navMore">More</span></button>
 </div></nav>
 <script src="config.js"></script>

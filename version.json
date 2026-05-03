@@ -1,8 +1,1 @@
-{
-  "version": "24.24.9",
-  "release_name": "Release Metadata & PWA Verification Fix",
-  "build": "2026-05-03",
-  "data_version": "2026-05-02",
-  "cache_version": "mmf-v24-24-9",
-  "notes": "Release metadata and PWA/offline hardening. Preserves the validated UX clarity and update reliability features while removing stale runtime version metadata and caching all app icons for offline install polish."
-}
+{"version":"25.0.3","release_name":"UX Foundation Today Filter Patch","build":"2026-05-03","data_version":"2026-05-03","cache_version":"mmf-v25-0-3","notes":"Today filtering excludes past same-day Masses while preserving validated data, search, filters, PWA update flow, and UX foundation functionality."}
