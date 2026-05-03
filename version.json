@@ -1,8 +1,8 @@
 {
-  "version": "26.0.1",
-  "release_name": "About Section Fix Release",
+  "version": "26.0.2",
+  "release_name": "Footer Help Routing Fix Release",
   "build": "2026-05-03",
   "data_version": "2026-05-03",
-  "cache_version": "mmf-v26-0-1",
-  "notes": "Adds a proper bilingual About section and preserves modal focus/touch handling, unified state, data, search, location, PWA update and offline behavior."
+  "cache_version": "mmf-v26-0-2",
+  "notes": "Fixes footer Help, About and Update routing so each opens the correct bilingual section while preserving v26 unified state, modal handling, data, search, location, PWA update and offline behavior."
 }

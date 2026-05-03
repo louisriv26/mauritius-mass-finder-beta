@@ -1,0 +1,38 @@
+Mauritius Mass Finder v26.0.2 — Footer Help Routing Fix Release
+
+Implemented fix:
+- Footer Help, About / À propos, and How to update / Comment mettre à jour now route to distinct rendered sections.
+- Removed fragile intra-panel scroll-to-heading behaviour that could land under the sticky header or on the wrong text.
+- Added selectable More-panel section state: help / about / update.
+- Preserved data, unified state model, modal/touch handling, search, filters, location, share, update flow and offline fallback.
+
+Validation:
+- Version: 26.0.2
+- Cache: mmf-v26-0-2
+- Rows: 396
+- Parishes: 48
+- Sites: 118
+- Mass rows: 379
+- Other / ambiguous rows: 17
+- Duplicate technical keys: 0
+- Invalid days: 0
+- Invalid times: 0
+- Missing coordinates: 0
+- data/masses.json valid: pass
+- fallback-data.js regenerated from data/masses.json: pass
+- app.js syntax: pass
+- sw.js syntax: pass
+- manifest.json valid: pass
+- version.json valid: pass
+- stale runtime v26.0.1 / mmf-v26-0-1 references: 0
+
+Footer routing gate:
+- Help footer target: help section
+- About footer target: about section
+- How to update footer target: update section
+- Update banner help target: update section
+
+Residual limitation:
+- Browser/mobile runtime automation was not available in this sandbox. Live phone smoke test recommended after deployment.
+
+Verdict: Ship.
