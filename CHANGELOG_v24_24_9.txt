@@ -1,0 +1,6 @@
+Mauritius Mass Finder v24.24.9
+
+- Aligned all runtime release metadata to the current version.
+- Updated canonical app version, cache version, manifest version, data metadata, and fallback-data metadata.
+- Added all PWA PNG icons to the service-worker core cache for stronger offline/install behaviour.
+- Preserved validated data, UX clarity, search, filters, bilingual mode, My Churches, Near Me, sharing, and update reliability logic.

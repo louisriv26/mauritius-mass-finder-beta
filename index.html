@@ -36,24 +36,29 @@
     <div class="intentChips" id="intentChips" aria-live="polite"></div>
   </header>
 
-  <nav class="quickRow" id="quickRow" aria-label="Quick actions">
-    <button class="pill primary" data-action="next" type="button">⚡ <span data-t="quickNext">Next Mass</span></button>
-    <button class="pill" data-action="today" type="button"><span data-t="quickToday">Today</span></button>
-    <button class="pill" data-action="tomorrow" type="button"><span data-t="quickTomorrow">Tomorrow</span></button>
-    <button class="pill" data-action="near" type="button">📍 <span data-t="quickNear">Near me</span></button>
-    <button class="pill" data-action="sunday" type="button">☀️ <span data-t="quickSunday">Sunday</span></button>
-    <button class="pill" data-action="saved" type="button">⭐ <span data-t="quickSaved">My Churches</span></button>
-  </nav>
+  <div class="quickScroller" id="quickScroller">
+    <nav class="quickRow" id="quickRow" aria-label="Quick actions">
+      <button class="pill primary" data-action="next" type="button">⚡ <span data-t="quickNext">Next Mass</span></button>
+      <button class="pill" data-action="today" type="button"><span data-t="quickToday">Today</span></button>
+      <button class="pill" data-action="tomorrow" type="button"><span data-t="quickTomorrow">Tomorrow</span></button>
+      <button class="pill" data-action="near" type="button">📍 <span data-t="quickNear">Near me</span></button>
+      <button class="pill" data-action="sunday" type="button">☀️ <span data-t="quickSunday">Sunday</span></button>
+      <button class="pill" data-action="saved" type="button">⭐ <span data-t="quickSaved">My Churches</span></button>
+    </nav>
+    <div class="scrollCue" id="quickScrollCue" aria-hidden="true">→</div>
+  </div>
+  <div class="swipeHint" id="swipeHint" role="note"></div>
 
   <main class="main">
     <section id="modeHero" aria-live="polite"></section>
     <div class="headLine" id="resultsHead">
-      <div class="resultCount" id="resultCount"></div>
+      <div><div class="contextLabel" id="contextLabel"></div><div class="resultCount" id="resultCount"></div></div>
       <button class="btn" id="openFilters" type="button">⚙ <span data-t="filters">Filters</span></button>
     </div>
     <section id="results" class="resultsGrid" aria-live="polite"></section>
     <section id="morePanel" class="morePanel" hidden></section>
   </main>
+  <footer class="appFooter" id="appFooter" aria-label="App help footer"></footer>
 </div>
 
 <div class="sheetBackdrop" id="sheetBackdrop"></div>
@@ -67,7 +72,7 @@
   <button class="btn primary" id="applyFilters" type="button" style="width:100%;margin-top:8px">Show results</button>
 </section>
 
-<div class="updateBanner" id="updateBanner"><div><b id="updateTitle">New version available</b><div id="updateText">Refresh to get the latest version.</div></div><button class="btn primary" id="updateRefresh" type="button">Refresh</button><button class="btn" id="updateDismiss" type="button">Later</button></div>
+<div class="updateBanner" id="updateBanner"><div><b id="updateTitle">New version available</b><div id="updateText">Update to get the latest version.</div><button class="linkBtn" id="updateHelp" type="button">Having trouble updating?</button></div><button class="btn primary" id="updateRefresh" type="button">Update now</button><button class="btn" id="updateDismiss" type="button">Later</button></div>
 <div class="toast" id="toast" role="status"></div>
 <nav class="bottomNav" aria-label="Main navigation"><div class="bottomNavInner">
   <button class="navBtn active" data-nav="home" type="button"><span>🏠</span><span data-t="navHome">Home</span></button>

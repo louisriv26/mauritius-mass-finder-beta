@@ -1,8 +1,8 @@
 {
-  "version": "24.24.5",
-  "release_name": "Semantic + Mobile Runtime Polish",
+  "version": "24.24.9",
+  "release_name": "Release Metadata & PWA Verification Fix",
   "build": "2026-05-03",
   "data_version": "2026-05-02",
-  "cache_version": "mmf-v24-24-5",
-  "notes": "Semantic polish release: Sunday evening means actual Sunday evening only; chip clearing cleans visible query text; sharing payloads are bilingual; prior calendar-day/Sunday-obligation and saved-church exact matching fixes preserved."
+  "cache_version": "mmf-v24-24-9",
+  "notes": "Release metadata and PWA/offline hardening. Preserves the validated UX clarity and update reliability features while removing stale runtime version metadata and caching all app icons for offline install polish."
 }

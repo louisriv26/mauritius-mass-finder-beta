@@ -1,9 +1,0 @@
-v24.24.5 Semantic + Mobile Runtime Polish
-
-- Defined “Sunday evening / dimanche soir” as actual Sunday evening only.
-- Preserved Sunday-obligation mode separately: Sunday + Saturday Masses from 15:30 onward.
-- Improved visible query cleanup after intent-chip removal.
-- Made app and Mass share payloads bilingual.
-- Updated runtime version to 24.24.5 and service-worker cache to mmf-v24-24-5.
-- Harmonised CSV/JSON/fallback schema by carrying coordinate_evidence_url into JSON rows.
-- Preserved full dataset: 396 rows, 48 parishes, 118 sites, 379 Mass rows, 17 other rows.
