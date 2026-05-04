@@ -1,0 +1,17 @@
+Mauritius Mass Finder v26.0.8 — Source Integrity Fix Release
+
+Implemented changes:
+- Updated version/cache to 26.0.8 / mmf-v26-0-8.
+- Preserved full 396-row dataset.
+- Added explicit source relationship fields to every row.
+- Strengthened source button labels for parent-parish and context-page cases.
+- Sainte-Thérèse under Notre-Dame-de-la-Délivrande now labels the source as parent parish page.
+- Regenerated fallback-data.js and data/masses.csv from data/masses.json.
+
+Validation summary:
+- 396 rows / 48 parishes / 118 sites.
+- 379 Mass rows / 17 other or ambiguous rows.
+- 0 duplicate technical keys.
+- 0 invalid days/times.
+- 0 missing coordinates.
+- Final extracted zip must be verified before release.

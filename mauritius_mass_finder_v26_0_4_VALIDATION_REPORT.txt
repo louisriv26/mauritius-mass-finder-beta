@@ -1,8 +1,0 @@
-Mauritius Mass Finder v26.0.4 — Validation Report
-
-Release: More Tabs Spacing Polish Release
-Change: Added CSS rule for .moreTabs display:flex, flex-wrap:wrap, gap:7px, margin-bottom:10px.
-Baseline: prior Near Me Radius Restoration Release package.
-Data impact: none.
-Feature impact: none intended.
-Validation: JS syntax, service-worker syntax, JSON validity, data integrity, stale version check, asset presence, zip integrity, final extracted zip inspection.

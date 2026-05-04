@@ -1,8 +1,8 @@
 {
-  "version": "26.0.4",
-  "release_name": "More Tabs Spacing Polish Release",
+  "version": "26.0.8",
+  "release_name": "Source Integrity Fix Release",
   "build": "2026-05-04",
   "data_version": "2026-05-03",
-  "cache_version": "mmf-v26-0-4",
-  "notes": "Adds a low-risk visual spacing polish for the More panel tabs while preserving v26 unified state, Near Me 12 km radius, data, search, PWA update and offline behavior."
+  "cache_version": "mmf-v26-0-8",
+  "notes": "Source Integrity Fix Release. Clarifies parent-parish source links while preserving search, exact-time parsing, typo tolerance, filters, data integrity, PWA update, and offline support."
 }
