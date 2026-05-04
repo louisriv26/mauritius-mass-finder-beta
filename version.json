@@ -1,8 +1,8 @@
 {
-  "version": "26.0.3",
-  "release_name": "Near Me Radius Restoration Release",
-  "build": "2026-05-03",
+  "version": "26.0.4",
+  "release_name": "More Tabs Spacing Polish Release",
+  "build": "2026-05-04",
   "data_version": "2026-05-03",
-  "cache_version": "mmf-v26-0-3",
-  "notes": "Restores Near Me relevance by applying a 12 km default radius with an explicit Show farther option, while preserving footer routing, v26 unified state, modal handling, data, search, PWA update and offline behavior."
+  "cache_version": "mmf-v26-0-4",
+  "notes": "Adds a low-risk visual spacing polish for the More panel tabs while preserving v26 unified state, Near Me 12 km radius, data, search, PWA update and offline behavior."
 }

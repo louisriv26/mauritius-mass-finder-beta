@@ -1,6 +1,6 @@
 
 'use strict';
-const APP_VERSION='26.0.3';
+const APP_VERSION='26.0.4';
 const NEAR_RADIUS_KM=12;
 const DAYS=['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'];
 const DAY_EN={Dimanche:'Sunday',Lundi:'Monday',Mardi:'Tuesday',Mercredi:'Wednesday',Jeudi:'Thursday',Vendredi:'Friday',Samedi:'Saturday'};
@@ -234,7 +234,7 @@ function closeFilters(){closeModal('filters')}
 function trapSheetFocus(e){if(e.key!=='Tab'||state.modal!=='filters')return; const f=focusablesIn($('#filterSheet')); if(!f.length)return; const first=f[0],last=f[f.length-1]; if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()} else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}
 function bindSheetDrag(){const sheet=$('#filterSheet'), grab=sheet?.querySelector('.grab'); if(!sheet||!grab)return; let startY=0,startX=0,dragging=false; grab.addEventListener('pointerdown',e=>{if(state.modal!=='filters')return; startY=e.clientY;startX=e.clientX;dragging=true; grab.setPointerCapture?.(e.pointerId)}); grab.addEventListener('pointerup',e=>{if(!dragging)return; const dy=e.clientY-startY,dx=Math.abs(e.clientX-startX); dragging=false; if(dy>60&&dy>dx*1.4)closeFilters()}); grab.addEventListener('pointercancel',()=>{dragging=false})}
 function applyRows(json){const rows=(json&&json.rows)||json||[]; if(Array.isArray(rows)&&rows.length){state.rows=rows.filter(rowActive); return true} return false}
-async function loadData(){state.saved=new Set(JSON.parse(localStorage.getItem('mmf_my_churches')||'[]')); let rendered=false; try{if(window.caches){const cached=await caches.match('data/masses.json'); if(cached){const json=await cached.clone().json(); rendered=applyRows(json); if(rendered)render();}}}catch(e){} if(!rendered){try{rendered=applyRows(window.MMF_FALLBACK_DATA||{}); if(rendered)render();}catch(e){}} try{let res=await fetch('data/masses.json',{cache:'no-cache'}); if(!res.ok)throw new Error('fetch'); let json=await res.clone().json(); if(window.caches){try{const c=await caches.open('mmf-v26-0-3'); await c.put('data/masses.json',res.clone())}catch(_){}} applyRows(json); render(); }catch(e){if(!rendered){state.loadError=String(e); render();}}}
+async function loadData(){state.saved=new Set(JSON.parse(localStorage.getItem('mmf_my_churches')||'[]')); let rendered=false; try{if(window.caches){const cached=await caches.match('data/masses.json'); if(cached){const json=await cached.clone().json(); rendered=applyRows(json); if(rendered)render();}}}catch(e){} if(!rendered){try{rendered=applyRows(window.MMF_FALLBACK_DATA||{}); if(rendered)render();}catch(e){}} try{let res=await fetch('data/masses.json',{cache:'no-cache'}); if(!res.ok)throw new Error('fetch'); let json=await res.clone().json(); if(window.caches){try{const c=await caches.open('mmf-v26-0-4'); await c.put('data/masses.json',res.clone())}catch(_){}} applyRows(json); render(); }catch(e){if(!rendered){state.loadError=String(e); render();}}}
 
 async function forceUpdate(){
   const banner=$('#updateBanner');
