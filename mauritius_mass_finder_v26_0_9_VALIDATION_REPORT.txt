@@ -1,0 +1,19 @@
+Mauritius Mass Finder v26.0.9 Bottom Navigation Stability Release
+
+Implemented fix:
+- Restored bottom navigation anchoring to the mobile visual viewport during scroll, resize, and orientation changes.
+- Added CSS regression guard for .bottomNav, .sheet, update banner, and toast bottom positioning.
+- Added visualViewport synchronization in app.js.
+
+Validation summary:
+- Dataset preserved: 396 rows, 48 parishes, 118 sites.
+- Mass rows: 379. Other/ambiguous rows: 17.
+- No duplicate technical keys.
+- No invalid days/times.
+- No missing coordinates.
+- Source integrity labels preserved from v26.0.8.
+- JS/SW/JSON syntax passed.
+- Final zip extraction passed.
+
+Residual limitation:
+- True iPhone/Android PWA visual verification must still be done on a real device because this environment cannot execute administrator-blocked browser/device tests.

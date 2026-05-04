@@ -1,8 +1,8 @@
 {
-  "version": "26.0.8",
-  "release_name": "Source Integrity Fix Release",
+  "version": "26.0.9",
+  "release_name": "Bottom Navigation Stability Release",
   "build": "2026-05-04",
   "data_version": "2026-05-03",
-  "cache_version": "mmf-v26-0-8",
-  "notes": "Source Integrity Fix Release. Clarifies parent-parish source links while preserving search, exact-time parsing, typo tolerance, filters, data integrity, PWA update, and offline support."
+  "cache_version": "mmf-v26-0-9",
+  "notes": "Bottom Navigation Stability Release. Restores fixed bottom navigation during scroll and visual viewport changes while preserving source integrity, search, filters, data integrity, PWA update, and offline support."
 }
