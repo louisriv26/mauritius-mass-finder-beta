@@ -1,8 +1,8 @@
 {
-  "version": "26.0.9",
-  "release_name": "Bottom Navigation Stability Release",
+  "version": "26.0.10",
+  "release_name": "Bottom Navigation Regression Recovery Release",
   "build": "2026-05-04",
   "data_version": "2026-05-03",
-  "cache_version": "mmf-v26-0-9",
-  "notes": "Bottom Navigation Stability Release. Restores fixed bottom navigation during scroll and visual viewport changes while preserving source integrity, search, filters, data integrity, PWA update, and offline support."
+  "cache_version": "mmf-v26-0-10",
+  "notes": "Bottom Navigation Regression Recovery Release. Restores bottom navigation using pure fixed CSS and removes unstable visual viewport repositioning while preserving source integrity, search, filters, data integrity, PWA update, and offline support."
 }

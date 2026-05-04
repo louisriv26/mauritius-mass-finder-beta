@@ -1,6 +1,6 @@
 
 'use strict';
-const APP_VERSION='26.0.9';
+const APP_VERSION='26.0.10';
 const NEAR_RADIUS_KM=12;
 const DAYS=['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'];
 const DAY_EN={Dimanche:'Sunday',Lundi:'Monday',Mardi:'Tuesday',Mercredi:'Wednesday',Jeudi:'Thursday',Vendredi:'Friday',Samedi:'Saturday'};
@@ -264,37 +264,9 @@ function openFilters(e){openModal('filters',e?.currentTarget||document.activeEle
 function closeFilters(){closeModal('filters')}
 function trapSheetFocus(e){if(e.key!=='Tab'||state.modal!=='filters')return; const f=focusablesIn($('#filterSheet')); if(!f.length)return; const first=f[0],last=f[f.length-1]; if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()} else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}
 
-function syncFixedBottomViewport(){
-  const root=document.documentElement;
-  const vv=window.visualViewport;
-  let bottomOffset=0;
-  if(vv){
-    bottomOffset=Math.max(0, Math.round(window.innerHeight - vv.height - vv.offsetTop));
-  }
-  root.style.setProperty('--vv-bottom-offset', bottomOffset+'px');
-  const nav=document.querySelector('.bottomNav');
-  if(nav){
-    nav.style.position='fixed';
-    nav.style.left='0';
-    nav.style.right='0';
-    nav.style.bottom='var(--vv-bottom-offset, 0px)';
-    nav.style.transform='translateZ(0)';
-  }
-}
-function bindFixedBottomViewport(){
-  syncFixedBottomViewport();
-  window.addEventListener('scroll', syncFixedBottomViewport, {passive:true});
-  window.addEventListener('resize', syncFixedBottomViewport, {passive:true});
-  window.addEventListener('orientationchange', ()=>setTimeout(syncFixedBottomViewport,250), {passive:true});
-  if(window.visualViewport){
-    visualViewport.addEventListener('resize', syncFixedBottomViewport, {passive:true});
-    visualViewport.addEventListener('scroll', syncFixedBottomViewport, {passive:true});
-  }
-}
-
 function bindSheetDrag(){const sheet=$('#filterSheet'), grab=sheet?.querySelector('.grab'); if(!sheet||!grab)return; let startY=0,startX=0,dragging=false; grab.addEventListener('pointerdown',e=>{if(state.modal!=='filters')return; startY=e.clientY;startX=e.clientX;dragging=true; grab.setPointerCapture?.(e.pointerId)}); grab.addEventListener('pointerup',e=>{if(!dragging)return; const dy=e.clientY-startY,dx=Math.abs(e.clientX-startX); dragging=false; if(dy>60&&dy>dx*1.4)closeFilters()}); grab.addEventListener('pointercancel',()=>{dragging=false})}
 function applyRows(json){const rows=(json&&json.rows)||json||[]; if(Array.isArray(rows)&&rows.length){state.rows=rows.filter(rowActive); return true} return false}
-async function loadData(){state.saved=new Set(JSON.parse(localStorage.getItem('mmf_my_churches')||'[]')); let rendered=false; try{if(window.caches){const cached=await caches.match('data/masses.json'); if(cached){const json=await cached.clone().json(); rendered=applyRows(json); if(rendered)render();}}}catch(e){} if(!rendered){try{rendered=applyRows(window.MMF_FALLBACK_DATA||{}); if(rendered)render();}catch(e){}} try{let res=await fetch('data/masses.json',{cache:'no-cache'}); if(!res.ok)throw new Error('fetch'); let json=await res.clone().json(); if(window.caches){try{const c=await caches.open('mmf-v26-0-9'); await c.put('data/masses.json',res.clone())}catch(_){}} applyRows(json); render(); }catch(e){if(!rendered){state.loadError=String(e); render();}}}
+async function loadData(){state.saved=new Set(JSON.parse(localStorage.getItem('mmf_my_churches')||'[]')); let rendered=false; try{if(window.caches){const cached=await caches.match('data/masses.json'); if(cached){const json=await cached.clone().json(); rendered=applyRows(json); if(rendered)render();}}}catch(e){} if(!rendered){try{rendered=applyRows(window.MMF_FALLBACK_DATA||{}); if(rendered)render();}catch(e){}} try{let res=await fetch('data/masses.json',{cache:'no-cache'}); if(!res.ok)throw new Error('fetch'); let json=await res.clone().json(); if(window.caches){try{const c=await caches.open('mmf-v26-0-10'); await c.put('data/masses.json',res.clone())}catch(_){}} applyRows(json); render(); }catch(e){if(!rendered){state.loadError=String(e); render();}}}
 
 async function forceUpdate(){
   const banner=$('#updateBanner');
@@ -318,4 +290,4 @@ async function forceUpdate(){
 async function checkUpdate(){try{const res=await fetch('version.json?ts='+Date.now(),{cache:'no-store'});const v=await res.json(); if(v.version&&v.version!==APP_VERSION&&!localStorage.getItem('mmf_update_dismissed_'+v.version)){const banner=$('#updateBanner'); banner.dataset.latestVersion=v.version; banner.classList.add('show')}}catch(e){}}
 function bind(){state.lang=localStorage.getItem('mmf_language')||((navigator.language||'').toLowerCase().startsWith('fr')?'fr':'en'); $('#searchInput').addEventListener('input',e=>{state.query=e.target.value;state.filters.siteUid='';state.mode='search';state.near=!!parseQuery(state.query).near; if(state.near){state.mode='near';state.nearExpanded=false; if(!state.location) requestLocation();} render()}); $('#clearSearch').addEventListener('click',()=>{state.query='';$('#searchInput').value='';resetFilters();state.mode='home';state.near=false;state.nearExpanded=false;render()}); $('#langEn').addEventListener('click',()=>setLang('en')); $('#langFr').addEventListener('click',()=>setLang('fr')); $('#openFilters').addEventListener('click',openFilters); $('#closeFilters').addEventListener('click',closeFilters); $('#sheetBackdrop').addEventListener('click',closeFilters); $('#applyFilters').addEventListener('click',closeFilters); $$('.pill').forEach(p=>p.addEventListener('click',()=>{const a=p.dataset.action; if(a==='next'){state.mode='home';state.near=false;resetFilters();state.query='';$('#searchInput').value=''} if(a==='today'){applyFilter('day','__today')} if(a==='tomorrow'){applyFilter('day','__tomorrow')} if(a==='evening'){applyFilter('time','evening')} if(a==='near'){state.mode='near';state.near=true;state.nearExpanded=false;requestLocation()} if(a==='sunday'){applyFilter('day','Dimanche')} if(a==='saved'){state.mode='saved';state.near=false} render()})); $$('[data-nav]').forEach(b=>b.addEventListener('click',()=>{const n=b.dataset.nav;if(n==='near'){state.mode='near';state.near=true;state.nearExpanded=false;requestLocation()} else {state.mode=n; if(n==='more')state.moreSection='help'; if(n!=='near')state.near=false} render(); window.scrollTo({top:0,behavior:'smooth'})})); const quick=$('#quickRow'); if(quick){quick.addEventListener('scroll',()=>{markSwipeHintSeen();updateSwipeAffordance()},{passive:true}); quick.addEventListener('click',()=>{markSwipeHintSeen();updateSwipeAffordance()}); window.addEventListener('resize',updateSwipeAffordance)} $('#updateRefresh').addEventListener('click',forceUpdate); $('#updateHelp')?.addEventListener('click',openUpdateHelp); $('#updateDismiss').addEventListener('click',()=>{const banner=$('#updateBanner'); const latest=banner.dataset.latestVersion||APP_VERSION; banner.classList.remove('show');localStorage.setItem('mmf_update_dismissed_'+latest,'1')}); document.addEventListener('keydown',e=>{if(e.key==='Escape'&&state.modal==='filters')closeFilters(); trapSheetFocus(e)})}
 async function registerSW(){if(!('serviceWorker'in navigator))return; try{await navigator.serviceWorker.register('sw.js')}catch(e){}}
-document.addEventListener('DOMContentLoaded',()=>{bind();bindFixedBottomViewport();bindSheetDrag();loadData();registerSW();checkUpdate();setInterval(checkUpdate,30*60*1000)});
+document.addEventListener('DOMContentLoaded',()=>{bind();bindSheetDrag();loadData();registerSW();checkUpdate();setInterval(checkUpdate,30*60*1000)});

@@ -1,0 +1,36 @@
+Mauritius Mass Finder v26.0.10 — Bottom Nav Regression Recovery Validation Report
+
+Implemented changes:
+- Removed unstable visualViewport / scroll / resize JavaScript that dynamically repositioned the bottom navigation.
+- Restored bottom navigation to pure CSS fixed positioning: bottom: 0, transform: none, contain: none, high z-index.
+- Kept safe-area padding and main content bottom padding.
+- Updated version/cache to 26.0.10 / mmf-v26-0-10.
+
+Validation summary:
+- Data integrity: PASS (396 rows, 48 parishes, 118 sites, 379 Mass rows, 17 other/ambiguous rows).
+- Duplicate technical keys: PASS (0).
+- Invalid days/times: PASS (0).
+- Missing coordinates: PASS (0).
+- JS syntax: PASS.
+- Service worker syntax: PASS.
+- JSON validity: PASS.
+- Stale version/cache grep: PASS.
+- Removed unstable bottom-nav JS: PASS.
+- Exact-time parsing simulation: PASS for 07:30, 11:59, 12:00, 16:59, 17:00, 18:30.
+- Search simulation: PASS for messe du soir Curepipe, evening Mass Curepipe, messe demain, messe aujourd’hui, messe samedi soir, messe du matin Port Louis, sacre coeur, Saint/St, eglise/église, 18h/18:00/6pm, curpipe.
+- Source integrity: PASS for labelled parent-parish source cases; 173 parent-parish cases retained with explicit parent-page labels.
+- Final extracted zip: PASS.
+
+Real browser/mobile limitation:
+- Chromium execution is blocked by administrator policy in this environment, so live mobile visual confirmation is NOT TESTED here.
+- Therefore verdict is FIX THEN SHIP pending live phone smoke test of the bottom band.
+
+Required live phone smoke test before public release:
+1. Open the app.
+2. Search: messe du soir Curepipe.
+3. Scroll long results down/up several times.
+4. Confirm bottom band stays fixed to bottom.
+5. Open/close filters.
+6. Switch tabs.
+7. Switch EN/FR.
+8. Confirm bottom band remains fixed throughout.
