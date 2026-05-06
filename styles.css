@@ -3,7 +3,6 @@
 
 .appFooter{display:flex;align-items:center;justify-content:center;gap:7px;flex-wrap:wrap;color:var(--muted);font-size:12px;padding:10px 14px calc(var(--navH) + 14px);text-align:center}.appFooter button,.linkBtn{border:0;background:transparent;color:var(--accent);font:inherit;font-weight:850;text-decoration:underline;text-underline-offset:2px;padding:2px 4px}.guideText ol,.guideText ul{margin:.35rem 0 .7rem 1.25rem;color:var(--muted);padding:0}.guideText li{margin:.2rem 0}.updateBanner .linkBtn{display:block;margin-top:4px;padding:0;text-align:left;font-size:12px;color:#7a3d12}.updateBanner>div:first-child{min-width:0;flex:1}@media(max-width:430px){.updateBanner{align-items:flex-start}.updateBanner .btn{padding:8px 9px;min-height:36px}.appFooter{font-size:11px}}
 
-/* v26.0.7 Correction, Search & Source-Clarity Patch */
 .quickScroller{position:relative;overflow:hidden}
 .quickRow{scroll-snap-type:x mandatory;scroll-padding-left:14px;padding-right:52px}
 .quickRow .pill{scroll-snap-align:start}
@@ -19,14 +18,12 @@
 
 .badge.lang{background:#eef6ff;border-color:#9dccff;color:#17406d;font-weight:800;}
 
-/* v26.0.7 release stabilization: Near Me radius restored */
 .pill.active{background:var(--accent);border-color:var(--accent);color:#fff}
 .grab{cursor:grab}.filtersOpen .sheet{touch-action:pan-y}
 @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.001ms!important}}
 
 body.modalOpen{overflow:hidden;touch-action:none}.sheet[aria-hidden="true"]{visibility:hidden}.filtersOpen .sheet[aria-hidden="false"]{visibility:visible}.grab{touch-action:none}.intentChip{display:inline-flex;align-items:center;gap:3px}.intentChip button{min-width:24px;min-height:24px;border-radius:999px}
 
-/* v26.0.7: More panel tab spacing polish */
 .moreTabs {
   display: flex;
   flex-wrap: wrap;
@@ -34,7 +31,6 @@ body.modalOpen{overflow:hidden;touch-action:none}.sheet[aria-hidden="true"]{visi
   margin-bottom: 10px;
 }
 
-/* v26.0.7 Correction & clarity patch */
 .resultNotice{grid-column:1/-1;background:#fff8e5;border:1px solid #eadba6;color:#5e4212;border-radius:14px;padding:9px 11px;margin:0 0 10px;font-size:13px;font-weight:800}.resultNotice.warn{background:#fff7ed;border-color:#fed7aa;color:#7a3d12}
 
 html,body{min-height:100%;overflow-x:hidden;}
@@ -46,7 +42,7 @@ html,body{min-height:100%;overflow-x:hidden;}
 
 
 
-/* v26.0.10 Bottom nav regression recovery: pure CSS fixed bottom, no viewport JS offset. */
+/* v26.1.4 Bottom nav regression recovery: pure CSS fixed bottom, no viewport JS offset. */
 html,body{min-height:100%;}
 body{padding-bottom:calc(var(--navH) + env(safe-area-inset-bottom))!important;overflow-x:hidden;}
 .bottomNav{position:fixed!important;left:0!important;right:0!important;bottom:0!important;top:auto!important;width:100%!important;z-index:9999!important;transform:none!important;translate:none!important;will-change:auto!important;contain:none!important;isolation:auto!important;}

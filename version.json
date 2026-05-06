@@ -1,8 +1,8 @@
 {
-  "version": "26.0.10",
-  "release_name": "Bottom Navigation Regression Recovery Release",
-  "build": "2026-05-04",
-  "data_version": "2026-05-03",
-  "cache_version": "mmf-v26-0-10",
-  "notes": "Bottom Navigation Regression Recovery Release. Restores bottom navigation using pure fixed CSS and removes unstable visual viewport repositioning while preserving source integrity, search, filters, data integrity, PWA update, and offline support."
+  "version": "26.1.4",
+  "release_name": "Runtime Data Note Cleanup Release",
+  "build": "2026-05-06",
+  "data_version": "2026-05-05",
+  "cache_version": "mmf-v26-1-4",
+  "notes": "Stale runtime data references removed; coordinate precision summary regenerated from actual rows; deployable zip cleaned."
 }
