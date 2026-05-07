@@ -1,20 +1,34 @@
 
 'use strict';
-const APP_VERSION='26.2.3';
+const APP_VERSION='27.0.4';
+const CACHE_NAME='mmf-v27-0-4';
 const NEAR_RADIUS_KM=12;
 const DAYS=['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'];
 const DAY_EN={Dimanche:'Sunday',Lundi:'Monday',Mardi:'Tuesday',Mercredi:'Wednesday',Jeudi:'Thursday',Vendredi:'Friday',Samedi:'Saturday'};
 const DAY_FR={Dimanche:'Dimanche',Lundi:'Lundi',Mardi:'Mardi',Mercredi:'Mercredi',Jeudi:'Jeudi',Vendredi:'Vendredi',Samedi:'Samedi'};
 const T={
- en:{title:'Mauritius\nMass Finder',subtitle:'Find a Mass quickly anywhere in Mauritius',search:'Search',searchPh:'evening Mass Curepipe, 18h, Saint Jean…',searchHint:'Try: evening Mass Curepipe',clear:'Clear',quickNext:'Next Mass',quickToday:'Today',quickTomorrow:'Tomorrow',quickNear:'Near me',quickEvening:'Evening',quickSunday:'Sunday',quickSaved:'My Churches',filters:'Filters',showResults:'Show results',day:'Day',time:'Time of day',region:'Region',type:'Type',anyDay:'Any day',today:'Today',tomorrow:'Tomorrow',sunday:'Sunday',allDay:'All day',morning:'Morning',afternoon:'Afternoon',evening:'Evening',allRegions:'All regions',massesOnly:'Masses only',includeOther:'Include other celebrations',nextMass:'Next Mass',nextUseful:'Next useful Mass',nearTitle:'Near Me',nearSub:'Within 12 km by default. Next Mass first, then distance',sortedHintNear:'Within 12 km: next Mass first, then distance',nearExpanded:'Showing farther results',expandNear:'Show farther',savedTitle:'My Churches',savedSub:'Your saved churches with their next Mass',noSaved:'No saved churches yet',noSavedText:'Tap Save on a Mass card to add a church here.',results:'results',result:'result',shown:'shown',directions:'Directions',share:'Share',save:'Save',saved:'Saved',source:'Source',sourceParishPage:'Source: parent parish page — {parish}',allTimes:'All times',verified:'Verified',todayRel:'Today',tomorrowRel:'Tomorrow',inM:'in {n} min',inH:'in {h}h {m}m',now:'now',weekdayMass:'Weekday Mass',sundayMass:'Sunday Mass',satEve:'Saturday evening Mass',otherCelebration:'Other celebration',approx:'~{d} km',exact:'{d} km',noResults:'No matching Mass found',noResultsText:'Try removing a filter, widening the place, or using a simpler search.',locationAsk:'Allow location access to sort nearby Masses.',locationDenied:'Location was not available. Results remain sorted by next Mass.',nearUse:'Use my location',moreTitle:'Help & app information',helpTitle:'How to use this app',helpHtml:'<p><b>Search naturally:</b> try “evening Mass Curepipe”, “messe du soir Quatre Bornes”, “18h”, or a church name.</p><p><b>Near Me:</b> location is used only on your device to sort nearby results.</p><p><b>Masses only:</b> the default view excludes other celebrations unless you include them in filters.</p>',trustTitle:'Trust note',trustText:'Mass times can change for feast days, funerals, cyclones, holidays or parish changes. Use the source link when timing is critical.',version:'Version',navHome:'Home',navSearch:'Search',navNear:'Near me',navSaved:'My Churches',navMore:'More',updateTitle:'New version available',updateText:'Update to get the latest version.',refresh:'Update now',later:'Later',copied:'Link copied',shared:'Ready to share',shareAppTitle:'Mauritius Mass Finder',shareMassIntro:'Mass time',howUpdate:'How to update',troubleUpdating:'Having trouble updating?',about:'About',aboutTitle:'About this app',aboutHtml:'<p><b>Purpose:</b> Mauritius Mass Finder helps people quickly find Catholic Mass times across Mauritius.</p><p><b>Data and trust:</b> the schedule is based on the maintained project database compiled from official diocesan parish information and project corrections. Parish schedules can still change at short notice.</p><p><b>Default view:</b> the app shows Masses only by default. Other celebrations, such as adoration or prayer services, are shown only when you choose to include them.</p><p><b>Corrections:</b> if a time looks wrong, use the source link or report it so the database can be corrected.</p>',updateGuideTitle:'How to update the app',updateGuideHtml:'<p>When a new version is available, a message will appear:</p><p><b>→ New version available</b></p><p>Tap <b>Update now</b> to load the latest version.</p><p><b>If nothing happens:</b></p><ol><li>Close the app completely</li><li>Reopen it</li></ol><p><b>If the problem continues:</b></p><ul><li>remove the app from your home screen</li><li>add it again from your browser</li></ul>',swipeHint:'Swipe to see more',showingToday:'Showing: Today',showingTomorrow:'Showing: Tomorrow',showingSunday:'Showing: Sunday Masses (including Saturday evening)',showingNear:'Showing: Near you',showingSaved:'Showing: My Churches',showingSearch:'Showing: Search results',showingSundayEvening:'Showing: Sunday evening',usingLocation:'Using your location',locationNotEnabled:'Location not enabled',sortedHint:'Sorted by time, then distance',updateFallback:'If nothing happens, close and reopen the app.',reportCorrection:'Report correction',reportGeneral:'Report a correction',reportFor:'Report this time',reportSubject:'Correction for Mauritius Mass Finder',reportBody:'Please check this Mass information:',resultCap:'Showing 60 of {n} — refine your search.',sundayExplain:'Includes Saturday evening Masses from 15:30 onward.',details:'Details',hideDetails:'Hide details',trustStrip:'{verified} · {source} · {precision}',sourceAvailable:'Official source available',approxLocation:'Approx. location',exactLocation:'Exact location',confidenceLow:'Lower confidence — check source',confidenceOk:'Confidence {score}%',onlyWhen:'Only when: {rule}',notMassWarning:'Other celebration — not a Mass',error:'Something went wrong'},
- fr:{title:'Trouver une\nMesse à Maurice',subtitle:'Trouvez rapidement une messe à Maurice',search:'Recherche',searchPh:'messe du soir Curepipe, 18h, Saint Jean…',searchHint:'Essayez : messe du soir Curepipe',clear:'Effacer',quickNext:'Prochaine messe',quickToday:'Aujourd’hui',quickTomorrow:'Demain',quickNear:'Près de moi',quickEvening:'Soir',quickSunday:'Dimanche',quickSaved:'Mes églises',filters:'Filtres',showResults:'Afficher les résultats',day:'Jour',time:'Moment',region:'Région',type:'Type',anyDay:'Tous les jours',today:'Aujourd’hui',tomorrow:'Demain',sunday:'Dimanche',allDay:'Toute la journée',morning:'Matin',afternoon:'Après-midi',evening:'Soir',allRegions:'Toutes les régions',massesOnly:'Messes uniquement',includeOther:'Inclure autres célébrations',nextMass:'Prochaine messe',nextUseful:'Prochaine messe utile',nearTitle:'Près de moi',nearSub:'Dans un rayon de 12 km par défaut. Prochaine messe d’abord, puis distance',sortedHintNear:'Dans un rayon de 12 km : prochaine messe d’abord, puis distance',nearExpanded:'Résultats plus éloignés affichés',expandNear:'Afficher plus loin',savedTitle:'Mes églises',savedSub:'Vos églises enregistrées avec leur prochaine messe',noSaved:'Aucune église enregistrée',noSavedText:'Appuyez sur Enregistrer sur une messe pour ajouter une église ici.',results:'résultats',result:'résultat',shown:'affichés',directions:'Itinéraire',share:'Partager',save:'Enregistrer',saved:'Enregistrée',source:'Source',sourceParishPage:'Source : page de la paroisse mère — {parish}',allTimes:'Tous les horaires',verified:'Vérifié',todayRel:'Aujourd’hui',tomorrowRel:'Demain',inM:'dans {n} min',inH:'dans {h}h {m}m',now:'maintenant',weekdayMass:'Messe de semaine',sundayMass:'Messe du dimanche',satEve:'Messe du samedi soir',otherCelebration:'Autre célébration',approx:'~{d} km',exact:'{d} km',noResults:'Aucune messe trouvée',noResultsText:'Essayez de retirer un filtre, d’élargir le lieu ou d’utiliser une recherche plus simple.',locationAsk:'Autorisez la localisation pour trier les messes proches.',locationDenied:'La localisation n’est pas disponible. Les résultats restent triés par prochaine messe.',nearUse:'Utiliser ma localisation',moreTitle:'Aide et informations',helpTitle:'Comment utiliser cette application',helpHtml:'<p><b>Recherchez naturellement :</b> essayez « messe du soir Curepipe », « 18h », ou le nom d’une église.</p><p><b>Près de moi :</b> la localisation est utilisée seulement sur votre appareil pour trier les résultats proches.</p><p><b>Messes uniquement :</b> l’affichage par défaut exclut les autres célébrations sauf si vous les incluez dans les filtres.</p>',trustTitle:'Note de confiance',trustText:'Les horaires peuvent changer en cas de fêtes, funérailles, cyclones, jours fériés ou changement paroissial. Utilisez le lien source lorsque l’horaire est important.',version:'Version',navHome:'Accueil',navSearch:'Recherche',navNear:'Près de moi',navSaved:'Mes églises',navMore:'Plus',updateTitle:'Nouvelle version disponible',updateText:'Actualisez pour obtenir la dernière version.',refresh:'Actualiser',later:'Plus tard',copied:'Lien copié',shared:'Prêt à partager',shareAppTitle:'Trouver une Messe à Maurice',shareMassIntro:'Horaire de messe',howUpdate:'Comment mettre à jour',troubleUpdating:'Problème de mise à jour ?',about:'À propos',aboutTitle:'À propos de cette application',aboutHtml:'<p><b>Objectif :</b> Trouver une Messe à Maurice aide à trouver rapidement les horaires des messes catholiques à Maurice.</p><p><b>Données et confiance :</b> les horaires viennent de la base de données du projet, établie à partir des informations paroissiales officielles du diocèse et des corrections vérifiées du projet. Les horaires peuvent toutefois changer à court terme.</p><p><b>Affichage par défaut :</b> l’application affiche uniquement les messes par défaut. Les autres célébrations, comme l’adoration ou les temps de prière, apparaissent seulement si vous choisissez de les inclure.</p><p><b>Corrections :</b> si un horaire semble incorrect, utilisez le lien source ou signalez-le afin que la base puisse être corrigée.</p>',updateGuideTitle:'Comment mettre à jour l’application',updateGuideHtml:'<p>Lorsqu’une nouvelle version est disponible, un message s’affiche :</p><p><b>→ Nouvelle version disponible</b></p><p>Appuyez sur <b>Actualiser</b> pour charger la dernière version.</p><p><b>Si cela ne fonctionne pas :</b></p><ol><li>Fermez complètement l’application</li><li>Rouvrez-la</li></ol><p><b>Si le problème persiste :</b></p><ul><li>supprimez l’application de votre écran d’accueil</li><li>ajoutez-la à nouveau depuis le navigateur</li></ul>',swipeHint:'Faites glisser pour voir plus',showingToday:'Affichage : Aujourd’hui',showingTomorrow:'Affichage : Demain',showingSunday:'Affichage : Messes du dimanche (y compris samedi soir)',showingNear:'Affichage : Près de vous',showingSaved:'Affichage : Mes églises',showingSearch:'Affichage : Résultats de recherche',showingSundayEvening:'Affichage : Dimanche soir',usingLocation:'Utilisation de votre position',locationNotEnabled:'Localisation non activée',sortedHint:'Trié par heure, puis distance',updateFallback:'Si rien ne se passe, fermez puis rouvrez l’application.',reportCorrection:'Signaler une correction',reportGeneral:'Signaler une correction',reportFor:'Signaler cet horaire',reportSubject:'Correction pour Trouver une Messe à Maurice',reportBody:'Merci de vérifier cette information de messe :',resultCap:'60 résultats affichés sur {n} — affinez votre recherche.',sundayExplain:'Inclut les messes du samedi soir à partir de 15h30.',details:'Détails',hideDetails:'Masquer les détails',trustStrip:'{verified} · {source} · {precision}',sourceAvailable:'Source officielle disponible',approxLocation:'Localisation approx.',exactLocation:'Localisation exacte',confidenceLow:'Confiance plus faible — vérifiez la source',confidenceOk:'Confiance {score}%',onlyWhen:'Seulement si : {rule}',notMassWarning:'Autre célébration — pas une messe',error:'Une erreur est survenue'}
+ en:{title:'Mauritius\nMass Finder',subtitle:'Find a Mass quickly anywhere in Mauritius',search:'Search',searchPh:'evening Mass Curepipe, 18h, Saint Jean…',searchHint:'Try: evening Mass Curepipe',clear:'Clear',quickNext:'Next Mass',quickToday:'Today',quickTomorrow:'Tomorrow',quickNear:'Near me',quickEvening:'Evening',quickSunday:'Sunday',quickSaved:'My Churches',filters:'Filters',showResults:'Show results',day:'Day',time:'Time of day',region:'Region',type:'Type',anyDay:'Any day',today:'Today',tomorrow:'Tomorrow',sunday:'Sunday',allDay:'All day',morning:'Morning',afternoon:'Afternoon',evening:'Evening',allRegions:'All regions',massesOnly:'Masses only',includeOther:'Include other celebrations',nextMass:'Next Mass',nextUseful:'Next useful Mass',nearTitle:'Near Me',nearSub:'Within 12 km by default. Next Mass first, then distance',sortedHintNear:'Within 12 km: next Mass first, then distance',nearExpanded:'Showing farther results',expandNear:'Show farther',savedTitle:'My Churches',savedSub:'Your saved churches with their next Mass',noSaved:'No saved churches yet',noSavedText:'Tap Save on a Mass card to add a church here.',results:'results',result:'result',shown:'shown',directions:'Directions',share:'Share',save:'Save',saved:'Saved',source:'Source',sourceParishPage:'Source: parent parish page — {parish}',allTimes:'Parish schedule',verified:'Verified',todayRel:'Today',tomorrowRel:'Tomorrow',inM:'in {n} min',inH:'in {h}h {m}m',now:'now',weekdayMass:'Weekday Mass',sundayMass:'Sunday Mass',satEve:'Saturday evening Mass',otherCelebration:'Other celebration',approx:'~{d} km',exact:'{d} km',noResults:'No matching Mass found',noResultsText:'Try removing a filter, widening the place, or using a simpler search.',locationAsk:'Allow location access to sort nearby Masses.',locationDenied:'Location was not available. Results remain sorted by next Mass.',nearUse:'Use my location',moreTitle:'Help & app information',helpTitle:'How to use this app',helpHtml:'<p><b>Search naturally:</b> try “evening Mass Curepipe”, “messe du soir Quatre Bornes”, “18h”, or a church name.</p><p><b>Near Me:</b> location is used only on your device to sort nearby results.</p><p><b>Masses only:</b> the default view excludes other celebrations unless you include them in filters.</p>',trustTitle:'Trust note',trustText:'Mass times can change for feast days, funerals, cyclones, holidays or parish changes. Use the source link when timing is critical.',version:'Version',navHome:'Home',navSearch:'Search',navNear:'Near me',navSaved:'My Churches',navMore:'More',updateTitle:'New version available',updateText:'Update to get the latest version.',refresh:'Update now',later:'Later',copied:'Link copied',shared:'Ready to share',shareAppTitle:'Mauritius Mass Finder',shareMassIntro:'Mass time',howUpdate:'How to update',troubleUpdating:'Having trouble updating?',about:'About',aboutTitle:'About this app',aboutHtml:'<p><b>Purpose:</b> Mauritius Mass Finder helps people quickly find Catholic Mass times across Mauritius.</p><p><b>Data and trust:</b> the schedule is based on the maintained project database compiled from official diocesan parish information and project corrections. Parish schedules can still change at short notice.</p><p><b>Default view:</b> the app shows Masses only by default. Other celebrations, such as adoration or prayer services, are shown only when you choose to include them.</p><p><b>Corrections:</b> if a time looks wrong, use the source link or report it so the database can be corrected.</p>',updateGuideTitle:'How to update the app',updateGuideHtml:'<p>When a new version is available, a message will appear:</p><p><b>→ New version available</b></p><p>Tap <b>Update now</b> to load the latest version.</p><p><b>If nothing happens:</b></p><ol><li>Close the app completely</li><li>Reopen it</li></ol><p><b>If the problem continues:</b></p><ul><li>remove the app from your home screen</li><li>add it again from your browser</li></ul>',swipeHint:'Swipe to see more',showingToday:'Showing: Today',showingTomorrow:'Showing: Tomorrow',showingSunday:'Showing: Sunday Masses (including Saturday evening)',showingNear:'Showing: Near you',showingSaved:'Showing: My Churches',showingSearch:'Showing: Search results',showingSundayEvening:'Showing: Sunday evening',usingLocation:'Using your location',locationNotEnabled:'Location not enabled',sortedHint:'Sorted by time, then distance',updateFallback:'If nothing happens, close and reopen the app.',reportCorrection:'Report correction',reportGeneral:'Report a correction',reportFor:'Report this time',reportSubject:'Correction for Mauritius Mass Finder',reportBody:'Please check this Mass information:',resultCap:'Showing 60 of {n} — refine your search.',sundayExplain:'Includes Saturday evening Masses from 15:30 onward.',details:'Details',hideDetails:'Hide details',trustStrip:'{verified} · {source} · {precision}',sourceAvailable:'Official source available',approxLocation:'Approx. location',exactLocation:'Exact location',confidenceLow:'Lower confidence — check source',confidenceOk:'Confidence {score}%',onlyWhen:'Only when: {rule}',notMassWarning:'Other celebration — not a Mass',parishSchedule:'Parish schedule',churchSchedule:'Church schedule',detailTitle:'Mass details',close:'Close',rule:'Rule',parish:'Parish',site:'Church',town:'Town',shareThisView:'Share this view',linkReady:'Share link ready',invalidLink:'Shared link could not be fully restored',error:'Something went wrong'},
+ fr:{title:'Trouver une\nMesse à Maurice',subtitle:'Trouvez rapidement une messe à Maurice',search:'Recherche',searchPh:'messe du soir Curepipe, 18h, Saint Jean…',searchHint:'Essayez : messe du soir Curepipe',clear:'Effacer',quickNext:'Prochaine messe',quickToday:'Aujourd’hui',quickTomorrow:'Demain',quickNear:'Près de moi',quickEvening:'Soir',quickSunday:'Dimanche',quickSaved:'Mes églises',filters:'Filtres',showResults:'Afficher les résultats',day:'Jour',time:'Moment',region:'Région',type:'Type',anyDay:'Tous les jours',today:'Aujourd’hui',tomorrow:'Demain',sunday:'Dimanche',allDay:'Toute la journée',morning:'Matin',afternoon:'Après-midi',evening:'Soir',allRegions:'Toutes les régions',massesOnly:'Messes uniquement',includeOther:'Inclure autres célébrations',nextMass:'Prochaine messe',nextUseful:'Prochaine messe utile',nearTitle:'Près de moi',nearSub:'Dans un rayon de 12 km par défaut. Prochaine messe d’abord, puis distance',sortedHintNear:'Dans un rayon de 12 km : prochaine messe d’abord, puis distance',nearExpanded:'Résultats plus éloignés affichés',expandNear:'Afficher plus loin',savedTitle:'Mes églises',savedSub:'Vos églises enregistrées avec leur prochaine messe',noSaved:'Aucune église enregistrée',noSavedText:'Appuyez sur Enregistrer sur une messe pour ajouter une église ici.',results:'résultats',result:'résultat',shown:'affichés',directions:'Itinéraire',share:'Partager',save:'Enregistrer',saved:'Enregistrée',source:'Source',sourceParishPage:'Source : page de la paroisse mère — {parish}',allTimes:'Horaires de la paroisse',verified:'Vérifié',todayRel:'Aujourd’hui',tomorrowRel:'Demain',inM:'dans {n} min',inH:'dans {h}h {m}m',now:'maintenant',weekdayMass:'Messe de semaine',sundayMass:'Messe du dimanche',satEve:'Messe du samedi soir',otherCelebration:'Autre célébration',approx:'~{d} km',exact:'{d} km',noResults:'Aucune messe trouvée',noResultsText:'Essayez de retirer un filtre, d’élargir le lieu ou d’utiliser une recherche plus simple.',locationAsk:'Autorisez la localisation pour trier les messes proches.',locationDenied:'La localisation n’est pas disponible. Les résultats restent triés par prochaine messe.',nearUse:'Utiliser ma localisation',moreTitle:'Aide et informations',helpTitle:'Comment utiliser cette application',helpHtml:'<p><b>Recherchez naturellement :</b> essayez « messe du soir Curepipe », « 18h », ou le nom d’une église.</p><p><b>Près de moi :</b> la localisation est utilisée seulement sur votre appareil pour trier les résultats proches.</p><p><b>Messes uniquement :</b> l’affichage par défaut exclut les autres célébrations sauf si vous les incluez dans les filtres.</p>',trustTitle:'Note de confiance',trustText:'Les horaires peuvent changer en cas de fêtes, funérailles, cyclones, jours fériés ou changement paroissial. Utilisez le lien source lorsque l’horaire est important.',version:'Version',navHome:'Accueil',navSearch:'Recherche',navNear:'Près de moi',navSaved:'Mes églises',navMore:'Plus',updateTitle:'Nouvelle version disponible',updateText:'Actualisez pour obtenir la dernière version.',refresh:'Actualiser',later:'Plus tard',copied:'Lien copié',shared:'Prêt à partager',shareAppTitle:'Trouver une Messe à Maurice',shareMassIntro:'Horaire de messe',howUpdate:'Comment mettre à jour',troubleUpdating:'Problème de mise à jour ?',about:'À propos',aboutTitle:'À propos de cette application',aboutHtml:'<p><b>Objectif :</b> Trouver une Messe à Maurice aide à trouver rapidement les horaires des messes catholiques à Maurice.</p><p><b>Données et confiance :</b> les horaires viennent de la base de données du projet, établie à partir des informations paroissiales officielles du diocèse et des corrections vérifiées du projet. Les horaires peuvent toutefois changer à court terme.</p><p><b>Affichage par défaut :</b> l’application affiche uniquement les messes par défaut. Les autres célébrations, comme l’adoration ou les temps de prière, apparaissent seulement si vous choisissez de les inclure.</p><p><b>Corrections :</b> si un horaire semble incorrect, utilisez le lien source ou signalez-le afin que la base puisse être corrigée.</p>',updateGuideTitle:'Comment mettre à jour l’application',updateGuideHtml:'<p>Lorsqu’une nouvelle version est disponible, un message s’affiche :</p><p><b>→ Nouvelle version disponible</b></p><p>Appuyez sur <b>Actualiser</b> pour charger la dernière version.</p><p><b>Si cela ne fonctionne pas :</b></p><ol><li>Fermez complètement l’application</li><li>Rouvrez-la</li></ol><p><b>Si le problème persiste :</b></p><ul><li>supprimez l’application de votre écran d’accueil</li><li>ajoutez-la à nouveau depuis le navigateur</li></ul>',swipeHint:'Faites glisser pour voir plus',showingToday:'Affichage : Aujourd’hui',showingTomorrow:'Affichage : Demain',showingSunday:'Affichage : Messes du dimanche (y compris samedi soir)',showingNear:'Affichage : Près de vous',showingSaved:'Affichage : Mes églises',showingSearch:'Affichage : Résultats de recherche',showingSundayEvening:'Affichage : Dimanche soir',usingLocation:'Utilisation de votre position',locationNotEnabled:'Localisation non activée',sortedHint:'Trié par heure, puis distance',updateFallback:'Si rien ne se passe, fermez puis rouvrez l’application.',reportCorrection:'Signaler une correction',reportGeneral:'Signaler une correction',reportFor:'Signaler cet horaire',reportSubject:'Correction pour Trouver une Messe à Maurice',reportBody:'Merci de vérifier cette information de messe :',resultCap:'60 résultats affichés sur {n} — affinez votre recherche.',sundayExplain:'Inclut les messes du samedi soir à partir de 15h30.',details:'Détails',hideDetails:'Masquer les détails',trustStrip:'{verified} · {source} · {precision}',sourceAvailable:'Source officielle disponible',approxLocation:'Localisation approx.',exactLocation:'Localisation exacte',confidenceLow:'Confiance plus faible — vérifiez la source',confidenceOk:'Confiance {score}%',onlyWhen:'Seulement si : {rule}',notMassWarning:'Autre célébration — pas une messe',parishSchedule:'Horaires de la paroisse',churchSchedule:'Horaires de cette église',detailTitle:'Détails de la messe',close:'Fermer',rule:'Condition',parish:'Paroisse',site:'Église',town:'Ville',shareThisView:'Partager cette vue',linkReady:'Lien de partage prêt',invalidLink:'Le lien partagé n’a pas pu être entièrement restauré',error:'Une erreur est survenue'}
 };
 const $=s=>document.querySelector(s); const $$=s=>[...document.querySelectorAll(s)];
 const DEFAULT_FILTERS={day:'',dayMode:'',time:'',region:'',type:'mass',siteUid:''};
-const state={query:'',parsed:{},filters:{...DEFAULT_FILTERS},location:null,near:false,nearExpanded:false,mode:'home',moreSection:'help',modal:null,saved:new Set(),lang:'en',rows:[],results:[],next:null,loadError:''};
+const state={query:'',parsed:{},filters:{...DEFAULT_FILTERS},location:null,near:false,nearExpanded:false,mode:'home',moreSection:'help',modal:null,saved:new Set(),lang:'en',rows:[],results:[],next:null,loadError:'',detailRow:null};
+function getState(){return state}
+function setState(patch={},options={}){
+  Object.entries(patch).forEach(([key,value])=>{
+    if(key==='filters')state.filters={...state.filters,...value};
+    else state[key]=value;
+  });
+  if(options.syncInput!==false&&Object.prototype.hasOwnProperty.call(patch,'query')){const input=$('#searchInput'); if(input)input.value=state.query||''}
+  if(options.url)history.replaceState(null,'',stateUrl());
+  if(options.render!==false)render();
+}
+function setFilters(patch={},options={}){setState({filters:patch},options)}
+function setMode(mode,patch={},options={}){setState({mode,...patch},options)}
 function tr(k,v={}){return String((T[state.lang]&&T[state.lang][k])||T.en[k]||k).replace(/\{(\w+)\}/g,(_,x)=>v[x]??'')}
 function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function norm(s){return String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[œŒ]/g,'oe').toLowerCase().replace(/[’'`´-]/g,' ').replace(/\b(st)\b/g,'saint').replace(/\b(ste)\b/g,'sainte').replace(/\b(nd)\b/g,'notre dame').replace(/[^a-z0-9]+/g,' ').trim()}
+function normaliseSearchText(text){return normaliseCommonTypos(norm(text))}
 function normaliseCommonTypos(s){return String(s||'').replace(/\bcurpipe\b/g,'curepipe').replace(/\bcurepype\b/g,'curepipe').replace(/\bquatrebornes\b/g,'quatre bornes').replace(/\bportlouis\b/g,'port louis').replace(/\bbeaubassin\b/g,'beau bassin').replace(/\brosehill\b/g,'rose hill').replace(/\bmahebourg\b/g,'mahebourg').replace(/\bmaheburg\b/g,'mahebourg').replace(/\bgrandbaie\b/g,'grand baie').replace(/\bgrandgaube\b/g,'grand gaube').replace(/\bflac\b/g,'flacq')}
 function parseExactTimeRaw(q){const raw=String(q||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,''); const m=raw.match(/\b(\d{1,2})\s*(?::|h)\s*(\d{2})\s*(am|pm)?\b|\b(\d{1,2})\s*h\b|\b(\d{1,2})\s*(am|pm)\b/); if(!m)return null; let h=+(m[1]||m[4]||m[5]), min=m[2]?+m[2]:0, ap=m[3]||m[6]||''; if(ap==='pm'&&h<12)h+=12; if(ap==='am'&&h===12)h=0; return h<24&&min<60?{minutes:h*60+min,label:`${String(h).padStart(2,'0')}:${String(min).padStart(2,'0')}`}:null}
 function bool(v){return v===true||String(v).toLowerCase()==='true'}
@@ -25,9 +39,13 @@ function rowLat(r){const x=parseFloat(r.latitude);return Number.isFinite(x)?x:nu
 function rowLon(r){const x=parseFloat(r.longitude);return Number.isFinite(x)?x:null}
 function siteName(r){return r.site_name||r.display_site_label||r.parish_label||r.parish_name||''}
 function dayName(d){return (state.lang==='fr'?DAY_FR:DAY_EN)[d]||d}
-function mauritiusNow(base=new Date()){return new Date(base.toLocaleString('en-US',{timeZone:'Indian/Mauritius'}))}
+function getMauritiusNow(base=new Date()){return new Date(base.toLocaleString('en-US',{timeZone:'Indian/Mauritius'}))}
+function mauritiusNow(base=new Date()){return getMauritiusNow(base)}
 function todayName(offset=0,base=mauritiusNow()){const d=new Date(base);d.setDate(d.getDate()+offset);return DAYS[d.getDay()]}
-function isSundayEligible(r){return r.day_of_week==='Dimanche'||(r.day_of_week==='Samedi'&&mins(r.time_24h)>=930)}
+function parseMassTime(row){return mins(row&&row.time_24h)}
+function isSaturdayEveningMass(row){return row&&row.day_of_week==='Samedi'&&parseMassTime(row)>=930}
+function isSundayEligible(r){return r.day_of_week==='Dimanche'||isSaturdayEveningMass(r)}
+function countsForSundayContext(row,now=mauritiusNow()){return isSundayEligible(row)}
 function dateSerial(d){return Math.floor(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate())/86400000)}
 function weekOfMonth(d){return Math.floor((d.getDate()-1)/7)+1}
 function isLastWeekdayOfMonth(d){const x=new Date(d);x.setDate(x.getDate()+7);return x.getMonth()!==d.getMonth()}
@@ -80,12 +98,15 @@ function nextDelta(r,now=mauritiusNow()){
   }
   return 999999;
 }
+function getNextOccurrence(row,now=mauritiusNow()){const delta=nextDelta(row,now); if(delta>=999999)return null; const d=new Date(now); d.setMinutes(d.getMinutes()+delta); return d}
+function isPastMass(row,now=mauritiusNow()){return row&&row.day_of_week===todayName(0,now)&&parseMassTime(row)<(now.getHours()*60+now.getMinutes())}
+function getNextMass(rows,now=mauritiusNow(),st=state){const arr=(rows||[]).filter(rowActive).filter(r=>st.filters?.type==='all'||rowMass(r)).map(r=>annotateRowForRanking(r,now)).filter(r=>r._actionable); return rankResults(arr,{near:!!st.near})[0]||null}
 function rel(delta,now=mauritiusNow()){if(delta>=999999)return ''; if(delta<=1)return tr('now'); const target=new Date(now); target.setMinutes(target.getMinutes()+delta); const dayDiff=dateSerial(target)-dateSerial(now); if(dayDiff===0){if(delta<60)return tr('inM',{n:delta}); const h=Math.floor(delta/60),m=delta%60; return tr('inH',{h,m});} if(dayDiff===1)return tr('tomorrowRel'); if(delta<60)return tr('inM',{n:delta}); if(delta<1440){const h=Math.floor(delta/60),m=delta%60; return tr('inH',{h,m});} return dayName(DAYS[target.getDay()])}
 function distKm(a,b,c,d){if([a,b,c,d].some(x=>!Number.isFinite(+x)))return null; const R=6371,rad=x=>x*Math.PI/180; const dLat=rad(c-a),dLon=rad(d-b); const A=Math.sin(dLat/2)**2+Math.cos(rad(a))*Math.cos(rad(c))*Math.sin(dLon/2)**2; return 2*R*Math.asin(Math.sqrt(A))}
 function distanceLabel(r,d=null){const val=d??(state.location?distKm(state.location.lat,state.location.lon,rowLat(r),rowLon(r)):null); if(val==null)return ''; const key=(String(r.coordinate_precision||'').includes('exact')?'exact':'approx'); return tr(key,{d:val.toFixed(val<10?1:0)})}
 function stripStopwords(text){const stop=/\b(du|de|des|le|la|les|l|a|au|aux|d)\b/g;return text.replace(stop,' ').replace(/\s+/g,' ').trim()}
-function parseQuery(q){
-  const exactRaw=parseExactTimeRaw(q); const n=normaliseCommonTypos(norm(q)); const p={raw:q,tokens:n.split(' ').filter(Boolean),chips:[]}; if(!n&&!exactRaw)return p;
+function parseUserIntent(q){
+  const exactRaw=parseExactTimeRaw(q); const n=normaliseSearchText(q); const p={raw:q,tokens:n.split(' ').filter(Boolean),chips:[]}; if(!n&&!exactRaw)return p;
   const chip=(k,label)=>p.chips.push({k,label});
   if(/\b(today|aujourd hui|maintenant|now)\b/.test(n)){p.day='today'; chip('day',tr('today'))}
   if(/\b(tomorrow|demain)\b/.test(n)){p.day='tomorrow'; chip('day',tr('tomorrow'))}
@@ -113,33 +134,44 @@ function parseQuery(q){
   clean=stripStopwords(clean);
   p.place=clean; if(clean) chip('place',clean); return p
 }
-function matchesText(r,p){if(!p.place)return true; const hay=norm([r.search_text,r.region,r.town,r.parish_name,r.parish_label,r.site_name,r.maps_query].join(' ')); return p.place.split(' ').every(t=>hay.includes(t))}
+function parseQuery(q){return parseUserIntent(q)}
+function matchesText(r,p){if(!p.place)return true; const hay=normaliseSearchText([r.search_text,r.region,r.town,r.parish_name,r.parish_label,r.site_name,r.maps_query].join(' ')); return p.place.split(' ').every(t=>hay.includes(t))}
 function matchesTime(r,b,p={}){const m=mins(r.time_24h); if(!b)return true; if(b==='morning')return m<720; if(b==='afternoon')return m>=720&&m<1020; if(b==='evening'){if((p.saturdayEvening||state.filters.day==='Samedi'||state.filters.dayMode==='sunday_obligation')&&r.day_of_week==='Samedi')return m>=930; return m>=1020;} return true}
 function matchesExact(r,ex){if(ex==null)return true; return Math.abs(mins(r.time_24h)-ex)<=45}
 function effectiveDayMode(){const p=state.parsed; if(state.filters.dayMode)return state.filters.dayMode; if(p.day==='today')return 'today'; if(p.day==='tomorrow')return 'tomorrow'; if(p.day==='Dimanche'&&p.sundayEvening)return 'calendar'; if(p.day==='Dimanche')return 'sunday_obligation'; if(DAYS.includes(p.day))return 'calendar'; return ''}
 function effectiveDay(){const p=state.parsed; if(state.filters.day)return state.filters.day; if(p.day==='today')return todayName(0); if(p.day==='tomorrow')return todayName(1); if(DAYS.includes(p.day))return p.day; return ''}
 function cleanVisibleQuery(q){return String(q||'').replace(/[’'`´]/g,' ').replace(/\b(mass|messe|church|eglise|église)\b/gi,' ').replace(/\b(du|de|des|le|la|les|l|à|a|au|aux|d)\b/gi,' ').replace(/\s+/g,' ').trim()}
 function removeQueryIntent(q,k){let s=String(q||''); if(k==='day')s=s.replace(/\b(today|aujourd[’']?hui|aujourd hui|maintenant|now|tomorrow|demain|monday|lundi|tuesday|mardi|wednesday|mercredi|thursday|jeudi|friday|vendredi|saturday|samedi|sunday|dimanche)\b/gi,' '); if(k==='time')s=s.replace(/\b(evening|soir|soirée|soiree|morning|matin|afternoon|après-midi|apres midi)\b/gi,' ').replace(/\b\d{1,2}(?:h|:)?\d{0,2}\s*(pm|am)?\b/gi,' '); return cleanVisibleQuery(s)}
-function resetFilters(){state.filters={...DEFAULT_FILTERS}}
-function applyFilter(key,value){
+function resetFilters(options={}){setState({filters:{...DEFAULT_FILTERS}},options)}
+function applyFilter(key,value,options={}){
+  const nextFilters={...state.filters};
+  const patch={mode:'search'};
   if(key==='day'){
-    if(value==='__today'){state.filters.day=todayName(0);state.filters.dayMode='today'}
-    else if(value==='__tomorrow'){state.filters.day=todayName(1);state.filters.dayMode='tomorrow'}
-    else {state.filters.day=value||'';state.filters.dayMode=value==='Dimanche'?'sunday_obligation':(value?'calendar':'')}
-    if(value)state.filters.siteUid='';
-  } else if(key in state.filters){state.filters[key]=value||''; if(key!=='siteUid'&&key!=='type')state.filters.siteUid=''}
-  state.mode='search';
+    if(value==='__today'){nextFilters.day=todayName(0);nextFilters.dayMode='today'}
+    else if(value==='__tomorrow'){nextFilters.day=todayName(1);nextFilters.dayMode='tomorrow'}
+    else {nextFilters.day=value||'';nextFilters.dayMode=value==='Dimanche'?'sunday_obligation':(value?'calendar':'')}
+    if(value)nextFilters.siteUid='';
+  } else if(key in nextFilters){
+    nextFilters[key]=value||'';
+    if(key!=='siteUid'&&key!=='type')nextFilters.siteUid='';
+  }
+  setState({...patch,filters:nextFilters},options);
 }
-function clearIntent(k){
-  if(k==='near'){state.near=false;state.nearExpanded=false;if(state.mode==='near')state.mode='home'}
-  if(k==='site'){state.filters.siteUid=''}
-  if(k==='region'){state.filters.region=''}
-  if(k==='type'){state.filters.type='mass'}
-  if(k==='day'){state.filters.day='';state.filters.dayMode='';state.query=removeQueryIntent(state.query,'day')}
-  if(k==='time'){state.filters.time='';state.query=removeQueryIntent(state.query,'time')}
-  if(k==='place')state.query='';
-  const input=$('#searchInput'); if(input)input.value=state.query;
+function clearIntent(k,options={}){
+  const nextFilters={...state.filters};
+  const patch={};
+  if(k==='near'){patch.near=false;patch.nearExpanded=false;if(state.mode==='near')patch.mode='home'}
+  if(k==='site'){nextFilters.siteUid=''}
+  if(k==='region'){nextFilters.region=''}
+  if(k==='type'){nextFilters.type='mass'}
+  if(k==='day'){nextFilters.day='';nextFilters.dayMode='';patch.query=removeQueryIntent(state.query,'day')}
+  if(k==='time'){nextFilters.time='';patch.query=removeQueryIntent(state.query,'time')}
+  if(k==='place')patch.query='';
+  patch.filters=nextFilters;
+  setState(patch,options);
 }
+function clearFilter(key,options={}){return clearIntent(key,options)}
+function clearAllFilters(options={}){return setState({query:'',filters:{...DEFAULT_FILTERS},near:false,nearExpanded:false,mode:'home'},options)}
 function effectiveTime(){return state.filters.time||(state.parsed&&state.parsed.time)||''}
 function effectiveType(){return state.filters.type||'mass'}
 
@@ -166,30 +198,58 @@ function updateSwipeAffordance(){
   hint.textContent=(!seen&&overflow)?tr('swipeHint'):'';
 }
 
-function compute(){
-  const now=mauritiusNow();
-  const p=state.parsed=parseQuery(state.query); const day=effectiveDay(); const dayMode=effectiveDayMode(); const sundayMode=day==='Dimanche'&&dayMode==='sunday_obligation'; const time=effectiveTime();
-  const dateCtx=dateContextFor(p,now);
-  const todayOnly=(p.day==='today'||state.filters.dayMode==='today');
-  const nowM=now.getHours()*60+now.getMinutes();
-  let arr=state.rows.filter(rowActive);
-  if(effectiveType()==='mass')arr=arr.filter(rowMass);
+function annotateRowForRanking(r,now=mauritiusNow()){
+  const occurrence=getNextOccurrence(r,now);
+  r._nextOccurrence=occurrence;
+  r._delta=occurrence?Math.max(0,Math.round((occurrence-now)/60000)):999999;
+  r._past=isPastMass(r,now);
+  r._sundayContext=countsForSundayContext(r,now);
+  r._actionable=rowMass(r)&&!r._past&&r._delta<999999;
+  r._dist=state.location?distKm(state.location.lat,state.location.lon,rowLat(r),rowLon(r)):null;
+  return r;
+}
+function rankResults(arr,{near=false}={}){
+  return arr.sort((a,b)=> near
+    ? ((a._delta-b._delta)||((a._dist??9999)-(b._dist??9999))||siteName(a).localeCompare(siteName(b)))
+    : ((a._delta-b._delta)||siteName(a).localeCompare(siteName(b)))
+  );
+}
+function _effectiveDayModeFor(st,p){ if(st.filters.dayMode)return st.filters.dayMode; if(p.day==='today')return 'today'; if(p.day==='tomorrow')return 'tomorrow'; if(p.day==='Dimanche'&&p.sundayEvening)return 'calendar'; if(p.day==='Dimanche')return 'sunday_obligation'; if(DAYS.includes(p.day))return 'calendar'; return ''}
+function _effectiveDayFor(st,p,now=mauritiusNow()){ if(st.filters.day)return st.filters.day; if(p.day==='today')return todayName(0,now); if(p.day==='tomorrow')return todayName(1,now); if(DAYS.includes(p.day))return p.day; return ''}
+function _effectiveTimeFor(st,p){return st.filters.time||(p&&p.time)||''}
+function _effectiveTypeFor(st){return st.filters.type||'mass'}
+function applyFilters(rows,st=state,now=mauritiusNow()){
+  const p=st.parsed||parseUserIntent(st.query||''); const day=_effectiveDayFor(st,p,now); const dayMode=_effectiveDayModeFor(st,p); const sundayMode=day==='Dimanche'&&dayMode==='sunday_obligation'; const time=_effectiveTimeFor(st,p);
+  const dateCtx=dateContextFor(p,now); const todayOnly=(p.day==='today'||st.filters.dayMode==='today'); const nowM=now.getHours()*60+now.getMinutes();
+  let arr=(rows||[]).filter(rowActive);
+  if(_effectiveTypeFor(st)==='mass')arr=arr.filter(rowMass);
   if(day)arr=arr.filter(r=>sundayMode?isSundayEligible(r):r.day_of_week===day);
   if(dateCtx)arr=arr.filter(r=>isValidForDateContext(r,dateCtx));
-  if(todayOnly)arr=arr.filter(r=>r.day_of_week!==todayName(0,now)||mins(r.time_24h)>=nowM);
+  if(todayOnly)arr=arr.filter(r=>r.day_of_week!==todayName(0,now)||parseMassTime(r)>=nowM);
   if(time)arr=arr.filter(r=>matchesTime(r,time,p));
-  if(state.filters.region)arr=arr.filter(r=>r.region===state.filters.region);
-  if(state.filters.siteUid)arr=arr.filter(r=>r.site_uid===state.filters.siteUid);
+  if(st.filters.region)arr=arr.filter(r=>r.region===st.filters.region);
+  if(st.filters.siteUid)arr=arr.filter(r=>r.site_uid===st.filters.siteUid);
   arr=arr.filter(r=>matchesText(r,p)&&matchesExact(r,p.exact));
-  if(state.mode==='saved')arr=arr.filter(r=>state.saved.has(r.site_uid));
-  arr.forEach(r=>{r._delta=nextDelta(r,now); r._actionable=rowMass(r)&&r._delta<999999; r._dist=state.location?distKm(state.location.lat,state.location.lon,rowLat(r),rowLon(r)):null});
-  if(state.near&&state.location&&!state.nearExpanded)arr=arr.filter(r=>r._dist==null||r._dist<=NEAR_RADIUS_KM);
-  arr.sort((a,b)=> state.near ? ((a._delta-b._delta)||((a._dist??9999)-(b._dist??9999))||siteName(a).localeCompare(siteName(b))) : ((a._delta-b._delta)||siteName(a).localeCompare(siteName(b))));
-  state.results=arr; state.next=arr.find(r=>r._actionable)||null;
+  if(st.mode==='saved')arr=arr.filter(r=>st.saved.has(r.site_uid));
+  arr.forEach(r=>annotateRowForRanking(r,now));
+  if(st.near&&st.location&&!st.nearExpanded)arr=arr.filter(r=>r._dist==null||r._dist<=NEAR_RADIUS_KM);
+  return rankResults(arr,{near:st.near});
 }
+function getVisibleResults(st=state,now=mauritiusNow()){
+  const parsed=parseUserIntent(st.query||'');
+  const shadow={...st,parsed};
+  return {parsed,results:applyFilters(shadow.rows,shadow,now)};
+}
+function applySearchAndFilters(){
+  const visible=getVisibleResults(state,mauritiusNow());
+  state.parsed=visible.parsed;
+  state.results=visible.results;
+  state.next=getNextMass(visible.results,mauritiusNow(),state);
+}
+function compute(){return applySearchAndFilters()}
 function mapsUrl(r){return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(r.maps_query||[siteName(r),r.town,r.parish_name,'Mauritius'].filter(Boolean).join(', '))}
 function sourceBadge(r){const dt=r.last_verified||r.last_checked||''; return dt?`${tr('verified')} ${dt.slice(0,7)}`:''}
-function massBadge(r){if(!rowMass(r))return tr('otherCelebration'); if(r.day_of_week==='Dimanche')return tr('sundayMass'); if(isSundayEligible(r)&&r.day_of_week==='Samedi')return tr('satEve'); return tr('weekdayMass')}
+function massBadge(r){if(!rowMass(r))return tr('otherCelebration'); if(r.day_of_week==='Dimanche')return tr('sundayMass'); if(countsForSundayContext(r)&&r.day_of_week==='Samedi')return tr('satEve'); return tr('weekdayMass')}
 function languageBadge(r){const code=String(r.language_code||r.language||'').toLowerCase(); if(code==='en'||code==='english') return state.lang==='fr'?'Messe en anglais':'English Mass'; return ''}
 
 function ruleText(r){
@@ -202,8 +262,47 @@ function confidenceScore(r){const n=parseInt(r.confidence_score||r.coordinate_co
 function precisionLabel(r){return String(r.coordinate_precision||'').includes('exact')?tr('exactLocation'):tr('approxLocation')}
 function trustLine(r){const v=sourceBadge(r)||tr('verified')+' '+(r.last_verified||r.last_checked||''); const score=confidenceScore(r); const conf=score!=null?(score<70?tr('confidenceLow'):tr('confidenceOk',{score})):''; return [v,tr('sourceAvailable'),precisionLabel(r),conf].filter(Boolean).join(' · ')}
 function warningBanner(r){const rule=ruleText(r), occ=occurrenceText(r); if(!rowMass(r))return `<div class="ruleBanner danger">${esc(tr('notMassWarning'))}${rule?' · '+esc(rule):''}</div>`; if(occ)return `<div class="ruleBanner">${esc(tr('onlyWhen',{rule:occ}))}</div>`; if(rule)return `<div class="ruleBanner">${esc(rule)}</div>`; return ''}
-async function shareRow(r){const url=mapsUrl(r); const text=`${tr('shareMassIntro')}: ${siteName(r)} — ${dayName(r.day_of_week)} ${r.time_24h}`; try{if(navigator.share){await navigator.share({title:siteName(r),text,url});toast(tr('shared'))}else{await navigator.clipboard.writeText(`${text}\n${url}`);toast(tr('copied'))}}catch(e){}}
-async function shareApp(){const title=tr('shareAppTitle'); const text=tr('subtitle'); try{if(navigator.share){await navigator.share({title,text,url:location.href});toast(tr('shared'))}else{await navigator.clipboard.writeText(`${title}\n${text}\n${location.href}`);toast(tr('copied'))}}catch(e){}}
+function rowKey(r){return String(r.id||r.row_id||r.uid||[r.site_uid,r.day_of_week,r.time_24h,r.special_rule||'',r.qualifier||''].join('|'))}
+function buildStateParams(extra={},st=state){
+  const p=new URLSearchParams();
+  if(st.query)p.set('q',st.query);
+  if(st.filters.day)p.set('day',st.filters.day);
+  if(st.filters.dayMode)p.set('dayMode',st.filters.dayMode);
+  if(_effectiveTimeFor(st,st.parsed||{}))p.set('time',_effectiveTimeFor(st,st.parsed||{}));
+  if(st.filters.region)p.set('region',st.filters.region);
+  if(_effectiveTypeFor(st)==='all')p.set('type','all');
+  if(st.near)p.set('near','1');
+  if(st.mode&&st.mode!=='home')p.set('mode',st.mode);
+  if(st.filters.siteUid)p.set('site',st.filters.siteUid);
+  Object.entries(extra).forEach(([k,v])=>{if(v!==undefined&&v!==null&&v!=='')p.set(k,String(v))});
+  return p;
+}
+function encodeStateToUrl(st=state,extra={}){const base=location.origin+location.pathname; const p=buildStateParams(extra,st); return base+(p.toString()?'#'+p.toString():'')}
+function stateUrl(extra={}){return encodeStateToUrl(state,extra)}
+function restoreStateFromUrl(hash){
+  if(!hash||hash.length<2)return null;
+  try{
+    const p=new URLSearchParams(hash.slice(1));
+    const nextFilters={...DEFAULT_FILTERS};
+    const q=p.get('q')||'';
+    nextFilters.day=p.get('day')||''; nextFilters.dayMode=p.get('dayMode')||'';
+    nextFilters.time=p.get('time')||''; nextFilters.region=p.get('region')||''; nextFilters.type=p.get('type')==='all'?'all':'mass'; nextFilters.siteUid=p.get('site')||'';
+    let mode=p.get('mode')||((q||nextFilters.day||nextFilters.time||nextFilters.region||nextFilters.siteUid)?'search':'home');
+    const near=p.get('near')==='1';
+    if(!['home','search','near','saved','more'].includes(mode))mode='search';
+    if(near)mode='near';
+    return {query:q,filters:nextFilters,near,mode};
+  }catch(e){toast(tr('invalidLink')); return null}
+}
+function restoreStateFromHash(){
+  const restored=restoreStateFromUrl(location.hash);
+  if(restored)setState(restored,{render:false});
+}
+async function shareUrl(url,title,text){try{if(navigator.share){await navigator.share({title,text,url});toast(tr('shared'))}else{await navigator.clipboard.writeText(`${text}
+${url}`);toast(tr('copied'))}}catch(e){}}
+async function shareResult(r){const text=`${tr('shareMassIntro')}: ${siteName(r)} — ${dayName(r.day_of_week)} ${r.time_24h}`; await shareUrl(stateUrl({row:rowKey(r)}),siteName(r),text)}
+async function shareCurrentView(){const title=tr('shareAppTitle'); const text=tr('subtitle'); await shareUrl(encodeStateToUrl(state),title,text)}
+async function shareApp(){await shareCurrentView()}
 function reportEmail(){return (window.MMF_CONFIG&&window.MMF_CONFIG.REPORT_EMAIL)||(window.MASS_FINDER_CONFIG&&window.MASS_FINDER_CONFIG.REPORT_EMAIL)||'mauritiusmassfinder@gmail.com'}
 function reportUrl(r){
   const subject=tr('reportSubject')+(r?' — '+siteName(r):'');
@@ -221,9 +320,9 @@ function reportUrl(r){
   lines.push('App version: '+APP_VERSION);
   return 'mailto:'+String(reportEmail()).replace(/[^A-Za-z0-9@._+%-]/g,'')+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(lines.join('\n'));
 }
-function showSite(r){state.mode='search';state.query='';state.filters.siteUid=r.site_uid;state.near=false;const input=$('#searchInput');if(input)input.value='';render();document.getElementById('resultsHead')?.scrollIntoView({behavior:'smooth',block:'start'})}
-function toggleSave(r){if(state.saved.has(r.site_uid))state.saved.delete(r.site_uid);else state.saved.add(r.site_uid); localStorage.setItem('mmf_my_churches',JSON.stringify([...state.saved])); render()}
-function renderNext(){const root=$('#modeHero'); if(state.mode==='more'){root.innerHTML='';return} if(state.mode==='saved'){root.innerHTML=`<section class="nextCard"><div class="eyebrow">${esc(tr('savedTitle'))}</div><div class="siteName">${esc(tr('savedSub'))}</div></section>`;return} if(state.mode==='near'&&!state.location){root.innerHTML=`<section class="nextCard"><div class="eyebrow">${esc(tr('nearTitle'))}</div><div class="siteName">${esc(tr('locationAsk'))}</div><div class="meta">${esc(tr('locationNotEnabled'))}</div><div class="actions"><button class="btn primary" id="locBtn">${esc(tr('nearUse'))}</button></div></section>`; $('#locBtn')?.addEventListener('click',requestLocation);return} const r=state.next; if(!r){root.innerHTML='';return} const dist=r._dist!=null?distanceLabel(r,r._dist):''; root.innerHTML=`<section class="nextCard"><div class="nextTop"><div><div class="eyebrow">${esc(state.near?tr('nearTitle'):tr('nextUseful'))}</div>${state.near?`<div class="meta">${esc(state.location?(state.nearExpanded?tr('nearExpanded'):tr('sortedHintNear')):tr('locationNotEnabled'))}</div>`:''}<div class="nextTime">${esc(r.time_24h)}</div><div class="relative">${esc(rel(r._delta))}${dist?' · '+esc(dist):''}</div></div><div style="font-size:26px">⛪</div></div><div class="siteName">${esc(siteName(r))}</div><div class="meta">${esc([r.town,r.parish_label||r.parish_name,r.region].filter(Boolean).join(' · '))}</div><div class="actions"><a class="btn primary" target="_blank" rel="noopener" href="${esc(mapsUrl(r))}">${esc(tr('directions'))}</a><button class="btn" id="nextShare">${esc(tr('share'))}</button><button class="btn" id="nextSave">${esc(state.saved.has(r.site_uid)?tr('saved'):tr('save'))} ${state.saved.has(r.site_uid)?'★':'☆'}</button>${state.near&&state.location&&!state.nearExpanded?`<button class="btn" id="expandNear">${esc(tr('expandNear'))}</button>`:''}</div></section>`; $('#expandNear')?.addEventListener('click',()=>{state.nearExpanded=true;render()}); $('#nextShare')?.addEventListener('click',()=>shareRow(r)); $('#nextSave')?.addEventListener('click',()=>toggleSave(r));}
+function showSite(r){const nextFilters={...state.filters,siteUid:r.site_uid}; setState({mode:'search',query:'',filters:nextFilters,near:false},{url:false}); const input=$('#searchInput');if(input)input.value='';history.replaceState(null,'',stateUrl({site:r.site_uid}));document.getElementById('resultsHead')?.scrollIntoView({behavior:'smooth',block:'start'})}
+function toggleSave(r){const saved=new Set(state.saved); if(saved.has(r.site_uid))saved.delete(r.site_uid);else saved.add(r.site_uid); localStorage.setItem('mmf_my_churches',JSON.stringify([...saved])); setState({saved})}
+function renderNext(){const root=$('#modeHero'); if(state.mode==='more'){root.innerHTML='';return} if(state.mode==='saved'){root.innerHTML=`<section class="nextCard"><div class="eyebrow">${esc(tr('savedTitle'))}</div><div class="siteName">${esc(tr('savedSub'))}</div></section>`;return} if(state.mode==='near'&&!state.location){root.innerHTML=`<section class="nextCard"><div class="eyebrow">${esc(tr('nearTitle'))}</div><div class="siteName">${esc(tr('locationAsk'))}</div><div class="meta">${esc(tr('locationNotEnabled'))}</div><div class="actions"><button class="btn primary" data-next-action="locate">${esc(tr('nearUse'))}</button></div></section>`;return} const r=state.next; if(!r){root.innerHTML='';return} const dist=r._dist!=null?distanceLabel(r,r._dist):''; root.innerHTML=`<section class="nextCard"><div class="nextTop"><div><div class="eyebrow">${esc(state.near?tr('nearTitle'):tr('nextUseful'))}</div>${state.near?`<div class="meta">${esc(state.location?(state.nearExpanded?tr('nearExpanded'):tr('sortedHintNear')):tr('locationNotEnabled'))}</div>`:''}<div class="nextTime">${esc(r.time_24h)}</div><div class="relative">${esc(rel(r._delta))}${dist?' · '+esc(dist):''}</div></div><div style="font-size:26px">⛪</div></div><div class="siteName">${esc(siteName(r))}</div><div class="meta">${esc([r.town,r.parish_label||r.parish_name,r.region].filter(Boolean).join(' · '))}</div><div class="actions"><a class="btn primary" target="_blank" rel="noopener" href="${esc(mapsUrl(r))}">${esc(tr('directions'))}</a><button class="btn" data-next-action="share">${esc(tr('share'))}</button><button class="btn" data-next-action="save">${esc(state.saved.has(r.site_uid)?tr('saved'):tr('save'))} ${state.saved.has(r.site_uid)?'★':'☆'}</button>${state.near&&state.location&&!state.nearExpanded?`<button class="btn" data-next-action="expand">${esc(tr('expandNear'))}</button>`:''}</div></section>`;}
 
 function sourceLabel(r){
   const direct=(state.lang==='fr'?r.source_label_fr:r.source_label_en)||'';
@@ -234,15 +333,42 @@ function sourceLabel(r){
   if(sourcePage&&site&&norm(sourcePage)!==norm(site))return tr('sourceParishPage',{parish:sourcePage});
   return tr('source');
 }
+function scheduleScopeLabel(r){const site=norm(r.site_name||''), parish=norm(r.parish_label||r.parish_name||''); return site&&parish&&site!==parish?tr('parishSchedule'):tr('churchSchedule')}
 function renderCard(r,i){
   const dist=r._dist!=null?distanceLabel(r,r._dist):'';
-  const rule=ruleText(r);
   const lang=languageBadge(r);
   const trust=trustLine(r);
-  const detailId=`detail-${esc(r.id||i)}`;
-  const secondary=`<div class="cardDetails" id="${detailId}" hidden><div class="detailGrid"><div><b>${esc(tr('source'))}</b><br>${r.source_url?`<a target="_blank" rel="noopener" href="${esc(r.source_url)}">${esc(sourceLabel(r))}</a>`:esc(tr('sourceAvailable'))}</div><div><b>${esc(tr('allTimes'))}</b><br><button class="linkBtn" data-alltimes="${i}" type="button">${esc(tr('allTimes'))}</button></div>${rule?`<div><b>${esc(state.lang==='fr'?'Condition':'Rule')}</b><br>${esc(rule)}</div>`:''}<div><b>${esc(tr('reportCorrection'))}</b><br><a href="${esc(reportUrl(r))}">${esc(tr('reportFor'))}</a></div><div><b>${esc(tr('share'))}</b><br><button class="linkBtn" data-share="${i}" type="button">${esc(tr('share'))}</button></div></div></div>`;
-  return `<article class="card">${warningBanner(r)}<div class="cardTop"><div><div class="cardTitle">${esc(siteName(r))}</div><div class="meta">${esc([r.town,r.parish_label||r.parish_name,r.region].filter(Boolean).join(' · '))}</div></div><div class="timeBox"><div class="time">${esc(r.time_24h)}</div><div class="relative">${esc(rel(r._delta))}</div></div></div><div class="trustStrip">${esc(trust)}</div><div class="badges"><span class="badge mass">${esc(dayName(r.day_of_week))}</span><span class="badge ${rowMass(r)?'ok':'warn'}">${esc(massBadge(r))}</span>${lang?`<span class="badge lang">${esc(lang)}</span>`:''}${dist?`<span class="badge">${esc(dist)}</span>`:''}</div><div class="actions"><a class="btn primary" target="_blank" rel="noopener" href="${esc(mapsUrl(r))}">${esc(tr('directions'))}</a><button class="btn" data-detail-toggle="${esc(detailId)}">${esc(tr('details'))}</button><button class="btn" data-save="${i}">${esc(state.saved.has(r.site_uid)?tr('saved'):tr('save'))} ${state.saved.has(r.site_uid)?'★':'☆'}</button></div>${secondary}</article>`
+  return `<article class="card">${warningBanner(r)}<div class="cardTop"><div><div class="cardTitle">${esc(siteName(r))}</div><div class="meta">${esc([r.town,r.parish_label||r.parish_name,r.region].filter(Boolean).join(' · '))}</div></div><div class="timeBox"><div class="time">${esc(r.time_24h)}</div><div class="relative">${esc(rel(r._delta))}</div></div></div><div class="trustStrip">${esc(trust)}</div><div class="badges"><span class="badge mass">${esc(dayName(r.day_of_week))}</span><span class="badge ${rowMass(r)?'ok':'warn'}">${esc(massBadge(r))}</span>${lang?`<span class="badge lang">${esc(lang)}</span>`:''}${dist?`<span class="badge">${esc(dist)}</span>`:''}</div><div class="actions"><a class="btn primary" target="_blank" rel="noopener" href="${esc(mapsUrl(r))}">${esc(tr('directions'))}</a><button class="btn" data-detail-row="${i}">${esc(tr('details'))}</button><button class="btn" data-save="${i}">${esc(state.saved.has(r.site_uid)?tr('saved'):tr('save'))} ${state.saved.has(r.site_uid)?'★':'☆'}</button></div></article>`
 }
+
+let lastFocusedBeforeDetail=null;
+function renderDetailSheet(r){
+  const root=$('#detailSheetBody'); if(!root||!r)return;
+  const rule=ruleText(r), dist=r._dist!=null?distanceLabel(r,r._dist):'';
+  root.innerHTML=`${warningBanner(r)}<div class="detailSummary"><div class="time">${esc(r.time_24h)}</div><div><div class="cardTitle">${esc(siteName(r))}</div><div class="meta">${esc([r.town,r.parish_label||r.parish_name,r.region].filter(Boolean).join(' · '))}</div><div class="relative">${esc(dayName(r.day_of_week))} · ${esc(rel(r._delta))}${dist?' · '+esc(dist):''}</div></div></div><div class="trustStrip">${esc(trustLine(r))}</div><div class="detailGrid"><div><b>${esc(tr('site'))}</b><br>${esc(siteName(r))}</div><div><b>${esc(tr('parish'))}</b><br>${esc(r.parish_label||r.parish_name||'')}</div>${r.town?`<div><b>${esc(tr('town'))}</b><br>${esc(r.town)}</div>`:''}${rule?`<div><b>${esc(tr('rule'))}</b><br>${esc(rule)}</div>`:''}<div><b>${esc(scheduleScopeLabel(r))}</b><br><button class="linkBtn" data-detail-action="all-times" type="button">${esc(scheduleScopeLabel(r))}</button></div><div><b>${esc(tr('source'))}</b><br>${r.source_url?`<a target="_blank" rel="noopener" href="${esc(r.source_url)}">${esc(sourceLabel(r))}</a>`:esc(tr('sourceAvailable'))}</div><div><b>${esc(tr('reportCorrection'))}</b><br><a href="${esc(reportUrl(r))}">${esc(tr('reportFor'))}</a></div></div><div class="actions detailActions"><a class="btn primary" target="_blank" rel="noopener" href="${esc(mapsUrl(r))}">${esc(tr('directions'))}</a><button class="btn" data-detail-action="share" type="button">${esc(tr('share'))}</button><button class="btn" data-detail-action="save" type="button">${esc(state.saved.has(r.site_uid)?tr('saved'):tr('save'))} ${state.saved.has(r.site_uid)?'★':'☆'}</button></div>`;
+}
+function openDetailSheet(r,trigger=document.activeElement){
+  setState({detailRow:r,modal:'detail'},{render:false}); lastFocusedBeforeDetail=trigger;
+  renderDetailSheet(r);
+  document.body.classList.add('detailOpen','modalOpen');
+  $('#detailSheet')?.setAttribute('aria-hidden','false');
+  $('#appRoot')?.setAttribute('inert','');
+  history.replaceState(null,'',stateUrl({row:rowKey(r)}));
+  setTimeout(()=>($('#closeDetail')||focusablesIn($('#detailSheet'))[0])?.focus(),0);
+}
+function closeDetailSheet(){
+  document.body.classList.remove('detailOpen','modalOpen');
+  $('#detailSheet')?.setAttribute('aria-hidden','true');
+  if(state.modal==='detail')setState({modal:null,detailRow:null},{render:false});
+  $('#appRoot')?.removeAttribute('inert');
+  if(lastFocusedBeforeDetail&&lastFocusedBeforeDetail.focus)lastFocusedBeforeDetail.focus();
+}
+function trapDetailFocus(e){if(e.key!=='Tab'||state.modal!=='detail')return; const f=focusablesIn($('#detailSheet')); if(!f.length)return; const first=f[0],last=f[f.length-1]; if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()} else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}
+function openHashRowIfNeeded(){
+  if(!location.hash)return; const p=new URLSearchParams(location.hash.slice(1)); const row=p.get('row'); if(!row||state.detailRow)return;
+  const r=state.rows.find(x=>rowKey(x)===row); if(r){r._delta=nextDelta(r); r._dist=state.location?distKm(state.location.lat,state.location.lon,rowLat(r),rowLon(r)):null; openDetailSheet(r,null)}
+}
+
 function renderSavedCard(group,i){
   const r=group.next; const dist=r&&r._dist!=null?distanceLabel(r,r._dist):'';
   const count=group.rows.length;
@@ -252,11 +378,11 @@ function renderSavedCard(group,i){
 function savedGroups(){
   const now=mauritiusNow(); const map=new Map();
   state.rows.filter(rowActive).filter(r=>state.saved.has(r.site_uid)).forEach(r=>{
-    r._delta=nextDelta(r,now); r._dist=state.location?distKm(state.location.lat,state.location.lon,rowLat(r),rowLon(r)):null;
+    annotateRowForRanking(r,now);
     const key=r.site_uid; if(!map.has(key))map.set(key,{first:r,rows:[],next:null});
-    const g=map.get(key); r._delta=nextDelta(r); r._actionable=rowMass(r)&&r._delta<999999; g.rows.push(r); if(r._actionable&&(!g.next||r._delta<g.next._delta))g.next=r;
+    const g=map.get(key); g.rows.push(r); if(r._actionable&&(!g.next||r._delta<g.next._delta))g.next=r;
   });
-  return [...map.values()].map(g=>{g.rows.sort((a,b)=>(a._delta-b._delta)||siteName(a).localeCompare(siteName(b))); return g}).sort((a,b)=>(a.next?._delta??999999)-(b.next?._delta??999999)||siteName(a.first).localeCompare(siteName(b.first)))
+  return [...map.values()].map(g=>{rankResults(g.rows,{near:false}); return g}).sort((a,b)=>(a.next?._delta??999999)-(b.next?._delta??999999)||siteName(a.first).localeCompare(siteName(b.first)))
 }
 function renderResults(){
   const root=$('#results'); const head=$('#resultCount'); const ctx=$('#contextLabel'); if(ctx)ctx.textContent=currentContextLabel();
@@ -265,18 +391,13 @@ function renderResults(){
     const groups=savedGroups(); const n=groups.length; head.innerHTML=`<b>${n}</b> ${esc(n===1?tr('result'):tr('results'))} ${esc(tr('shown'))}<span class="sortHint"> · ${esc(state.near?tr('sortedHintNear'):tr('sortedHint'))}</span>`;
     if(!n){root.className=''; root.innerHTML=`<div class="empty"><h3>${esc(tr('noSaved'))}</h3><p>${esc(tr('noSavedText'))}</p></div>`; return}
     root.className='resultsGrid'; root.innerHTML=groups.map(renderSavedCard).join('');
-    $$('[data-show-site]').forEach(b=>b.addEventListener('click',()=>{const g=groups[+b.dataset.showSite]; state.mode='search'; state.query=''; state.filters.siteUid=g.first.site_uid; $('#searchInput').value=state.query; render()}));
-    $$('[data-unsave-site]').forEach(b=>b.addEventListener('click',()=>{const g=groups[+b.dataset.unsaveSite]; state.saved.delete(g.first.site_uid); localStorage.setItem('mmf_my_churches',JSON.stringify([...state.saved])); render()}));
     return
   }
   const arr=state.results; const n=arr.length; head.innerHTML=`<b>${n}</b> ${esc(n===1?tr('result'):tr('results'))} ${esc(tr('shown'))}<span class="sortHint"> · ${esc(state.near?tr('sortedHintNear'):tr('sortedHint'))}</span>`;
-  if(!n){root.className=''; root.innerHTML=`<div class="empty"><h3>${esc(tr('noResults'))}</h3><p>${esc(tr('noResultsText'))}</p>${state.near&&state.location&&!state.nearExpanded?`<button class="btn primary" id="emptyExpandNear">${esc(tr('expandNear'))}</button>`:''}</div>`; $('#emptyExpandNear')?.addEventListener('click',()=>{state.nearExpanded=true;render()}); return}
+  if(!n){root.className=''; root.innerHTML=`<div class="empty"><h3>${esc(tr('noResults'))}</h3><p>${esc(tr('noResultsText'))}</p>${state.near&&state.location&&!state.nearExpanded?`<button class="btn primary" data-empty-action="expand-near">${esc(tr('expandNear'))}</button>`:''}</div>`; return}
   root.className='resultsGrid'; const capped=arr.length>60; const sundayNote=(effectiveDay()==='Dimanche'&&effectiveDayMode()==='sunday_obligation'&&arr.some(isSundayEligible))?`<div class="resultNotice">${esc(tr('sundayExplain'))}</div>`:''; const capNote=capped?`<div class="resultNotice warn">${esc(tr('resultCap',{n:arr.length}))}</div>`:''; root.innerHTML=sundayNote+capNote+arr.slice(0,60).map(renderCard).join('');
-  $$('[data-share]').forEach(b=>b.addEventListener('click',()=>shareRow(state.results[+b.dataset.share])));
-  $$('[data-alltimes]').forEach(b=>b.addEventListener('click',()=>showSite(state.results[+b.dataset.alltimes])));
-  $$('[data-save]').forEach(b=>b.addEventListener('click',()=>toggleSave(state.results[+b.dataset.save]))); $$('[data-detail-toggle]').forEach(b=>b.addEventListener('click',()=>{const el=document.getElementById(b.dataset.detailToggle); if(el){const isHidden=el.hasAttribute('hidden'); el.toggleAttribute('hidden',!isHidden); b.textContent=isHidden?tr('hideDetails'):tr('details')}}))
 }
-function renderChips(){const root=$('#intentChips'); if(!root)return; const chips=[...(state.parsed.chips||[])]; const has=k=>chips.some(c=>c.k===k); if(state.near&&!has('near'))chips.unshift({k:'near',label:tr('quickNear')}); const day=effectiveDay(),mode=effectiveDayMode(),time=effectiveTime(); if(day&&!has('day'))chips.push({k:'day',label:mode==='today'?tr('today'):mode==='tomorrow'?tr('tomorrow'):mode==='sunday_obligation'?tr('sunday'):dayName(day)}); if(time&&!has('time'))chips.push({k:'time',label:tr(time)||time}); if(state.filters.region)chips.push({k:'region',label:state.filters.region}); if(effectiveType()==='all')chips.push({k:'type',label:tr('includeOther')}); if(state.filters.siteUid)chips.push({k:'site',label:tr('allTimes')}); root.innerHTML=chips.map(c=>`<span class="intentChip">${esc(c.label)}<button data-chip="${esc(c.k)}" type="button" aria-label="${esc((state.lang==='fr'?'Retirer ':'Remove ')+c.label)}">×</button></span>`).join(''); $$('[data-chip]').forEach(b=>b.addEventListener('click',()=>{clearIntent(b.dataset.chip); render()}));}
+function renderChips(){const root=$('#intentChips'); if(!root)return; const chips=[...(state.parsed.chips||[])]; const has=k=>chips.some(c=>c.k===k); if(state.near&&!has('near'))chips.unshift({k:'near',label:tr('quickNear')}); const day=effectiveDay(),mode=effectiveDayMode(),time=effectiveTime(); if(day&&!has('day'))chips.push({k:'day',label:mode==='today'?tr('today'):mode==='tomorrow'?tr('tomorrow'):mode==='sunday_obligation'?tr('sunday'):dayName(day)}); if(time&&!has('time'))chips.push({k:'time',label:tr(time)||time}); if(state.filters.region)chips.push({k:'region',label:state.filters.region}); if(effectiveType()==='all')chips.push({k:'type',label:tr('includeOther')}); if(state.filters.siteUid)chips.push({k:'site',label:tr('allTimes')}); root.innerHTML=chips.map(c=>`<span class="intentChip">${esc(c.label)}<button data-chip="${esc(c.k)}" type="button" aria-label="${esc((state.lang==='fr'?'Retirer ':'Remove ')+c.label)}">×</button></span>`).join('');}
 function moreSectionContent(){
   const sections={
     help:{id:'helpSection',title:tr('helpTitle'),body:tr('helpHtml')},
@@ -291,76 +412,59 @@ function renderMore(){
   if(state.mode!=='more'){box.hidden=true;box.innerHTML='';return}
   const section=moreSectionContent();
   box.hidden=false;
-  box.innerHTML=`<section class="panel morePanelContent" tabindex="-1" aria-labelledby="${esc(section.id)}"><h2>${esc(tr('moreTitle'))}</h2><div class="moreTabs" role="tablist" aria-label="${esc(tr('moreTitle'))}"><button type="button" data-more-section="help" class="tag ${state.moreSection==='help'?'active':''}">${esc(tr('helpTitle'))}</button><button type="button" data-more-section="about" class="tag ${state.moreSection==='about'?'active':''}">${esc(tr('about'))}</button><button type="button" data-more-section="update" class="tag ${state.moreSection==='update'?'active':''}">${esc(tr('howUpdate'))}</button><button type="button" data-more-section="report" class="tag ${state.moreSection==='report'?'active':''}">${esc(tr('reportCorrection'))}</button></div><h3 id="${esc(section.id)}">${esc(section.title)}</h3>${section.body}<h3>${esc(tr('trustTitle'))}</h3><p>${esc(tr('trustText'))}</p><p>${esc(tr('version'))}: ${APP_VERSION}</p><button class="btn primary" id="shareAppBtn">${esc(tr('share'))}</button></section>`;
-  $$('[data-more-section]').forEach(b=>b.addEventListener('click',()=>openMoreSection(b.dataset.moreSection,false)));
-  $('#shareAppBtn')?.addEventListener('click',shareApp)
+  box.innerHTML=`<section class="panel morePanelContent" tabindex="-1" aria-labelledby="${esc(section.id)}"><h2>${esc(tr('moreTitle'))}</h2><div class="moreTabs" role="tablist" aria-label="${esc(tr('moreTitle'))}"><button type="button" data-more-section="help" class="tag ${state.moreSection==='help'?'active':''}">${esc(tr('helpTitle'))}</button><button type="button" data-more-section="about" class="tag ${state.moreSection==='about'?'active':''}">${esc(tr('about'))}</button><button type="button" data-more-section="update" class="tag ${state.moreSection==='update'?'active':''}">${esc(tr('howUpdate'))}</button><button type="button" data-more-section="report" class="tag ${state.moreSection==='report'?'active':''}">${esc(tr('reportCorrection'))}</button></div><h3 id="${esc(section.id)}">${esc(section.title)}</h3>${section.body}<h3>${esc(tr('trustTitle'))}</h3><p>${esc(tr('trustText'))}</p><p>${esc(tr('version'))}: ${APP_VERSION}</p><button class="btn primary" data-share-app="1">${esc(tr('share'))}</button></section>`;
 }
 function openMoreSection(section='help',shouldScroll=true){
-  state.mode='more';
-  state.moreSection=(section||'help').replace(/^#/,'').replace('Section','').replace('howToUpdate','update');
-  render();
+  const moreSection=(section||'help').replace(/^#/,'').replace('Section','').replace('howToUpdate','update');
+  setState({mode:'more',moreSection});
   const panel=$('#morePanel');
   if(shouldScroll&&panel){setTimeout(()=>{panel.scrollIntoView({behavior:'smooth',block:'start'}); $('.morePanelContent')?.focus({preventScroll:true})},0)}
 }
-function renderFooter(){const f=$('#appFooter'); if(!f)return; f.innerHTML=`<span>${esc(tr('version'))} ${APP_VERSION}</span><span aria-hidden="true">•</span><button type="button" data-footer-target="help">${esc(tr('helpTitle'))}</button><span aria-hidden="true">•</span><button type="button" data-footer-target="about">${esc(tr('about'))}</button><span aria-hidden="true">•</span><button type="button" id="footerUpdateHelp">${esc(tr('howUpdate'))}</button><span aria-hidden="true">•</span><button type="button" data-footer-target="report">${esc(tr('reportCorrection'))}</button>`; $$('[data-footer-target]').forEach(b=>b.addEventListener('click',()=>openMoreSection(b.dataset.footerTarget))); $('#footerUpdateHelp')?.addEventListener('click',openUpdateHelp)}
+function renderFooter(){const f=$('#appFooter'); if(!f)return; f.innerHTML=`<span>${esc(tr('version'))} ${APP_VERSION}</span><span aria-hidden="true">•</span><button type="button" data-footer-target="help">${esc(tr('helpTitle'))}</button><span aria-hidden="true">•</span><button type="button" data-footer-target="about">${esc(tr('about'))}</button><span aria-hidden="true">•</span><button type="button" data-footer-target="update">${esc(tr('howUpdate'))}</button><span aria-hidden="true">•</span><button type="button" data-footer-target="report">${esc(tr('reportCorrection'))}</button>`;}
 function openUpdateHelp(){openMoreSection('update')}
 
 function renderStatic(){document.documentElement.lang=state.lang; $('#appTitle').innerHTML=esc(tr('title')).replace('\n','<br>'); $('#appSubtitle').textContent=tr('subtitle'); $('#searchLabel').textContent=tr('search'); $('#searchInput').placeholder=tr('searchPh'); const sh=$('#searchHint'); if(sh) sh.textContent=tr('searchHint'); $('#clearSearch').textContent=tr('clear'); $('#heroCount').textContent=`${state.rows.length} ${state.lang==='fr'?'horaires':'schedules'} · ${new Set(state.rows.map(r=>r.parish_uid)).size} ${state.lang==='fr'?'paroisses':'parishes'}`; $$('[data-t]').forEach(el=>el.textContent=tr(el.dataset.t)); $('#filterTitle').textContent=tr('filters'); $('#dayLabel').textContent=tr('day'); $('#timeLabel').textContent=tr('time'); $('#regionLabel').textContent=tr('region'); $('#typeLabel').textContent=tr('type'); $('#applyFilters').textContent=tr('showResults'); $('#updateTitle').textContent=tr('updateTitle'); $('#updateText').textContent=tr('updateText'); $('#updateRefresh').textContent=tr('refresh'); $('#updateDismiss').textContent=tr('later'); $('#updateHelp')&&($('#updateHelp').textContent=tr('troubleUpdating')); $('#langEn').classList.toggle('active',state.lang==='en'); $('#langFr').classList.toggle('active',state.lang==='fr'); updateSwipeAffordance();}
-function renderTags(){const days=[['',tr('anyDay')],['__today',tr('today')],['__tomorrow',tr('tomorrow')],['Dimanche',tr('sunday')],['Samedi',dayName('Samedi')]]; const times=[['',tr('allDay')],['morning',tr('morning')],['afternoon',tr('afternoon')],['evening',tr('evening')]]; const regs=[['',tr('allRegions')],...[...new Set(state.rows.map(r=>r.region).filter(Boolean))].sort().map(x=>[x,x])]; const types=[['mass',tr('massesOnly')],['all',tr('includeOther')]]; const currentDay=effectiveDay(),currentDayMode=effectiveDayMode(),currentTime=effectiveTime(),currentType=effectiveType(); const isActive=(key,v,val)=>{ if(key==='day')return (v===''&&!currentDay)||((v==='__today'&&currentDayMode==='today')||(v==='__tomorrow'&&currentDayMode==='tomorrow')||(v==='Dimanche'&&currentDay==='Dimanche'&&currentDayMode==='sunday_obligation')||(v===currentDay&&v!=='Dimanche'&&v!==''&&currentDayMode!=='today'&&currentDayMode!=='tomorrow')); if(key==='time')return v===currentTime; if(key==='type')return v===currentType; return v===val}; const build=(id,arr,val,key)=>{const el=$(id); if(!el)return; el.innerHTML=arr.map(([v,l])=>`<button class="tag ${isActive(key,v,val)?'active':''}" data-filter="${key}" data-value="${esc(v)}" type="button" aria-pressed="${isActive(key,v,val)?'true':'false'}">${esc(l)}</button>`).join('')}; build('#dayTags',days,state.filters.day,'day'); build('#timeTags',times,state.filters.time,'time'); build('#regionTags',regs,state.filters.region,'region'); build('#typeTags',types,state.filters.type,'type'); $$('[data-filter]').forEach(b=>b.addEventListener('click',()=>{applyFilter(b.dataset.filter,b.dataset.value); render()}))}
+function renderTags(){const days=[['',tr('anyDay')],['__today',tr('today')],['__tomorrow',tr('tomorrow')],['Dimanche',tr('sunday')],['Samedi',dayName('Samedi')]]; const times=[['',tr('allDay')],['morning',tr('morning')],['afternoon',tr('afternoon')],['evening',tr('evening')]]; const regs=[['',tr('allRegions')],...[...new Set(state.rows.map(r=>r.region).filter(Boolean))].sort().map(x=>[x,x])]; const types=[['mass',tr('massesOnly')],['all',tr('includeOther')]]; const currentDay=effectiveDay(),currentDayMode=effectiveDayMode(),currentTime=effectiveTime(),currentType=effectiveType(); const isActive=(key,v,val)=>{ if(key==='day')return (v===''&&!currentDay)||((v==='__today'&&currentDayMode==='today')||(v==='__tomorrow'&&currentDayMode==='tomorrow')||(v==='Dimanche'&&currentDay==='Dimanche'&&currentDayMode==='sunday_obligation')||(v===currentDay&&v!=='Dimanche'&&v!==''&&currentDayMode!=='today'&&currentDayMode!=='tomorrow')); if(key==='time')return v===currentTime; if(key==='type')return v===currentType; return v===val}; const build=(id,arr,val,key)=>{const el=$(id); if(!el)return; el.innerHTML=arr.map(([v,l])=>`<button class="tag ${isActive(key,v,val)?'active':''}" data-filter="${key}" data-value="${esc(v)}" type="button" aria-pressed="${isActive(key,v,val)?'true':'false'}">${esc(l)}</button>`).join('')}; build('#dayTags',days,state.filters.day,'day'); build('#timeTags',times,state.filters.time,'time'); build('#regionTags',regs,state.filters.region,'region'); build('#typeTags',types,state.filters.type,'type');}
 function renderNav(){const day=effectiveDay(),mode=effectiveDayMode(),time=effectiveTime(); $$('[data-nav]').forEach(b=>b.classList.toggle('active',b.dataset.nav===state.mode || (state.mode==='home'&&b.dataset.nav==='home'))); $$('.pill').forEach(p=>p.classList.toggle('active',(p.dataset.action==='near'&&state.near)||(p.dataset.action==='saved'&&state.mode==='saved')||(p.dataset.action==='evening'&&time==='evening')||(p.dataset.action==='today'&&day===todayName(0)&&mode==='today')||(p.dataset.action==='tomorrow'&&day===todayName(1)&&mode==='tomorrow')||(p.dataset.action==='sunday'&&day==='Dimanche'&&mode==='sunday_obligation')))}
 function render(){compute(); renderStatic(); renderChips(); renderTags(); renderNav(); renderNext(); renderResults(); renderMore(); renderFooter(); $('#resultsHead').hidden=state.mode==='more'; $('#searchBox').classList.toggle('hasText',!!state.query);}
-function setLang(l){state.lang=l;localStorage.setItem('mmf_language',l);render()}
-function toast(msg){const t=$('#toast');t.textContent=msg;t.classList.add('show');clearTimeout(toast._t);toast._t=setTimeout(()=>t.classList.remove('show'),1800)}
-function requestLocation(){if(!navigator.geolocation){toast(tr('locationDenied'));return} navigator.geolocation.getCurrentPosition(pos=>{state.location={lat:pos.coords.latitude,lon:pos.coords.longitude};state.near=true;state.mode='near';render()},()=>toast(tr('locationDenied')),{enableHighAccuracy:false,timeout:8000,maximumAge:0})}
+function setLang(l){localStorage.setItem('mmf_language',l); setState({lang:l}); if(state.detailRow)renderDetailSheet(state.detailRow)}
+function toast(msg){const t=$('#toast'); if(!t)return; t.textContent=msg;t.classList.add('show');clearTimeout(toast._t);toast._t=setTimeout(()=>t.classList.remove('show'),1800)}
+function requestLocation(){if(!navigator.geolocation){toast(tr('locationDenied'));return} navigator.geolocation.getCurrentPosition(pos=>{setState({location:{lat:pos.coords.latitude,lon:pos.coords.longitude},near:true,mode:'near'})},()=>toast(tr('locationDenied')),{enableHighAccuracy:false,timeout:8000,maximumAge:0})}
 let lastFocusedBeforeSheet=null;
 function focusablesIn(el){return $$('button,[href],input,select,textarea,[tabindex]:not([tabindex="-1"])').filter(x=>el&&el.contains(x)&&!x.disabled&&x.getAttribute('aria-hidden')!=='true')}
-function openModal(name,trigger=document.activeElement){
-  if(name!=='filters')return;
-  lastFocusedBeforeSheet=trigger;
-  state.modal='filters';
-  document.body.classList.add('filtersOpen','modalOpen');
-  $('#filterSheet')?.setAttribute('aria-hidden','false');
-  $('#openFilters')?.setAttribute('aria-expanded','true');
-  $('#appRoot')?.setAttribute('inert','');
-  setTimeout(()=>{const target=$('#filterSheet')?.querySelector('#closeFilters')||focusablesIn($('#filterSheet'))[0]; target?.focus()},0)
-}
-function closeModal(name='filters'){
-  if(name!=='filters'&&state.modal!==name)return;
-  document.body.classList.remove('filtersOpen','modalOpen');
-  state.modal=null;
-  $('#filterSheet')?.setAttribute('aria-hidden','true');
-  $('#openFilters')?.setAttribute('aria-expanded','false');
-  $('#appRoot')?.removeAttribute('inert');
-  if(lastFocusedBeforeSheet&&lastFocusedBeforeSheet.focus)lastFocusedBeforeSheet.focus();
-}
+function openModal(name,trigger=document.activeElement){if(name!=='filters')return; lastFocusedBeforeSheet=trigger; setState({modal:'filters'},{render:false}); document.body.classList.add('filtersOpen','modalOpen'); $('#filterSheet')?.setAttribute('aria-hidden','false'); $('#openFilters')?.setAttribute('aria-expanded','true'); $('#appRoot')?.setAttribute('inert',''); setTimeout(()=>{const target=$('#filterSheet')?.querySelector('#closeFilters')||focusablesIn($('#filterSheet'))[0]; target?.focus()},0)}
+function closeModal(name='filters'){if(name!=='filters'&&state.modal!==name)return; document.body.classList.remove('filtersOpen','modalOpen'); setState({modal:null},{render:false}); $('#filterSheet')?.setAttribute('aria-hidden','true'); $('#openFilters')?.setAttribute('aria-expanded','false'); $('#appRoot')?.removeAttribute('inert'); if(lastFocusedBeforeSheet&&lastFocusedBeforeSheet.focus)lastFocusedBeforeSheet.focus()}
 function openFilters(e){openModal('filters',e?.currentTarget||document.activeElement)}
 function closeFilters(){closeModal('filters')}
 function trapSheetFocus(e){if(e.key!=='Tab'||state.modal!=='filters')return; const f=focusablesIn($('#filterSheet')); if(!f.length)return; const first=f[0],last=f[f.length-1]; if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()} else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}
-
 function bindSheetDrag(){const sheet=$('#filterSheet'), grab=sheet?.querySelector('.grab'); if(!sheet||!grab)return; let startY=0,startX=0,dragging=false; grab.addEventListener('pointerdown',e=>{if(state.modal!=='filters')return; startY=e.clientY;startX=e.clientX;dragging=true; grab.setPointerCapture?.(e.pointerId)}); grab.addEventListener('pointerup',e=>{if(!dragging)return; const dy=e.clientY-startY,dx=Math.abs(e.clientX-startX); dragging=false; if(dy>60&&dy>dx*1.4)closeFilters()}); grab.addEventListener('pointercancel',()=>{dragging=false})}
-function applyRows(json){const rows=(json&&json.rows)||json||[]; if(Array.isArray(rows)&&rows.length){state.rows=rows.filter(rowActive); return true} return false}
-async function loadData(){state.saved=new Set(JSON.parse(localStorage.getItem('mmf_my_churches')||'[]')); let rendered=false; try{if(window.caches){const cached=await caches.match('data/masses.json'); if(cached){const json=await cached.clone().json(); rendered=applyRows(json); if(rendered)render();}}}catch(e){} if(!rendered){try{rendered=applyRows(window.MMF_FALLBACK_DATA||{}); if(rendered)render();}catch(e){}} try{let res=await fetch('data/masses.json',{cache:'no-cache'}); if(!res.ok)throw new Error('fetch'); let json=await res.clone().json(); if(window.caches){try{const c=await caches.open('mmf-v26-2-3'); await c.put('data/masses.json',res.clone())}catch(_){}} applyRows(json); render(); }catch(e){if(!rendered){state.loadError=String(e); render();}}}
-
-async function forceUpdate(){
-  const banner=$('#updateBanner');
-  const latest=(banner&&banner.dataset.latestVersion)||APP_VERSION;
-  try{
-    if(navigator.serviceWorker){
-      const reg=await navigator.serviceWorker.getRegistration();
-      if(reg&&reg.update)await reg.update();
-    }
-    if(window.caches){
-      const keys=await caches.keys();
-      await Promise.all(keys.filter(k=>k.startsWith('mmf-')).map(k=>caches.delete(k)));
-    }
-  }catch(e){}
-  try{localStorage.removeItem('mmf_update_dismissed_'+latest)}catch(e){}
-  setTimeout(()=>{const t=$('#updateText'); if(t)t.textContent=tr('updateFallback')},2000);
-  const base=location.origin+location.pathname;
-  location.replace(base+'?v='+encodeURIComponent(latest)+'&refresh='+Date.now()+location.hash);
-}
-
+function applyRows(json){const rows=(json&&json.rows)||json||[]; if(Array.isArray(rows)&&rows.length){setState({rows:rows.filter(rowActive)},{render:false}); return true} return false}
+async function loadData(){setState({saved:new Set(JSON.parse(localStorage.getItem('mmf_my_churches')||'[]'))},{render:false}); let rendered=false; try{if(window.caches){const cached=await caches.match('data/masses.json'); if(cached){const json=await cached.clone().json(); rendered=applyRows(json); if(rendered){render();openHashRowIfNeeded();}}}}catch(e){} if(!rendered){try{rendered=applyRows(window.MMF_FALLBACK_DATA||{}); if(rendered){render();openHashRowIfNeeded();}}catch(e){}} try{let res=await fetch('data/masses.json',{cache:'no-cache'}); if(!res.ok)throw new Error('fetch'); let json=await res.clone().json(); if(window.caches){try{const c=await caches.open(CACHE_NAME); await c.put('data/masses.json',res.clone())}catch(_){}} applyRows(json); render(); openHashRowIfNeeded(); }catch(e){if(!rendered)setState({loadError:String(e)})}}
+async function forceUpdate(){const banner=$('#updateBanner'); const latest=(banner&&banner.dataset.latestVersion)||APP_VERSION; try{if(navigator.serviceWorker){const reg=await navigator.serviceWorker.getRegistration(); if(reg&&reg.update)await reg.update()} if(window.caches){const keys=await caches.keys(); await Promise.all(keys.filter(k=>k.startsWith('mmf-')).map(k=>caches.delete(k)))}}catch(e){} try{localStorage.removeItem('mmf_update_dismissed_'+latest)}catch(e){} setTimeout(()=>{const t=$('#updateText'); if(t)t.textContent=tr('updateFallback')},2000); const base=location.origin+location.pathname; location.replace(base+'?v='+encodeURIComponent(latest)+'&refresh='+Date.now()+location.hash)}
 async function checkUpdate(){try{const res=await fetch('version.json?ts='+Date.now(),{cache:'no-store'});const v=await res.json(); if(v.version&&v.version!==APP_VERSION&&!localStorage.getItem('mmf_update_dismissed_'+v.version)){const banner=$('#updateBanner'); banner.dataset.latestVersion=v.version; banner.classList.add('show')}}catch(e){}}
-function bind(){state.lang=localStorage.getItem('mmf_language')||((navigator.language||'').toLowerCase().startsWith('fr')?'fr':'en'); $('#searchInput').addEventListener('input',e=>{state.query=e.target.value;state.filters.siteUid='';state.mode='search';state.near=!!parseQuery(state.query).near; if(state.near){state.mode='near';state.nearExpanded=false; if(!state.location) requestLocation();} render()}); $('#clearSearch').addEventListener('click',()=>{state.query='';$('#searchInput').value='';resetFilters();state.mode='home';state.near=false;state.nearExpanded=false;render()}); $('#langEn').addEventListener('click',()=>setLang('en')); $('#langFr').addEventListener('click',()=>setLang('fr')); $('#openFilters').addEventListener('click',openFilters); $('#closeFilters').addEventListener('click',closeFilters); $('#sheetBackdrop').addEventListener('click',closeFilters); $('#applyFilters').addEventListener('click',closeFilters); $$('.pill').forEach(p=>p.addEventListener('click',()=>{const a=p.dataset.action; if(a==='next'){state.mode='home';state.near=false;resetFilters();state.query='';$('#searchInput').value=''} if(a==='today'){applyFilter('day','__today')} if(a==='tomorrow'){applyFilter('day','__tomorrow')} if(a==='evening'){applyFilter('time','evening')} if(a==='near'){state.mode='near';state.near=true;state.nearExpanded=false;requestLocation()} if(a==='sunday'){applyFilter('day','Dimanche')} if(a==='saved'){state.mode='saved';state.near=false} render()})); $$('[data-nav]').forEach(b=>b.addEventListener('click',()=>{const n=b.dataset.nav;if(n==='near'){state.mode='near';state.near=true;state.nearExpanded=false;requestLocation()} else {state.mode=n; if(n==='more')state.moreSection='help'; if(n!=='near')state.near=false} render(); window.scrollTo({top:0,behavior:'smooth'})})); const quick=$('#quickRow'); if(quick){quick.addEventListener('scroll',()=>{markSwipeHintSeen();updateSwipeAffordance()},{passive:true}); quick.addEventListener('click',()=>{markSwipeHintSeen();updateSwipeAffordance()}); window.addEventListener('resize',updateSwipeAffordance)} $('#updateRefresh').addEventListener('click',forceUpdate); $('#updateHelp')?.addEventListener('click',openUpdateHelp); $('#updateDismiss').addEventListener('click',()=>{const banner=$('#updateBanner'); const latest=banner.dataset.latestVersion||APP_VERSION; banner.classList.remove('show');localStorage.setItem('mmf_update_dismissed_'+latest,'1')}); document.addEventListener('keydown',e=>{if(e.key==='Escape'&&state.modal==='filters')closeFilters(); trapSheetFocus(e)})}
+
+function handleDelegatedAction(e){
+  const chip=e.target.closest('[data-chip]'); if(chip){e.preventDefault(); clearFilter(chip.dataset.chip); return}
+  const filter=e.target.closest('[data-filter]'); if(filter){e.preventDefault(); applyFilter(filter.dataset.filter,filter.dataset.value); return}
+  const detailBtn=e.target.closest('[data-detail-row]'); if(detailBtn){e.preventDefault(); const r=state.results[+detailBtn.dataset.detailRow]; if(r)openDetailSheet(r,detailBtn); return}
+  const saveBtn=e.target.closest('[data-save]'); if(saveBtn){e.preventDefault(); const r=state.results[+saveBtn.dataset.save]; if(r)toggleSave(r); return}
+  const showSiteBtn=e.target.closest('[data-show-site]'); if(showSiteBtn){e.preventDefault(); const g=savedGroups()[+showSiteBtn.dataset.showSite]; if(g)showSite(g.first); return}
+  const unsaveBtn=e.target.closest('[data-unsave-site]'); if(unsaveBtn){e.preventDefault(); const g=savedGroups()[+unsaveBtn.dataset.unsaveSite]; if(g)toggleSave(g.first); return}
+  const nextAction=e.target.closest('[data-next-action]'); if(nextAction){e.preventDefault(); const a=nextAction.dataset.nextAction; if(a==='locate')requestLocation(); if(a==='expand')setState({nearExpanded:true}); if(a==='share'&&state.next)shareResult(state.next); if(a==='save'&&state.next)toggleSave(state.next); return}
+  const emptyAction=e.target.closest('[data-empty-action="expand-near"]'); if(emptyAction){e.preventDefault(); setState({nearExpanded:true}); return}
+  const detailAction=e.target.closest('[data-detail-action]'); if(detailAction){e.preventDefault(); const r=state.detailRow; if(!r)return; const a=detailAction.dataset.detailAction; if(a==='share')shareResult(r); if(a==='save')toggleSave(r); if(a==='all-times'){closeDetailSheet();showSite(r)} return}
+  const more=e.target.closest('[data-more-section]'); if(more){e.preventDefault(); openMoreSection(more.dataset.moreSection,false); return}
+  const footer=e.target.closest('[data-footer-target]'); if(footer){e.preventDefault(); openMoreSection(footer.dataset.footerTarget); return}
+  const share=e.target.closest('[data-share-app]'); if(share){e.preventDefault(); shareApp(); return}
+}
+function installDelegatedActions(){document.addEventListener('click',handleDelegatedAction)}
+function runSearchDiagnostics(){const tests=['messe du soir Curepipe','evening Mass Curepipe','messe demain','messe aujourd’hui','messe samedi soir','18h','18:00','6pm','sacre coeur','saint jean','st jean','église','eglise']; const now=getMauritiusNow(new Date('2026-05-07T05:00:00+04:00')); return tests.map(q=>{const st={...state,query:q,filters:{...DEFAULT_FILTERS},mode:'search',near:false}; const out=getVisibleResults(st,now); return {query:q,count:out.results.length,top:out.results[0]?siteName(out.results[0]):null,pass:out.results.length>0}})}
+function runDateDiagnostics(testNow){const now=getMauritiusNow(testNow?new Date(testNow):new Date()); const next=getNextMass(state.rows,now,state); return {now:now.toISOString(),next:next?{site:siteName(next),day:next.day_of_week,time:next.time_24h,delta:next._delta}:null,pass:!!next}}
+function runRankingDiagnostics(){return {top:state.results.slice(0,5).map(r=>({site:siteName(r),day:r.day_of_week,time:r.time_24h,delta:r._delta,dist:r._dist??null})),pass:true}}
+function runStateDiagnostics(){return {mode:state.mode,query:state.query,filters:{...state.filters},near:state.near,modal:state.modal,results:state.results.length,pass:true}}
+function runDeepLinkDiagnostics(){const url=encodeStateToUrl(state); const restored=restoreStateFromUrl(url.includes('#')?url.slice(url.indexOf('#')):''); return {url,restored,pass:!!restored||!url.includes('#')}}
+window.MMFDiagnostics={runSearchDiagnostics,runDateDiagnostics,runRankingDiagnostics,runStateDiagnostics,runDeepLinkDiagnostics};
+
+function bind(){setState({lang:localStorage.getItem('mmf_language')||((navigator.language||'').toLowerCase().startsWith('fr')?'fr':'en')},{render:false}); restoreStateFromHash(); $('#searchInput').addEventListener('input',e=>{const q=e.target.value; const parsed=parseUserIntent(q); const near=!!parsed.near; setState({query:q,filters:{siteUid:''},mode:near?'near':'search',near,nearExpanded:near?false:state.nearExpanded},{url:true}); if(near&&!state.location) requestLocation()}); $('#clearSearch').addEventListener('click',()=>clearAllFilters({url:true})); $('#langEn').addEventListener('click',()=>setLang('en')); $('#langFr').addEventListener('click',()=>setLang('fr')); $('#openFilters').addEventListener('click',openFilters); $('#closeFilters').addEventListener('click',closeFilters); $('#sheetBackdrop').addEventListener('click',()=>{if(state.modal==='detail')closeDetailSheet(); else closeFilters()}); $('#closeDetail')?.addEventListener('click',closeDetailSheet); $('#applyFilters').addEventListener('click',closeFilters); $$('.pill').forEach(p=>p.addEventListener('click',()=>{const a=p.dataset.action; if(a==='next')setState({mode:'home',near:false,query:'',filters:{...DEFAULT_FILTERS}}); if(a==='today')applyFilter('day','__today'); if(a==='tomorrow')applyFilter('day','__tomorrow'); if(a==='evening')applyFilter('time','evening'); if(a==='near'){setState({mode:'near',near:true,nearExpanded:false});requestLocation()} if(a==='sunday')applyFilter('day','Dimanche'); if(a==='saved')setState({mode:'saved',near:false})})); $$('[data-nav]').forEach(b=>b.addEventListener('click',()=>{const n=b.dataset.nav;if(n==='near'){setState({mode:'near',near:true,nearExpanded:false});requestLocation()} else setState({mode:n,near:false,moreSection:n==='more'?'help':state.moreSection}); window.scrollTo({top:0,behavior:'smooth'})})); const quick=$('#quickRow'); if(quick){quick.addEventListener('scroll',()=>{markSwipeHintSeen();updateSwipeAffordance()},{passive:true}); quick.addEventListener('click',()=>{markSwipeHintSeen();updateSwipeAffordance()}); window.addEventListener('resize',updateSwipeAffordance)} $('#updateRefresh').addEventListener('click',forceUpdate); $('#updateHelp')?.addEventListener('click',openUpdateHelp); $('#updateDismiss').addEventListener('click',()=>{const banner=$('#updateBanner'); const latest=banner.dataset.latestVersion||APP_VERSION; banner.classList.remove('show');localStorage.setItem('mmf_update_dismissed_'+latest,'1')}); document.addEventListener('keydown',e=>{if(e.key==='Escape'&&state.modal==='filters')closeFilters(); if(e.key==='Escape'&&state.modal==='detail')closeDetailSheet(); trapSheetFocus(e); trapDetailFocus(e)})}
 async function registerSW(){if(!('serviceWorker'in navigator))return; try{await navigator.serviceWorker.register('sw.js')}catch(e){}}
-document.addEventListener('DOMContentLoaded',()=>{bind();bindSheetDrag();loadData();registerSW();checkUpdate();setInterval(checkUpdate,30*60*1000)});
+document.addEventListener('DOMContentLoaded',()=>{installDelegatedActions();bind();bindSheetDrag();loadData();registerSW();checkUpdate();setInterval(checkUpdate,30*60*1000)});

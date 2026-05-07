@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Mauritius Mass Finder v26.2.3</title>
+<title>Mauritius Mass Finder v27.0.4</title>
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#6f2c2c">
 <meta name="description" content="Find a Catholic Mass quickly anywhere in Mauritius.">
@@ -70,6 +70,11 @@
   <div class="filterGroup"><div class="filterLabel" id="regionLabel">Region</div><div class="tagRow" id="regionTags"></div></div>
   <div class="filterGroup"><div class="filterLabel" id="typeLabel">Type</div><div class="tagRow" id="typeTags"></div></div>
   <button class="btn primary" id="applyFilters" type="button" style="width:100%;margin-top:8px">Show results</button>
+</section>
+<section class="sheet detailSheet" id="detailSheet" aria-label="Mass details" aria-modal="true" aria-hidden="true" role="dialog" tabindex="-1">
+  <div class="grab"></div>
+  <div class="sheetHead"><h2 id="detailTitle" data-t="detailTitle">Mass details</h2><button class="btn icon" id="closeDetail" type="button">×</button></div>
+  <div id="detailSheetBody"></div>
 </section>
 
 <div class="updateBanner" id="updateBanner"><div><b id="updateTitle">New version available</b><div id="updateText">Update to get the latest version.</div><button class="linkBtn" id="updateHelp" type="button">Having trouble updating?</button></div><button class="btn primary" id="updateRefresh" type="button">Update now</button><button class="btn" id="updateDismiss" type="button">Later</button></div>

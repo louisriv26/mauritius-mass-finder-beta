@@ -1,8 +1,8 @@
 {
-  "version": "26.2.3",
-  "release_name": "Date-Specific Occurrence Filter Patch",
+  "version": "27.0.4",
+  "release_name": "Runtime Closure & Event Delegation Patch",
   "build": "2026-05-07",
   "data_version": "2026-05-05",
-  "cache_version": "mmf-v26-2-3",
-  "notes": "Date-specific searches and filters now exclude occurrence-invalid conditional Masses; structured special-rule semantics and contextual-note safety preserved."
+  "cache_version": "mmf-v27-0-4",
+  "notes": "Runtime closure patch: active required functions, delegated dynamic actions, diagnostics harness, preserved v27 behavior."
 }

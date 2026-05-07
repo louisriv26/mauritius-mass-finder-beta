@@ -1,0 +1,61 @@
+Mauritius Mass Finder v27.0.4 Runtime Closure & Event Delegation Patch — Validation Report
+
+1. Implemented runtime-closure fixes
+- Updated version/cache to 27.0.4 / mmf-v27-0-4.
+- Activated date/time functions in live ranking annotation: getNextOccurrence(), isPastMass(), countsForSundayContext().
+- Preserved canonical search/filter/share/date functions from v27.0.3 and wired current view/app/result share through the shared share layer.
+- Replaced repeated render-time event listeners for result cards, saved cards, detail sheet, chips, filter tags, More panel, footer, Next card, and empty Near Me expansion with a single delegated click handler.
+- Added non-user-facing window.MMFDiagnostics harness with deterministic search/date/ranking/state/deep-link diagnostics.
+- Removed stale v27.0.3 validation report from deployable root.
+
+2. Architecture before/after evidence
+Baseline v27.0.3 was recorded from the prior audit as:
+- direct state assignment lines: 10
+- setState() calls: 28
+- direct render() calls: 4
+- event listeners still attached inside several render functions
+
+v27.0.4 package evidence:
+- state assignment pattern count in runtime scan: 136
+- setState() textual calls: 29
+- addEventListener textual count: 23
+- dynamic render-time listener attachment removed from renderResults(), renderChips(), renderTags(), renderMore(), renderFooter(), renderDetailSheet(), and renderNext().
+- required functions present and active: normaliseSearchText, parseUserIntent, applyFilters, clearFilter, clearAllFilters, getMauritiusNow, parseMassTime, getNextOccurrence, isPastMass, getNextMass, isSaturdayEveningMass, countsForSundayContext, encodeStateToUrl, restoreStateFromUrl, shareApp, shareCurrentView, shareResult.
+
+3. Diagnostic harness results
+Deterministic Node-based diagnostics run against the final working folder:
+- Search diagnostics: PASS for required queries including messe du soir Curepipe, evening Mass Curepipe, messe aujourd’hui, messe demain, messe samedi soir, 18h, 18:00, 6pm, sacre coeur, saint jean, st jean, église, eglise.
+- Fixed-time date diagnostics: PASS for Wednesday 06:15, Friday 17:30, Saturday 14:30, Saturday 16:30, Saturday 23:45, Sunday 19:00, and midnight rollover.
+
+4. Data integrity
+- rows: 396
+- parish labels/uids: 48
+- sites: 118
+- Mass rows: 379
+- other/ambiguous rows: 17
+- duplicate technical keys: 0
+- invalid days/times: 0
+- missing coordinates: 0
+
+5. Technical gates
+- app.js syntax: PASS
+- sw.js syntax: PASS
+- version.json validity: PASS
+- manifest.json validity: PASS
+- data/masses.json validity: PASS
+- stale v27.0.0/v27.0.1/v27.0.2/v27.0.3 runtime references: PASS
+- final extracted-zip audit: PASS
+
+6. Remaining NOT TESTED items
+- Real iPhone/Android browser testing: NOT TESTED in this environment.
+- Installed PWA update banner on real device: NOT TESTED in this environment.
+- Real geolocation prompt/denial on phone: NOT TESTED in this environment.
+- Row-by-row live source meaning revalidation against current diocesan pages: NOT TESTED in this build; existing source URLs/data preserved.
+
+7. Release blockers
+No file/package/data/syntax blockers found.
+Wide-release SHIP remains blocked only by the release-confidence rule because browser/device/PWA runtime testing was unavailable.
+
+8. Final verdict
+FIX THEN SHIP.
+Reason: all package and deterministic runtime diagnostics passed, but real browser/device/PWA testing was unavailable.
