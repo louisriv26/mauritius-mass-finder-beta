@@ -1,8 +1,8 @@
 {
-  "version": "26.1.4",
-  "release_name": "Runtime Data Note Cleanup Release",
-  "build": "2026-05-06",
+  "version": "26.2.3",
+  "release_name": "Date-Specific Occurrence Filter Patch",
+  "build": "2026-05-07",
   "data_version": "2026-05-05",
-  "cache_version": "mmf-v26-1-4",
-  "notes": "Stale runtime data references removed; coordinate precision summary regenerated from actual rows; deployable zip cleaned."
+  "cache_version": "mmf-v26-2-3",
+  "notes": "Date-specific searches and filters now exclude occurrence-invalid conditional Masses; structured special-rule semantics and contextual-note safety preserved."
 }
