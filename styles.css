@@ -42,7 +42,7 @@ html,body{min-height:100%;overflow-x:hidden;}
 
 
 
-/* v27.0.4 Bottom nav regression preservation: pure CSS fixed bottom, no viewport JS offset. */
+/* Bottom nav regression preservation: pure CSS fixed bottom, no viewport JS offset. */
 html,body{min-height:100%;}
 body{padding-bottom:calc(var(--navH) + env(safe-area-inset-bottom))!important;overflow-x:hidden;}
 .bottomNav{position:fixed!important;left:0!important;right:0!important;bottom:0!important;top:auto!important;width:100%!important;z-index:9999!important;transform:none!important;translate:none!important;will-change:auto!important;contain:none!important;isolation:auto!important;}
@@ -52,7 +52,7 @@ body{padding-bottom:calc(var(--navH) + env(safe-area-inset-bottom))!important;ov
 .toast{bottom:calc(var(--navH) + 18px + env(safe-area-inset-bottom))!important;}
 
 
-/* v27.0.4 Structured Special-Rule Semantics Patch */
+/* Structured special-rule semantics support. */
 .hero{padding:12px 14px 10px;}
 .brandTitle{font-size:22px;line-height:1.02;letter-spacing:-.045em;}
 .brandSubtitle{font-size:12px;margin-top:2px;}
@@ -71,7 +71,7 @@ body{padding-bottom:calc(var(--navH) + env(safe-area-inset-bottom))!important;ov
 @media(max-width:430px){.hero{padding:10px 12px 9px}.brandTitle{font-size:20px}.brandSubtitle{display:none}.searchHint{font-size:11px}.quickRow{padding-top:8px}.card .actions{gap:6px}.card .actions .btn{flex:1 1 auto}}
 
 
-/* v27.0.4 Structural UX Expansion: detail bottom sheet and shareable-state support */
+/* Structural UX expansion: detail bottom sheet and shareable-state support. */
 .detailOpen .sheetBackdrop{opacity:1;pointer-events:auto}
 .detailOpen .detailSheet{transform:translateY(0);visibility:visible}
 .detailSheet[aria-hidden="true"]{visibility:hidden}
@@ -80,3 +80,17 @@ body{padding-bottom:calc(var(--navH) + env(safe-area-inset-bottom))!important;ov
 .detailActions{position:sticky;bottom:0;background:linear-gradient(180deg,rgba(255,255,255,.75),#fff 35%);padding-top:10px;margin-top:12px}
 .detailGrid{display:grid;grid-template-columns:1fr;gap:10px;margin-top:12px}
 @media(min-width:760px){.detailGrid{grid-template-columns:1fr 1fr}.detailSheet{border-radius:22px 22px 0 0}}
+
+/* Clean detail source presentation. */
+body.scrollLocked{overflow:hidden!important;touch-action:none!important;overscroll-behavior:none!important;}
+.detailSheet{overscroll-behavior:contain;-webkit-overflow-scrolling:touch;}
+.detailActionList{display:grid;grid-template-columns:1fr;gap:0;margin-top:14px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;}
+.detailActionRow{appearance:none;border:0;border-bottom:1px solid var(--line);background:#fff;color:var(--ink);padding:12px 14px;margin:0;width:100%;text-align:left;text-decoration:none;display:flex;align-items:center;justify-content:space-between;gap:12px;font:inherit;box-sizing:border-box;}
+.detailActionRow:last-child{border-bottom:0;}
+.detailActionRow span{font-weight:900;line-height:1.2;}
+.detailActionRow strong{font-size:12px;color:var(--muted);font-weight:800;text-align:right;line-height:1.25;max-width:52%;}
+.detailActionRow:not(.inert)::after{content:'›';color:var(--muted);font-size:22px;line-height:1;margin-left:2px;}
+.detailActionRow.inert{color:var(--muted);}
+.faq details{border:1px solid var(--line);border-radius:14px;padding:10px 12px;margin:8px 0;background:#fff;}
+.faq summary{font-weight:900;cursor:pointer;}
+.faq p{margin:.45rem 0;color:var(--muted);}

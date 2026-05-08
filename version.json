@@ -1,8 +1,8 @@
 {
-  "version": "27.0.4",
-  "release_name": "Runtime Closure & Event Delegation Patch",
-  "build": "2026-05-07",
+  "version": "27.1.1",
+  "release_name": "Church Schedule Wording Alignment Patch",
+  "build": "2026-05-08",
   "data_version": "2026-05-05",
-  "cache_version": "mmf-v27-0-4",
-  "notes": "Runtime closure patch: active required functions, delegated dynamic actions, diagnostics harness, preserved v27 behavior."
+  "cache_version": "mmf-v27-1-1",
+  "notes": "Aligns the detail action wording with the actual site-level schedule behaviour: Church schedule / Horaires de cette église. Preserves shareable state, hardening fixes, detail clarity, FAQ, source links, search, filters, Near Me, bilingual mode, update flow, and PWA support."
 }

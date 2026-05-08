@@ -1,0 +1,33 @@
+Mauritius Mass Finder v27.1.1 validation report
+
+Release: Church Schedule Wording Alignment Patch
+Version: 27.1.1
+Cache: mmf-v27-1-1
+
+Implemented changes:
+- Replaced misleading site-level schedule action wording.
+- EN label corrected to Church schedule.
+- FR label corrected to Horaires de cette église.
+- Preserved the existing site_uid filtering behaviour; no parish-wide schedule logic was introduced.
+
+Validation summary:
+- 396 rows.
+- 48 parishes.
+- 118 sites.
+- 379 Mass rows.
+- 17 other/ambiguous rows.
+- 0 duplicate technical keys.
+- 0 invalid days/times.
+- 0 missing coordinates.
+- JSON, CSV and fallback data consistency passed.
+- JavaScript syntax passed.
+- Service worker syntax passed.
+- Manifest/version metadata passed.
+- Stale label scan passed for the previous misleading schedule labels.
+- Stale version/cache scan passed for runtime files.
+
+Release confidence:
+- Deterministic/package validation passed.
+- Real browser/device/PWA smoke testing still required before wide release.
+
+Verdict: FIX THEN SHIP pending live phone/PWA smoke test.
