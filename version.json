@@ -1,8 +1,8 @@
 {
-  "version": "27.1.1",
-  "release_name": "Church Schedule Wording Alignment Patch",
+  "version": "27.1.2",
+  "release_name": "Unified Report Issue Patch",
   "build": "2026-05-08",
   "data_version": "2026-05-05",
-  "cache_version": "mmf-v27-1-1",
-  "notes": "Aligns the detail action wording with the actual site-level schedule behaviour: Church schedule / Horaires de cette église. Preserves shareable state, hardening fixes, detail clarity, FAQ, source links, search, filters, Near Me, bilingual mode, update flow, and PWA support."
+  "cache_version": "mmf-v27-1-2",
+  "notes": "Unifies duplicate detail reporting actions into one clear Report an issue / Signaler un problème action. Preserves shareable state, hardening fixes, church schedule wording, FAQ, source links, search, filters, Near Me, bilingual mode, update flow and PWA support."
 }
