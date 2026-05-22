@@ -1,7 +1,7 @@
 
 'use strict';
-const APP_VERSION='27.1.12';
-const CACHE_NAME='mmf-v27-1-12';
+const APP_VERSION='27.1.15';
+const CACHE_NAME='mmf-v27-1-15';
 const NEAR_RADIUS_KM=12;
 const DAYS=['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'];
 const DAY_EN={Dimanche:'Sunday',Lundi:'Monday',Mardi:'Tuesday',Mercredi:'Wednesday',Jeudi:'Thursday',Vendredi:'Friday',Samedi:'Saturday'};
@@ -149,7 +149,7 @@ function rel(delta,now=mauritiusNow()){
 }
 function distKm(a,b,c,d){if([a,b,c,d].some(x=>!Number.isFinite(+x)))return null; const R=6371,rad=x=>x*Math.PI/180; const dLat=rad(c-a),dLon=rad(d-b); const A=Math.sin(dLat/2)**2+Math.cos(rad(a))*Math.cos(rad(c))*Math.sin(dLon/2)**2; return 2*R*Math.asin(Math.sqrt(A))}
 function distanceLabel(r,d=null){const val=d??(state.location?distKm(state.location.lat,state.location.lon,rowLat(r),rowLon(r)):null); if(val==null)return ''; const key=(String(r.coordinate_precision||'').includes('exact')?'exact':'approx'); return tr(key,{d:val.toFixed(val<10?1:0)})}
-function stripStopwords(text){const stop=/\b(du|de|des|le|la|les|l|a|au|aux|d)\b/g;return text.replace(stop,' ').replace(/\s+/g,' ').trim()}
+function stripStopwords(text){const stop=/\b(du|de|des|le|la|les|l|a|au|aux|d|i|need|want|find|show|get|please|the|an|for|to|mass|near|me|now)\b/g;return text.replace(stop,' ').replace(/\s+/g,' ').trim()}
 function parseUserIntent(q){
   const exactRaw=parseExactTimeRaw(q); const n=normaliseSearchText(q); const p={raw:q,tokens:n.split(' ').filter(Boolean),chips:[]}; if(!n&&!exactRaw)return p;
   const chip=(k,label)=>p.chips.push({k,label});
@@ -165,7 +165,8 @@ function parseUserIntent(q){
   for(const [word,day] of Object.entries(dayMap)){
     if(new RegExp('\\b'+word+'\\b').test(n)){p.day=day; chip('day',dayName(day)); break}
   }
-  if(/\b(today|aujourd hui|maintenant|now)\b/.test(n)){p.day='today'; p.chips=p.chips.filter(c=>c.k!=='day'); chip('day',tr('today'))}
+  if(/\b(today|aujourd hui)\b/.test(n)){p.day='today'; p.chips=p.chips.filter(c=>c.k!=='day'); chip('day',tr('today'))}
+  if(/\b(maintenant|now)\b/.test(n)){p.now=true; chip('time',tr('nextUseful'))}
   if(/\b(tomorrow|demain)\b/.test(n)){p.day='tomorrow'; p.chips=p.chips.filter(c=>c.k!=='day'); chip('day',tr('tomorrow'))}
   if(/\b(evening|soir|soiree|tonight|ce soir)\b/.test(n)){p.time='afternoon'; chip('time',tr('afternoon')); if(/\b(saturday|samedi)\b/.test(n))p.saturdayEvening=true; if(/\b(sunday|dimanche)\b/.test(n))p.sundayEvening=true}
   else if(/\b(morning|matin)\b/.test(n)){p.time='morning'; chip('time',tr('morning'))}

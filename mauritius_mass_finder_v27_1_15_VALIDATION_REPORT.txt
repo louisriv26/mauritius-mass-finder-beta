@@ -1,0 +1,46 @@
+Mauritius Mass Finder v27.1.15 — Metadata Consistency Patch
+
+Implemented changes
+- Updated runtime metadata to v27.1.15.
+- Updated service-worker cache metadata to mmf-v27-1-15.
+- Corrected data/masses.json meta version/app_version/cache_version/minimum_supported_cache.
+- Regenerated fallback-data.js directly from corrected data/masses.json.
+- Updated version.json and manifest.json to v27.1.15.
+- Removed old validation report from deployable root and added this v27.1.15 report.
+- No dataset, UX, search, or feature behaviour changes intended.
+
+Gate results
+- Required file presence: PASS
+- JSON validity: PASS
+- JavaScript syntax: PASS
+- Service-worker syntax: PASS
+- Metadata consistency: PASS
+- Runtime stale-reference scan for v27.1.13/v27.1.14 and old cache names: PASS
+- Data counts: PASS — 395 rows / 47 parishes / 117 sites / 379 Mass rows / 16 other rows
+- Invalid days/times: PASS — 0
+- Missing coordinates: PASS — 0
+- Duplicate technical keys: PASS — 0
+- fallback-data.js parity with data/masses.json: PASS
+- Source URL presence: PASS
+- v27.1.14 Near Me Now parser preservation: PASS
+
+Deterministic parser checks
+- “I need a Mass near me now”: near=true, now=true, place blank, no strict today filter
+- “near me today”: near=true, day=today
+- “near me tomorrow”: near=true, day=tomorrow
+- “messe aujourd hui”: day=today
+- “messe demain”: day=tomorrow
+- “messe du soir Curepipe”: time=afternoon, place=curepipe
+- “evening Mass Curepipe”: time=afternoon, place=curepipe
+- “18h”, “18:00”, “6pm”: exact=18:00
+- “sacre coeur”, “saint jean”, “st jean”: normalized place behaviour preserved
+
+Update-flow gate
+- Static update metadata: PASS
+- Stable localStorage keys not intentionally changed: PASS
+- Real iPhone PWA update-flow: NOT TESTED in this environment
+- Real Android PWA update-flow: NOT TESTED in this environment
+
+Final verdict
+- FIX THEN SHIP
+- Reason: all static and deterministic gates passed, but real-device PWA/update-flow testing remains unavailable.
