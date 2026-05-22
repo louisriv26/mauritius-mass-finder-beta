@@ -1,8 +1,8 @@
 {
-  "version": "27.1.10",
-  "release_name": "Simplified Time Categories Patch",
+  "version": "27.1.11",
+  "release_name": "Sunday Wording and Search Tips Copy Patch",
   "build": "2026-05-22",
   "data_version": "2026-05-22",
-  "cache_version": "mmf-v27-1-10",
-  "notes": "Removes the visible Evening/Soir time category. Time filters now use All day, Morning, and Afternoon, while evening/soir search phrases remain supported as afternoon/later-day intent."
+  "cache_version": "mmf-v27-1-11",
+  "notes": "Updates Help/More guidance to use natural keyword examples and cautious Saturday afternoon wording for Sunday-related searches, while preserving Morning/Afternoon time filters and soir/evening search aliases."
 }
