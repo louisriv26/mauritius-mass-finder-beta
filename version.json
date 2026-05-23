@@ -1,8 +1,8 @@
 {
-  "version": "27.1.15",
-  "release_name": "Metadata Consistency Patch",
+  "version": "27.1.16",
+  "release_name": "Saturday Anticipated Sunday Mass Rule",
   "build": "2026-05-22",
   "data_version": "2026-05-22",
-  "cache_version": "mmf-v27-1-15",
-  "notes": "Metadata consistency patch. Aligns data, fallback data, version file, manifest, runtime constants, and service-worker cache metadata. No data, UX, or feature behaviour changes intended."
+  "cache_version": "mmf-v27-1-16",
+  "notes": "Mauritius rule update: Saturday Masses from 3:00 pm are generally anticipated Sunday Masses and are included in Sunday searches and filters. Metadata, cache, fallback data, and runtime files aligned."
 }
