@@ -1,34 +1,34 @@
 window.MMF_FALLBACK_DATA = {
   "meta": {
     "app": "Mauritius Mass Finder",
-    "version": "27.2.3",
+    "version": "27.2.5",
     "generated_at": "2026-05-22T00:00:00+04:00",
-    "source": "Preserved validated schedule dataset from prior baseline; v27.2.3 changes only French Near-clearing, language intent preservation, ARIA/accessibility labels, and semantic polish. Mass data rows unchanged.",
+    "source": "Preserved validated schedule dataset from prior baseline; v27.2.5 changes app runtime semantics, update flow, accessibility and mobile stability only.",
     "row_count": 395,
     "parish_count": 47,
     "site_count": 117,
     "mass_rows": 379,
     "other_rows": 16,
-    "notes": "Decision UX compliance patch. Mass data rows unchanged; Saturday Masses from 3:00 pm remain generally treated as anticipated Sunday Masses.",
+    "notes": "Backdrop interaction stability patch. Mass data rows unchanged; Saturday Masses from 3:00 pm remain generally treated as anticipated Sunday Masses.",
     "coordinate_update": "All retained runtime sites have coordinates and coordinate precision labels. One unsupported hidden non-Mass row was removed from runtime data.",
     "directions_update": "Directions use Google Maps text-query fallback for all sites; distance labels reflect coordinate precision, with non-exact coordinates shown approximately.",
-    "app_version": "27.2.3",
-    "release": "v27.2.3 French Near-Clearing Compliance Patch",
+    "app_version": "27.2.5",
+    "release": "v27.2.5 Backdrop Interaction Stability Patch",
     "last_verified": "2026-05-02",
     "sunday_obligation_rule": "In Mauritius, Saturday Masses from 3:00 pm are generally anticipated Sunday Masses.",
     "sunday_obligation_rows": 188,
-    "release_name": "French Near-Clearing Compliance Patch",
+    "release_name": "Backdrop Interaction Stability Patch",
     "coordinate_precision_summary": {
       "approximate": 132,
       "exact_google_maps_pin": 209,
       "exact_church_building": 54
     },
-    "build_date": "2026-05-26",
+    "build_date": "2026-05-25",
     "date": "2026-05-06",
     "data_version": "2026-05-22",
-    "cache_version": "mmf-v27-2-3",
-    "minimum_supported_cache": "mmf-v27-2-3",
-    "build": "2026-05-26",
+    "cache_version": "mmf-v27-2-5",
+    "minimum_supported_cache": "mmf-v27-2-5",
+    "build": "2026-05-25",
     "language_rule": "Strict: English only if explicitly stated on the official diocesan source; otherwise Mass language defaults to French.",
     "english_mass_rows": 5,
     "default_french_mass_rows": 374,
@@ -54,8 +54,8 @@ window.MMF_FALLBACK_DATA = {
     "geospatial_note": "No coordinates moved by geospatial pass; added/normalized audit fields and preserved coordinates because no cluster, duplicate, town, or bounds conflict was detected.",
     "structured_rule_semantics": "Known occurrence/special rules are localized into direct explicit wording; exception rules are not prefixed with “Only when” or “Exception” in user-facing banners.",
     "date_specific_occurrence_filter": "today/tomorrow date contexts filter rows through occurrence_rule validity; contextual notes do not control occurrence.",
-    "time_filter_rule": "Visible filters: all day, morning (<12:00), afternoon (12:00–16:59), and evening (>=17:00). Saturday evening/Sunday-obligation logic remains separate and follows the app rule from 3:00 pm.",
-    "runtime_hardening": "Preserves localStorage guard, saved-mode shared-link trap prevention, Near Me calibration, data-load error handling, update fallback wording, Saturday/Sunday consistency gates, prior semantic path fixes; v27.2.3 adds robust French Near-clearing and accessibility polish."
+    "time_filter_rule": "Visible filters: all day, morning (<12:00), afternoon (>=12:00). Soir/evening remains a hidden search alias mapped to afternoon.",
+    "runtime_hardening": "Guarded localStorage access, saved-mode shared-link trap prevention, preserved Near Me calibration, data-load error handling, update fallback wording, and Saturday/Sunday consistency gates."
   },
   "rows": [
     {
@@ -29289,10 +29289,9 @@ window.MMF_FALLBACK_DATA = {
       "context_note": ""
     }
   ],
-  "version": "27.2.3",
-  "release": "v27.2.3 French Near-Clearing Compliance Patch",
-  "cache_version": "mmf-v27-2-3",
+  "version": "27.2.5",
+  "release": "v27.2.5 Backdrop Interaction Stability Patch",
+  "cache_version": "mmf-v27-2-5",
   "updated_at": "2026-05-26",
-  "notes": "v27.2.3 French Near-clearing compliance patch. Mass data rows unchanged."
-}
-;
+  "notes": "Backdrop interaction stability patch. Schedule rows unchanged; semantic/search/update/mobile-stability logic updated in app runtime."
+};

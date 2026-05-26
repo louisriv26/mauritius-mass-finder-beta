@@ -1,7 +1,7 @@
 {
   "name": "Mauritius Mass Finder",
   "short_name": "Mass Finder",
-  "description": "Mauritius Mass Finder v27.2.3 — French Near-clearing compliance patch.",
+  "description": "Mauritius Mass Finder v27.2.5 — Backdrop interaction stability patch.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
@@ -35,6 +35,6 @@
       "purpose": "maskable"
     }
   ],
-  "version": "27.2.3",
+  "version": "27.2.5",
   "id": "./"
 }

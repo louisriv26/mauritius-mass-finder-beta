@@ -1,8 +1,8 @@
 {
-  "version": "27.2.3",
-  "release_name": "French Near-Clearing Compliance Patch",
+  "version": "27.2.5",
+  "release_name": "Backdrop Interaction Stability Patch",
   "build": "2026-05-26",
   "data_version": "2026-05-22",
-  "cache_version": "mmf-v27-2-3",
-  "notes": "French Near-clearing compliance patch: preserves language/special/time/place intents when clearing Near, adds French/English semantic polish and accessibility live-region labels. Mass data rows unchanged."
+  "cache_version": "mmf-v27-2-5",
+  "notes": "Backdrop interaction stability patch from stable light-only baseline. Preserves semantic search, Near-clearing, Saturday/Sunday consistency, My Churches, accessibility and update-flow improvements."
 }

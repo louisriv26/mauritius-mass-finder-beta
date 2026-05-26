@@ -1,21 +1,21 @@
 
 'use strict';
-const APP_VERSION='27.2.3';
-const CACHE_NAME='mmf-v27-2-3';
+const APP_VERSION='27.2.5';
+const CACHE_NAME='mmf-v27-2-5';
 const NEAR_RADIUS_KM=12;
 const DAYS=['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'];
 const DAY_EN={Dimanche:'Sunday',Lundi:'Monday',Mardi:'Tuesday',Mercredi:'Wednesday',Jeudi:'Thursday',Vendredi:'Friday',Samedi:'Saturday'};
 const DAY_FR={Dimanche:'Dimanche',Lundi:'Lundi',Mardi:'Mardi',Mercredi:'Mercredi',Jeudi:'Jeudi',Vendredi:'Vendredi',Samedi:'Samedi'};
 const T={
- en:{title:'Mauritius\nMass Finder',subtitle:'Find a Mass quickly anywhere in Mauritius',search:'Search',searchPh:'evening Mass Curepipe, 18h, Saint Jean…',searchHint:'Try: evening Mass Curepipe · first Friday · English Mass.',clear:'Clear',quickNext:'Next Mass',quickToday:'Today',quickTomorrow:'Tomorrow',quickNear:'Near me',quickAfternoon:'Afternoon',quickEvening:'Evening',quickSunday:'Sunday',quickSaved:'My Churches',filters:'Filters',showResults:'Show results',day:'Day',time:'Time of day',region:'Region',type:'Type',anyDay:'Any day',today:'Today',tomorrow:'Tomorrow',sunday:'Sunday',allDay:'All day',morning:'Morning',afternoon:'Afternoon',evening:'Evening',allRegions:'All regions',massesOnly:'Masses only',includeOther:'Include other celebrations',nextMass:'Next Mass',nextUseful:'Next useful Mass',nearTitle:'Near Me',nearSub:'Within 12 km by default. Results are grouped by urgency, then ranked by true distance',sortedHintNear:'Near Me: grouped by urgency, then nearest first within each group',nearExpanded:'No nearby Mass found within 12 km. Showing results within 20 km.',savedTitle:'My Churches',savedSub:'Your saved churches with their next Mass',noSaved:'No saved churches yet',noSavedText:'Tap Add to My Churches on a Mass card to save a church here.',results:'results',result:'result',shown:'shown',directions:'Directions',share:'Share',save:'Add to My Churches',saved:'In My Churches',source:'Source',sourceParishPage:'Parent parish page — {parish}',allTimes:'Parish schedule',verified:'Verified',todayRel:'Today',tomorrowRel:'Tomorrow',inM:'in {n} min',startingSoon:'Starting soon',endingSoon:'Ending soon',earlierToday:'Earlier today',laterThisWeek:'Later this week',firstFriday:'First Friday',englishMass:'English Mass',themeSystem:'Theme: system',themeLight:'Theme: light',themeDark:'Theme: dark',noMassToday:'No more Masses found for today',noMassTodayText:'See tomorrow, clear filters, or search nearby.',locationSearchHelp:'To show the nearest Mass, allow location access or search by town',inH:'in {h}h {m}m',now:'now',startedAgo:'Started {n} min ago · in progress',weekdayMass:'Weekday Mass',sundayMass:'Sunday Mass',satEve:'Anticipated Sunday Mass',otherCelebration:'Other celebration',approx:'~{d} km',exact:'{d} km',noResults:'No matching Mass found',noResultsText:'Try removing a filter, widening the place, or using a simpler search.',locationAsk:'Allow location access to sort nearby Masses.',locationDenied:'Location was not available. Results remain sorted by next Mass.',nearUse:'Use my location',moreTitle:'Help & app information',helpTitle:'How to use this app',helpHtml:'<div class="faq"><p><b>Quick tips:</b> try “evening Curepipe”. You can also try “morning Curepipe”, “afternoon Curepipe” or “18:00”. A few words are enough.</p><details open><summary>Finding a Mass</summary><p>Search by town, parish, church name, time, or simple keywords such as “morning Curepipe”, “evening Curepipe”, “afternoon Curepipe”, “Curepipe 18:00”, or “saint jean”. Morning means before 12:00. Afternoon means 12:00–16:59. Evening means from 17:00 onward.</p></details><details><summary>Near Me</summary><p>Near Me uses your device location to rank upcoming Masses. Approximate distances are shown with “~”.</p></details><details><summary>My Churches</summary><p>Add to My Churches saves the church/site so you can find its next Mass quickly. It does not save one single Mass occurrence. Saved churches normally remain after app updates.</p></details><details><summary>Other celebrations</summary><p>The default view shows Masses only. Prayer services, adoration, or ambiguous celebrations appear only when you include other celebrations.</p></details><details><summary>Saturday / Sunday</summary><p>In Mauritius, Saturday Masses from 3:00 pm are generally anticipated Sunday Masses. The app therefore includes them in Sunday Mass searches and filters.</p></details><details><summary>Sources and reliability</summary><p>Use Source to check the official parish or context page. If an item looks wrong, use Report an issue.</p></details><details><summary>Updates and offline use</summary><p>Use the update banner when it appears. Saved churches are stored on your device and normally survive updates. Offline mode uses the last available app data.</p></details></div>',trustTitle:'Trust note',trustText:'Mass times can change for feast days, funerals, cyclones, holidays or parish changes. Use the source link when timing is critical.',version:'Version',navHome:'Home',navNear:'Near me',navSaved:'My Churches',navMore:'More',updateTitle:'New version available',updateText:'Update to get the latest version.',refresh:'Update now',later:'Later',copied:'Link copied',shared:'Ready to share',shareAppTitle:'Mauritius Mass Finder',shareMassIntro:'Mass time',howUpdate:'How to update',troubleUpdating:'Having trouble updating?',about:'About',aboutTitle:'About this app',aboutHtml:'<p><b>Purpose:</b> Mauritius Mass Finder helps people quickly find Catholic Mass times across Mauritius.</p><p><b>Data and trust:</b> the schedule is based on the maintained project database compiled from official diocesan parish information and project corrections. Church schedules can still change at short notice.</p><p><b>Default view:</b> the app shows Masses only by default. Other celebrations, such as adoration or prayer services, are shown only when you choose to include them.</p><p><b>Corrections:</b> if a time looks wrong, use the source link or Report an issue so the database can be corrected.</p>',updateGuideTitle:'How to update the app',updateGuideHtml:'<p>When a new version is available, a message will appear:</p><p><b>→ New version available</b></p><p>Tap <b>Update now</b> to load the latest version.</p><p><b>If nothing happens:</b></p><ol><li>Close the app completely</li><li>Reopen it</li></ol><p><b>If the problem continues:</b></p><ul><li>remove the app from your home screen</li><li>add it again from your browser</li></ul>',swipeHint:'Swipe to see more',showingToday:'Showing: Today',showingTomorrow:'Showing: Tomorrow',showingSunday:'Showing: Sunday Masses (including Saturday Masses from 3:00 pm)',showingNear:'Showing: Near you',showingSaved:'Showing: My Churches',showingSearch:'Showing: Search results',showingSundayEvening:'Showing: Sunday evening',usingLocation:'Using your location',locationNotEnabled:'Location not enabled',sortedHint:'Sorted by time, then distance',updateFallback:'If nothing happens, close and reopen the app.',reportIssue:'Report an issue',reportSubject:'Correction for Mauritius Mass Finder',reportBody:'Please check this Mass information:',resultCap:'Showing 60 of {n} — refine your search.',sundayExplain:'In Mauritius, Saturday Masses from 3:00 pm are generally anticipated Sunday Masses.',details:'Details',hideDetails:'Hide details',trustStrip:'{verified} · {source} · {precision}',sourceAvailable:'Official source available',approxLocation:'Approx. location',exactLocation:'Exact location',confidenceLow:'Lower confidence — check source',confidenceOk:'Confidence {score}%',onlyWhen:'{rule}',exceptWhen:'{rule}',ruleFirstFridayOnly:'First Friday of the month only',ruleExceptFirstFriday:'Every Friday except the first Friday of the month',ruleFirstSundayOnly:'First Sunday of the month only',ruleExceptFirstSunday:'Every Sunday except the first Sunday of the month',ruleEnglishFirstSunday:'English Mass on the first Sunday of the month',ruleMesseOuCelebration:'Ambiguous: Mass or celebration',ruleExposition:'Exposition of the Blessed Sacrament',ruleAdoration:'Adoration',notMassWarning:'Other celebration — not a Mass',parishSchedule:'Parish schedule',churchSchedule:'Church schedule',detailTitle:'Mass details',close:'Close',filterSheetLabel:'Filters',detailSheetLabel:'Mass details',bottomNavLabel:'Main navigation',rule:'Rule',parish:'Parish',site:'Church',town:'Town',shareThisView:'Share this view',linkReady:'Share link ready',invalidLink:'Shared link could not be fully restored',loadDataError:'We could not load the latest Mass data. Please check your connection and try again.',error:'Something went wrong'},
- fr:{title:'Trouver une\nMesse à Maurice',subtitle:'Trouvez rapidement une messe à Maurice',search:'Recherche',searchPh:'messe du soir Curepipe, 18h, Saint Jean…',searchHint:'Essayez : messe du soir Curepipe · premier vendredi · messe anglais.',clear:'Effacer',quickNext:'Prochaine messe',quickToday:'Aujourd’hui',quickTomorrow:'Demain',quickNear:'Près de moi',quickAfternoon:'Après-midi',quickEvening:'Soir',quickSunday:'Dimanche',quickSaved:'Mes églises',filters:'Filtres',showResults:'Afficher les résultats',day:'Jour',time:'Moment',region:'Région',type:'Type',anyDay:'Tous les jours',today:'Aujourd’hui',tomorrow:'Demain',sunday:'Dimanche',allDay:'Toute la journée',morning:'Matin',afternoon:'Après-midi',evening:'Soir',allRegions:'Toutes les régions',massesOnly:'Messes uniquement',includeOther:'Inclure autres célébrations',nextMass:'Prochaine messe',nextUseful:'Prochaine messe utile',nearTitle:'Près de moi',nearSub:'Dans un rayon de 12 km par défaut. Les résultats sont groupés par urgence, puis classés par vraie distance',sortedHintNear:'Près de moi : groupé par urgence, puis plus proche d’abord dans chaque groupe',nearExpanded:'Aucune messe trouvée à moins de 12 km. Affichage des résultats à moins de 20 km.',savedTitle:'Mes églises',savedSub:'Vos églises enregistrées avec leur prochaine messe',noSaved:'Aucune église enregistrée',noSavedText:'Appuyez sur Ajouter à Mes églises pour enregistrer une église ici.',results:'résultats',result:'résultat',shown:'affichés',directions:'Itinéraire',share:'Partager',save:'Ajouter à Mes églises',saved:'Dans Mes églises',source:'Source',sourceParishPage:'Page de la paroisse mère — {parish}',allTimes:'Horaires de la paroisse',verified:'Vérifié',todayRel:'Aujourd’hui',tomorrowRel:'Demain',inM:'dans {n} min',startingSoon:'Bientôt',endingSoon:'Bientôt terminée',earlierToday:'Plus tôt aujourd’hui',laterThisWeek:'Plus tard cette semaine',firstFriday:'Premier vendredi',englishMass:'Messe en anglais',themeSystem:'Thème : système',themeLight:'Thème : clair',themeDark:'Thème : sombre',noMassToday:'Aucune autre messe trouvée aujourd’hui',noMassTodayText:'Voir demain, effacer les filtres ou chercher à proximité.',locationSearchHelp:'Pour afficher la messe la plus proche, autorisez la localisation ou recherchez par ville',inH:'dans {h}h {m}m',now:'maintenant',startedAgo:'Commencée il y a {n} min · en cours',weekdayMass:'Messe de semaine',sundayMass:'Messe du dimanche',satEve:'Messe anticipée du dimanche',otherCelebration:'Autre célébration',approx:'~{d} km',exact:'{d} km',noResults:'Aucune messe trouvée',noResultsText:'Essayez de retirer un filtre, d’élargir le lieu ou d’utiliser une recherche plus simple.',locationAsk:'Autorisez la localisation pour trier les messes proches.',locationDenied:'La localisation n’est pas disponible. Les résultats restent triés par prochaine messe.',nearUse:'Utiliser ma localisation',moreTitle:'Aide et informations',helpTitle:'Comment utiliser cette application',helpHtml:'<div class="faq"><p><b>Conseils rapides :</b> essayez « messe du soir Curepipe ». Vous pouvez aussi essayer « matin Curepipe » ou « 18h ». Quelques mots suffisent.</p><details open><summary>Trouver une messe</summary><p>Recherchez par ville, paroisse, église, heure ou mot simple comme « matin Curepipe », « messe du soir Curepipe », « Curepipe 18h » ou « saint jean ». Matin signifie avant 12h00. Soir signifie à partir de 17h00.</p></details><details><summary>Près de moi</summary><p>Près de moi utilise la localisation de votre appareil pour classer les prochaines messes. Les distances approximatives sont indiquées avec « ~ ».</p></details><details><summary>Mes églises</summary><p>Ajouter à Mes églises enregistre l’église ou le lieu pour retrouver rapidement sa prochaine messe. Cela n’enregistre pas une seule messe précise. Les églises enregistrées restent normalement disponibles après les mises à jour.</p></details><details><summary>Autres célébrations</summary><p>Par défaut, l’application affiche uniquement les messes. Les temps de prière, adorations ou célébrations ambiguës apparaissent seulement si vous incluez les autres célébrations.</p></details><details><summary>Samedi / dimanche</summary><p>À Maurice, les messes du samedi à partir de 15h sont généralement des messes anticipées du dimanche. L’application les inclut donc dans les recherches et filtres du dimanche.</p></details><details><summary>Sources et fiabilité</summary><p>Utilisez Source pour vérifier la page officielle ou la page de contexte. Si une information semble incorrecte, utilisez Signaler un problème.</p></details><details><summary>Mises à jour et hors ligne</summary><p>Utilisez la bannière de mise à jour lorsqu’elle apparaît. Vos églises sont sauvegardées sur votre appareil et restent normalement disponibles. Hors ligne, l’application utilise les dernières données disponibles.</p></details></div>',trustTitle:'Note de confiance',trustText:'Les horaires peuvent changer en cas de fêtes, funérailles, cyclones, jours fériés ou changement paroissial. Utilisez le lien source lorsque l’horaire est important.',version:'Version',navHome:'Accueil',navNear:'Près de moi',navSaved:'Mes églises',navMore:'Plus',updateTitle:'Nouvelle version disponible',updateText:'Actualisez pour obtenir la dernière version.',refresh:'Actualiser',later:'Plus tard',copied:'Lien copié',shared:'Prêt à partager',shareAppTitle:'Trouver une Messe à Maurice',shareMassIntro:'Horaire de messe',howUpdate:'Comment mettre à jour',troubleUpdating:'Problème de mise à jour ?',about:'À propos',aboutTitle:'À propos de cette application',aboutHtml:'<p><b>Objectif :</b> Trouver une Messe à Maurice aide à trouver rapidement les horaires des messes catholiques à Maurice.</p><p><b>Données et confiance :</b> les horaires viennent de la base de données du projet, établie à partir des informations paroissiales officielles du diocèse et des corrections vérifiées du projet. Les horaires peuvent toutefois changer à court terme.</p><p><b>Affichage par défaut :</b> l’application affiche uniquement les messes par défaut. Les autres célébrations, comme l’adoration ou les temps de prière, apparaissent seulement si vous choisissez de les inclure.</p><p><b>Corrections :</b> si un horaire semble incorrect, utilisez le lien source ou Signaler un problème afin que la base puisse être corrigée.</p>',updateGuideTitle:'Comment mettre à jour l’application',updateGuideHtml:'<p>Lorsqu’une nouvelle version est disponible, un message s’affiche :</p><p><b>→ Nouvelle version disponible</b></p><p>Appuyez sur <b>Actualiser</b> pour charger la dernière version.</p><p><b>Si cela ne fonctionne pas :</b></p><ol><li>Fermez complètement l’application</li><li>Rouvrez-la</li></ol><p><b>Si le problème persiste :</b></p><ul><li>supprimez l’application de votre écran d’accueil</li><li>ajoutez-la à nouveau depuis le navigateur</li></ul>',swipeHint:'Faites glisser pour voir plus',showingToday:'Affichage : Aujourd’hui',showingTomorrow:'Affichage : Demain',showingSunday:'Affichage : Messes du dimanche (y compris les messes du samedi à partir de 15h)',showingNear:'Affichage : Près de vous',showingSaved:'Affichage : Mes églises',showingSearch:'Affichage : Résultats de recherche',showingSundayEvening:'Affichage : Dimanche soir',usingLocation:'Utilisation de votre position',locationNotEnabled:'Localisation non activée',sortedHint:'Trié par heure, puis distance',updateFallback:'Si rien ne se passe, fermez puis rouvrez l’application.',reportIssue:'Signaler un problème',reportSubject:'Correction pour Trouver une Messe à Maurice',reportBody:'Merci de vérifier cette information de messe :',resultCap:'60 résultats affichés sur {n} — affinez votre recherche.',sundayExplain:'À Maurice, les messes du samedi à partir de 15h sont généralement des messes anticipées du dimanche.',details:'Détails',hideDetails:'Masquer les détails',trustStrip:'{verified} · {source} · {precision}',sourceAvailable:'Source officielle disponible',approxLocation:'Localisation approx.',exactLocation:'Localisation exacte',confidenceLow:'Confiance plus faible — vérifiez la source',confidenceOk:'Confiance {score}%',onlyWhen:'{rule}',exceptWhen:'{rule}',ruleFirstFridayOnly:'Premier vendredi du mois seulement',ruleExceptFirstFriday:'Tous les vendredis sauf le premier vendredi du mois',ruleFirstSundayOnly:'Premier dimanche du mois seulement',ruleExceptFirstSunday:'Tous les dimanches sauf le premier dimanche du mois',ruleEnglishFirstSunday:'Messe en anglais le premier dimanche du mois',ruleMesseOuCelebration:'Ambigu : messe ou célébration',ruleExposition:'Exposition du Saint-Sacrement',ruleAdoration:'Adoration',notMassWarning:'Autre célébration — pas une messe',parishSchedule:'Horaires de la paroisse',churchSchedule:'Horaires de cette église',detailTitle:'Détails de la messe',close:'Fermer',filterSheetLabel:'Filtres',detailSheetLabel:'Détails de la messe',bottomNavLabel:'Navigation principale',rule:'Condition',parish:'Paroisse',site:'Église',town:'Ville',shareThisView:'Partager cette vue',linkReady:'Lien de partage prêt',invalidLink:'Le lien partagé n’a pas pu être entièrement restauré',loadDataError:'Impossible de charger les derniers horaires de messe. Vérifiez votre connexion puis réessayez.',error:'Une erreur est survenue'}
+ en:{title:'Mauritius\nMass Finder',subtitle:'Find a Mass quickly anywhere in Mauritius',search:'Search',searchPh:'evening Mass Curepipe, 18h, Saint Jean…',searchHint:'Try: evening Mass Curepipe.',clear:'Clear',quickNext:'Next Mass',quickToday:'Today',quickTomorrow:'Tomorrow',quickNear:'Near me',quickAfternoon:'Afternoon',quickEvening:'Evening',quickSunday:'Sunday',quickSaved:'My Churches',filters:'Filters',showResults:'Show results',day:'Day',time:'Time of day',region:'Region',type:'Type',anyDay:'Any day',today:'Today',tomorrow:'Tomorrow',sunday:'Sunday',allDay:'All day',morning:'Morning',afternoon:'Afternoon',evening:'Evening',earlierToday:'Earlier today',closing:'Close',filterSheetLabel:'Filters',detailSheetLabel:'Mass details',bottomNavLabel:'Main navigation',allRegions:'All regions',massesOnly:'Masses only',includeOther:'Include other celebrations',nextMass:'Next Mass',nextUseful:'Next useful Mass',nearTitle:'Near Me',nearSub:'Within 12 km by default. Results are grouped by urgency, then ranked by true distance',sortedHintNear:'Near Me: grouped by urgency, then nearest first within each group',nearExpanded:'No nearby Mass found within 12 km. Showing results within 20 km.',savedTitle:'My Churches',savedSub:'Your saved churches with their next Mass',noSaved:'No saved churches yet',noSavedText:'Tap Add to My Churches on a Mass card to save a church here.',results:'results',result:'result',shown:'shown',directions:'Directions',share:'Share',save:'Add to My Churches',saved:'In My Churches',source:'Source',sourceParishPage:'Parent parish page — {parish}',allTimes:'Parish schedule',verified:'Verified',todayRel:'Today',tomorrowRel:'Tomorrow',inM:'in {n} min',inH:'in {h}h {m}m',now:'now',startedAgo:'Started {n} min ago · in progress',weekdayMass:'Weekday Mass',sundayMass:'Sunday Mass',satEve:'Anticipated Sunday Mass',otherCelebration:'Other celebration',approx:'~{d} km',exact:'{d} km',noResults:'No matching Mass found',noResultsText:'Try removing a filter, widening the place, or using a simpler search.',locationAsk:'Allow location access to sort nearby Masses.',locationDenied:'Location was not available. Results remain sorted by next Mass.',nearUse:'Use my location',moreTitle:'Help & app information',helpTitle:'How to use this app',helpHtml:'<div class="faq"><p><b>Quick tips:</b> try “evening Mass Curepipe”. You can also try “morning Curepipe” or “18:00”. A few words are enough.</p><details open><summary>Finding a Mass</summary><p>Search by town, parish, church name, time, or simple keywords such as “morning Curepipe”, “evening Mass Curepipe”, “Curepipe 18:00”, or “saint jean”. Morning means before 12:00. Afternoon means 12:00–16:59. Evening means 17:00 onward.</p></details><details><summary>Near Me</summary><p>Near Me uses your device location to rank upcoming Masses. Approximate distances are shown with “~”.</p></details><details><summary>My Churches</summary><p>Add to My Churches saves the church/site so you can find its next Mass quickly. It does not save one single Mass occurrence. Saved churches normally remain after app updates.</p></details><details><summary>Other celebrations</summary><p>The default view shows Masses only. Prayer services, adoration, or ambiguous celebrations appear only when you include other celebrations.</p></details><details><summary>Saturday / Sunday</summary><p>In Mauritius, Saturday Masses from 3:00 pm are generally anticipated Sunday Masses. The app therefore includes them in Sunday Mass searches and filters.</p></details><details><summary>Sources and reliability</summary><p>Use Source to check the official parish or context page. If an item looks wrong, use Report an issue.</p></details><details><summary>Updates and offline use</summary><p>Use the update banner when it appears. Saved churches are stored on your device and normally survive updates. Offline mode uses the last available app data.</p></details></div>',trustTitle:'Trust note',trustText:'Mass times can change for feast days, funerals, cyclones, holidays or parish changes. Use the source link when timing is critical.',version:'Version',navHome:'Home',navNear:'Near me',navSaved:'My Churches',navMore:'More',updateTitle:'New version available',updateText:'Update to get the latest version.',refresh:'Update now',later:'Later',copied:'Link copied',shared:'Ready to share',shareAppTitle:'Mauritius Mass Finder',shareMassIntro:'Mass time',howUpdate:'How to update',troubleUpdating:'Having trouble updating?',about:'About',aboutTitle:'About this app',aboutHtml:'<p><b>Purpose:</b> Mauritius Mass Finder helps people quickly find Catholic Mass times across Mauritius.</p><p><b>Data and trust:</b> the schedule is based on the maintained project database compiled from official diocesan parish information and project corrections. Church schedules can still change at short notice.</p><p><b>Default view:</b> the app shows Masses only by default. Other celebrations, such as adoration or prayer services, are shown only when you choose to include them.</p><p><b>Corrections:</b> if a time looks wrong, use the source link or Report an issue so the database can be corrected.</p>',updateGuideTitle:'How to update the app',updateGuideHtml:'<p>When a new version is available, a message will appear:</p><p><b>→ New version available</b></p><p>Tap <b>Update now</b> to load the latest version.</p><p><b>If nothing happens:</b></p><ol><li>Close the app completely</li><li>Reopen it</li></ol><p><b>If the problem continues:</b></p><ul><li>remove the app from your home screen</li><li>add it again from your browser</li></ul>',swipeHint:'Swipe to see more',showingToday:'Showing: Today',showingTomorrow:'Showing: Tomorrow',showingSunday:'Showing: Sunday Masses (including Saturday Masses from 3:00 pm)',showingNear:'Showing: Near you',showingSaved:'Showing: My Churches',showingSearch:'Showing: Search results',showingSundayEvening:'Showing: Sunday Masses',usingLocation:'Using your location',locationNotEnabled:'Location not enabled',sortedHint:'Sorted by time, then distance',updateFallback:'If nothing happens, close and reopen the app.',reportIssue:'Report an issue',reportSubject:'Correction for Mauritius Mass Finder',reportBody:'Please check this Mass information:',resultCap:'Showing 60 of {n} — refine your search.',sundayExplain:'In Mauritius, Saturday Masses from 3:00 pm are generally anticipated Sunday Masses.',details:'Details',hideDetails:'Hide details',trustStrip:'{verified} · {source} · {precision}',sourceAvailable:'Official source available',approxLocation:'Approx. location',exactLocation:'Exact location',confidenceLow:'Lower confidence — check source',confidenceOk:'Confidence {score}%',onlyWhen:'{rule}',exceptWhen:'{rule}',ruleFirstFridayOnly:'First Friday of the month only',ruleExceptFirstFriday:'Every Friday except the first Friday of the month',ruleFirstSundayOnly:'First Sunday of the month only',ruleExceptFirstSunday:'Every Sunday except the first Sunday of the month',ruleEnglishFirstSunday:'English Mass on the first Sunday of the month',ruleMesseOuCelebration:'Ambiguous: Mass or celebration',ruleExposition:'Exposition of the Blessed Sacrament',ruleAdoration:'Adoration',notMassWarning:'Other celebration — not a Mass',parishSchedule:'Parish schedule',churchSchedule:'Church schedule',detailTitle:'Mass details',close:'Close',rule:'Rule',parish:'Parish',site:'Church',town:'Town',shareThisView:'Share this view',linkReady:'Share link ready',invalidLink:'Shared link could not be fully restored',loadDataError:'We could not load the latest Mass data. Please check your connection and try again.',error:'Something went wrong'},
+ fr:{title:'Trouver une\nMesse à Maurice',subtitle:'Trouvez rapidement une messe à Maurice',search:'Recherche',searchPh:'messe du soir Curepipe, 18h, Saint Jean…',searchHint:'Essayez : messe du soir Curepipe.',clear:'Effacer',quickNext:'Prochaine messe',quickToday:'Aujourd’hui',quickTomorrow:'Demain',quickNear:'Près de moi',quickAfternoon:'Après-midi',quickEvening:'Soir',quickSunday:'Dimanche',quickSaved:'Mes églises',filters:'Filtres',showResults:'Afficher les résultats',day:'Jour',time:'Moment',region:'Région',type:'Type',anyDay:'Tous les jours',today:'Aujourd’hui',tomorrow:'Demain',sunday:'Dimanche',allDay:'Toute la journée',morning:'Matin',afternoon:'Après-midi',evening:'Soir',earlierToday:'Plus tôt aujourd’hui',closing:'Fermer',filterSheetLabel:'Filtres',detailSheetLabel:'Détails de la messe',bottomNavLabel:'Navigation principale',allRegions:'Toutes les régions',massesOnly:'Messes uniquement',includeOther:'Inclure autres célébrations',nextMass:'Prochaine messe',nextUseful:'Prochaine messe utile',nearTitle:'Près de moi',nearSub:'Dans un rayon de 12 km par défaut. Les résultats sont groupés par urgence, puis classés par vraie distance',sortedHintNear:'Près de moi : groupé par urgence, puis plus proche d’abord dans chaque groupe',nearExpanded:'Aucune messe trouvée à moins de 12 km. Affichage des résultats à moins de 20 km.',savedTitle:'Mes églises',savedSub:'Vos églises enregistrées avec leur prochaine messe',noSaved:'Aucune église enregistrée',noSavedText:'Appuyez sur Ajouter à Mes églises pour enregistrer une église ici.',results:'résultats',result:'résultat',shown:'affichés',directions:'Itinéraire',share:'Partager',save:'Ajouter à Mes églises',saved:'Dans Mes églises',source:'Source',sourceParishPage:'Page de la paroisse mère — {parish}',allTimes:'Horaires de la paroisse',verified:'Vérifié',todayRel:'Aujourd’hui',tomorrowRel:'Demain',inM:'dans {n} min',inH:'dans {h}h {m}m',now:'maintenant',startedAgo:'Commencée il y a {n} min · en cours',weekdayMass:'Messe de semaine',sundayMass:'Messe du dimanche',satEve:'Messe anticipée du dimanche',otherCelebration:'Autre célébration',approx:'~{d} km',exact:'{d} km',noResults:'Aucune messe trouvée',noResultsText:'Essayez de retirer un filtre, d’élargir le lieu ou d’utiliser une recherche plus simple.',locationAsk:'Autorisez la localisation pour trier les messes proches.',locationDenied:'La localisation n’est pas disponible. Les résultats restent triés par prochaine messe.',nearUse:'Utiliser ma localisation',moreTitle:'Aide et informations',helpTitle:'Comment utiliser cette application',helpHtml:'<div class="faq"><p><b>Conseils rapides :</b> essayez « messe du soir Curepipe ». Vous pouvez aussi essayer « matin Curepipe » ou « 18h ». Quelques mots suffisent.</p><details open><summary>Trouver une messe</summary><p>Recherchez par ville, paroisse, église, heure ou mot simple comme « matin Curepipe », « messe du soir Curepipe », « Curepipe 18h » ou « saint jean ». Matin signifie avant 12h00. Après-midi signifie de 12h00 à 16h59. Soir signifie à partir de 17h00.</p></details><details><summary>Près de moi</summary><p>Près de moi utilise la localisation de votre appareil pour classer les prochaines messes. Les distances approximatives sont indiquées avec « ~ ».</p></details><details><summary>Mes églises</summary><p>Ajouter à Mes églises enregistre l’église ou le lieu pour retrouver rapidement sa prochaine messe. Cela n’enregistre pas une seule messe précise. Les églises enregistrées restent normalement disponibles après les mises à jour.</p></details><details><summary>Autres célébrations</summary><p>Par défaut, l’application affiche uniquement les messes. Les temps de prière, adorations ou célébrations ambiguës apparaissent seulement si vous incluez les autres célébrations.</p></details><details><summary>Samedi / dimanche</summary><p>À Maurice, les messes du samedi à partir de 15h sont généralement des messes anticipées du dimanche. L’application les inclut donc dans les recherches et filtres du dimanche.</p></details><details><summary>Sources et fiabilité</summary><p>Utilisez Source pour vérifier la page officielle ou la page de contexte. Si une information semble incorrecte, utilisez Signaler un problème.</p></details><details><summary>Mises à jour et hors ligne</summary><p>Utilisez la bannière de mise à jour lorsqu’elle apparaît. Vos églises sont sauvegardées sur votre appareil et restent normalement disponibles. Hors ligne, l’application utilise les dernières données disponibles.</p></details></div>',trustTitle:'Note de confiance',trustText:'Les horaires peuvent changer en cas de fêtes, funérailles, cyclones, jours fériés ou changement paroissial. Utilisez le lien source lorsque l’horaire est important.',version:'Version',navHome:'Accueil',navNear:'Près de moi',navSaved:'Mes églises',navMore:'Plus',updateTitle:'Nouvelle version disponible',updateText:'Actualisez pour obtenir la dernière version.',refresh:'Actualiser',later:'Plus tard',copied:'Lien copié',shared:'Prêt à partager',shareAppTitle:'Trouver une Messe à Maurice',shareMassIntro:'Horaire de messe',howUpdate:'Comment mettre à jour',troubleUpdating:'Problème de mise à jour ?',about:'À propos',aboutTitle:'À propos de cette application',aboutHtml:'<p><b>Objectif :</b> Trouver une Messe à Maurice aide à trouver rapidement les horaires des messes catholiques à Maurice.</p><p><b>Données et confiance :</b> les horaires viennent de la base de données du projet, établie à partir des informations paroissiales officielles du diocèse et des corrections vérifiées du projet. Les horaires peuvent toutefois changer à court terme.</p><p><b>Affichage par défaut :</b> l’application affiche uniquement les messes par défaut. Les autres célébrations, comme l’adoration ou les temps de prière, apparaissent seulement si vous choisissez de les inclure.</p><p><b>Corrections :</b> si un horaire semble incorrect, utilisez le lien source ou Signaler un problème afin que la base puisse être corrigée.</p>',updateGuideTitle:'Comment mettre à jour l’application',updateGuideHtml:'<p>Lorsqu’une nouvelle version est disponible, un message s’affiche :</p><p><b>→ Nouvelle version disponible</b></p><p>Appuyez sur <b>Actualiser</b> pour charger la dernière version.</p><p><b>Si cela ne fonctionne pas :</b></p><ol><li>Fermez complètement l’application</li><li>Rouvrez-la</li></ol><p><b>Si le problème persiste :</b></p><ul><li>supprimez l’application de votre écran d’accueil</li><li>ajoutez-la à nouveau depuis le navigateur</li></ul>',swipeHint:'Faites glisser pour voir plus',showingToday:'Affichage : Aujourd’hui',showingTomorrow:'Affichage : Demain',showingSunday:'Affichage : Messes du dimanche (y compris les messes du samedi à partir de 15h)',showingNear:'Affichage : Près de vous',showingSaved:'Affichage : Mes églises',showingSearch:'Affichage : Résultats de recherche',showingSundayEvening:'Affichage : Messes du dimanche',usingLocation:'Utilisation de votre position',locationNotEnabled:'Localisation non activée',sortedHint:'Trié par heure, puis distance',updateFallback:'Si rien ne se passe, fermez puis rouvrez l’application.',reportIssue:'Signaler un problème',reportSubject:'Correction pour Trouver une Messe à Maurice',reportBody:'Merci de vérifier cette information de messe :',resultCap:'60 résultats affichés sur {n} — affinez votre recherche.',sundayExplain:'À Maurice, les messes du samedi à partir de 15h sont généralement des messes anticipées du dimanche.',details:'Détails',hideDetails:'Masquer les détails',trustStrip:'{verified} · {source} · {precision}',sourceAvailable:'Source officielle disponible',approxLocation:'Localisation approx.',exactLocation:'Localisation exacte',confidenceLow:'Confiance plus faible — vérifiez la source',confidenceOk:'Confiance {score}%',onlyWhen:'{rule}',exceptWhen:'{rule}',ruleFirstFridayOnly:'Premier vendredi du mois seulement',ruleExceptFirstFriday:'Tous les vendredis sauf le premier vendredi du mois',ruleFirstSundayOnly:'Premier dimanche du mois seulement',ruleExceptFirstSunday:'Tous les dimanches sauf le premier dimanche du mois',ruleEnglishFirstSunday:'Messe en anglais le premier dimanche du mois',ruleMesseOuCelebration:'Ambigu : messe ou célébration',ruleExposition:'Exposition du Saint-Sacrement',ruleAdoration:'Adoration',notMassWarning:'Autre célébration — pas une messe',parishSchedule:'Horaires de la paroisse',churchSchedule:'Horaires de cette église',detailTitle:'Détails de la messe',close:'Fermer',rule:'Condition',parish:'Paroisse',site:'Église',town:'Ville',shareThisView:'Partager cette vue',linkReady:'Lien de partage prêt',invalidLink:'Le lien partagé n’a pas pu être entièrement restauré',loadDataError:'Impossible de charger les derniers horaires de messe. Vérifiez votre connexion puis réessayez.',error:'Une erreur est survenue'}
 };
 const $=s=>document.querySelector(s); const $$=s=>[...document.querySelectorAll(s)];
 function storageGet(key,fallback=null){try{const v=localStorage.getItem(key);return v==null?fallback:v}catch(e){return fallback}}
 function storageSet(key,value){try{localStorage.setItem(key,value);return true}catch(e){return false}}
 function storageRemove(key){try{localStorage.removeItem(key);return true}catch(e){return false}}
 const DEFAULT_FILTERS={day:'',dayMode:'',time:'',region:'',type:'mass',siteUid:''};
-const state={query:'',parsed:{},filters:{...DEFAULT_FILTERS},location:null,near:false,nearExpanded:false,nearScope:'',mode:'home',moreSection:'help',modal:null,saved:new Set(),lang:'en',rows:[],results:[],next:null,loadError:'',detailRow:null,theme:'system'};
+const state={query:'',parsed:{},filters:{...DEFAULT_FILTERS},location:null,near:false,nearExpanded:false,nearScope:'',mode:'home',moreSection:'help',modal:null,saved:new Set(),lang:'en',rows:[],results:[],next:null,loadError:'',detailRow:null};
 function getState(){return state}
 function setState(patch={},options={}){
   Object.entries(patch).forEach(([key,value])=>{
@@ -150,35 +150,52 @@ function rel(delta,now=mauritiusNow()){
   if(delta<1440){const h=Math.floor(delta/60),m=delta%60; return tr('inH',{h,m});}
   return dayName(DAYS[target.getDay()])
 }
-function temporalState(r,now=mauritiusNow()){
-  const elapsed=minutesSinceStart(r,now);
-  const grace=massGraceMinutes(r);
-  if(elapsed!=null&&elapsed>0){if(elapsed>grace)return 'past'; if(elapsed>=Math.max(0,grace-10))return 'ending'; return 'progress'}
-  const d=nextDelta(r,now);
-  if(d>=999999)return 'later';
-  if(d<0){const e=Math.abs(d); if(e>grace)return 'past'; if(e>=Math.max(0,grace-10))return 'ending'; return 'progress'}
-  if(d<=30)return 'soon';
-  const occ=r&&r._nextOccurrence;
-  if(occ instanceof Date&&!Number.isNaN(+occ)){const diff=dateSerial(occ)-dateSerial(now); if(diff>1)return 'later'}
-  return 'upcoming';
-}
-function temporalLabel(r,now=mauritiusNow()){const st=temporalState(r,now), d=nextDelta(r,now); if(st==='soon')return tr('startingSoon'); if(st==='progress')return rel(d,now); if(st==='ending')return tr('endingSoon'); if(st==='past')return tr('earlierToday'); return rel(d,now)}
-function occurrenceDateKey(r,now=mauritiusNow()){const st=temporalState(r,now); if(st==='past')return dateSerial(now)-0.25; const occ=r&&r._nextOccurrence instanceof Date?r._nextOccurrence:getNextOccurrence(r,now); return occ?dateSerial(occ):999999}
-function dateSeparatorLabel(r,now=mauritiusNow()){const st=temporalState(r,now); if(st==='past')return tr('earlierToday'); const occ=r&&r._nextOccurrence instanceof Date?r._nextOccurrence:getNextOccurrence(r,now); if(!occ)return tr('laterThisWeek'); const diff=dateSerial(occ)-dateSerial(now); if(diff===0)return tr('today'); if(diff===1)return tr('tomorrow'); if(diff>1&&diff<7)return dayName(DAYS[occ.getDay()]); return tr('laterThisWeek')}
 function distKm(a,b,c,d){if([a,b,c,d].some(x=>!Number.isFinite(+x)))return null; const R=6371,rad=x=>x*Math.PI/180; const dLat=rad(c-a),dLon=rad(d-b); const A=Math.sin(dLat/2)**2+Math.cos(rad(a))*Math.cos(rad(c))*Math.sin(dLon/2)**2; return 2*R*Math.asin(Math.sqrt(A))}
 function distanceLabel(r,d=null){const val=d??(state.location?distKm(state.location.lat,state.location.lon,rowLat(r),rowLon(r)):null); if(val==null)return ''; const key=(String(r.coordinate_precision||'').includes('exact')?'exact':'approx'); return tr(key,{d:val.toFixed(val<10?1:0)})}
-function stripStopwords(text){
-  const stop=/\b(du|de|des|le|la|les|l|a|à|au|aux|d|i|in|en|need|want|find|show|get|please|the|an|for|to|mass|messe|church|eglise|église|near|me|moi|now|maintenant|proche|proximite|proximité|autour|anglais|english)\b/g;
-  return String(text||'').replace(stop,' ').replace(/\s+/g,' ').trim()
+
+function semanticReplaceNormalized(text,patterns){
+  let s=' '+normaliseSearchText(text)+' ';
+  (patterns||[]).sort((a,b)=>b.length-a.length).forEach(p=>{
+    const q=' '+normaliseSearchText(p)+' ';
+    if(!q.trim())return;
+    s=s.split(q).join(' ');
+  });
+  return s.replace(/\s+/g,' ').trim();
 }
-function removePhrasesFromNormalisedText(text,phrases){
-  let out=' '+normaliseSearchText(text)+' ';
-  [...phrases].sort((a,b)=>normaliseSearchText(b).length-normaliseSearchText(a).length).forEach(ph=>{const n=normaliseSearchText(ph); if(n)out=out.replace(new RegExp(' '+n.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+' ','g'),' ')});
-  return out.replace(/\s+/g,' ').trim()
+function hasAnyPhrase(n,phrases){
+  const s=' '+normaliseSearchText(n)+' ';
+  return phrases.some(p=>s.includes(' '+normaliseSearchText(p)+' '));
 }
+function isEnglishIntentText(n){return hasAnyPhrase(n,['english mass','mass in english','messe en anglais','messe anglais','messe anglaise','english','anglais'])}
+function isFirstFridayIntentText(n){return hasAnyPhrase(n,['first friday','1st friday','premier vendredi','1er vendredi','messe 1er vendredi'])}
+function isNearIntentText(n){return hasAnyPhrase(n,['near me','nearby','near','closest','around me','pres de moi','près de moi','proche de moi','proche','a proximite','à proximité','aux alentours','autour de moi'])}
+function isEveningIntentText(n){return hasAnyPhrase(n,['evening','soir','soiree','soirée','tonight','ce soir'])}
+function preservedVisibleQueryWithoutNear(q){
+  const parsed=parseUserIntent(q);
+  const parts=[];
+  if(parsed.lang==='EN')parts.push(state.lang==='fr'?'messe en anglais':'English Mass');
+  if(parsed.firstFriday)parts.push(state.lang==='fr'?'premier vendredi':'first friday');
+  if(parsed.time==='evening')parts.push(state.lang==='fr'?'soir':'evening');
+  else if(parsed.time==='morning')parts.push(state.lang==='fr'?'matin':'morning');
+  else if(parsed.time==='afternoon')parts.push(state.lang==='fr'?'après-midi':'afternoon');
+  if(parsed.exactLabel)parts.push(parsed.exactLabel);
+  if(parsed.day==='today')parts.push(state.lang==='fr'?'aujourd’hui':'today');
+  else if(parsed.day==='tomorrow')parts.push(state.lang==='fr'?'demain':'tomorrow');
+  else if(DAYS.includes(parsed.day))parts.push(state.lang==='fr'?DAY_FR[parsed.day]:DAY_EN[parsed.day]);
+  if(parsed.place)parts.push(parsed.place);
+  return parts.join(' ').replace(/\s+/g,' ').trim();
+}
+function rowIsEnglish(r){const txt=normaliseSearchText([r.language_code,r.language,r.special_rule,r.notes,r.qualifier,r.search_text].join(' ')); return /\ben\b/.test(String(r.language_code||'').toLowerCase())||txt.includes('english')||txt.includes('anglais')}
+function rowIsFirstFriday(r){const txt=normaliseSearchText([r.special_rule,r.notes,r.qualifier,r.search_text].join(' ')); return txt.includes('first friday')||txt.includes('premier vendredi')||txt.includes('1er vendredi')}
+
+function stripStopwords(text){const stop=/\b(du|de|des|le|la|les|l|a|au|aux|d|en|i|need|want|find|show|get|please|the|an|for|to|mass|messe|church|eglise|near|me|now|moi|maintenant|proche|proximite|proximité|autour|anglais|english)\b/g;return String(text||'').replace(stop,' ').replace(/\s+/g,' ').trim()}
 function parseUserIntent(q){
-  const exactRaw=parseExactTimeRaw(q); const n=normaliseSearchText(q); const p={raw:q,tokens:n.split(' ').filter(Boolean),chips:[]}; if(!n&&!exactRaw)return p;
-  const chip=(k,label)=>p.chips.push({k,label});
+  const raw=String(q||'');
+  const exactRaw=parseExactTimeRaw(raw);
+  const n=normaliseSearchText(raw);
+  const p={raw:raw,tokens:n.split(' ').filter(Boolean),chips:[]};
+  if(!n&&!exactRaw)return p;
+  const chip=(k,label)=>{if(!p.chips.some(c=>c.k===k&&c.label===label))p.chips.push({k,label})};
   const dayMap={
     monday:'Lundi',lundi:'Lundi',
     tuesday:'Mardi',mardi:'Mardi',
@@ -192,64 +209,73 @@ function parseUserIntent(q){
     if(new RegExp('\\b'+word+'\\b').test(n)){p.day=day; chip('day',dayName(day)); break}
   }
   if(/\b(today|aujourd hui)\b/.test(n)){p.day='today'; p.chips=p.chips.filter(c=>c.k!=='day'); chip('day',tr('today'))}
-  if(/\b(maintenant|now)\b/.test(n)){p.now=true; chip('time',tr('nextUseful'))}
   if(/\b(tomorrow|demain)\b/.test(n)){p.day='tomorrow'; p.chips=p.chips.filter(c=>c.k!=='day'); chip('day',tr('tomorrow'))}
-  if(/\b(first friday|1st friday|1er vendredi|premier vendredi)\b/.test(n)){p.firstFriday=true;p.day='Vendredi';p.chips=p.chips.filter(c=>c.k!=='day');chip('special',tr('firstFriday'))}
-  if(/\b(english mass|mass in english|english|messe anglais|messe en anglais|messe anglaise|anglais|anglaise)\b/.test(n)){p.language='en';chip('language',tr('englishMass'))}
-  if(/\b(evening|soir|soiree|tonight|ce soir)\b/.test(n)){p.time='evening'; chip('time',tr('evening')); if(/\b(saturday|samedi)\b/.test(n)){p.saturdayEvening=true;p.saturdayAnticipated=true} if(/\b(sunday|dimanche)\b/.test(n))p.sundayEvening=true}
+  if(/\b(maintenant|now)\b/.test(n)){p.now=true; chip('time',tr('nextUseful'))}
+  if(isEnglishIntentText(n)){p.lang='EN'; chip('lang',state.lang==='fr'?'Messe en anglais':'English Mass')}
+  if(isFirstFridayIntentText(n)){p.firstFriday=true; chip('rule',state.lang==='fr'?'Premier vendredi':'First Friday')}
+  if(isEveningIntentText(n)){p.time='evening'; chip('time',tr('evening')); if(/\b(saturday|samedi)\b/.test(n)){p.saturdayEvening=true;p.saturdayAnticipated=true} if(/\b(sunday|dimanche)\b/.test(n))p.sundayEvening=true}
   else if(/\b(morning|matin)\b/.test(n)){p.time='morning'; chip('time',tr('morning'))}
   else if(/\b(afternoon|apres midi)\b/.test(n)){p.time='afternoon'; chip('time',tr('afternoon')); if(/\b(saturday|samedi)\b/.test(n))p.saturdayAnticipated=true}
-  if(exactRaw){p.exact=exactRaw.minutes;chip('time',exactRaw.label)}
-  if(/\b(near me|nearby|closest|around me|pres de moi|proche de moi|proche|a proximite|proximite|aux alentours|autour de moi)\b/.test(n)){p.near=true;chip('near',tr('quickNear'))}
-  const consumed=[
-    'today','aujourd hui','maintenant','now','tomorrow','demain',
+  if(exactRaw){p.exact=exactRaw.minutes;p.exactLabel=exactRaw.label;chip('time',exactRaw.label)}
+  if(isNearIntentText(n)){p.near=true;chip('near',tr('quickNear'))}
+  const removePhrases=[
+    'today','aujourd hui','tomorrow','demain','maintenant','now',
     'monday','lundi','tuesday','mardi','wednesday','mercredi','thursday','jeudi','friday','vendredi','saturday','samedi','sunday','dimanche',
-    'evening','soir','soiree','tonight','ce soir','morning','matin','afternoon','apres midi',
-    'first friday','1st friday','1er vendredi','premier vendredi',
-    'english mass','mass in english','messe anglais','messe en anglais','messe anglaise','english','anglais','anglaise',
-    'mass','messe','church','eglise',
-    'near me','nearby','closest','around me','pres de moi','proche de moi','proche','a proximite','proximite','aux alentours','autour de moi'
+    'evening','soir','soiree','soirée','tonight','ce soir','morning','matin','afternoon','apres midi','après-midi',
+    'english mass','mass in english','messe en anglais','messe anglais','messe anglaise','english','anglais',
+    'first friday','1st friday','premier vendredi','1er vendredi','messe 1er vendredi',
+    'near me','nearby','closest','around me','near','pres de moi','près de moi','proche de moi','proche','a proximite','à proximité','aux alentours','autour de moi',
+    'mass','messe','church','eglise','église'
   ];
-  let clean=removePhrasesFromNormalisedText(n,consumed)
+  let clean=semanticReplaceNormalized(n,removePhrases)
     .replace(/\b\d{1,2}(?:h|:)?\d{0,2}\s*(pm|am)?\b/g,' ')
     .replace(/\s+/g,' ').trim();
   clean=stripStopwords(clean);
-  p.place=clean; if(clean) chip('place',clean); return p
+  p.place=clean; if(clean) chip('place',clean);
+  return p
 }
 function parseQuery(q){return parseUserIntent(q)}
-function matchesText(r,p){if(!p.place)return true; const hay=normaliseSearchText([r.search_text,r.region,r.town,r.parish_name,r.parish_label,r.site_name,r.maps_query].join(' ')); return p.place.split(' ').every(t=>hay.includes(t))}
-function matchesTime(r,b,p={}){const m=mins(r.time_24h); if(!b)return true; if(b==='morning')return m<720; if(b==='afternoon')return m>=720&&m<1020; if(b==='evening'&&p&&p.saturdayAnticipated)return m>=900; if(b==='evening')return m>=1020; return true}
+function matchesText(r,p){
+  if(p&&p.lang==='EN'&&!rowIsEnglish(r))return false;
+  if(p&&p.firstFriday&&!rowIsFirstFriday(r))return false;
+  if(!p.place)return true;
+  const hay=normaliseSearchText([r.search_text,r.region,r.town,r.parish_name,r.parish_label,r.site_name,r.maps_query].join(' '));
+  return p.place.split(' ').filter(Boolean).every(t=>hay.includes(t))
+}
+function matchesTime(r,b,p={}){
+  const m=mins(r.time_24h); if(!b)return true;
+  if(b==='morning')return m<720;
+  if(b==='afternoon')return m>=720&&m<1020;
+  if(b==='evening'&&p&&p.saturdayAnticipated)return m>=900;
+  if(b==='evening')return m>=1020;
+  return true
+}
 function matchesExact(r,ex){if(ex==null)return true; return Math.abs(mins(r.time_24h)-ex)<=45}
-function rowSemanticText(r){return normaliseSearchText([r.occurrence_rule,r.special_rule,r.qualifier,r.notes,r.source_text_excerpt,r.language_rule,r.language,r.language_code,r.display_category,r.mass_category].join(' '))}
-function matchesFirstFridayIntent(r,p={}){if(!p.firstFriday)return true; if(r.day_of_week!=='Vendredi')return false; const hay=rowSemanticText(r); return /first friday|1st friday|1er vendredi|premier vendredi/.test(hay)}
-function matchesLanguageIntent(r,p={}){if(!p.language)return true; if(p.language==='en'){const hay=rowSemanticText(r); const code=String(r.language_code||r.language||'').toLowerCase(); return code==='en'||code==='english'||/english|anglais/.test(hay)} return true}
+function effectiveDayMode(){
+  const p=state.parsed;
+  if(state.filters.dayMode==='sunday_obligation'&&state.filters.day==='Dimanche'&&effectiveTime()==='evening')return 'calendar';
+  if(state.filters.dayMode)return state.filters.dayMode;
+  if(p.day==='today')return 'today';
+  if(p.day==='tomorrow')return 'tomorrow';
+  if(p.day==='Dimanche'&&p.sundayEvening)return 'calendar';
+  if(p.day==='Dimanche')return 'sunday_obligation';
+  if(DAYS.includes(p.day))return 'calendar';
+  return ''
+}
+function effectiveDay(){const p=state.parsed; if(state.filters.day)return state.filters.day; if(p.day==='today')return todayName(0); if(p.day==='tomorrow')return todayName(1); if(DAYS.includes(p.day))return p.day; return ''}
 function cleanVisibleQuery(q){
-  return String(q||'')
-    .replace(/[’'`´]/g,' ')
-    .replace(/\b(mass|messe|church|eglise|église)\b/gi,' ')
-    .replace(/\b(du|de|des|le|la|les|l|à|a|au|aux|d|in|en)\b/gi,' ')
-    .replace(/\s+/g,' ')
-    .trim()
+  let s=normaliseSearchText(q);
+  s=semanticReplaceNormalized(s,['mass','messe','church','eglise','église']);
+  s=stripStopwords(s);
+  return s.replace(/\s+/g,' ').trim()
 }
 function removeQueryIntent(q,k){
-  let s=String(q||'').replace(/[’'`´]/g,' ');
-  const replacePhrase=(phrase)=>{s=s.replace(new RegExp(phrase,'gi'),' ')};
-  if(k==='day')s=s.replace(/\b(today|aujourd\s*hui|tomorrow|demain|monday|lundi|tuesday|mardi|wednesday|mercredi|thursday|jeudi|friday|vendredi|saturday|samedi|sunday|dimanche)\b/gi,' ');
-  if(k==='time'){
-    ['ce\\s+soir','après[ -]?midi','apres[ -]?midi'].forEach(replacePhrase);
-    s=s.replace(/\b(evening|soir|soirée|soiree|tonight|morning|matin|afternoon)\b/gi,' ').replace(/\b\d{1,2}(?:h|:)?\d{0,2}\s*(pm|am)?\b/gi,' ');
-  }
-  if(k==='near'){
-    ['près\\s+de\\s+moi','pres\\s+de\\s+moi','à\\s+proximité','a\\s+proximite','aux\\s+alentours','autour\\s+de\\s+moi','proche\\s+de\\s+moi','around\\s+me','near\\s+me'].forEach(replacePhrase);
-    s=s.replace(/\b(nearby|closest|near|proche|proximite|proximité|maintenant|now)\b/gi,' ');
-  }
-  if(k==='language'){
-    ['mass\\s+in\\s+english','english\\s+mass','messe\\s+en\\s+anglais','messe\\s+anglaise','messe\\s+anglais'].forEach(replacePhrase);
-    s=s.replace(/\b(english|anglais|anglaise)\b/gi,' ');
-  }
-  if(k==='special'){
-    ['first\\s+friday','1st\\s+friday','1er\\s+vendredi','premier\\s+vendredi'].forEach(replacePhrase);
-  }
+  if(k==='near')return preservedVisibleQueryWithoutNear(q);
+  let s=String(q||'');
+  if(k==='day')s=semanticReplaceNormalized(s,['today','aujourd hui','maintenant','now','tomorrow','demain','monday','lundi','tuesday','mardi','wednesday','mercredi','thursday','jeudi','friday','vendredi','saturday','samedi','sunday','dimanche']);
+  if(k==='time')s=semanticReplaceNormalized(s,['evening','soir','soiree','soirée','tonight','ce soir','morning','matin','afternoon','apres midi','après-midi']).replace(/\b\d{1,2}(?:h|:)?\d{0,2}\s*(pm|am)?\b/gi,' ');
+  if(k==='lang')s=semanticReplaceNormalized(s,['english mass','mass in english','messe en anglais','messe anglais','messe anglaise','english','anglais']);
+  if(k==='rule')s=semanticReplaceNormalized(s,['first friday','1st friday','premier vendredi','1er vendredi','messe 1er vendredi']);
   return cleanVisibleQuery(s)
 }
 function resetFilters(options={}){setState({filters:{...DEFAULT_FILTERS}},options)}
@@ -270,14 +296,14 @@ function applyFilter(key,value,options={url:true}){
 function clearIntent(k,options={url:true}){
   const nextFilters={...state.filters};
   const patch={};
-  if(k==='near'){patch.near=false;patch.nearExpanded=false;patch.nearScope='';patch.query=removeQueryIntent(state.query,'near');if(state.mode==='near')patch.mode='search'}
+  if(k==='near'){patch.near=false;patch.nearExpanded=false;patch.nearScope='';patch.query=removeQueryIntent(state.query,'near');if(state.mode==='near')patch.mode='home'}
   if(k==='site'){nextFilters.siteUid=''}
   if(k==='region'){nextFilters.region=''}
   if(k==='type'){nextFilters.type='mass'}
   if(k==='day'){nextFilters.day='';nextFilters.dayMode='';patch.query=removeQueryIntent(state.query,'day')}
   if(k==='time'){nextFilters.time='';patch.query=removeQueryIntent(state.query,'time')}
-  if(k==='language')patch.query=removeQueryIntent(state.query,'language');
-  if(k==='special')patch.query=removeQueryIntent(state.query,'special');
+  if(k==='lang'){patch.query=removeQueryIntent(state.query,'lang')}
+  if(k==='rule'){patch.query=removeQueryIntent(state.query,'rule')}
   if(k==='place')patch.query='';
   patch.filters=nextFilters;
   setState(patch,options);
@@ -290,10 +316,9 @@ function effectiveType(){return state.filters.type||'mass'}
 function currentContextLabel(){
   if(state.mode==='near')return tr('showingNear');
   if(state.mode==='saved')return tr('showingSaved');
-  const p=state.parsed||{}; const day=effectiveDay(); const mode=effectiveDayMode(); const time=effectiveTime();
+  const p=state.parsed||{}; const day=effectiveDay(); const mode=effectiveDayMode();
   if(day===todayName(0)&&(mode==='calendar'||mode==='today'))return tr('showingToday');
   if(day===todayName(1)&&(mode==='calendar'||mode==='tomorrow'))return tr('showingTomorrow');
-  if(day==='Dimanche'&&time==='evening')return tr('showingSundayEvening');
   if(day==='Dimanche'&&mode==='sunday_obligation')return tr('showingSunday');
   if(state.query||state.filters.region||state.filters.time||state.filters.siteUid)return tr('showingSearch');
   return '';
@@ -316,7 +341,6 @@ function annotateRowForRanking(r,now=mauritiusNow(),st=state){
   r._delta=occurrence?Math.round((occurrence-now)/60000):999999;
   r._inProgress=r._delta<0&&!isPastMass(r,now);
   r._past=isPastMass(r,now);
-  r._temporalState=temporalState(r,now);
   r._sundayContext=countsForSundayContext(r,now);
   r._actionable=rowMass(r)&&!r._past&&r._delta<999999;
   const loc=st&&st.location;
@@ -370,22 +394,39 @@ function nearRecommendationLabel(r,scope=state.nearScope,now=mauritiusNow()){
   if(g===3)return state.lang==='fr'?'Messe la plus proche demain':'Closest Mass tomorrow';
   return state.lang==='fr'?'Aucune messe proche bientôt — affichage de l’option la plus proche plus tard':'No nearby Mass soon — showing nearest later option';
 }
-function _effectiveDayModeFor(st,p){ if(st.filters.dayMode)return st.filters.dayMode; if(p.day==='today')return 'today'; if(p.day==='tomorrow')return 'tomorrow'; if(p.day==='Dimanche'&&p.sundayEvening)return 'calendar'; if(p.day==='Dimanche')return 'sunday_obligation'; if(DAYS.includes(p.day))return 'calendar'; return ''}
+function _effectiveDayModeFor(st,p){
+  if(st.filters.dayMode==='sunday_obligation'&&st.filters.day==='Dimanche'&&_effectiveTimeFor(st,p)==='evening')return 'calendar';
+  if(st.filters.dayMode)return st.filters.dayMode;
+  if(p.day==='today')return 'today';
+  if(p.day==='tomorrow')return 'tomorrow';
+  if(p.day==='Dimanche'&&p.sundayEvening)return 'calendar';
+  if(p.day==='Dimanche')return 'sunday_obligation';
+  if(DAYS.includes(p.day))return 'calendar';
+  return ''
+}
 function _effectiveDayFor(st,p,now=mauritiusNow()){ if(st.filters.day)return st.filters.day; if(p.day==='today')return todayName(0,now); if(p.day==='tomorrow')return todayName(1,now); if(DAYS.includes(p.day))return p.day; return ''}
 function _effectiveTimeFor(st,p){return st.filters.time||(p&&p.time)||''}
 function _effectiveTypeFor(st){return st.filters.type||'mass'}
 function applyFilters(rows,st=state,now=mauritiusNow()){
-  const p=st.parsed||parseUserIntent(st.query||''); const day=_effectiveDayFor(st,p,now); const dayMode=_effectiveDayModeFor(st,p); const time=_effectiveTimeFor(st,p); const sundayMode=day==='Dimanche'&&dayMode==='sunday_obligation'&&time!=='evening';
-  const dateCtx=dateContextFor(p,now,st); const todayOnly=(p.day==='today'||st.filters.dayMode==='today'); const nowM=now.getHours()*60+now.getMinutes();
+  const p=st.parsed||parseUserIntent(st.query||'');
+  const day=_effectiveDayFor(st,p,now);
+  const dayMode=_effectiveDayModeFor(st,p);
+  const sundayMode=day==='Dimanche'&&dayMode==='sunday_obligation';
+  const time=_effectiveTimeFor(st,p);
+  const dateCtx=dateContextFor(p,now,st);
+  const todayOnly=(p.day==='today'||st.filters.dayMode==='today');
+  const nowM=now.getHours()*60+now.getMinutes();
   let arr=(rows||[]).filter(rowActive);
   if(_effectiveTypeFor(st)==='mass')arr=arr.filter(rowMass);
   if(day)arr=arr.filter(r=>sundayMode?isSundayEligible(r):r.day_of_week===day);
   if(dateCtx)arr=arr.filter(r=>isValidForDateContext(r,dateCtx));
   if(todayOnly)arr=arr.filter(r=>r.day_of_week!==todayName(0,now)||parseMassTime(r)+massGraceMinutes(r)>=nowM);
-  if(time){const timeCtx=(day==='Samedi'&&time==='evening')?{...p,saturdayAnticipated:true}:p; arr=arr.filter(r=>matchesTime(r,time,timeCtx));}
+  const pForTime={...p};
+  if(day==='Samedi'&&time==='evening')pForTime.saturdayAnticipated=true;
+  if(time)arr=arr.filter(r=>matchesTime(r,time,pForTime));
   if(st.filters.region)arr=arr.filter(r=>r.region===st.filters.region);
   if(st.filters.siteUid)arr=arr.filter(r=>r.site_uid===st.filters.siteUid);
-  arr=arr.filter(r=>matchesText(r,p)&&matchesExact(r,p.exact)&&matchesFirstFridayIntent(r,p)&&matchesLanguageIntent(r,p));
+  arr=arr.filter(r=>matchesText(r,p)&&matchesExact(r,p.exact));
   if(st.mode==='saved')arr=arr.filter(r=>st.saved.has(r.site_uid));
   arr.forEach(r=>annotateRowForRanking(r,now,st));
   if(st.near&&st.location){
@@ -596,7 +637,7 @@ function renderNext(){
   const r=state.next; if(!r){root.innerHTML='';return}
   const dist=r._dist!=null?distanceLabel(r,r._dist):'';
   const nearMeta=state.near?nearRecommendationLabel(r,state.nearScope):'';
-  root.innerHTML=`<section class="nextCard"><div class="nextTop"><div><div class="eyebrow">${esc(state.near?tr('nearTitle'):tr('nextUseful'))}</div>${state.near?`<div class="meta">${esc(nearMeta||tr('sortedHintNear'))}</div>`:''}<div class="nextTime">${esc(r.time_24h)}</div><div class="relative state-${esc(r._temporalState||temporalState(r))}">${esc(temporalLabel(r))}${dist?' · '+esc(dist):''}</div></div><div style="font-size:26px">⛪</div></div><div class="siteName">${esc(visibleSiteName(r))}</div><div class="meta">${esc([r.town,r.parish_label||r.parish_name,r.region].filter(Boolean).join(' · '))}</div><div class="actions"><a class="btn primary" target="_blank" rel="noopener" href="${esc(mapsUrl(r))}">${esc(tr('directions'))}</a><button class="btn" data-next-action="share">${esc(tr('share'))}</button><button class="btn" data-next-action="save">${esc(state.saved.has(r.site_uid)?tr('saved'):tr('save'))} ${state.saved.has(r.site_uid)?'★':'☆'}</button></div></section>`;
+  root.innerHTML=`<section class="nextCard"><div class="nextTop"><div><div class="eyebrow">${esc(state.near?tr('nearTitle'):tr('nextUseful'))}</div>${state.near?`<div class="meta">${esc(nearMeta||tr('sortedHintNear'))}</div>`:''}<div class="nextTime">${esc(r.time_24h)}</div><div class="relative">${esc(rel(r._delta))}${dist?' · '+esc(dist):''}</div></div><div style="font-size:26px">⛪</div></div><div class="siteName">${esc(visibleSiteName(r))}</div><div class="meta">${esc([r.town,r.parish_label||r.parish_name,r.region].filter(Boolean).join(' · '))}</div><div class="actions"><a class="btn primary" target="_blank" rel="noopener" href="${esc(mapsUrl(r))}">${esc(tr('directions'))}</a><button class="btn" data-next-action="share">${esc(tr('share'))}</button><button class="btn" data-next-action="save">${esc(state.saved.has(r.site_uid)?tr('saved'):tr('save'))} ${state.saved.has(r.site_uid)?'★':'☆'}</button></div></section>`;
 }
 
 
@@ -614,9 +655,7 @@ function renderCard(r,i){
   const dist=r._dist!=null?distanceLabel(r,r._dist):'';
   const lang=languageBadge(r);
   const trust=trustLine(r);
-  const status=temporalLabel(r);
-  const temporalClass='state-'+(r._temporalState||temporalState(r));
-  return `<article class="card decisionCard ${esc(temporalClass)}">${warningBanner(r)}<div class="cardTop decisionTop"><div class="timeBox primaryTime"><div class="time">${esc(r.time_24h)}</div><div class="relative ${esc(temporalClass)}">${esc(status)}</div></div><div class="decisionPlace"><div class="cardTitle">${esc(visibleSiteName(r))}</div><div class="meta">${esc([r.town,r.parish_label||r.parish_name,r.region].filter(Boolean).join(' · '))}</div></div></div><div class="trustStrip">${esc(trust)}</div><div class="badges"><span class="badge mass">${esc(dayName(r.day_of_week))}</span><span class="badge ${rowMass(r)?'ok':'warn'}">${esc(massBadge(r))}</span>${lang?`<span class="badge lang">${esc(lang)}</span>`:''}${dist?`<span class="badge">${esc(dist)}</span>`:''}</div><div class="actions"><a class="btn primary" target="_blank" rel="noopener" href="${esc(mapsUrl(r))}">${esc(tr('directions'))}</a><button class="btn" data-detail-row="${i}">${esc(tr('details'))}</button><button class="btn" data-save="${i}">${esc(state.saved.has(r.site_uid)?tr('saved'):tr('save'))} ${state.saved.has(r.site_uid)?'★':'☆'}</button></div></article>`
+  return `<article class="card">${warningBanner(r)}<div class="cardTop"><div><div class="cardTitle">${esc(visibleSiteName(r))}</div><div class="meta">${esc([r.town,r.parish_label||r.parish_name,r.region].filter(Boolean).join(' · '))}</div></div><div class="timeBox"><div class="time">${esc(r.time_24h)}</div><div class="relative">${esc(rel(r._delta))}</div></div></div><div class="trustStrip">${esc(trust)}</div><div class="badges"><span class="badge mass">${esc(dayName(r.day_of_week))}</span><span class="badge ${rowMass(r)?'ok':'warn'}">${esc(massBadge(r))}</span>${lang?`<span class="badge lang">${esc(lang)}</span>`:''}${dist?`<span class="badge">${esc(dist)}</span>`:''}</div><div class="actions"><a class="btn primary" target="_blank" rel="noopener" href="${esc(mapsUrl(r))}">${esc(tr('directions'))}</a><button class="btn" data-detail-row="${i}">${esc(tr('details'))}</button><button class="btn" data-save="${i}">${esc(state.saved.has(r.site_uid)?tr('saved'):tr('save'))} ${state.saved.has(r.site_uid)?'★':'☆'}</button></div></article>`
 }
 
 let lastFocusedBeforeDetail=null;
@@ -649,9 +688,22 @@ function unlockPageScroll(){
   document.body.style.width='';
   window.scrollTo(0,lockedScrollY||0);
 }
+function activateSheetBackdrop(){
+  const backdrop=$('#sheetBackdrop');
+  if(!backdrop)return;
+  backdrop.style.removeProperty('pointer-events');
+  backdrop.style.removeProperty('opacity');
+}
+function deactivateSheetBackdrop(){
+  const backdrop=$('#sheetBackdrop');
+  if(!backdrop)return;
+  backdrop.style.pointerEvents='none';
+  backdrop.style.opacity='0';
+}
 function openDetailSheet(r,trigger=document.activeElement){
   setState({detailRow:r,modal:'detail'},{render:false}); lastFocusedBeforeDetail=trigger;
   renderDetailSheet(r);
+  activateSheetBackdrop();
   lockPageScroll();
   document.body.classList.add('detailOpen','modalOpen');
   $('#detailSheet')?.setAttribute('aria-hidden','false');
@@ -661,6 +713,7 @@ function openDetailSheet(r,trigger=document.activeElement){
 }
 function closeDetailSheet(){
   document.body.classList.remove('detailOpen','modalOpen');
+  deactivateSheetBackdrop();
   $('#detailSheet')?.setAttribute('aria-hidden','true');
   if(state.modal==='detail')setState({modal:null,detailRow:null},{render:false});
   $('#appRoot')?.removeAttribute('inert');
@@ -676,8 +729,8 @@ function openHashRowIfNeeded(){
 function renderSavedCard(group,i){
   const r=group.next; const dist=r&&r._dist!=null?distanceLabel(r,r._dist):'';
   const count=group.rows.length;
-  const upcoming=group.rows.filter(rowMass).slice(0,5).map(x=>`${dayName(x.day_of_week)} ${x.time_24h}`).join(' · ');
-  return `<article class="card savedChurch"><div class="cardTop"><div><div class="cardTitle">${esc(visibleSiteName(group.first))}</div><div class="meta">${esc([group.first.town,group.first.parish_label||group.first.parish_name,group.first.region].filter(Boolean).join(' · '))}</div></div>${r?`<div class="timeBox"><div class="time">${esc(r.time_24h)}</div><div class="relative">${esc(rel(r._delta))}</div></div>`:''}</div>${r?`<div class="trustStrip">${esc(trustLine(r))}</div>`:''}<div class="badges">${r?`<span class="badge mass">${esc(dayName(r.day_of_week))}</span><span class="badge ok">${esc(tr('nextMass'))}</span>${languageBadge(r)?`<span class="badge lang">${esc(languageBadge(r))}</span>`:''}`:''}${dist?`<span class="badge">${esc(dist)}</span>`:''}<span class="badge">${count} ${esc(tr('parishSchedule'))}</span></div>${upcoming?`<div class="savedTimes">${esc(upcoming)}</div>`:''}<div class="actions"><a class="btn primary" target="_blank" rel="noopener" href="${esc(mapsUrl(group.first))}">${esc(tr('directions'))}</a><button class="btn" data-show-site="${i}">${esc(tr('parishSchedule'))}</button><button class="btn" data-unsave-site="${i}">${esc(tr('saved'))} ★</button></div></article>`
+  const upcoming=group.rows.filter(rowMass).slice(0,3).map(x=>`${dayName(x.day_of_week)} ${x.time_24h}`).join(' · ');
+  return `<article class="card savedChurch"><div class="cardTop"><div><div class="cardTitle">${esc(visibleSiteName(group.first))}</div><div class="meta">${esc([group.first.town,group.first.parish_label||group.first.parish_name,group.first.region].filter(Boolean).join(' · '))}</div></div>${r?`<div class="timeBox"><div class="time">${esc(r.time_24h)}</div><div class="relative">${esc(rel(r._delta))}</div></div>`:''}</div>${r?`<div class="trustStrip">${esc(trustLine(r))}</div>`:''}<div class="badges">${r?`<span class="badge mass">${esc(dayName(r.day_of_week))}</span><span class="badge ok">${esc(tr('nextMass'))}</span>${languageBadge(r)?`<span class="badge lang">${esc(languageBadge(r))}</span>`:''}`:''}${dist?`<span class="badge">${esc(dist)}</span>`:''}<span class="badge">${count} ${esc(tr('allTimes'))}</span></div>${upcoming?`<div class="savedTimes">${esc(upcoming)}</div>`:''}<div class="actions"><a class="btn primary" target="_blank" rel="noopener" href="${esc(mapsUrl(group.first))}">${esc(tr('directions'))}</a><button class="btn" data-show-site="${i}">${esc(tr('allTimes'))}</button><button class="btn" data-unsave-site="${i}">${esc(tr('saved'))} ★</button></div></article>`
 }
 function savedGroups(){
   const now=mauritiusNow(); const map=new Map();
@@ -688,14 +741,28 @@ function savedGroups(){
   });
   return [...map.values()].map(g=>{rankResults(g.rows,{near:false}); return g}).sort((a,b)=>(a.next?._delta??999999)-(b.next?._delta??999999)||siteName(a.first).localeCompare(siteName(b.first)))
 }
-function emptyStateHtml(){
-  const p=state.parsed||{};
-  let title=tr('noResults'), text=tr('noResultsText'), actions=`<button class="btn" data-empty-action="clear" type="button">${esc(tr('clear'))}</button>`;
-  if(state.near&&!state.location){title=tr('locationNotEnabled'); text=tr('locationSearchHelp'); actions=`<button class="btn primary" data-empty-action="locate" type="button">${esc(tr('nearUse'))}</button><button class="btn" data-empty-action="clear" type="button">${esc(tr('clear'))}</button>`}
-  else if(effectiveDay()===todayName(0)){title=tr('noMassToday'); text=tr('noMassTodayText'); actions=`<button class="btn primary" data-empty-action="tomorrow" type="button">${esc(tr('tomorrow'))}</button><button class="btn" data-empty-action="clear" type="button">${esc(tr('clear'))}</button>`}
-  else if(p.language||p.firstFriday||p.near){actions+=`<button class="btn" data-empty-action="clear" type="button">${esc(tr('clear'))}</button>`}
-  return `<div class="empty"><h3>${esc(title)}</h3><p>${esc(text)}</p><div class="actions">${actions}</div></div>`
+
+function dateGroupLabel(r,now=mauritiusNow()){
+  if(r._inProgress)return tr('todayRel');
+  if(r._past&&r.day_of_week===todayName(0,now))return tr('earlierToday');
+  const occ=r._nextOccurrence||getNextOccurrence(r,now);
+  if(!occ)return dayName(r.day_of_week);
+  const diff=dateSerial(occ)-dateSerial(now);
+  if(diff===0)return tr('todayRel');
+  if(diff===1)return tr('tomorrowRel');
+  return dayName(DAYS[occ.getDay()]);
 }
+function renderCardsWithDateSeparators(arr,limit=60){
+  const now=mauritiusNow();
+  let last='';
+  return arr.slice(0,limit).map((r,i)=>{
+    const label=dateGroupLabel(r,now);
+    const sep=label!==last?`<div class="dateSep">${esc(label)}</div>`:'';
+    last=label;
+    return sep+renderCard(r,i);
+  }).join('');
+}
+
 function renderResults(){
   const root=$('#results'); const head=$('#resultCount'); const ctx=$('#contextLabel'); if(ctx)ctx.textContent=currentContextLabel();
   if(state.mode==='more'){root.innerHTML='';head.textContent='';return}
@@ -707,10 +774,10 @@ function renderResults(){
     return
   }
   const arr=state.results; const n=arr.length; head.innerHTML=`<b>${n}</b> ${esc(n===1?tr('result'):tr('results'))} ${esc(tr('shown'))}<span class="sortHint"> · ${esc(state.near?tr('sortedHintNear'):tr('sortedHint'))}</span>`;
-  if(!n){root.className=''; root.innerHTML=emptyStateHtml(); return}
-  root.className='resultsGrid'; const capped=arr.length>60; const sundayNote=(effectiveDay()==='Dimanche'&&effectiveDayMode()==='sunday_obligation'&&arr.some(isSundayEligible))?`<div class="resultNotice">${esc(tr('sundayExplain'))}</div>`:''; const nearNotice=state.near&&state.location?nearScopeNotice(state.nearScope):''; const nearNote=nearNotice?`<div class="resultNotice ${state.nearScope==='all'?'warn':''}">${esc(nearNotice)}</div>`:''; const capNote=capped?`<div class="resultNotice warn">${esc(tr('resultCap',{n:arr.length}))}</div>`:''; let lastKey=null; const cards=[]; arr.slice(0,60).forEach((r,i)=>{const key=occurrenceDateKey(r); if(key!==lastKey){lastKey=key; cards.push(`<div class="dateSeparator">${esc(dateSeparatorLabel(r))}</div>`)} cards.push(renderCard(r,i))}); root.innerHTML=nearNote+sundayNote+capNote+cards.join('');
+  if(!n){root.className=''; root.innerHTML=`<div class="empty"><h3>${esc(tr('noResults'))}</h3><p>${esc(tr('noResultsText'))}</p></div>`; return}
+  root.className='resultsGrid'; const capped=arr.length>60; const sundayNote=(effectiveDay()==='Dimanche'&&effectiveDayMode()==='sunday_obligation'&&arr.some(isSundayEligible))?`<div class="resultNotice">${esc(tr('sundayExplain'))}</div>`:''; const nearNotice=state.near&&state.location?nearScopeNotice(state.nearScope):''; const nearNote=nearNotice?`<div class="resultNotice ${state.nearScope==='all'?'warn':''}">${esc(nearNotice)}</div>`:''; const capNote=capped?`<div class="resultNotice warn">${esc(tr('resultCap',{n:arr.length}))}</div>`:''; root.innerHTML=nearNote+sundayNote+capNote+renderCardsWithDateSeparators(arr,60);
 }
-function renderChips(){const root=$('#intentChips'); if(!root)return; const chips=[...(state.parsed.chips||[])]; const has=k=>chips.some(c=>c.k===k); if(state.near&&!has('near'))chips.unshift({k:'near',label:tr('quickNear')}); const day=effectiveDay(),mode=effectiveDayMode(),time=effectiveTime(); if(day&&!has('day'))chips.push({k:'day',label:mode==='today'?tr('today'):mode==='tomorrow'?tr('tomorrow'):mode==='sunday_obligation'?tr('sunday'):dayName(day)}); if(time&&!has('time'))chips.push({k:'time',label:tr(time)||time}); if(state.filters.region)chips.push({k:'region',label:state.filters.region}); if(effectiveType()==='all')chips.push({k:'type',label:tr('includeOther')}); if(state.filters.siteUid)chips.push({k:'site',label:tr('allTimes')}); const seen=new Set(); const unique=chips.filter(c=>{const key=c.k+'|'+c.label; if(seen.has(key))return false; seen.add(key); return true}); root.innerHTML=unique.map(c=>`<span class="intentChip">${esc(c.label)}<button data-chip="${esc(c.k)}" type="button" aria-label="${esc((state.lang==='fr'?'Retirer ':'Remove ')+c.label)}">×</button></span>`).join('');}
+function renderChips(){const root=$('#intentChips'); if(!root)return; const chips=[...(state.parsed.chips||[])]; const has=k=>chips.some(c=>c.k===k); if(state.near&&!has('near'))chips.unshift({k:'near',label:tr('quickNear')}); const day=effectiveDay(),mode=effectiveDayMode(),time=effectiveTime(); if(day&&!has('day'))chips.push({k:'day',label:mode==='today'?tr('today'):mode==='tomorrow'?tr('tomorrow'):mode==='sunday_obligation'?tr('sunday'):dayName(day)}); if(time&&!has('time'))chips.push({k:'time',label:tr(time)||time}); if(state.filters.region)chips.push({k:'region',label:state.filters.region}); if(effectiveType()==='all')chips.push({k:'type',label:tr('includeOther')}); if(state.filters.siteUid)chips.push({k:'site',label:tr('allTimes')}); root.innerHTML=chips.map(c=>`<span class="intentChip">${esc(c.label)}<button data-chip="${esc(c.k)}" type="button" aria-label="${esc((state.lang==='fr'?'Retirer ':'Remove ')+c.label)}">×</button></span>`).join('');}
 function moreSectionContent(){
   const sections={
     help:{id:'helpSection',title:tr('helpTitle'),body:tr('helpHtml')},
@@ -736,13 +803,48 @@ function openMoreSection(section='help',shouldScroll=true){
 function renderFooter(){const f=$('#appFooter'); if(!f)return; f.innerHTML=`<span>${esc(tr('version'))} ${APP_VERSION}</span><span aria-hidden="true">•</span><button type="button" data-footer-target="help">${esc(tr('helpTitle'))}</button><span aria-hidden="true">•</span><button type="button" data-footer-target="about">${esc(tr('about'))}</button><span aria-hidden="true">•</span><button type="button" data-footer-target="update">${esc(tr('howUpdate'))}</button><span aria-hidden="true">•</span><button type="button" data-footer-target="report">${esc(tr('reportIssue'))}</button>`;}
 function openUpdateHelp(){openMoreSection('update')}
 
-function effectiveTheme(){return state.theme==='dark'||(state.theme==='system'&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light'}
-function renderTheme(){const mode=effectiveTheme(); document.documentElement.dataset.theme=mode; const meta=document.querySelector('meta[name="theme-color"]'); if(meta)meta.setAttribute('content',mode==='dark'?'#130f0d':'#6f2c2c'); const btn=$('#themeToggle'); if(btn){btn.textContent=state.theme==='dark'?'☀':state.theme==='light'?'◐':'☾'; btn.setAttribute('aria-label',tr(state.theme==='dark'?'themeDark':state.theme==='light'?'themeLight':'themeSystem')); btn.title=btn.getAttribute('aria-label')}}
-function cycleTheme(){const next=state.theme==='system'?'dark':state.theme==='dark'?'light':'system'; storageSet('mmf_theme',next); setState({theme:next})}
-function renderStatic(){document.documentElement.lang=state.lang; $('#appTitle').innerHTML=esc(tr('title')).replace('\n','<br>'); $('#appSubtitle').textContent=tr('subtitle'); $('#searchLabel').textContent=tr('search'); $('#searchInput').placeholder=tr('searchPh'); const sh=$('#searchHint'); if(sh) sh.textContent=tr('searchHint'); $('#clearSearch').textContent=tr('clear'); $('#heroCount').textContent=`${state.rows.length} ${state.lang==='fr'?'horaires':'schedules'} · ${new Set(state.rows.map(r=>r.parish_uid)).size} ${state.lang==='fr'?'paroisses':'parishes'}`; $$('[data-t]').forEach(el=>el.textContent=tr(el.dataset.t)); $('#filterTitle').textContent=tr('filters'); $('#dayLabel').textContent=tr('day'); $('#timeLabel').textContent=tr('time'); $('#regionLabel').textContent=tr('region'); $('#typeLabel').textContent=tr('type'); $('#applyFilters').textContent=tr('showResults'); $('#updateTitle').textContent=tr('updateTitle'); $('#updateText').textContent=tr('updateText'); $('#updateRefresh').textContent=tr('refresh'); $('#updateDismiss').textContent=tr('later'); $('#updateHelp')&&($('#updateHelp').textContent=tr('troubleUpdating')); const cf=$('#closeFilters'); if(cf){cf.setAttribute('aria-label',state.lang==='fr'?'Fermer les filtres':'Close filters'); cf.title=cf.getAttribute('aria-label')} const cd=$('#closeDetail'); if(cd){cd.setAttribute('aria-label',state.lang==='fr'?'Fermer les détails':'Close details'); cd.title=cd.getAttribute('aria-label')} const fs=$('#filterSheet'); if(fs)fs.setAttribute('aria-label',tr('filterSheetLabel')); const ds=$('#detailSheet'); if(ds)ds.setAttribute('aria-label',tr('detailSheetLabel')); const bn=document.querySelector('.bottomNav'); if(bn)bn.setAttribute('aria-label',tr('bottomNavLabel')); const ub=$('#updateBanner'); if(ub){ub.setAttribute('role','status');ub.setAttribute('aria-live','polite')} $('#langEn').classList.toggle('active',state.lang==='en'); $('#langFr').classList.toggle('active',state.lang==='fr'); updateSwipeAffordance();}
-function renderTags(){const days=[['',tr('anyDay')],['__today',tr('today')],['__tomorrow',tr('tomorrow')],['Dimanche',tr('sunday')],['Samedi',dayName('Samedi')]]; const times=[['',tr('allDay')],['morning',tr('morning')],['afternoon',tr('afternoon')],['evening',tr('evening')]]; const regs=[['',tr('allRegions')],...[...new Set(state.rows.map(r=>r.region).filter(Boolean))].sort().map(x=>[x,x])]; const types=[['mass',tr('massesOnly')],['all',tr('includeOther')]]; const currentDay=effectiveDay(),currentDayMode=effectiveDayMode(),currentTime=effectiveTime(),currentType=effectiveType(); const isActive=(key,v,val)=>{ if(key==='day')return (v===''&&!currentDay)||((v==='__today'&&currentDayMode==='today')||(v==='__tomorrow'&&currentDayMode==='tomorrow')||(v==='Dimanche'&&currentDay==='Dimanche'&&currentDayMode==='sunday_obligation')||(v===currentDay&&v!=='Dimanche'&&v!==''&&currentDayMode!=='today'&&currentDayMode!=='tomorrow')); if(key==='time')return v===currentTime; if(key==='type')return v===currentType; return v===val}; const build=(id,arr,val,key)=>{const el=$(id); if(!el)return; el.innerHTML=arr.map(([v,l])=>`<button class="tag ${isActive(key,v,val)?'active':''}" data-filter="${key}" data-value="${esc(v)}" type="button" aria-pressed="${isActive(key,v,val)?'true':'false'}">${esc(l)}</button>`).join('')}; build('#dayTags',days,state.filters.day,'day'); build('#timeTags',times,state.filters.time,'time'); build('#regionTags',regs,state.filters.region,'region'); build('#typeTags',types,state.filters.type,'type');}
-function renderNav(){const day=effectiveDay(),mode=effectiveDayMode(),time=effectiveTime(); $$('[data-nav]').forEach(b=>b.classList.toggle('active',b.dataset.nav===state.mode || (state.mode==='home'&&b.dataset.nav==='home'))); $$('.pill').forEach(p=>p.classList.toggle('active',(p.dataset.action==='near'&&state.near)||(p.dataset.action==='saved'&&state.mode==='saved')||(p.dataset.action==='evening'&&time==='evening')||(p.dataset.action==='today'&&day===todayName(0)&&mode==='today')||(p.dataset.action==='tomorrow'&&day===todayName(1)&&mode==='tomorrow')||(p.dataset.action==='sunday'&&day==='Dimanche'&&mode==='sunday_obligation')))}
-function render(){compute(); renderTheme(); renderStatic(); renderChips(); renderTags(); renderNav(); renderNext(); renderResults(); renderMore(); renderFooter(); $('#resultsHead').hidden=state.mode==='more'; $('#searchBox').classList.toggle('hasText',!!state.query);}
+function renderStatic(){
+  document.documentElement.lang=state.lang;
+  $('#appTitle').innerHTML=esc(tr('title')).replace('\n','<br>');
+  $('#appSubtitle').textContent=tr('subtitle');
+  $('#searchLabel').textContent=tr('search');
+  $('#searchInput').placeholder=tr('searchPh');
+  const sh=$('#searchHint'); if(sh) sh.textContent=tr('searchHint');
+  $('#clearSearch').textContent=tr('clear');
+  $('#heroCount').textContent=`${state.rows.length} ${state.lang==='fr'?'horaires':'schedules'} · ${new Set(state.rows.map(r=>r.parish_uid)).size} ${state.lang==='fr'?'paroisses':'parishes'}`;
+  $$('[data-t]').forEach(el=>el.textContent=tr(el.dataset.t));
+  $('#filterTitle').textContent=tr('filters');
+  $('#dayLabel').textContent=tr('day');
+  $('#timeLabel').textContent=tr('time');
+  $('#regionLabel').textContent=tr('region');
+  $('#typeLabel').textContent=tr('type');
+  $('#applyFilters').textContent=tr('showResults');
+  $('#updateTitle').textContent=tr('updateTitle');
+  $('#updateText').textContent=tr('updateText');
+  $('#updateRefresh').textContent=tr('refresh');
+  $('#updateDismiss').textContent=tr('later');
+  $('#updateHelp')&&($('#updateHelp').textContent=tr('troubleUpdating'));
+  $('#filterSheet')?.setAttribute('aria-label',tr('filterSheetLabel'));
+  $('#detailSheet')?.setAttribute('aria-label',tr('detailSheetLabel'));
+  $('#bottomNav')?.setAttribute('aria-label',tr('bottomNavLabel'));
+  $('#closeFilters')?.setAttribute('aria-label',state.lang==='fr'?'Fermer les filtres':'Close filters');
+  $('#closeDetail')?.setAttribute('aria-label',state.lang==='fr'?'Fermer les détails':'Close details');
+  $('#langEn').classList.toggle('active',state.lang==='en');
+  $('#langFr').classList.toggle('active',state.lang==='fr');
+  updateSwipeAffordance();
+}
+function renderTags(){
+  const days=[['',tr('anyDay')],['__today',tr('today')],['__tomorrow',tr('tomorrow')],['Dimanche',tr('sunday')],['Samedi',dayName('Samedi')]];
+  const times=[['',tr('allDay')],['morning',tr('morning')],['afternoon',tr('afternoon')],['evening',tr('evening')]];
+  const regs=[['',tr('allRegions')],...[...new Set(state.rows.map(r=>r.region).filter(Boolean))].sort().map(x=>[x,x])];
+  const types=[['mass',tr('massesOnly')],['all',tr('includeOther')]];
+  const currentDay=effectiveDay(),currentDayMode=effectiveDayMode(),currentTime=effectiveTime(),currentType=effectiveType();
+  const isActive=(key,v,val)=>{ if(key==='day')return (v===''&&!currentDay)||((v==='__today'&&currentDayMode==='today')||(v==='__tomorrow'&&currentDayMode==='tomorrow')||(v==='Dimanche'&&currentDay==='Dimanche'&&(currentDayMode==='sunday_obligation'||currentDayMode==='calendar'))||(v===currentDay&&v!=='Dimanche'&&v!==''&&currentDayMode!=='today'&&currentDayMode!=='tomorrow')); if(key==='time')return v===currentTime; if(key==='type')return v===currentType; return v===val};
+  const build=(id,arr,val,key)=>{const el=$(id); if(!el)return; el.innerHTML=arr.map(([v,l])=>`<button class="tag ${isActive(key,v,val)?'active':''}" data-filter="${key}" data-value="${esc(v)}" type="button" aria-pressed="${isActive(key,v,val)?'true':'false'}">${esc(l)}</button>`).join('')};
+  build('#dayTags',days,state.filters.day,'day'); build('#timeTags',times,state.filters.time,'time'); build('#regionTags',regs,state.filters.region,'region'); build('#typeTags',types,state.filters.type,'type');
+}
+function renderNav(){const day=effectiveDay(),mode=effectiveDayMode(),time=effectiveTime(); $$('[data-nav]').forEach(b=>b.classList.toggle('active',b.dataset.nav===state.mode || (state.mode==='home'&&b.dataset.nav==='home'))); $$('.pill').forEach(p=>p.classList.toggle('active',(p.dataset.action==='near'&&state.near)||(p.dataset.action==='saved'&&state.mode==='saved')||(p.dataset.action==='afternoon'&&time==='afternoon')||(p.dataset.action==='today'&&day===todayName(0)&&mode==='today')||(p.dataset.action==='tomorrow'&&day===todayName(1)&&mode==='tomorrow')||(p.dataset.action==='sunday'&&day==='Dimanche'&&mode==='sunday_obligation')))}
+function render(){compute(); renderStatic(); renderChips(); renderTags(); renderNav(); renderNext(); renderResults(); renderMore(); renderFooter(); $('#resultsHead').hidden=state.mode==='more'; $('#searchBox').classList.toggle('hasText',!!state.query);}
 function setLang(l){storageSet('mmf_language',l); setState({lang:l},{url:true}); if(state.detailRow)renderDetailSheet(state.detailRow)}
 function toast(msg){const t=$('#toast'); if(!t)return; t.textContent=msg;t.classList.add('show');clearTimeout(toast._t);toast._t=setTimeout(()=>t.classList.remove('show'),1800)}
 let locationRequestInFlight=false;
@@ -758,8 +860,8 @@ function requestLocation(){
 }
 let lastFocusedBeforeSheet=null;
 function focusablesIn(el){return $$('button,[href],input,select,textarea,[tabindex]:not([tabindex="-1"])').filter(x=>el&&el.contains(x)&&!x.disabled&&x.getAttribute('aria-hidden')!=='true')}
-function openModal(name,trigger=document.activeElement){if(name!=='filters')return; lastFocusedBeforeSheet=trigger; setState({modal:'filters'},{render:false}); document.body.classList.add('filtersOpen','modalOpen'); $('#filterSheet')?.setAttribute('aria-hidden','false'); $('#openFilters')?.setAttribute('aria-expanded','true'); $('#appRoot')?.setAttribute('inert',''); setTimeout(()=>{const target=$('#filterSheet')?.querySelector('#closeFilters')||focusablesIn($('#filterSheet'))[0]; target?.focus()},0)}
-function closeModal(name='filters'){if(name!=='filters'&&state.modal!==name)return; document.body.classList.remove('filtersOpen','modalOpen'); setState({modal:null},{render:false}); $('#filterSheet')?.setAttribute('aria-hidden','true'); $('#openFilters')?.setAttribute('aria-expanded','false'); $('#appRoot')?.removeAttribute('inert'); if(lastFocusedBeforeSheet&&lastFocusedBeforeSheet.focus)lastFocusedBeforeSheet.focus()}
+function openModal(name,trigger=document.activeElement){if(name!=='filters')return; lastFocusedBeforeSheet=trigger; setState({modal:'filters'},{render:false}); activateSheetBackdrop(); document.body.classList.add('filtersOpen','modalOpen'); $('#filterSheet')?.setAttribute('aria-hidden','false'); $('#openFilters')?.setAttribute('aria-expanded','true'); $('#appRoot')?.setAttribute('inert',''); setTimeout(()=>{const target=$('#filterSheet')?.querySelector('#closeFilters')||focusablesIn($('#filterSheet'))[0]; target?.focus()},0)}
+function closeModal(name='filters'){if(name!=='filters'&&state.modal!==name)return; document.body.classList.remove('filtersOpen','modalOpen'); deactivateSheetBackdrop(); setState({modal:null},{render:false}); $('#filterSheet')?.setAttribute('aria-hidden','true'); $('#openFilters')?.setAttribute('aria-expanded','false'); $('#appRoot')?.removeAttribute('inert'); if(lastFocusedBeforeSheet&&lastFocusedBeforeSheet.focus)lastFocusedBeforeSheet.focus()}
 function openFilters(e){openModal('filters',e?.currentTarget||document.activeElement)}
 function closeFilters(){closeModal('filters')}
 function trapSheetFocus(e){if(e.key!=='Tab'||state.modal!=='filters')return; const f=focusablesIn($('#filterSheet')); if(!f.length)return; const first=f[0],last=f[f.length-1]; if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()} else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}
@@ -786,13 +888,12 @@ function handleDelegatedAction(e){
   const unsaveBtn=e.target.closest('[data-unsave-site]'); if(unsaveBtn){e.preventDefault(); const g=savedGroups()[+unsaveBtn.dataset.unsaveSite]; if(g)toggleSave(g.first); return}
   const nextAction=e.target.closest('[data-next-action]'); if(nextAction){e.preventDefault(); const a=nextAction.dataset.nextAction; if(a==='locate')requestLocation(); if(a==='share'&&state.next)shareResult(state.next); if(a==='save'&&state.next)toggleSave(state.next); return}
   const detailAction=e.target.closest('[data-detail-action]'); if(detailAction){e.preventDefault(); const r=state.detailRow; if(!r)return; const a=detailAction.dataset.detailAction; if(a==='share')shareResult(r); if(a==='save')toggleSave(r); if(a==='all-times'){closeDetailSheet();showSite(r)} return}
-  const empty=e.target.closest('[data-empty-action]'); if(empty){e.preventDefault(); const a=empty.dataset.emptyAction; if(a==='clear')clearAllFilters({url:true}); if(a==='tomorrow')applyFilter('day','__tomorrow'); if(a==='locate')requestLocation(); return}
   const more=e.target.closest('[data-more-section]'); if(more){e.preventDefault(); openMoreSection(more.dataset.moreSection,false); return}
   const footer=e.target.closest('[data-footer-target]'); if(footer){e.preventDefault(); openMoreSection(footer.dataset.footerTarget); return}
   const share=e.target.closest('[data-share-app]'); if(share){e.preventDefault(); shareApp(); return}
 }
 function installDelegatedActions(){document.addEventListener('click',handleDelegatedAction)}
-function runSearchDiagnostics(){const tests=['après-midi Curepipe','matin Curepipe','soir Curepipe','messe après-midi Curepipe','messe matin Curepipe','messe soir Curepipe','afternoon Curepipe','morning Curepipe','evening Curepipe','ce soir Curepipe','messe ce soir','messe du soir Curepipe','evening Mass Curepipe','messe demain','messe aujourd’hui','messe samedi soir','18h','18:00','6pm','sacre coeur','saint jean','st jean','église','eglise','messe proche maintenant','messe près de moi maintenant','premier vendredi','first friday','messe anglais','English Mass','English Mass near me now','English Mass near me now Curepipe','Saturday evening','Sunday evening','dimanche soir']; const now=getMauritiusNow(new Date('2026-05-07T05:00:00+04:00')); return tests.map(q=>{const st={...state,query:q,filters:{...DEFAULT_FILTERS},mode:'search',near:false}; const out=getVisibleResults(st,now); return {query:q,count:out.results.length,top:out.results[0]?visibleSiteName(out.results[0]):null,pass:out.results.length>0}})}
+function runSearchDiagnostics(){const tests=['après-midi Curepipe','matin Curepipe','soir Curepipe','messe après-midi Curepipe','messe matin Curepipe','messe soir Curepipe','afternoon Curepipe','morning Curepipe','evening Curepipe','messe du soir Curepipe','evening Mass Curepipe','messe demain','messe aujourd’hui','messe samedi soir','18h','18:00','6pm','sacre coeur','saint jean','st jean','église','eglise']; const now=getMauritiusNow(new Date('2026-05-07T05:00:00+04:00')); return tests.map(q=>{const st={...state,query:q,filters:{...DEFAULT_FILTERS},mode:'search',near:false}; const out=getVisibleResults(st,now); return {query:q,count:out.results.length,top:out.results[0]?visibleSiteName(out.results[0]):null,pass:out.results.length>0}})}
 function runDateDiagnostics(testNow){const now=getMauritiusNow(testNow?new Date(testNow):new Date()); const next=getNextMass(state.rows,now,state); return {now:now.toISOString(),next:next?{site:visibleSiteName(next),day:next.day_of_week,time:next.time_24h,delta:next._delta}:null,pass:!!next}}
 function runRankingDiagnostics(){return {top:state.results.slice(0,5).map(r=>({site:visibleSiteName(r),day:r.day_of_week,time:r.time_24h,delta:r._delta,dist:r._dist??null})),pass:true}}
 function runStateDiagnostics(){return {mode:state.mode,query:state.query,filters:{...state.filters},near:state.near,modal:state.modal,results:state.results.length,pass:true}}
@@ -805,7 +906,27 @@ function runDeepLinkDiagnostics(){
 window.MMFDiagnostics={runSearchDiagnostics,runDateDiagnostics,runRankingDiagnostics,runStateDiagnostics,runDeepLinkDiagnostics};
 
 let searchDebounceTimer=null;
-function bind(){setState({lang:storageGet('mmf_language')||((navigator.language||'').toLowerCase().startsWith('fr')?'fr':'en'),theme:storageGet('mmf_theme','system')},{render:false}); restoreStateFromHash(); $('#searchInput').addEventListener('input',e=>{
+
+function resetInteractionState(){
+  try{
+    document.body.classList.remove('modalOpen','scrollLocked','filtersOpen','detailOpen');
+    const appRoot=$('#appRoot'); if(appRoot){appRoot.removeAttribute('inert'); appRoot.removeAttribute('aria-hidden')}
+    deactivateSheetBackdrop()
+    const filter=$('#filterSheet'); if(filter){filter.setAttribute('aria-hidden','true')}
+    const detail=$('#detailSheet'); if(detail){detail.setAttribute('aria-hidden','true')}
+  }catch(e){console.warn('MMF interaction reset failed',e)}
+}
+function showInitFailure(e){
+  try{
+    console.error('MMF init failed',e);
+    document.body.classList.remove('modalOpen','scrollLocked','filtersOpen','detailOpen');
+    const root=$('#results')||document.body;
+    const msg=(state&&state.lang==='fr')?'Problème de chargement de l’application. Veuillez actualiser.':'App loading problem. Please refresh.';
+    root.innerHTML=`<div class="empty error"><h3>${esc(msg)}</h3></div>`;
+  }catch(_){}
+}
+
+function bind(){setState({lang:storageGet('mmf_language')||((navigator.language||'').toLowerCase().startsWith('fr')?'fr':'en')},{render:false}); restoreStateFromHash(); $('#searchInput').addEventListener('input',e=>{
   const q=e.target.value;
   if(searchDebounceTimer)clearTimeout(searchDebounceTimer);
   searchDebounceTimer=setTimeout(()=>{
@@ -814,6 +935,6 @@ function bind(){setState({lang:storageGet('mmf_language')||((navigator.language|
     setState({query:q,filters:{siteUid:''},mode:near?'near':'search',near,nearExpanded:near?false:state.nearExpanded,nearScope:''},{url:true});
     if(near&&!state.location) requestLocation();
   },150);
-}); $('#clearSearch').addEventListener('click',()=>clearAllFilters({url:true})); $('#langEn').addEventListener('click',()=>setLang('en')); $('#langFr').addEventListener('click',()=>setLang('fr')); $('#themeToggle')?.addEventListener('click',cycleTheme); $('#openFilters').addEventListener('click',openFilters); $('#closeFilters').addEventListener('click',closeFilters); $('#sheetBackdrop').addEventListener('click',()=>{if(state.modal==='detail')closeDetailSheet(); else closeFilters()}); $('#closeDetail')?.addEventListener('click',closeDetailSheet); $('#applyFilters').addEventListener('click',closeFilters); $$('.pill').forEach(p=>p.addEventListener('click',()=>{const a=p.dataset.action; if(a==='next')setState({mode:'home',near:false,nearScope:'',query:'',filters:{...DEFAULT_FILTERS}},{url:true}); if(a==='today')applyFilter('day','__today'); if(a==='tomorrow')applyFilter('day','__tomorrow'); if(a==='evening')applyFilter('time','evening'); if(a==='near'){setState({mode:'near',near:true,nearExpanded:false,nearScope:''},{url:true});requestLocation()} if(a==='sunday')applyFilter('day','Dimanche'); if(a==='saved')setState({mode:'saved',near:false,nearScope:''},{url:true})})); $$('[data-nav]').forEach(b=>b.addEventListener('click',()=>{const n=b.dataset.nav;if(n==='near'){setState({mode:'near',near:true,nearExpanded:false,nearScope:''},{url:true});requestLocation()} else setState({mode:n,near:false,nearScope:'',moreSection:n==='more'?'help':state.moreSection},{url:true}); window.scrollTo({top:0,behavior:'smooth'})})); const quick=$('#quickRow'); if(quick){quick.addEventListener('scroll',()=>{markSwipeHintSeen();updateSwipeAffordance()},{passive:true}); quick.addEventListener('click',()=>{markSwipeHintSeen();updateSwipeAffordance()}); window.addEventListener('resize',updateSwipeAffordance)} $('#updateRefresh').addEventListener('click',forceUpdate); $('#updateHelp')?.addEventListener('click',openUpdateHelp); $('#updateDismiss').addEventListener('click',()=>{const banner=$('#updateBanner'); const latest=banner.dataset.latestVersion||APP_VERSION; banner.classList.remove('show');storageSet('mmf_update_dismissed_'+latest,'1')}); document.addEventListener('keydown',e=>{if(e.key==='Escape'&&state.modal==='filters')closeFilters(); if(e.key==='Escape'&&state.modal==='detail')closeDetailSheet(); trapSheetFocus(e); trapDetailFocus(e)})}
+}); $('#clearSearch').addEventListener('click',()=>clearAllFilters({url:true})); $('#langEn').addEventListener('click',()=>setLang('en')); $('#langFr').addEventListener('click',()=>setLang('fr')); $('#openFilters').addEventListener('click',openFilters); $('#closeFilters').addEventListener('click',closeFilters); $('#sheetBackdrop').addEventListener('click',()=>{if(state.modal==='detail')closeDetailSheet(); else closeFilters()}); $('#closeDetail')?.addEventListener('click',closeDetailSheet); $('#applyFilters').addEventListener('click',closeFilters); $$('.pill').forEach(p=>p.addEventListener('click',()=>{const a=p.dataset.action; if(a==='next')setState({mode:'home',near:false,nearScope:'',query:'',filters:{...DEFAULT_FILTERS}},{url:true}); if(a==='today')applyFilter('day','__today'); if(a==='tomorrow')applyFilter('day','__tomorrow'); if(a==='afternoon')applyFilter('time','afternoon'); if(a==='evening')applyFilter('time','evening'); if(a==='near'){setState({mode:'near',near:true,nearExpanded:false,nearScope:''},{url:true});requestLocation()} if(a==='sunday')applyFilter('day','Dimanche'); if(a==='saved')setState({mode:'saved',near:false,nearScope:''},{url:true})})); $$('[data-nav]').forEach(b=>b.addEventListener('click',()=>{const n=b.dataset.nav;if(n==='near'){setState({mode:'near',near:true,nearExpanded:false,nearScope:''},{url:true});requestLocation()} else setState({mode:n,near:false,nearScope:'',moreSection:n==='more'?'help':state.moreSection},{url:true}); window.scrollTo({top:0,behavior:'smooth'})})); const quick=$('#quickRow'); if(quick){quick.addEventListener('scroll',()=>{markSwipeHintSeen();updateSwipeAffordance()},{passive:true}); quick.addEventListener('click',()=>{markSwipeHintSeen();updateSwipeAffordance()}); window.addEventListener('resize',updateSwipeAffordance)} $('#updateRefresh').addEventListener('click',forceUpdate); $('#updateHelp')?.addEventListener('click',openUpdateHelp); $('#updateDismiss').addEventListener('click',()=>{const banner=$('#updateBanner'); const latest=banner.dataset.latestVersion||APP_VERSION; banner.classList.remove('show');storageSet('mmf_update_dismissed_'+latest,'1')}); document.addEventListener('keydown',e=>{if(e.key==='Escape'&&state.modal==='filters')closeFilters(); if(e.key==='Escape'&&state.modal==='detail')closeDetailSheet(); trapSheetFocus(e); trapDetailFocus(e)})}
 async function registerSW(){if(!('serviceWorker'in navigator))return; try{await navigator.serviceWorker.register('sw.js')}catch(e){}}
-document.addEventListener('DOMContentLoaded',()=>{installDelegatedActions();bind();bindSheetDrag();loadData();registerSW();checkUpdate();setInterval(checkUpdate,30*60*1000)});
+document.addEventListener('DOMContentLoaded',()=>{try{resetInteractionState();installDelegatedActions();bind();bindSheetDrag();loadData();registerSW();checkUpdate();setInterval(checkUpdate,30*60*1000)}catch(e){showInitFailure(e)}});
