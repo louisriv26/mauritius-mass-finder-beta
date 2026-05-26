@@ -1,8 +1,8 @@
 {
-  "version": "27.1.16",
-  "release_name": "Saturday Anticipated Sunday Mass Rule",
-  "build": "2026-05-22",
+  "version": "27.2.3",
+  "release_name": "French Near-Clearing Compliance Patch",
+  "build": "2026-05-26",
   "data_version": "2026-05-22",
-  "cache_version": "mmf-v27-1-16",
-  "notes": "Mauritius rule update: Saturday Masses from 3:00 pm are generally anticipated Sunday Masses and are included in Sunday searches and filters. Metadata, cache, fallback data, and runtime files aligned."
+  "cache_version": "mmf-v27-2-3",
+  "notes": "French Near-clearing compliance patch: preserves language/special/time/place intents when clearing Near, adds French/English semantic polish and accessibility live-region labels. Mass data rows unchanged."
 }

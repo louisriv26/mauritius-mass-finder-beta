@@ -1,7 +1,7 @@
 {
   "name": "Mauritius Mass Finder",
   "short_name": "Mass Finder",
-  "description": "Find, save, and share Catholic Mass times quickly anywhere in Mauritius.",
+  "description": "Mauritius Mass Finder v27.2.3 — French Near-clearing compliance patch.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
@@ -35,6 +35,6 @@
       "purpose": "maskable"
     }
   ],
-  "version": "27.1.16",
+  "version": "27.2.3",
   "id": "./"
 }
