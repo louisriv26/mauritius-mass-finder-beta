@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Mauritius Mass Finder v27.2.7</title>
+<title>Mauritius Mass Finder v27.2.10</title>
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#6f2c2c">
 <meta name="description" content="Find a Catholic Mass quickly anywhere in Mauritius.">
@@ -39,11 +39,12 @@
 
   <div class="quickScroller" id="quickScroller">
     <nav class="quickRow" id="quickRow" aria-label="Quick actions">
-      <button class="pill" data-action="today" type="button"><span data-t="quickToday">Today</span></button>
-      <button class="pill" data-action="tomorrow" type="button"><span data-t="quickTomorrow">Tomorrow</span></button>
-      <button class="pill" data-action="afternoon" type="button">☀️ <span data-t="quickAfternoon">Afternoon</span></button>
-      <button class="pill" data-action="near" type="button">📍 <span data-t="quickNear">Near me</span></button>
-      <button class="pill secondary" data-action="saved" type="button">⭐ <span data-t="quickSaved">My Churches</span></button>
+      <button class="pill" data-action="today" type="button" aria-pressed="false"><span data-t="quickToday">Today</span></button>
+      <button class="pill" data-action="tomorrow" type="button" aria-pressed="false"><span data-t="quickTomorrow">Tomorrow</span></button>
+      <button class="pill" data-action="morning" type="button" aria-pressed="false">🌅 <span data-t="quickMorning">Morning</span></button>
+      <button class="pill" data-action="afternoon" type="button" aria-pressed="false">☀️ <span data-t="quickAfternoon">Afternoon</span></button>
+      <button class="pill" data-action="near" type="button" aria-pressed="false">📍 <span data-t="quickNear">Near me</span></button>
+      <button class="pill secondary" data-action="saved" type="button" aria-pressed="false">⭐ <span data-t="quickSaved">My Churches</span></button>
     </nav>
     <div class="scrollCue" id="quickScrollCue" aria-hidden="true">→</div>
   </div>
@@ -53,7 +54,7 @@
     <section id="modeHero" aria-live="polite"></section>
     <div class="headLine" id="resultsHead">
       <div><div class="contextLabel" id="contextLabel"></div><div class="resultCount" id="resultCount"></div></div>
-      <button class="btn" id="openFilters" type="button" aria-haspopup="dialog" aria-controls="filterSheet" aria-expanded="false">⚙ <span data-t="filters">Filters</span></button>
+      <button class="btn filterBtn" id="openFilters" type="button" aria-haspopup="dialog" aria-controls="filterSheet" aria-expanded="false">⚙ <span data-t="filters">Filters</span><span class="filterCount" id="filterCount" hidden></span></button>
     </div>
     <section id="results" class="resultsGrid" aria-live="polite"></section>
     <section id="morePanel" class="morePanel" hidden></section>

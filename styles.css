@@ -96,3 +96,13 @@ body.scrollLocked{overflow:hidden!important;touch-action:none!important;overscro
 .faq p{margin:.45rem 0;color:var(--muted);}
 
 .dateSep{grid-column:1/-1;margin:10px 2px 0;padding:6px 2px;color:var(--muted);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.06em}
+
+
+/* v27.2.10 URL restore robustness and exact-time deep-link polish. */
+.filterBtn{min-height:44px;padding:10px 14px;border-radius:14px;font-weight:950;box-shadow:0 6px 18px rgba(58,32,20,.07);white-space:nowrap;}
+.filterBtn.hasActiveFilters{background:var(--accentSoft);border-color:var(--line2);color:var(--accent);}
+.filterCount{display:inline-flex;align-items:center;justify-content:center;min-width:22px;height:22px;padding:0 7px;border-radius:999px;background:var(--accent);color:#fff;font-size:12px;font-weight:950;line-height:1;margin-left:2px;}
+.filterCount[hidden]{display:none!important;}
+.sheet{overscroll-behavior:contain;-webkit-overflow-scrolling:touch;}
+.sheetBackdrop{touch-action:none;}
+@media(max-width:430px){.filterBtn{min-height:44px;padding:9px 12px}.headLine{align-items:flex-start}.headLine>div{min-width:0}.quickRow{gap:6px}.pill{min-height:40px}}

@@ -1,8 +1,8 @@
 {
-  "version": "27.2.7",
-  "release_name": "Natural-Language Modifier Cleanup Patch",
-  "build": "2026-05-26",
+  "version": "27.2.10",
+  "release_name": "URL Restore Robustness & Device Smoke Patch",
+  "build": "2026-05-27",
   "data_version": "2026-05-22",
-  "cache_version": "mmf-v27-2-7",
-  "notes": "Natural-language modifier cleanup patch. English and French filler words such as this/in/at/ce/cet/à are removed from residual place parsing while preserving Afternoon / Après-midi semantics, light-only stability, update flow and data rows."
+  "cache_version": "mmf-v27-2-10",
+  "notes": "URL restore robustness patch. Weekday URL values now normalise across English/French/case variants, exact-time URL values are applied through the same exact-time search path, Saturday/Sunday help wording is safer, and prior intent-consistency fixes are preserved. Schedule rows unchanged."
 }

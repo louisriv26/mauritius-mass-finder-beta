@@ -1,7 +1,7 @@
 {
   "name": "Mauritius Mass Finder",
   "short_name": "Mass Finder",
-  "description": "Mauritius Mass Finder v27.2.7 — Natural-language modifier cleanup patch.",
+  "description": "Mauritius Mass Finder v27.2.10 — URL restore robustness and exact-time deep-link patch.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
@@ -35,6 +35,6 @@
       "purpose": "maskable"
     }
   ],
-  "version": "27.2.7",
+  "version": "27.2.10",
   "id": "./"
 }
