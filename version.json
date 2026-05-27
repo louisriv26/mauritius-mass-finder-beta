@@ -1,8 +1,8 @@
 {
-  "version": "27.2.5",
-  "release_name": "Backdrop Interaction Stability Patch",
+  "version": "27.2.7",
+  "release_name": "Natural-Language Modifier Cleanup Patch",
   "build": "2026-05-26",
   "data_version": "2026-05-22",
-  "cache_version": "mmf-v27-2-5",
-  "notes": "Backdrop interaction stability patch from stable light-only baseline. Preserves semantic search, Near-clearing, Saturday/Sunday consistency, My Churches, accessibility and update-flow improvements."
+  "cache_version": "mmf-v27-2-7",
+  "notes": "Natural-language modifier cleanup patch. English and French filler words such as this/in/at/ce/cet/à are removed from residual place parsing while preserving Afternoon / Après-midi semantics, light-only stability, update flow and data rows."
 }

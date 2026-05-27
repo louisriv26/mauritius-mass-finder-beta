@@ -1,23 +1,23 @@
 window.MMF_FALLBACK_DATA = {
   "meta": {
     "app": "Mauritius Mass Finder",
-    "version": "27.2.5",
+    "version": "27.2.7",
     "generated_at": "2026-05-22T00:00:00+04:00",
-    "source": "Preserved validated schedule dataset from prior baseline; v27.2.5 changes app runtime semantics, update flow, accessibility and mobile stability only.",
+    "source": "Preserved validated schedule dataset from prior baseline; v27.2.7 changes app runtime time semantics, update flow, accessibility and mobile stability only.",
     "row_count": 395,
     "parish_count": 47,
     "site_count": 117,
     "mass_rows": 379,
     "other_rows": 16,
-    "notes": "Backdrop interaction stability patch. Mass data rows unchanged; Saturday Masses from 3:00 pm remain generally treated as anticipated Sunday Masses.",
+    "notes": "Natural-language modifier cleanup patch. Mass data rows unchanged; Afternoon / Après-midi means 12:00 onward; soir/evening are aliases.",
     "coordinate_update": "All retained runtime sites have coordinates and coordinate precision labels. One unsupported hidden non-Mass row was removed from runtime data.",
     "directions_update": "Directions use Google Maps text-query fallback for all sites; distance labels reflect coordinate precision, with non-exact coordinates shown approximately.",
-    "app_version": "27.2.5",
-    "release": "v27.2.5 Backdrop Interaction Stability Patch",
+    "app_version": "27.2.7",
+    "release": "v27.2.7 Natural-Language Modifier Cleanup Patch",
     "last_verified": "2026-05-02",
     "sunday_obligation_rule": "In Mauritius, Saturday Masses from 3:00 pm are generally anticipated Sunday Masses.",
     "sunday_obligation_rows": 188,
-    "release_name": "Backdrop Interaction Stability Patch",
+    "release_name": "Natural-Language Modifier Cleanup Patch",
     "coordinate_precision_summary": {
       "approximate": 132,
       "exact_google_maps_pin": 209,
@@ -26,8 +26,8 @@ window.MMF_FALLBACK_DATA = {
     "build_date": "2026-05-25",
     "date": "2026-05-06",
     "data_version": "2026-05-22",
-    "cache_version": "mmf-v27-2-5",
-    "minimum_supported_cache": "mmf-v27-2-5",
+    "cache_version": "mmf-v27-2-7",
+    "minimum_supported_cache": "mmf-v27-2-7",
     "build": "2026-05-25",
     "language_rule": "Strict: English only if explicitly stated on the official diocesan source; otherwise Mass language defaults to French.",
     "english_mass_rows": 5,
@@ -29289,9 +29289,9 @@ window.MMF_FALLBACK_DATA = {
       "context_note": ""
     }
   ],
-  "version": "27.2.5",
-  "release": "v27.2.5 Backdrop Interaction Stability Patch",
-  "cache_version": "mmf-v27-2-5",
+  "version": "27.2.7",
+  "release": "v27.2.7 Natural-Language Modifier Cleanup Patch",
+  "cache_version": "mmf-v27-2-7",
   "updated_at": "2026-05-26",
-  "notes": "Backdrop interaction stability patch. Schedule rows unchanged; semantic/search/update/mobile-stability logic updated in app runtime."
+  "notes": "Natural-language modifier cleanup patch. Schedule rows unchanged; app runtime maps soir/evening aliases to Afternoon / Après-midi from 12:00 onward."
 };
