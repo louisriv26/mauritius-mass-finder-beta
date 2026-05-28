@@ -98,11 +98,72 @@ body.scrollLocked{overflow:hidden!important;touch-action:none!important;overscro
 .dateSep{grid-column:1/-1;margin:10px 2px 0;padding:6px 2px;color:var(--muted);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.06em}
 
 
-/* v27.2.10 URL restore robustness and exact-time deep-link polish. */
+/* v27.2.17 Occurrence Semantics Patch. */
 .filterBtn{min-height:44px;padding:10px 14px;border-radius:14px;font-weight:950;box-shadow:0 6px 18px rgba(58,32,20,.07);white-space:nowrap;}
 .filterBtn.hasActiveFilters{background:var(--accentSoft);border-color:var(--line2);color:var(--accent);}
 .filterCount{display:inline-flex;align-items:center;justify-content:center;min-width:22px;height:22px;padding:0 7px;border-radius:999px;background:var(--accent);color:#fff;font-size:12px;font-weight:950;line-height:1;margin-left:2px;}
 .filterCount[hidden]{display:none!important;}
-.sheet{overscroll-behavior:contain;-webkit-overflow-scrolling:touch;}
+.sheet#filterSheet{overscroll-behavior:contain;-webkit-overflow-scrolling:touch;}
 .sheetBackdrop{touch-action:none;}
 @media(max-width:430px){.filterBtn{min-height:44px;padding:9px 12px}.headLine{align-items:flex-start}.headLine>div{min-width:0}.quickRow{gap:6px}.pill{min-height:40px}}
+
+
+/* v27.2.17 Occurrence Semantics Patch. */
+.sheet#filterSheet{display:flex!important;flex-direction:column!important;max-height:min(86dvh, calc(100dvh - 12px))!important;overflow:hidden!important;padding:14px 14px 0!important;margin-bottom:0!important;}
+.sheet#filterSheet .filterGroup{flex:0 0 auto;}
+.sheet#filterSheet{padding-bottom:0!important;bottom:calc(var(--navH) + env(safe-area-inset-bottom, 0px))!important;max-height:calc(100dvh - var(--navH) - env(safe-area-inset-bottom, 0px) - 12px)!important;}
+.sheet#filterSheet .sheetFooter{position:sticky;bottom:0;z-index:2;background:linear-gradient(180deg,rgba(255,255,255,.86),#fff 35%);padding:10px 0 calc(12px + env(safe-area-inset-bottom, 0px));border-top:1px solid var(--line);margin-top:8px;}
+.sheet#filterSheet .sheetFooter .btn{width:100%;}
+@media(max-width:430px){.sheet#filterSheet{border-radius:18px 18px 0 0;}.tag{padding:7px 10px;font-size:12px}.sheetHead{margin-bottom:6px}.filterGroup{margin:8px 0}.sheet#filterSheet .sheetFooter{padding-top:8px}}
+
+
+/* v27.2.17 Occurrence Semantics Patch. */
+.sheet#filterSheet{
+  display:flex!important;
+  flex-direction:column!important;
+  overflow:hidden!important;
+  bottom:calc(var(--navH) + env(safe-area-inset-bottom, 0px))!important;
+  max-height:calc(100dvh - var(--navH) - env(safe-area-inset-bottom, 0px) - 12px)!important;
+  padding:14px 14px 0!important;
+}
+.sheet#filterSheet .sheetBody{
+  flex:1 1 auto!important;
+  min-height:0!important;
+  overflow-y:auto!important;
+  -webkit-overflow-scrolling:touch!important;
+  overscroll-behavior:contain!important;
+  padding:0 0 8px!important;
+}
+.sheet#filterSheet .sheetFooter{
+  flex:0 0 auto!important;
+  position:sticky!important;
+  bottom:0!important;
+  z-index:3!important;
+  background:linear-gradient(180deg,rgba(255,255,255,.86),#fff 35%)!important;
+  padding:10px 0 calc(12px + env(safe-area-inset-bottom, 0px))!important;
+  border-top:1px solid var(--line)!important;
+  margin-top:0!important;
+}
+.sheet#filterSheet .sheetFooter .btn{width:100%!important;}
+
+/* v27.2.17 Occurrence Semantics Patch. */
+
+
+/* v27.2.17 Occurrence Semantics Patch. */
+.detailSheet{
+  display:flex!important;
+  flex-direction:column!important;
+  overflow:hidden!important;
+  max-height:min(86dvh, calc(100dvh - 12px))!important;
+  padding:14px 14px 0!important;
+}
+#detailSheetBody{
+  flex:1 1 auto!important;
+  min-height:0!important;
+  overflow-y:auto!important;
+  -webkit-overflow-scrolling:touch!important;
+  overscroll-behavior:contain!important;
+  padding-bottom:calc(18px + env(safe-area-inset-bottom, 0px))!important;
+}
+
+.toast{pointer-events:none!important;}

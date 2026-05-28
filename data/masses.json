@@ -1,34 +1,34 @@
 {
   "meta": {
     "app": "Mauritius Mass Finder",
-    "version": "27.2.10",
+    "version": "27.2.17",
     "generated_at": "2026-05-22T00:00:00+04:00",
-    "source": "Preserved validated schedule dataset from prior baseline; v27.2.10 changes intent resolution, relative day handling, Sunday-context semantics, accessibility, and cautious Saturday/Sunday wording only.",
+    "source": "Preserved validated schedule dataset; v27.2.17 updates occurrence semantics for Grand-Baie English first-Sunday Mass and first-Friday search precision.",
     "row_count": 395,
     "parish_count": 47,
     "site_count": 117,
     "mass_rows": 379,
     "other_rows": 16,
-    "notes": "Intent consistency and rollover patch. Schedule rows unchanged; Afternoon / Après-midi remains 12:00 onward; soir/evening remain aliases; Today/Tomorrow remain dynamic relative modes; Saturday Masses from 15:00 onward remain in Sunday context.",
+    "notes": "Occurrence semantics patch. row-0271 is explicitly first-Sunday-only; first-Friday semantic search no longer treats exposition notes or except-first-Friday rows as first-Friday-only Masses.",
     "coordinate_update": "All retained runtime sites have coordinates and coordinate precision labels. One unsupported hidden non-Mass row was removed from runtime data.",
     "directions_update": "Directions use Google Maps text-query fallback for all sites; distance labels reflect coordinate precision, with non-exact coordinates shown approximately.",
-    "app_version": "27.2.10",
-    "release": "v27.2.10 URL Restore Robustness & Device Smoke Patch",
+    "app_version": "27.2.17",
+    "release": "v27.2.17 Occurrence Semantics Patch",
     "last_verified": "2026-05-02",
     "sunday_obligation_rule": "In Mauritius, Saturday Masses from 3:00 pm are generally treated as Sunday obligation.",
     "sunday_obligation_rows": 188,
-    "release_name": "Intent Consistency, Rollover & Sunday Semantics Patch",
+    "release_name": "Occurrence Semantics Patch",
     "coordinate_precision_summary": {
       "approximate": 132,
       "exact_google_maps_pin": 209,
       "exact_church_building": 54
     },
-    "build_date": "2026-05-27",
+    "build_date": "2026-05-28",
     "date": "2026-05-06",
     "data_version": "2026-05-22",
-    "cache_version": "mmf-v27-2-10",
-    "minimum_supported_cache": "mmf-v27-2-10",
-    "build": "2026-05-27",
+    "cache_version": "mmf-v27-2-17",
+    "minimum_supported_cache": "mmf-v27-2-17",
+    "build": "2026-05-28",
     "language_rule": "Strict: English only if explicitly stated on the official diocesan source; otherwise Mass language defaults to French.",
     "english_mass_rows": 5,
     "default_french_mass_rows": 374,
@@ -54,9 +54,9 @@
     "geospatial_note": "No coordinates moved by geospatial pass; added/normalized audit fields and preserved coordinates because no cluster, duplicate, town, or bounds conflict was detected.",
     "structured_rule_semantics": "Known occurrence/special rules are localized into direct explicit wording; exception rules are not prefixed with “Only when” or “Exception” in user-facing banners.",
     "date_specific_occurrence_filter": "today/tomorrow date contexts filter rows through occurrence_rule validity; contextual notes do not control occurrence.",
-    "time_filter_rule": "Visible filters: all day, morning (<12:00), afternoon (>=12:00). Soir/evening remains a hidden search alias mapped to afternoon. v27.2.10 preserves the v27.2.10 Morning / Matin chip and weekday filter sheet while fixing intent precedence and relative-day rollover.",
-    "runtime_hardening": "Guarded localStorage access, saved-mode shared-link trap prevention, preserved Near Me calibration, data-load error handling, update fallback wording, and Saturday/Sunday consistency gates.",
-    "updated_at": "2026-05-27"
+    "time_filter_rule": "Visible filters: all day, morning (<12:00), afternoon (>=12:00). Soir/evening remains a hidden search alias mapped to afternoon. CSS integrity patch preserves prior time-filter behaviour.",
+    "runtime_hardening": "Occurrence semantics patch preserves prior detail-sheet CSS, filter-sheet CSS, CSS integrity, and date-context fixes.",
+    "updated_at": "2026-05-28"
   },
   "rows": [
     {
@@ -6735,8 +6735,8 @@
       "verified_status": "high",
       "language": "French",
       "special_rule": "",
-      "qualifier": "First Friday exposition 07:00-12:00",
-      "notes": "",
+      "qualifier": "",
+      "notes": "First Friday exposition 07:00-12:00",
       "source_url": "https://dioceseportlouis.org/diocese/les-paroisses/hautes-plaines-wilhems/saint-paul-1906",
       "last_checked": "2026-04-26",
       "is_active": "True",
@@ -6747,7 +6747,7 @@
       "site_type": "Parish Church",
       "is_mass_only_visible": "True",
       "display_category": "Mass",
-      "search_text": "hautes plaines wilhems phoenix st paul st paul st paul first friday exposition 07 00 12 00 first friday exposition 07 00 12 00 st paul phoenix hautes plaines wilhems mauritius hautes plaines wilhems phoenix st paul st paul st paul first friday exposition 07 00 12 00 first friday exposition 07 00 12 00 st paul phoenix hautes plaines wilhems mauritius first friday exposition 07 00 12 00",
+      "search_text": "hautes plaines wilhems phoenix st paul st paul st paul first friday exposition 07 00 12 00 st paul phoenix hautes plaines wilhems mauritius hautes plaines wilhems phoenix st paul st paul st paul st paul phoenix hautes plaines wilhems mauritius",
       "coordinate_precision": "exact_google_maps_pin",
       "coordinate_note": "coordinate replaced with Google Maps place-level Plus Code 5HFVPG66+52 via GCatholic. This is materially more precise than locality centroid; not claimed as manually doorway-visual-verified.",
       "display_site_label": "Saint-Paul — 07:00",
@@ -20109,7 +20109,7 @@
       "confidence_score": "82",
       "confidence_precision_gate": "pass",
       "safe_location_action": "preserve_coordinate_no_geospatial_conflict_detected",
-      "occurrence_rule": "",
+      "occurrence_rule": "First Sunday only",
       "language_rule": "English on first Sunday of the month",
       "context_note": ""
     },
@@ -29290,9 +29290,9 @@
       "context_note": ""
     }
   ],
-  "version": "27.2.10",
-  "release": "v27.2.10 URL Restore Robustness & Device Smoke Patch",
-  "cache_version": "mmf-v27-2-10",
-  "updated_at": "2026-05-27",
-  "notes": "Filter interaction and weekday selection patch. Adds Morning / Matin quick chip, retap-to-clear quick chips, full weekday filter sheet, stronger Filter button, and filter-sheet background scroll lock. Schedule rows unchanged; Afternoon / Après-midi remains 12:00 onward; soir/evening remain aliases."
+  "version": "27.2.17",
+  "release": "v27.2.17 Occurrence Semantics Patch",
+  "cache_version": "mmf-v27-2-17",
+  "updated_at": "2026-05-28",
+  "notes": "Occurrence semantics patch. Sets Grand-Baie Saints-Anges-Gardiens English Mass to first-Sunday-only and tightens first-Friday semantic search; prior CSS, date-context, and Saint-Paul fixes preserved."
 }

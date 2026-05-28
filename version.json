@@ -1,8 +1,8 @@
 {
-  "version": "27.2.10",
-  "release_name": "URL Restore Robustness & Device Smoke Patch",
-  "build": "2026-05-27",
+  "version": "27.2.17",
+  "release_name": "Occurrence Semantics Patch",
+  "build": "2026-05-28",
   "data_version": "2026-05-22",
-  "cache_version": "mmf-v27-2-10",
-  "notes": "URL restore robustness patch. Weekday URL values now normalise across English/French/case variants, exact-time URL values are applied through the same exact-time search path, Saturday/Sunday help wording is safer, and prior intent-consistency fixes are preserved. Schedule rows unchanged."
+  "cache_version": "mmf-v27-2-17",
+  "notes": "Occurrence semantics patch. Grand-Baie English Mass is first-Sunday-only; first-Friday semantic search excludes exposition-note weekly rows and except-first-Friday rows."
 }

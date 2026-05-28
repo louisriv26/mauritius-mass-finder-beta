@@ -1,7 +1,7 @@
 {
   "name": "Mauritius Mass Finder",
   "short_name": "Mass Finder",
-  "description": "Mauritius Mass Finder v27.2.10 — URL restore robustness and exact-time deep-link patch.",
+  "description": "Mauritius Mass Finder v27.2.17 — Occurrence Semantics Patch.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
@@ -35,6 +35,6 @@
       "purpose": "maskable"
     }
   ],
-  "version": "27.2.10",
+  "version": "27.2.17",
   "id": "./"
 }
