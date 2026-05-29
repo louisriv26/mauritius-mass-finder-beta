@@ -1,8 +1,8 @@
 {
-  "version": "27.2.18",
-  "release_name": "First-Install Onboarding & PWA Guidance Release",
+  "version": "27.2.19",
+  "release_name": "Install Onboarding Copy Clarity Patch",
   "build": "2026-05-29",
   "data_version": "2026-05-22",
-  "cache_version": "mmf-v27-2-18",
-  "notes": "First-install onboarding and PWA guidance release. Adds first-visit install help, first standalone launch welcome, permanent iPhone/Android install instructions, Android install prompt support where available, and PWA metadata hardening."
+  "cache_version": "mmf-v27-2-19",
+  "notes": "Install onboarding copy clarity patch. Clarifies first-install card copy, keeps iPhone/Android installation guidance visible, simplifies first installed launch welcome, and preserves schedule rows unchanged."
 }

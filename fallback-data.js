@@ -1,23 +1,23 @@
 window.MMF_FALLBACK_DATA = {
   "meta": {
     "app": "Mauritius Mass Finder",
-    "version": "27.2.18",
+    "version": "27.2.19",
     "generated_at": "2026-05-22T00:00:00+04:00",
-    "source": "Preserved validated schedule dataset; v27.2.18 adds first-install PWA guidance. Schedule rows unchanged from the previous validated release.",
+    "source": "Preserved validated schedule dataset; v27.2.19 clarifies first-install onboarding copy. Schedule rows unchanged from the previous validated release.",
     "row_count": 395,
     "parish_count": 47,
     "site_count": 117,
     "mass_rows": 379,
     "other_rows": 16,
-    "notes": "First-install onboarding/PWA guidance release. Schedule rows unchanged from the previous validated release.",
+    "notes": "Install onboarding copy clarity patch. Schedule rows unchanged from the previous validated release.",
     "coordinate_update": "All retained runtime sites have coordinates and coordinate precision labels. One unsupported hidden non-Mass row was removed from runtime data.",
     "directions_update": "Directions use Google Maps text-query fallback for all sites; distance labels reflect coordinate precision, with non-exact coordinates shown approximately.",
-    "app_version": "27.2.18",
-    "release": "v27.2.18 First-Install Onboarding & PWA Guidance Release",
+    "app_version": "27.2.19",
+    "release": "v27.2.19 Install Onboarding Copy Clarity Patch",
     "last_verified": "2026-05-02",
     "sunday_obligation_rule": "In Mauritius, Saturday Masses from 3:00 pm are generally treated as Sunday obligation.",
     "sunday_obligation_rows": 188,
-    "release_name": "First-Install Onboarding & PWA Guidance Release",
+    "release_name": "Install Onboarding Copy Clarity Patch",
     "coordinate_precision_summary": {
       "approximate": 132,
       "exact_google_maps_pin": 209,
@@ -26,8 +26,8 @@ window.MMF_FALLBACK_DATA = {
     "build_date": "2026-05-29",
     "date": "2026-05-06",
     "data_version": "2026-05-22",
-    "cache_version": "mmf-v27-2-18",
-    "minimum_supported_cache": "mmf-v27-2-18",
+    "cache_version": "mmf-v27-2-19",
+    "minimum_supported_cache": "mmf-v27-2-19",
     "build": "2026-05-29",
     "language_rule": "Strict: English only if explicitly stated on the official diocesan source; otherwise Mass language defaults to French.",
     "english_mass_rows": 5,
@@ -56,7 +56,7 @@ window.MMF_FALLBACK_DATA = {
     "date_specific_occurrence_filter": "today/tomorrow date contexts filter rows through occurrence_rule validity; contextual notes do not control occurrence.",
     "time_filter_rule": "Visible filters: all day, morning (<12:00), afternoon (>=12:00). Soir/evening remains a hidden search alias mapped to afternoon. CSS integrity patch preserves prior time-filter behaviour.",
     "runtime_hardening": "Occurrence semantics patch preserves prior detail-sheet CSS, filter-sheet CSS, CSS integrity, and date-context fixes.",
-    "updated_at": "2026-05-28"
+    "updated_at": "2026-05-29"
   },
   "rows": [
     {
@@ -29290,9 +29290,9 @@ window.MMF_FALLBACK_DATA = {
       "context_note": ""
     }
   ],
-  "version": "27.2.18",
-  "release": "v27.2.18 First-Install Onboarding & PWA Guidance Release",
-  "cache_version": "mmf-v27-2-18",
+  "version": "27.2.19",
+  "release": "v27.2.19 Install Onboarding Copy Clarity Patch",
+  "cache_version": "mmf-v27-2-19",
   "updated_at": "2026-05-29",
-  "notes": "First-install onboarding and PWA guidance release. Adds first-visit install help, first standalone launch welcome, and permanent iPhone/Android installation instructions. Schedule rows unchanged."
+  "notes": "Install onboarding copy clarity patch. Schedule rows unchanged."
 };
