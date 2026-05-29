@@ -98,7 +98,7 @@ body.scrollLocked{overflow:hidden!important;touch-action:none!important;overscro
 .dateSep{grid-column:1/-1;margin:10px 2px 0;padding:6px 2px;color:var(--muted);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.06em}
 
 
-/* v27.2.17 Occurrence Semantics Patch. */
+/* v27.2.18 First-Install Onboarding & PWA Guidance Release. */
 .filterBtn{min-height:44px;padding:10px 14px;border-radius:14px;font-weight:950;box-shadow:0 6px 18px rgba(58,32,20,.07);white-space:nowrap;}
 .filterBtn.hasActiveFilters{background:var(--accentSoft);border-color:var(--line2);color:var(--accent);}
 .filterCount{display:inline-flex;align-items:center;justify-content:center;min-width:22px;height:22px;padding:0 7px;border-radius:999px;background:var(--accent);color:#fff;font-size:12px;font-weight:950;line-height:1;margin-left:2px;}
@@ -108,7 +108,7 @@ body.scrollLocked{overflow:hidden!important;touch-action:none!important;overscro
 @media(max-width:430px){.filterBtn{min-height:44px;padding:9px 12px}.headLine{align-items:flex-start}.headLine>div{min-width:0}.quickRow{gap:6px}.pill{min-height:40px}}
 
 
-/* v27.2.17 Occurrence Semantics Patch. */
+/* v27.2.18 First-Install Onboarding & PWA Guidance Release. */
 .sheet#filterSheet{display:flex!important;flex-direction:column!important;max-height:min(86dvh, calc(100dvh - 12px))!important;overflow:hidden!important;padding:14px 14px 0!important;margin-bottom:0!important;}
 .sheet#filterSheet .filterGroup{flex:0 0 auto;}
 .sheet#filterSheet{padding-bottom:0!important;bottom:calc(var(--navH) + env(safe-area-inset-bottom, 0px))!important;max-height:calc(100dvh - var(--navH) - env(safe-area-inset-bottom, 0px) - 12px)!important;}
@@ -117,7 +117,7 @@ body.scrollLocked{overflow:hidden!important;touch-action:none!important;overscro
 @media(max-width:430px){.sheet#filterSheet{border-radius:18px 18px 0 0;}.tag{padding:7px 10px;font-size:12px}.sheetHead{margin-bottom:6px}.filterGroup{margin:8px 0}.sheet#filterSheet .sheetFooter{padding-top:8px}}
 
 
-/* v27.2.17 Occurrence Semantics Patch. */
+/* v27.2.18 First-Install Onboarding & PWA Guidance Release. */
 .sheet#filterSheet{
   display:flex!important;
   flex-direction:column!important;
@@ -146,10 +146,10 @@ body.scrollLocked{overflow:hidden!important;touch-action:none!important;overscro
 }
 .sheet#filterSheet .sheetFooter .btn{width:100%!important;}
 
-/* v27.2.17 Occurrence Semantics Patch. */
+/* v27.2.18 First-Install Onboarding & PWA Guidance Release. */
 
 
-/* v27.2.17 Occurrence Semantics Patch. */
+/* v27.2.18 First-Install Onboarding & PWA Guidance Release. */
 .detailSheet{
   display:flex!important;
   flex-direction:column!important;
@@ -167,3 +167,22 @@ body.scrollLocked{overflow:hidden!important;touch-action:none!important;overscro
 }
 
 .toast{pointer-events:none!important;}
+
+
+/* v27.2.18 first-install onboarding */
+.installOnboardingCard{background:#fff;border:1px solid var(--line2);border-radius:18px;margin:10px 14px 8px;padding:14px 15px;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:space-between;gap:12px;position:relative;z-index:9}.installOnboardingCard h2{font-size:17px;line-height:1.15;margin:.15rem 0 .25rem;letter-spacing:-.025em}.installOnboardingCard p{margin:.2rem 0;color:var(--muted);font-size:13px}.installOnboardingCard .actions{margin-top:0;flex:0 0 auto}.installOnboardingCard.installed{border-color:#cfe8cf;background:#f7fff7}.installGuide summary{font-weight:900;color:var(--ink);cursor:pointer}.installWarning{background:var(--warn);border:1px solid #eadba6;border-radius:12px;padding:9px 10px;color:#5d4212!important}@media(max-width:560px){.installOnboardingCard{align-items:stretch;flex-direction:column}.installOnboardingCard .actions{display:flex}.installOnboardingCard .actions .btn{flex:1 1 auto}}
+
+/* v27.2.18 mobile filter sheet hardening */
+#filterSheet{display:flex;flex-direction:column;overflow:hidden;max-height:calc(86vh - env(safe-area-inset-bottom));padding-bottom:0;}
+#filterSheet .sheetBody{flex:1 1 auto;min-height:0;overflow:auto;-webkit-overflow-scrolling:touch;padding-bottom:10px;}
+#filterSheet .sheetFooter{flex:0 0 auto;position:sticky;bottom:0;background:#fff;padding:10px 0 calc(14px + env(safe-area-inset-bottom));border-top:1px solid var(--line);}
+#filterSheet{height:min(86vh, calc(100vh - 28px));}
+#filterSheet{position:fixed;}
+#filterSheet .sheetFooter{position:absolute!important;left:14px;right:14px;bottom:0!important;margin:0;background:#fff;z-index:2;}
+#filterSheet .sheetBody{padding-bottom:88px;}
+/* v27.2.18 definitive mobile filter viewport clamp */
+#filterSheet{top:max(24px, env(safe-area-inset-top));bottom:calc(var(--navH) + env(safe-area-inset-bottom));height:auto!important;max-height:none!important;}
+body.filtersOpen #filterSheet{transform:none!important;}
+body.filtersOpen #applyFilters{position:fixed!important;left:14px;right:14px;bottom:calc(var(--navH) + 14px + env(safe-area-inset-bottom));z-index:60;width:auto!important;}
+
+.filterGlobalApply{display:none;position:fixed;left:14px;right:14px;bottom:calc(var(--navH) + 14px + env(safe-area-inset-bottom));z-index:62;width:auto!important;}body.filtersOpen .filterGlobalApply{display:inline-flex;}

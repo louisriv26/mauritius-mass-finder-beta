@@ -1,7 +1,7 @@
 {
   "name": "Mauritius Mass Finder",
   "short_name": "Mass Finder",
-  "description": "Mauritius Mass Finder v27.2.17 — Occurrence Semantics Patch.",
+  "description": "Mauritius Mass Finder v27.2.18 — First-Install Onboarding & PWA Guidance Release.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
@@ -35,6 +35,6 @@
       "purpose": "maskable"
     }
   ],
-  "version": "27.2.17",
+  "version": "27.2.18",
   "id": "./"
 }
