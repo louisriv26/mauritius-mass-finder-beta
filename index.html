@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Mauritius Mass Finder v27.2.19</title>
+<title>Mauritius Mass Finder v27.2.26</title>
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#6f2c2c">
 <meta name="description" content="Find a Catholic Mass quickly anywhere in Mauritius.">
@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<a href="#results" class="skipLink sr-only" id="skipToResults">Skip to results</a>
 <div class="app" id="appRoot">
   <header class="hero" id="hero">
     <div class="heroTop">
@@ -52,6 +53,7 @@
 
   <main class="main">
     <section id="modeHero" aria-live="polite"></section>
+    <div class="dataNotice" id="dataNotice" role="status" aria-live="polite" hidden></div>
     <div class="headLine" id="resultsHead">
       <div><div class="contextLabel" id="contextLabel"></div><div class="resultCount" id="resultCount"></div></div>
       <button class="btn filterBtn" id="openFilters" type="button" aria-haspopup="dialog" aria-controls="filterSheet" aria-expanded="false">⚙ <span data-t="filters">Filters</span><span class="filterCount" id="filterCount" hidden></span></button>
