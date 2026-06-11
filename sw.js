@@ -1,6 +1,93 @@
+/* Stage 6N — non-highlighting PWA/offline/update hardening — prototype-98 */
+const CACHE_NAME = 'luisa-24h-prototype-98';
+const CACHE_PREFIX = 'luisa-24h-';
+const APP_SHELL = [
+  './',
+  './index.html',
+  './luisa_24_heures.html',
+  './manifest.json',
+  './version.json',
+  './icon-180.png',
+  './icon-192.png',
+  './icon-512.png'
+];
 
-const CACHE_NAME='mmf-v27-2-26';
-const CORE=['./','index.html','styles.css','app.js','config.js','version.json','manifest.json','data/masses.json','fallback-data.js','icon.svg','icons/icon-192.png','icons/icon-512.png','icons/icon-maskable-192.png','icons/icon-maskable-512.png'];
-self.addEventListener('install',event=>{self.skipWaiting();event.waitUntil(caches.open(CACHE_NAME).then(c=>c.addAll(CORE)).catch(err=>{console.warn('MMF precache failed',err);}));});
-self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE_NAME&&k.startsWith('mmf-')).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
-self.addEventListener('fetch',event=>{const req=event.request;if(req.method!=='GET')return;const url=new URL(req.url); if(url.pathname.endsWith('/version.json')){event.respondWith(fetch(req,{cache:'no-store'}).then(res=>{const copy=res.clone();caches.open(CACHE_NAME).then(c=>c.put(req,copy));return res}).catch(()=>caches.match(req)));return} if(url.pathname.endsWith('/data/masses.json')){event.respondWith(caches.match(req).then(cached=>{const fresh=fetch(req).then(res=>{const copy=res.clone();caches.open(CACHE_NAME).then(c=>c.put(req,copy));return res}).catch(()=>cached); if(cached){event.waitUntil(fresh.catch(()=>{}));return cached} return fresh}));return} event.respondWith(caches.match(req).then(cached=>cached||fetch(req).then(res=>{const copy=res.clone();caches.open(CACHE_NAME).then(c=>c.put(req,copy));return res}).catch(()=>caches.match('index.html'))));});
+async function cacheAppShell() {
+  const cache = await caches.open(CACHE_NAME);
+  await cache.addAll(APP_SHELL.map(url => new Request(url, { cache: 'reload' })));
+}
+
+self.addEventListener('install', event => {
+  event.waitUntil(cacheAppShell().then(() => self.skipWaiting()));
+});
+
+self.addEventListener('activate', event => {
+  event.waitUntil(
+    caches.keys()
+      .then(keys => Promise.all(keys
+        .filter(key => key.startsWith(CACHE_PREFIX) && key !== CACHE_NAME)
+        .map(key => caches.delete(key))))
+      .then(() => self.clients.claim())
+  );
+});
+
+self.addEventListener('message', event => {
+  if (event.data && event.data.type === 'SKIP_WAITING') self.skipWaiting();
+});
+
+async function putOkResponse(request, response) {
+  if (response && response.ok) {
+    const cache = await caches.open(CACHE_NAME);
+    await cache.put(request, response.clone());
+  }
+  return response;
+}
+
+async function networkFirst(request, fallbackUrls) {
+  try {
+    const response = await fetch(request, { cache: 'no-store' });
+    return await putOkResponse(request, response);
+  } catch (error) {
+    const cached = await caches.match(request);
+    if (cached) return cached;
+    for (const url of fallbackUrls || []) {
+      const fallback = await caches.match(url);
+      if (fallback) return fallback;
+    }
+    throw error;
+  }
+}
+
+async function cacheFirst(request, fallbackUrls) {
+  const cached = await caches.match(request);
+  if (cached) return cached;
+  try {
+    const response = await fetch(request);
+    return await putOkResponse(request, response);
+  } catch (error) {
+    for (const url of fallbackUrls || []) {
+      const fallback = await caches.match(url);
+      if (fallback) return fallback;
+    }
+    throw error;
+  }
+}
+
+self.addEventListener('fetch', event => {
+  const req = event.request;
+  if (req.method !== 'GET') return;
+  const url = new URL(req.url);
+  if (url.origin !== self.location.origin) return;
+
+  if (url.pathname.endsWith('/version.json')) {
+    event.respondWith(networkFirst(req, ['./version.json']));
+    return;
+  }
+
+  if (req.mode === 'navigate' || url.pathname.endsWith('/index.html') || url.pathname.endsWith('/luisa_24_heures.html')) {
+    event.respondWith(networkFirst(req, ['./index.html', './luisa_24_heures.html']));
+    return;
+  }
+
+  event.respondWith(cacheFirst(req, ['./index.html', './luisa_24_heures.html']));
+});

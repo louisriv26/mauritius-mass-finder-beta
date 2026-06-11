@@ -1,8 +1,12 @@
 {
-  "version": "27.2.26",
-  "release_name": "Stale Metadata Final Cleanup",
-  "build": "2026-06-04",
-  "data_version": "2026-06-04",
-  "cache_version": "mmf-v27-2-26",
-  "notes": "Stale metadata final cleanup release. Preserves current data, search, Near Me, My Churches, bilingual mode, update flow, offline/fallback support, and Saint-Paul Mass/exposition separation."
+  "version": "prototype-98",
+  "build_date": "2026-06-11",
+  "stage": "Stage 6O.1 — four-pass decisive evidence-gate repair — no runtime change",
+  "package": "luisa_24_heures_app_v98_stage6o_4pass_decisive_gate_repaired_locked.zip",
+  "app_version": "prototype-98",
+  "generated_at_utc": "2026-06-11T17:16:45Z",
+  "source_package": "luisa_24_heures_app_v98_stage6o_live_device_pwa_validation_pack_locked.zip",
+  "runtime_html_changed": false,
+  "real_device_status": "NOT_TESTED",
+  "runtime_change_scope": "Stage 6O.1 evidence classification/deploy metadata repair only. Runtime HTML and service-worker code unchanged; real-device gates remain NOT_TESTED."
 }
