@@ -1,12 +1,8 @@
 {
-  "version": "prototype-98",
-  "build_date": "2026-06-11",
-  "stage": "Stage 6O.1 — four-pass decisive evidence-gate repair — no runtime change",
-  "package": "luisa_24_heures_app_v98_stage6o_4pass_decisive_gate_repaired_locked.zip",
-  "app_version": "prototype-98",
-  "generated_at_utc": "2026-06-11T17:16:45Z",
-  "source_package": "luisa_24_heures_app_v98_stage6o_live_device_pwa_validation_pack_locked.zip",
-  "runtime_html_changed": false,
-  "real_device_status": "NOT_TESTED",
-  "runtime_change_scope": "Stage 6O.1 evidence classification/deploy metadata repair only. Runtime HTML and service-worker code unchanged; real-device gates remain NOT_TESTED."
+  "version": "27.3.0",
+  "release_name": "Source-Confirmed Schedule Corrections",
+  "build": "2026-06-21",
+  "data_version": "2026-06-21",
+  "cache_version": "mmf-v27-3-0",
+  "notes": "Source-confirmed schedule correction: Saint-Vincent-de-Paul Sunday Mass corrected from 09:00 to 09:30, and an inapplicable Saturday-obligation context note removed from the Friday Notre-Dame-de-la-Paix Mass. No UI, search-logic, coordinate, classification, or other schedule change."
 }
