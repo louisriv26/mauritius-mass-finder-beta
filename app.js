@@ -1,7 +1,7 @@
 
 'use strict';
-const APP_VERSION='27.3.1';
-const CACHE_NAME='mmf-v27-3-1';
+const APP_VERSION='27.3.2';
+const CACHE_NAME='mmf-v27-3-2';
 const NEAR_RADIUS_KM=12;
 const DAYS=['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'];
 const DAY_EN={Dimanche:'Sunday',Lundi:'Monday',Mardi:'Tuesday',Mercredi:'Wednesday',Jeudi:'Thursday',Vendredi:'Friday',Samedi:'Saturday'};

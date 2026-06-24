@@ -1,8 +1,8 @@
 {
-  "version": "27.3.1",
-  "release_name": "Search Index Rebuild",
+  "version": "27.3.2",
+  "release_name": "CSS Architecture Refactor",
   "build": "2026-06-24",
   "data_version": "2026-06-21",
-  "cache_version": "mmf-v27-3-1",
-  "notes": "Pipeline-generated release. Rebuilds search_text index with word-level deduplication fix (B-01). Data payload reduced from 1.88 MB to 519 KB. No schedule, UI, or classification changes."
+  "cache_version": "mmf-v27-3-2",
+  "notes": "CSS refactor: zero !important declarations (down from 103), one rule per element, token system with dark mode support. No schedule, data, or behaviour changes."
 }
