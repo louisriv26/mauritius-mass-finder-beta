@@ -1,8 +1,8 @@
 {
-  "version": "27.3.2",
-  "release_name": "CSS Architecture Refactor",
+  "version": "27.3.3",
+  "release_name": "Bug Fixes",
   "build": "2026-06-24",
   "data_version": "2026-06-21",
-  "cache_version": "mmf-v27-3-2",
-  "notes": "CSS refactor: zero !important declarations (down from 103), one rule per element, token system with dark mode support. No schedule, data, or behaviour changes."
+  "cache_version": "mmf-v27-3-3",
+  "notes": "rel() no longer shows '0m' when minutes are zero; dead code path removed; 23 unused translation keys removed; My Churches preview excludes past-today times."
 }
