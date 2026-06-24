@@ -3,6 +3,6 @@
   "release_name": "Phase 4 Occurrence Semantics",
   "build": "2026-06-24",
   "data_version": "2026-06-21",
-  "cache_version": "mmf-v27-3-5c",
+  "cache_version": "mmf-v27-3-5e",
   "notes": "Results grid now shows 'Already under way' section below upcoming Masses. In-progress Masses (within grace period) are visually separated rather than deprioritised."
 }
