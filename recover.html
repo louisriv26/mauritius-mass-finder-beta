@@ -41,9 +41,16 @@ async function repair(){
       // Only delete beta channel caches (mmf-beta-*) — do not touch production caches
       await Promise.all(keys.filter(k=>k.startsWith('mmf-beta-')).map(k=>caches.delete(k)));
     }
+    // Verify controller released — an old controlling SW may still hold this client briefly
+    const stillControlled=navigator.serviceWorker&&navigator.serviceWorker.controller;
     status.className='ok';
-    status.textContent='Done. Opening repaired app…';
-    setTimeout(()=>location.replace('./?recovered='+Date.now()),800);
+    if(stillControlled){
+      status.innerHTML='Cache cleared. <strong>To complete the repair:</strong> close this app completely, then reopen it from your Home Screen or browser.';
+    }else{
+      status.textContent='Done. Opening repaired app…';
+      // ?recovered= is explicitly bypassed by the service worker fetch handler
+      setTimeout(()=>location.replace('./?recovered='+Date.now()),800);
+    }
   }catch(e){
     status.className='err';
     status.textContent='Error: '+e.message+'. Please clear site data manually in your browser settings.';

@@ -190,7 +190,7 @@ function bind(){
   $('#updateRefresh').addEventListener('click',()=>forceUpdate());
   $('#updateDismiss').addEventListener('click',()=>{
     const banner=$('#updateBanner');
-    if(banner){storageSet('mmf_update_dismissed_'+(banner.dataset.latestVersion||APP_VERSION),'1');banner.classList.remove('show')}
+    if(banner){storageSet('mmf_update_dismissed_'+(banner.dataset.latestBuildId||banner.dataset.latestVersion||APP_VERSION),'1');banner.classList.remove('show')}
   });
   $('#updateHelp').addEventListener('click',()=>openMoreSection('updateHelp'));
 }

@@ -1,9 +1,9 @@
 {
-  "version": "27.3.7",
-  "release_name": "PWA Isolation + Recovery",
+  "version": "27.3.8",
+  "release_name": "PWA Recovery Completion",
   "build": "2026-06-24",
-  "build_id": "27.3.7-1",
+  "build_id": "27.3.8-1",
   "data_version": "2026-06-21",
-  "cache_version": "mmf-beta-v27-3-7",
-  "notes": "PWA isolation: channel-scoped caches (mmf-beta-*), scoped recover.html, race-free update handshake (controllerchange armed before reg.update), fatal precache failure, build_id for same-version detection."
+  "cache_version": "mmf-beta-v27-3-8",
+  "notes": "Network-first masses.json; ?recovered= SW bypass; build_id-scoped dismissal key; recover.html controller-null check with close/reopen fallback; pipeline-regenerated data metadata aligned to mmf-beta-v27-3-8."
 }
