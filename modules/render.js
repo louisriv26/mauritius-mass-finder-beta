@@ -14,6 +14,7 @@ import {
   toast,markSwipeHintSeen,updateSwipeAffordance
 } from './utils.js';
 import {
+  compute,
   effectiveDay,effectiveDayMode,effectiveTime,effectiveType,
   isDayFilterActive,isTimeFilterActive,
   nearScopeNotice,nearRecommendationLabel,
