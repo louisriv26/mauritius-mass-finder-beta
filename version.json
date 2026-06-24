@@ -1,8 +1,8 @@
 {
-  "version": "27.3.0",
-  "release_name": "Source-Confirmed Schedule Corrections",
-  "build": "2026-06-21",
+  "version": "27.3.1",
+  "release_name": "Search Index Rebuild",
+  "build": "2026-06-24",
   "data_version": "2026-06-21",
-  "cache_version": "mmf-v27-3-0",
-  "notes": "Source-confirmed schedule correction: Saint-Vincent-de-Paul Sunday Mass corrected from 09:00 to 09:30, and an inapplicable Saturday-obligation context note removed from the Friday Notre-Dame-de-la-Paix Mass. No UI, search-logic, coordinate, classification, or other schedule change."
+  "cache_version": "mmf-v27-3-1",
+  "notes": "Pipeline-generated release. Rebuilds search_text index with word-level deduplication fix (B-01). Data payload reduced from 1.88 MB to 519 KB. No schedule, UI, or classification changes."
 }
