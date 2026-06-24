@@ -1,4 +1,4 @@
-﻿export const DEFAULT_FILTERS={day:'',dayMode:'',time:'',region:'',type:'mass',siteUid:''};
+export const DEFAULT_FILTERS={day:'',dayMode:'',time:'',region:'',type:'mass',siteUid:''};
 export const state={query:'',parsed:{},filters:{...DEFAULT_FILTERS},location:null,near:false,nearExpanded:false,nearScope:'',mode:'home',moreSection:'help',modal:null,saved:new Set(),lang:'en',rows:[],results:[],next:null,loadError:'',dataStale:false,dataSource:'',detailRow:null,exactTimeStatus:null};
 export function getState(){return state}
 let _render=()=>{};

@@ -1,4 +1,4 @@
-﻿import {initApp,state,setState,DEFAULT_FILTERS} from './modules/state.js';
+import {initApp,state,setState,DEFAULT_FILTERS} from './modules/state.js';
 import {
   $,$$,storageGet,storageSet,storageRemove,tr,esc,
   visibleSiteName,siteName,dayName,

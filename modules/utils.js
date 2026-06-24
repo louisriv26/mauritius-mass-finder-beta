@@ -1,4 +1,4 @@
-﻿import {DAYS,DAY_EN,DAY_FR,NEAR_RADIUS_KM,APP_VERSION} from './constants.js';
+import {DAYS,DAY_EN,DAY_FR,NEAR_RADIUS_KM,APP_VERSION} from './constants.js';
 import {T} from './translations.js';
 import {state} from './state.js';
 export const $=s=>document.querySelector(s); export const $$=s=>[...document.querySelectorAll(s)];

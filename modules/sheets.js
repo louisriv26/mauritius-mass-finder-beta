@@ -1,4 +1,4 @@
-﻿import {state,setState} from './state.js';
+import {state,setState} from './state.js';
 import {$,$$,rowKey,nextDelta,distKm,rowLat,rowLon,mauritiusNow} from './utils.js';
 import {renderDetailSheet} from './render.js';
 import {stateUrl} from './search.js';

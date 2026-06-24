@@ -1,4 +1,4 @@
-﻿import {APP_VERSION} from './constants.js';
+import {APP_VERSION} from './constants.js';
 import {state,setState} from './state.js';
 import {
   $,$$,tr,esc,

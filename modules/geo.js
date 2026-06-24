@@ -1,4 +1,4 @@
-﻿import {state,setState} from './state.js';
+import {state,setState} from './state.js';
 let _onFail=()=>{};
 export function initGeo(fn){_onFail=fn;}
 export let locationRequestInFlight=false;

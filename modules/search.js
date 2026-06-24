@@ -1,4 +1,4 @@
-﻿import {DAYS,NEAR_RADIUS_KM} from './constants.js';
+import {DAYS,NEAR_RADIUS_KM} from './constants.js';
 import {state,setState,setFilters,DEFAULT_FILTERS} from './state.js';
 import {
   $,$$,tr,norm,normaliseSearchText,bool,mins,
