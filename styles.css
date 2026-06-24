@@ -721,6 +721,9 @@ body.filtersOpen #filterSheet { transform: translateY(0); }
 }
 .guideText ol, .guideText ul { margin: .35rem 0 .7rem 1.25rem; color: var(--muted); padding: 0; }
 .guideText li { margin: .2rem 0; }
+.guideActions { margin: 1rem 0 .5rem; }
+.guideDivider { border: none; border-top: 1px solid var(--border); margin: 1.25rem 0 .75rem; }
+.guideMuted { color: var(--muted); font-size: .875rem; margin: 0 0 .75rem; }
 
 /* === MEDIA QUERIES === */
 @media (min-width: 760px) {

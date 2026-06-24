@@ -29,7 +29,7 @@ import {
   deactivateSheetBackdrop
 } from './modules/sheets.js';
 import {requestLocation,initGeo,locationRequestInFlight} from './modules/geo.js';
-import {registerSW,checkUpdate,forceUpdate} from './modules/sw-bridge.js';
+import {registerSW,checkUpdate,forceUpdate,manualCheckUpdate} from './modules/sw-bridge.js';
 import {CACHE_NAME,APP_VERSION} from './modules/constants.js';
 
 initApp(render, stateUrl);
@@ -107,6 +107,7 @@ function handleDelegatedAction(e){
   const more=e.target.closest('[data-more-section]'); if(more){e.preventDefault(); openMoreSection(more.dataset.moreSection,false); return}
   const footer=e.target.closest('[data-footer-target]'); if(footer){e.preventDefault(); openMoreSection(footer.dataset.footerTarget); return}
   const share=e.target.closest('[data-share-app]'); if(share){e.preventDefault(); shareApp(); return}
+  const appAction=e.target.closest('[data-app-action]'); if(appAction){e.preventDefault(); if(appAction.dataset.appAction==='checkUpdate')manualCheckUpdate(); return}
 }
 function installDelegatedActions(){document.addEventListener('click',handleDelegatedAction)}
 function runSearchDiagnostics(){const tests=['àprès-midi Curepipe','matin Curepipe','soir Curepipe','messe après-midi Curepipe','messe matin Curepipe','messe soir Curepipe','afternoon Curepipe','morning Curepipe','evening Curepipe','messe du soir Curepipe','evening Mass Curepipe','messe demain','messe aujourd’hui','messe samedi soir','18h','18:00','6pm','sacre coeur','saint jean','st jean','église','eglise']; const now=getMauritiusNow(new Date('2026-05-07T05:00:00+04:00')); return tests.map(q=>{const st={...state,query:q,filters:{...DEFAULT_FILTERS},mode:'search',near:false}; const out=getVisibleResults(st,now); return {query:q,count:out.results.length,top:out.results[0]?visibleSiteName(out.results[0]):null,pass:out.results.length>0}})}

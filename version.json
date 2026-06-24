@@ -3,6 +3,6 @@
   "release_name": "Modular Architecture — Bug Fixes",
   "build": "2026-06-24",
   "data_version": "2026-06-21",
-  "cache_version": "mmf-v27-3-6b",
+  "cache_version": "mmf-v27-3-6c",
   "notes": "Fixes: missing imports (confidenceScore, DAY_FR, DAY_EN), fallback data exposure, under-way card row key, typed Near Me lifecycle, My Churches toggle, trust date, result cap, dark mode removed, SW controllerchange update handshake."
 }

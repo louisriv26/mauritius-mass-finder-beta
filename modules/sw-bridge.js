@@ -31,4 +31,5 @@ export async function forceUpdate(){
   location.replace(location.origin+location.pathname+location.hash);
 }
 export async function checkUpdate(){try{const res=await fetch('version.json?ts='+Date.now(),{cache:'no-store'});const v=await res.json(); if(v.version&&v.version!==APP_VERSION&&!storageGet('mmf_update_dismissed_'+v.version)){const banner=$('#updateBanner'); banner.dataset.latestVersion=v.version; banner.classList.add('show')}}catch(e){}}
+export async function manualCheckUpdate(){try{const res=await fetch('version.json?ts='+Date.now(),{cache:'no-store'});const v=await res.json(); if(v.version&&v.version!==APP_VERSION){const banner=$('#updateBanner'); banner.dataset.latestVersion=v.version; banner.classList.add('show'); storageRemove('mmf_update_dismissed_'+v.version); forceUpdate()}else{toast(tr('checkUpToDate'))}}catch(e){toast(tr('checkUpToDate'))}}
 export async function registerSW(){if(!('serviceWorker'in navigator))return; try{await navigator.serviceWorker.register('sw.js',{updateViaCache:'none'})}catch(e){}}

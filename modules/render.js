@@ -124,7 +124,7 @@ export function moreSectionContent(){
     help:{id:'helpSection',title:tr('helpTitle'),body:tr('helpHtml')},
     install:{id:'installSection',title:tr('installTab'),body:installInstructionsHtml()},
     about:{id:'aboutSection',title:tr('aboutTitle'),body:`<div class="guideText">${tr('aboutHtml')}</div>`},
-    update:{id:'howToUpdateSection',title:tr('updateGuideTitle'),body:`<div class="guideText">${tr('updateGuideHtml')}</div>`},
+    update:{id:'howToUpdateSection',title:tr('updateGuideTitle'),body:`<div class="guideText">${tr('updateGuideHtml')}</div><div class="guideActions"><button class="btn primary" data-app-action="checkUpdate">${esc(tr('checkForUpdate'))}</button></div><hr class="guideDivider"><p class="guideMuted">${esc(tr('repairAppDesc'))}</p><div class="guideActions"><a class="btn" href="recover.html">${esc(tr('repairApp'))}</a></div>`},
     report:{id:'reportSection',title:tr('reportIssue'),body:`<div class="guideText"><p>${esc(tr('trustText'))}</p><p><a class="btn primary" href="${esc(reportUrl(null))}">${esc(tr('reportIssue'))}</a></p></div>`}
   };
   return sections[state.moreSection]||sections.help;
