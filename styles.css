@@ -1,4 +1,4 @@
-
+﻿
 /* === TOKENS === */
 :root {
   --bg: #fbf7f2;
@@ -374,6 +374,17 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: .06em;
+}
+.sectionSep {
+  grid-column: 1 / -1;
+  margin: 20px 2px 4px;
+  padding: 8px 2px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  border-top: 1px solid var(--border);
 }
 
 /* === CARDS === */
