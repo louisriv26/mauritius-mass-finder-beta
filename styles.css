@@ -21,18 +21,6 @@
   --navH: 74px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #1a1210;
-    --bg2: #1f1613;
-    --card: #241a18;
-    --ink: #f0e8e3;
-    --muted: #a8988f;
-    --soft: #8a7a72;
-    --line: #3d2d28;
-    --line2: #4d3630;
-    --accentSoft: #3d1e1e;
-  }
 }
 
 /* === RESET + BASE === */

@@ -1,8 +1,8 @@
 {
-  "version": "27.3.5",
-  "release_name": "Phase 4 Occurrence Semantics",
+  "version": "27.3.6",
+  "release_name": "Modular Architecture — Bug Fixes",
   "build": "2026-06-24",
   "data_version": "2026-06-21",
-  "cache_version": "mmf-v27-3-5e",
-  "notes": "Results grid now shows 'Already under way' section below upcoming Masses. In-progress Masses (within grace period) are visually separated rather than deprioritised."
+  "cache_version": "mmf-v27-3-6",
+  "notes": "Fixes: missing imports (confidenceScore, DAY_FR, DAY_EN), fallback data exposure, under-way card row key, typed Near Me lifecycle, My Churches toggle, trust date, result cap, dark mode removed, SW controllerchange update handshake."
 }

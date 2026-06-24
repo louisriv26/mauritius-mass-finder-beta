@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Repair — Mauritius Mass Finder</title>
+<style>
+  body{font-family:system-ui,sans-serif;max-width:480px;margin:40px auto;padding:20px;color:#241914}
+  h1{color:#6f2c2c}
+  .btn{display:inline-block;padding:12px 24px;background:#6f2c2c;color:#fff;border:none;border-radius:12px;font-size:1rem;cursor:pointer;margin-top:16px}
+  .btn:disabled{opacity:.5;cursor:not-allowed}
+  #status{margin-top:16px;padding:12px;border-radius:8px;background:#f5e7df}
+  .ok{background:#eef8ee!important}
+  .err{background:#fff0f0!important}
+</style>
+</head>
+<body>
+<h1>Repair App Cache</h1>
+<p>This page clears the Mauritius Mass Finder service worker and cache so the app can reload cleanly.</p>
+<p><strong>Your saved churches and language preference will be kept.</strong></p>
+<button class="btn" id="repairBtn" onclick="repair()">Repair this app</button>
+<div id="status" hidden></div>
+<script>
+async function repair(){
+  const btn=document.getElementById('repairBtn');
+  const status=document.getElementById('status');
+  btn.disabled=true;
+  status.hidden=false;
+  status.textContent='Unregistering service worker…';
+  try{
+    if('serviceWorker' in navigator){
+      const regs=await navigator.serviceWorker.getRegistrations();
+      await Promise.all(regs.map(r=>r.unregister()));
+    }
+    status.textContent='Clearing app cache…';
+    if('caches' in window){
+      const keys=await caches.keys();
+      await Promise.all(keys.filter(k=>k.startsWith('mmf-')).map(k=>caches.delete(k)));
+    }
+    status.className='ok';
+    status.textContent='Done. Opening repaired app…';
+    setTimeout(()=>location.replace('./?recovered='+Date.now()),800);
+  }catch(e){
+    status.className='err';
+    status.textContent='Error: '+e.message+'. Please clear site data manually in your browser settings.';
+    btn.disabled=false;
+  }
+}
+</script>
+</body>
+</html>

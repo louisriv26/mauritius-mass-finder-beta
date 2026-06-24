@@ -1,4 +1,4 @@
-import {DAYS,NEAR_RADIUS_KM} from './constants.js';
+import {DAYS,NEAR_RADIUS_KM,DAY_FR,DAY_EN} from './constants.js';
 import {state,setState,setFilters,DEFAULT_FILTERS} from './state.js';
 import {
   $,$$,tr,norm,normaliseSearchText,bool,mins,
@@ -7,7 +7,7 @@ import {
   parseMassTime,isSundayEligible,countsForSundayContext,massGraceMinutes,
   dateSerial,isRuleValidForDate,dateContextFor,isValidForDateContext,
   nextDelta,getNextOccurrence,isPastMass,
-  distKm,isExactCoordinate,
+  distKm,isExactCoordinate,confidenceScore,
   semanticReplaceNormalized,hasAnyPhrase,isNearIntentText,isEveningIntentText,
   isEnglishIntentText,isFirstFridayIntentText,stripStopwords,
   rowIsEnglish,rowIsFirstFriday,

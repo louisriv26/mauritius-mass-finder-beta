@@ -98,8 +98,8 @@ function handleDelegatedAction(e){
   const installAction=e.target.closest('[data-install-action]'); if(installAction){e.preventDefault(); handleInstallAction(installAction.dataset.installAction); return}
   const chip=e.target.closest('[data-chip]'); if(chip){e.preventDefault(); clearFilter(chip.dataset.chip); return}
   const filter=e.target.closest('[data-filter]'); if(filter){e.preventDefault(); applyFilter(filter.dataset.filter,filter.dataset.value); return}
-  const detailBtn=e.target.closest('[data-detail-row]'); if(detailBtn){e.preventDefault(); const r=state.results[+detailBtn.dataset.detailRow]; if(r)openDetailSheet(r,detailBtn); return}
-  const saveBtn=e.target.closest('[data-save]'); if(saveBtn){e.preventDefault(); const r=state.results[+saveBtn.dataset.save]; if(r)toggleSave(r); return}
+  const detailBtn=e.target.closest('[data-row-key]'); if(detailBtn){e.preventDefault(); const k=detailBtn.dataset.rowKey; const r=state.results.find(x=>x.id===k||(x.id==null&&rowKey(x)===k)); if(r)openDetailSheet(r,detailBtn); return}
+  const saveBtn=e.target.closest('[data-save-key]'); if(saveBtn){e.preventDefault(); const k=saveBtn.dataset.saveKey; const r=state.results.find(x=>x.id===k||(x.id==null&&rowKey(x)===k)); if(r)toggleSave(r); return}
   const showSiteBtn=e.target.closest('[data-show-site]'); if(showSiteBtn){e.preventDefault(); const g=savedGroups()[+showSiteBtn.dataset.showSite]; if(g)showSite(g.first); return}
   const unsaveBtn=e.target.closest('[data-unsave-site]'); if(unsaveBtn){e.preventDefault(); const g=savedGroups()[+unsaveBtn.dataset.unsaveSite]; if(g)toggleSave(g.first); return}
   const nextAction=e.target.closest('[data-next-action]'); if(nextAction){e.preventDefault(); const a=nextAction.dataset.nextAction; if(a==='locate')requestLocation(); if(a==='share'&&state.next)shareResult(state.next); if(a==='save'&&state.next)toggleSave(state.next); return}
@@ -144,7 +144,10 @@ function bind(){
   restoreStateFromHash();
   $('#searchInput').addEventListener('input',e=>{
     clearTimeout(searchDebounceTimer);
-    searchDebounceTimer=setTimeout(()=>setState({query:e.target.value||''},{url:true}),200);
+    searchDebounceTimer=setTimeout(()=>{
+      setState({query:e.target.value||''},{url:true});
+      if(state.parsed&&state.parsed.near&&!state.near)toggleNearMode();
+    },200);
   });
   $('#clearSearch').addEventListener('click',()=>{
     clearAllFilters();
@@ -163,7 +166,7 @@ function bind(){
   $$('.navBtn[data-nav]').forEach(btn=>btn.addEventListener('click',()=>{
     const nav=btn.dataset.nav;
     if(nav==='home'){clearAllFilters();setState({query:'',mode:'home'},{url:true,syncInput:true});}
-    else if(nav==='saved')setState({mode:'saved'},{url:true});
+    else if(nav==='saved'){if(state.mode==='saved')clearAllFilters();else setState({mode:'saved'},{url:true})}
     else if(nav==='near')toggleNearMode();
     else if(nav==='more')setState({mode:'more'},{url:true});
   }));
@@ -172,7 +175,7 @@ function bind(){
     if(a==='today'||a==='tomorrow')toggleQuickDay(a);
     else if(a==='morning'||a==='afternoon'||a==='evening')toggleQuickTime(a);
     else if(a==='near')toggleNearMode();
-    else if(a==='saved')setState({mode:'saved'},{url:true});
+    else if(a==='saved'){if(state.mode==='saved')clearAllFilters();else setState({mode:'saved'},{url:true})}
   }));
   document.addEventListener('keydown',e=>{
     if(e.key==='Escape'){
