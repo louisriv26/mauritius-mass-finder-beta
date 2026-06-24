@@ -1,8 +1,9 @@
 {
-  "version": "27.3.6",
-  "release_name": "Modular Architecture — Bug Fixes",
+  "version": "27.3.7",
+  "release_name": "PWA Isolation + Recovery",
   "build": "2026-06-24",
+  "build_id": "27.3.7-1",
   "data_version": "2026-06-21",
-  "cache_version": "mmf-v27-3-6e",
-  "notes": "Fixes: missing imports (confidenceScore, DAY_FR, DAY_EN), fallback data exposure, under-way card row key, typed Near Me lifecycle, My Churches toggle, trust date, result cap, dark mode removed, SW controllerchange update handshake."
+  "cache_version": "mmf-beta-v27-3-7",
+  "notes": "PWA isolation: channel-scoped caches (mmf-beta-*), scoped recover.html, race-free update handshake (controllerchange armed before reg.update), fatal precache failure, build_id for same-version detection."
 }
