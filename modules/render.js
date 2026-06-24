@@ -1,7 +1,7 @@
-import {APP_VERSION} from './constants.js';
+import {APP_VERSION,DAYS} from './constants.js';
 import {state,setState} from './state.js';
 import {
-  $,$$,tr,esc,
+  $,$$,tr,esc,norm,
   storageGet,storageSet,
   mauritiusNow,dayName,todayName,
   rowMass,rowActive,siteName,visibleSiteName,
