@@ -1,9 +1,9 @@
 {
-  "version": "27.3.8",
-  "release_name": "PWA Recovery Completion",
-  "build": "2026-06-24",
-  "build_id": "27.3.8-1",
+  "version": "27.3.9",
+  "release_name": "Boot and Artifact Integrity Repair",
+  "build": "2026-06-25",
+  "build_id": "27.3.9-1",
   "data_version": "2026-06-21",
-  "cache_version": "mmf-beta-v27-3-8",
-  "notes": "Network-first masses.json; ?recovered= SW bypass; build_id-scoped dismissal key; recover.html controller-null check with close/reopen fallback; pipeline-regenerated data metadata aligned to mmf-beta-v27-3-8."
+  "cache_version": "mmf-beta-v27-3-9",
+  "notes": "Fix P0: two U+2019 typographic apostrophes used as JS string delimiters in translations.js FR section, causing full ES module parse failure. Add static boot-fallback recovery link. Fix C-REL-07 recover.html error path. Fresh cache identity mmf-beta-v27-3-9."
 }

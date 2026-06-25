@@ -53,7 +53,7 @@ async function repair(){
     }
   }catch(e){
     status.className='err';
-    status.textContent='Error: '+e.message+'. Please clear site data manually in your browser settings.';
+    status.textContent='Error: '+e.message+'. Close the app completely and reopen it from your browser, or try again.';
     btn.disabled=false;
   }
 }

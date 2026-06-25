@@ -194,4 +194,4 @@ function bind(){
   });
   $('#updateHelp').addEventListener('click',()=>openMoreSection('updateHelp'));
 }
-document.addEventListener('DOMContentLoaded',()=>{try{resetInteractionState();installDelegatedActions();bind();bindSheetDrag();renderInstallOnboarding();loadData();registerSW();checkUpdate();setInterval(checkUpdate,30*60*1000)}catch(e){showInitFailure(e)}});
+document.addEventListener('DOMContentLoaded',()=>{const bf=document.getElementById('bootFallback');if(bf)bf.hidden=true;try{resetInteractionState();installDelegatedActions();bind();bindSheetDrag();renderInstallOnboarding();loadData();registerSW();checkUpdate();setInterval(checkUpdate,30*60*1000)}catch(e){showInitFailure(e)}});
