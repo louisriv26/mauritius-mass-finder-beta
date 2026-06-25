@@ -1,9 +1,9 @@
 {
-  "version": "27.3.9",
-  "release_name": "Boot and Artifact Integrity Repair",
+  "version": "27.3.10",
+  "release_name": "Data Truthfulness and Recovery Governance",
   "build": "2026-06-25",
-  "build_id": "27.3.9-1",
+  "build_id": "27.3.10-1",
   "data_version": "2026-06-21",
-  "cache_version": "mmf-beta-v27-3-9",
-  "notes": "Fix P0: two U+2019 typographic apostrophes used as JS string delimiters in translations.js FR section, causing full ES module parse failure. Add static boot-fallback recovery link. Fix C-REL-07 recover.html error path. Fresh cache identity mmf-beta-v27-3-9."
+  "cache_version": "mmf-beta-v27-3-10",
+  "notes": "P1: cache/fallback renders immediately show stale-data notice until network confirms freshness. P1: trust line uses batch-reconciled wording instead of Verified for batch-only rows. P1: showInitFailure re-exposes recovery link; bootFallback hidden only after loadData first render. Governance: C-REL-04 now requires version increment for every repair build."
 }

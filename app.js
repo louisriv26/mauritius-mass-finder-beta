@@ -70,14 +70,14 @@ async function loadData(){
       if(cached){
         const json=await cached.clone().json();
         rendered=applyRows(json);
-        if(rendered){setState({dataStale:false,dataSource:'cache'},{render:false});render();openHashRowIfNeeded();}
+        if(rendered){setState({dataStale:true,dataSource:'cache'},{render:false});render();openHashRowIfNeeded();const bf=document.getElementById('bootFallback');if(bf)bf.hidden=true;}
       }
     }
   }catch(e){}
   if(!rendered){
     try{
       rendered=applyRows(window.MMF_FALLBACK_DATA||{});
-      if(rendered){setState({dataStale:false,dataSource:'fallback'},{render:false});render();openHashRowIfNeeded();}
+      if(rendered){setState({dataStale:true,dataSource:'fallback'},{render:false});render();openHashRowIfNeeded();const bf=document.getElementById('bootFallback');if(bf)bf.hidden=true;}
     }catch(e){}
   }
   try{
@@ -89,6 +89,7 @@ async function loadData(){
     setState({dataStale:false,dataSource:'network',loadError:''},{render:false});
     render();
     openHashRowIfNeeded();
+    const bf=document.getElementById('bootFallback');if(bf)bf.hidden=true;
   }catch(e){
     if(rendered)setState({dataStale:true},{render:true});
     else setState({loadError:String(e),dataStale:false});
@@ -135,6 +136,7 @@ function showInitFailure(e){
   try{
     console.error('MMF init failed',e);
     document.body.classList.remove('modalOpen','scrollLocked','filtersOpen','detailOpen');
+    const bf=document.getElementById('bootFallback');if(bf)bf.hidden=false;
     const root=$('#results')||document.body;
     const msg=(state&&state.lang==='fr')?'Problème de chargement de l’application. Veuillez actualiser.':'App loading problem. Please refresh.';
     root.innerHTML=`<div class="empty error"><h3>${esc(msg)}</h3></div>`;
@@ -194,4 +196,4 @@ function bind(){
   });
   $('#updateHelp').addEventListener('click',()=>openMoreSection('updateHelp'));
 }
-document.addEventListener('DOMContentLoaded',()=>{const bf=document.getElementById('bootFallback');if(bf)bf.hidden=true;try{resetInteractionState();installDelegatedActions();bind();bindSheetDrag();renderInstallOnboarding();loadData();registerSW();checkUpdate();setInterval(checkUpdate,30*60*1000)}catch(e){showInitFailure(e)}});
+document.addEventListener('DOMContentLoaded',()=>{try{resetInteractionState();installDelegatedActions();bind();bindSheetDrag();renderInstallOnboarding();loadData();registerSW();checkUpdate();setInterval(checkUpdate,30*60*1000)}catch(e){showInitFailure(e)}});

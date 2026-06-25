@@ -1,4 +1,4 @@
-const CACHE_NAME='mmf-beta-v27-3-9';
+const CACHE_NAME='mmf-beta-v27-3-10';
 const CORE=['./','index.html','styles.css','app.js','config.js','version.json','manifest.json','data/masses.json','fallback-data.js','recover.html','icon.svg','icons/icon-192.png','icons/icon-512.png','icons/icon-maskable-192.png','icons/icon-maskable-512.png','modules/constants.js','modules/translations.js','modules/state.js','modules/utils.js','modules/geo.js','modules/search.js','modules/render.js','modules/sheets.js','modules/sw-bridge.js'];
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE_NAME).then(c=>c.addAll(CORE)));});
 self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE_NAME&&k.startsWith('mmf-beta-')).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
