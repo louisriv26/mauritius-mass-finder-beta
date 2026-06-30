@@ -1,9 +1,9 @@
 {
-  "version": "27.3.10",
-  "release_name": "Data Truthfulness and Recovery Governance",
+  "version": "27.3.11",
+  "release_name": "Quick Day Filter Fix",
   "build": "2026-06-25",
-  "build_id": "27.3.10-1",
+  "build_id": "27.3.11-1",
   "data_version": "2026-06-21",
-  "cache_version": "mmf-beta-v27-3-10",
-  "notes": "P1: cache/fallback renders immediately show stale-data notice until network confirms freshness. P1: trust line uses batch-reconciled wording instead of Verified for batch-only rows. P1: showInitFailure re-exposes recovery link; bootFallback hidden only after loadData first render. Governance: C-REL-04 now requires version increment for every repair build."
+  "cache_version": "mmf-beta-v27-3-11",
+  "notes": "Fix P0: toggleQuickDay('today'/'tomorrow') passed raw string to applyFilter instead of '__today'/'__tomorrow', causing dayMode='calendar' and effectiveDay to return literal 'today'/'tomorrow' — matching no corpus rows. Also fixes chip label showing English in FR mode."
 }

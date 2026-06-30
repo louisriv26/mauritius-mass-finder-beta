@@ -183,8 +183,9 @@ export function applyFilter(key,value,options={url:true}){
   setState({...patch,filters:nextFilters},options);
 }
 export function toggleQuickDay(value){
-  if(isDayFilterActive(value))clearIntent('day',{url:true});
-  else applyFilter('day',value,{url:true});
+  const mapped=value==='today'?'__today':value==='tomorrow'?'__tomorrow':value;
+  if(isDayFilterActive(mapped))clearIntent('day',{url:true});
+  else applyFilter('day',mapped,{url:true});
 }
 export function toggleQuickTime(value){
   if(isTimeFilterActive(value))clearIntent('time',{url:true});
