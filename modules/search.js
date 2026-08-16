@@ -7,6 +7,7 @@ import {
   parseMassTime,isSundayEligible,countsForSundayContext,massGraceMinutes,
   dateSerial,isRuleValidForDate,dateContextFor,isValidForDateContext,
   nextDelta,getNextOccurrence,isPastMass,
+  feastForOccurrence,
   distKm,isExactCoordinate,confidenceScore,
   semanticReplaceNormalized,hasAnyPhrase,isNearIntentText,isEveningIntentText,
   isEnglishIntentText,isFirstFridayIntentText,stripStopwords,
@@ -264,6 +265,7 @@ export function annotateRowForRanking(r,now=mauritiusNow(),st=state){
   r._actionable=rowMass(r)&&!r._past&&r._delta<999999;
   const loc=st&&st.location;
   r._dist=loc?distKm(loc.lat,loc.lon,rowLat(r),rowLon(r)):null;
+  r._feast=occurrence?feastForOccurrence(occurrence,st&&st.feastDates,now):null;
   return r;
 }
 export function rankGroup(r){return r._inProgress?1:0}

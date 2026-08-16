@@ -1,9 +1,9 @@
 {
-  "version": "27.3.11",
-  "release_name": "Quick Day Filter Fix",
-  "build": "2026-06-25",
-  "build_id": "27.3.11-1",
+  "version": "27.4.1",
+  "release_name": "Feast Day Awareness — Announced State",
+  "build": "2026-08-16",
+  "build_id": "27.4.1-1",
   "data_version": "2026-06-21",
-  "cache_version": "mmf-beta-v27-3-11",
-  "notes": "Fix P0: toggleQuickDay('today'/'tomorrow') passed raw string to applyFilter instead of '__today'/'__tomorrow', causing dayMode='calendar' and effectiveDay to return literal 'today'/'tomorrow' — matching no corpus rows. Also fixes chip label showing English in FR mode."
+  "cache_version": "mmf-beta-v27-4-1",
+  "notes": "Feast-date calendar shipped in masses.json meta.feast_dates (Toussaint 2026-11-01, Noël 2026-12-25). When a rendered result's next occurrence falls within 14 days on a feast date: results strip warns that times may change, date separators append the feast label, hero card carries a warning band, and Mass cards carry a feast banner. No override/schedule data yet — Announced state only, see 09_MMF_Feast_Experience_Design.md."
 }

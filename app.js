@@ -60,7 +60,7 @@ function loadSavedChurches(){
   }catch(e){storageRemove('mmf_my_churches')}
   return new Set();
 }
-function applyRows(json){const rows=(json&&json.rows)||json||[]; if(Array.isArray(rows)&&rows.length){setState({rows:rows.filter(rowActive)},{render:false}); return true} return false}
+function applyRows(json){const rows=(json&&json.rows)||json||[]; if(Array.isArray(rows)&&rows.length){setState({rows:rows.filter(rowActive),feastDates:(json&&json.meta&&json.meta.feast_dates)||[]},{render:false}); return true} return false}
 async function loadData(){
   setState({saved:loadSavedChurches()},{render:false});
   let rendered=false;

@@ -53,6 +53,16 @@ export function isInProgressMass(row,now=mauritiusNow()){
   return elapsed!=null&&elapsed>0&&elapsed<=massGraceMinutes(row);
 }
 export function dateSerial(d){return Math.floor(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate())/86400000)}
+export function feastDateSerial(dateStr){const d=new Date(dateStr+'T00:00:00');return dateSerial(d)}
+export function feastForOccurrence(occurrence,feastDates,now=mauritiusNow(),horizonDays=14){
+  if(!(occurrence instanceof Date)||Number.isNaN(+occurrence))return null;
+  if(!Array.isArray(feastDates)||!feastDates.length)return null;
+  const occSerial=dateSerial(occurrence),nowSerial=dateSerial(now);
+  const diff=occSerial-nowSerial;
+  if(diff<0||diff>horizonDays)return null;
+  return feastDates.find(f=>feastDateSerial(f.date)===occSerial)||null;
+}
+export function feastLabel(feast){return feast?(state.lang==='fr'?feast.label_fr:feast.label_en):''}
 export function weekOfMonth(d){return Math.floor((d.getDate()-1)/7)+1}
 export function isLastWeekdayOfMonth(d){const x=new Date(d);x.setDate(x.getDate()+7);return x.getMonth()!==d.getMonth()}
 export function isOccurrenceRuleCandidate(t){
