@@ -1,9 +1,9 @@
 {
-  "version": "27.4.7",
-  "release_name": "Classification fix + 3 further Masses",
+  "version": "27.4.8",
+  "release_name": "Remove 9 Masses absent from the diocese pages",
   "build": "2026-08-17",
-  "build_id": "27.4.7-1",
+  "build_id": "27.4.8-1",
   "data_version": "2026-08-17",
-  "cache_version": "mmf-beta-v27-4-7",
-  "notes": "Fixed a <br> inside <b> parser defect that had been gluing day names to times all along. That exposed a class never compared before: Mass vs non-Mass classification. Sainte-Therese-d'Avila had Thursday and Friday swapped - the corpus marked Thursday 07:00 a Mass when the page says 'celebration par des laics', and Friday 07:00 a lay celebration when the page says Mass. Corrected. Added 3 more Masses (Coeur-Immacule Monday 11:00, Saint-Joseph Surinam Friday 07:00, Notre-Dame-de-Fatima Triolet Sunday 10:00 English first-Sunday). 422 rows / 392 Mass."
+  "cache_version": "mmf-beta-v27-4-8",
+  "notes": "Removed 9 Mass rows that no diocese page lists, on Louis explicit instruction after reviewing each one. This overrides the default reading of C-DATA-02 (absence is not evidence of removal) as a deliberate editorial choice that the app mirrors the official site. Removed rows archived in pipeline/removed_rows_2026-08-17.json and restorable. Two sites disappear entirely: Bon-Pasteur/Baie du Tombeau and Dans les quartiers/Plaine Magnien. Four other corpus-only rows were deliberately NOT removed - the pages do publish them and the scraper had misclassified them as non-Mass."
 }
