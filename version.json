@@ -1,9 +1,9 @@
 {
-  "version": "27.4.2",
-  "release_name": "Source Link Repair — diocese site restructure",
+  "version": "27.4.3",
+  "release_name": "Schedule Reconciliation — 6 confirmed time changes",
   "build": "2026-08-17",
-  "build_id": "27.4.2-1",
-  "data_version": "2026-06-21",
-  "cache_version": "mmf-beta-v27-4-2",
-  "notes": "The Diocese of Port Louis restructured its website: all 47 /diocese/les-paroisses/... URLs recorded in the corpus now return 404, so every 'Source' link in the app was dead. Remapped all 410 rows to the new /paroisses-messes/<slug>/ structure. 111 distinct URLs, all verified HTTP 200. Schedule data untouched — source_url is the only field changed (verified via pipeline diff)."
+  "build_id": "27.4.3-1",
+  "data_version": "2026-08-17",
+  "cache_version": "mmf-beta-v27-4-3",
+  "notes": "Reconciled all 410 rows against the diocese's new /paroisses-messes/ pages (scraped 2026-08-17). 80 sites identical, 31 differing, 61 differences found. Applied ONLY the 6 same-day time changes, each quoted from the page text in the change register. The other 55 differences were NOT applied: absence from a page is not evidence of removal (C-DATA-02). row-0091 remains quarantined (C-DATA-03)."
 }
