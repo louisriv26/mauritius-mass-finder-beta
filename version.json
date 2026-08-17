@@ -1,9 +1,9 @@
 {
-  "version": "27.4.4",
-  "release_name": "Schedule Reconciliation — 2 further time changes after parser fix",
+  "version": "27.4.5",
+  "release_name": "Deep reconciliation — parser rebuilt, 2 further corrections",
   "build": "2026-08-17",
-  "build_id": "27.4.4-1",
+  "build_id": "27.4.5-1",
   "data_version": "2026-08-17",
-  "cache_version": "mmf-beta-v27-4-4",
-  "notes": "Re-checked the reconciliation after fixing two parser defects: time ranges ('07h00 a 18h ... exposition') were being read as two separate Masses, and Masses named at an off-site location were attributed to the wrong church. Replaced the +/-90min pairing rule with a structural one (exactly one corpus Mass and one site Mass on the same day = unambiguous change, whatever the gap). Found and applied 2 more corrections, including Immaculee-Conception Friday 06:30 -> 17:00, an 11-hour move the first pass missed. 8 time corrections total."
+  "cache_version": "mmf-beta-v27-4-5",
+  "notes": "Deep re-check. The parser was rebuilt to actually understand the diocese pages: 'Pas de messes' is now read as positive evidence of absence; OFFICES/LAUDES sub-sections are non-Mass; prose schedules are parsed; 'sauf jeudi' excludes rather than includes; time ranges are one event; off-site Masses are attributed to the church named; and duplicate listings across a parish page and a chapel page are de-duplicated. 10 time corrections in total across v27.4.3-27.4.5. Zero unambiguous differences remain. 3 sites where two official pages contradict each other are flagged, not silently changed."
 }
