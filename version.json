@@ -1,9 +1,9 @@
 {
-  "version": "27.4.6",
-  "release_name": "9 Mass rows added — site-only gap closed",
+  "version": "27.4.7",
+  "release_name": "Classification fix + 3 further Masses",
   "build": "2026-08-17",
-  "build_id": "27.4.6-1",
+  "build_id": "27.4.7-1",
   "data_version": "2026-08-17",
-  "cache_version": "mmf-beta-v27-4-6",
-  "notes": "Added the 9 Masses published on the diocese pages but missing from the corpus; 7 of the 9 are stated on two independent pages. Each row was cloned from an existing row of the SAME site, so coordinates, region, parish and precision metadata are inherited rather than invented. Corpus is now 419 rows / 389 Mass. SITE-ONLY differences are now zero. Introduced an accounting harness: every parsed schedule line must land in exactly one bucket (attributed or explicitly unattributed) - 516 in, 516 accounted for, 0 lost, 0 invented."
+  "cache_version": "mmf-beta-v27-4-7",
+  "notes": "Fixed a <br> inside <b> parser defect that had been gluing day names to times all along. That exposed a class never compared before: Mass vs non-Mass classification. Sainte-Therese-d'Avila had Thursday and Friday swapped - the corpus marked Thursday 07:00 a Mass when the page says 'celebration par des laics', and Friday 07:00 a lay celebration when the page says Mass. Corrected. Added 3 more Masses (Coeur-Immacule Monday 11:00, Saint-Joseph Surinam Friday 07:00, Notre-Dame-de-Fatima Triolet Sunday 10:00 English first-Sunday). 422 rows / 392 Mass."
 }
