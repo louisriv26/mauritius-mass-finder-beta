@@ -1,9 +1,9 @@
 {
-  "version": "27.4.1",
-  "release_name": "Feast Day Awareness — Announced State",
-  "build": "2026-08-16",
-  "build_id": "27.4.1-1",
+  "version": "27.4.2",
+  "release_name": "Source Link Repair — diocese site restructure",
+  "build": "2026-08-17",
+  "build_id": "27.4.2-1",
   "data_version": "2026-06-21",
-  "cache_version": "mmf-beta-v27-4-1",
-  "notes": "Feast-date calendar shipped in masses.json meta.feast_dates (Toussaint 2026-11-01, Noël 2026-12-25). When a rendered result's next occurrence falls within 14 days on a feast date: results strip warns that times may change, date separators append the feast label, hero card carries a warning band, and Mass cards carry a feast banner. No override/schedule data yet — Announced state only, see 09_MMF_Feast_Experience_Design.md."
+  "cache_version": "mmf-beta-v27-4-2",
+  "notes": "The Diocese of Port Louis restructured its website: all 47 /diocese/les-paroisses/... URLs recorded in the corpus now return 404, so every 'Source' link in the app was dead. Remapped all 410 rows to the new /paroisses-messes/<slug>/ structure. 111 distinct URLs, all verified HTTP 200. Schedule data untouched — source_url is the only field changed (verified via pipeline diff)."
 }
