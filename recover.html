@@ -16,12 +16,13 @@
 </head>
 <body>
 <h1>Repair App Cache</h1>
-<p>This page clears the Mauritius Mass Finder beta service worker and cache so the app can reload cleanly.</p>
+<p>This page clears this app's service worker and cache so it can reload cleanly.</p>
 <p><strong>Your saved churches and language preference will be kept.</strong></p>
-<p><em>Direct URL: <code>https://louisriv26.github.io/mauritius-mass-finder-beta/recover.html</code></em></p>
+<p><em>Direct URL: <code id="directUrl"></code></em></p>
 <button class="btn" id="repairBtn" onclick="repair()">Repair this app</button>
 <div id="status" hidden></div>
 <script>
+document.getElementById('directUrl').textContent=new URL('recover.html',location.href).href;
 async function repair(){
   const btn=document.getElementById('repairBtn');
   const status=document.getElementById('status');
@@ -29,17 +30,31 @@ async function repair(){
   status.hidden=false;
   status.textContent='Unregistering service worker…';
   try{
+    // This same file is deployed to both the production and beta channels, which
+    // share one GitHub Pages origin. Never hardcode a channel name here — that is
+    // what silently made this page a no-op on production after it was copied over
+    // from beta unchanged (channel detection always matched beta, never prod).
+    // Instead, read this deployment's OWN sw.js to learn its own CACHE_NAME, and
+    // only ever touch this channel's own registration and caches.
+    const swSrc=await fetch('sw.js',{cache:'no-store'}).then(r=>r.ok?r.text():null).catch(()=>null);
+    const cacheNameMatch=swSrc&&swSrc.match(/CACHE_NAME\s*=\s*'([^']+)'/);
+    if(!cacheNameMatch)throw new Error('could not read this app\'s own service worker to identify its cache');
+    const ownCacheName=cacheNameMatch[1];
+    const isBetaChannel=ownCacheName.startsWith('mmf-beta-');
+    const ownScope=new URL('.',location.href).href;
+
     if('serviceWorker' in navigator){
       const regs=await navigator.serviceWorker.getRegistrations();
-      // Only unregister the beta-scoped registration — do not touch production
-      const betaReg=regs.find(r=>r.scope.includes('/mauritius-mass-finder-beta/'));
-      if(betaReg)await betaReg.unregister();
+      const ownReg=regs.find(r=>r.scope===ownScope);
+      if(ownReg)await ownReg.unregister();
     }
     status.textContent='Clearing app cache…';
     if('caches' in window){
       const keys=await caches.keys();
-      // Only delete beta channel caches (mmf-beta-*) — do not touch production caches
-      await Promise.all(keys.filter(k=>k.startsWith('mmf-beta-')).map(k=>caches.delete(k)));
+      const toDelete=isBetaChannel
+        ?keys.filter(k=>k.startsWith('mmf-beta-'))
+        :keys.filter(k=>k.startsWith('mmf-')&&!k.startsWith('mmf-beta-'));
+      await Promise.all(toDelete.map(k=>caches.delete(k)));
     }
     // Verify controller released — an old controlling SW may still hold this client briefly
     const stillControlled=navigator.serviceWorker&&navigator.serviceWorker.controller;
