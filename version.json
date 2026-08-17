@@ -1,9 +1,9 @@
 {
-  "version": "27.4.5",
-  "release_name": "Deep reconciliation — parser rebuilt, 2 further corrections",
+  "version": "27.4.6",
+  "release_name": "9 Mass rows added — site-only gap closed",
   "build": "2026-08-17",
-  "build_id": "27.4.5-1",
+  "build_id": "27.4.6-1",
   "data_version": "2026-08-17",
-  "cache_version": "mmf-beta-v27-4-5",
-  "notes": "Deep re-check. The parser was rebuilt to actually understand the diocese pages: 'Pas de messes' is now read as positive evidence of absence; OFFICES/LAUDES sub-sections are non-Mass; prose schedules are parsed; 'sauf jeudi' excludes rather than includes; time ranges are one event; off-site Masses are attributed to the church named; and duplicate listings across a parish page and a chapel page are de-duplicated. 10 time corrections in total across v27.4.3-27.4.5. Zero unambiguous differences remain. 3 sites where two official pages contradict each other are flagged, not silently changed."
+  "cache_version": "mmf-beta-v27-4-6",
+  "notes": "Added the 9 Masses published on the diocese pages but missing from the corpus; 7 of the 9 are stated on two independent pages. Each row was cloned from an existing row of the SAME site, so coordinates, region, parish and precision metadata are inherited rather than invented. Corpus is now 419 rows / 389 Mass. SITE-ONLY differences are now zero. Introduced an accounting harness: every parsed schedule line must land in exactly one bucket (attributed or explicitly unattributed) - 516 in, 516 accounted for, 0 lost, 0 invented."
 }
