@@ -663,6 +663,19 @@ body.filtersOpen #filterSheet { transform: translateY(0); }
 .panel h2, .panel h3 { margin: .1rem 0 .4rem; letter-spacing: -.02em; }
 .panel p { color: var(--muted); margin: .4rem 0; }
 
+/* === FEAST DOCUMENT VIEWER === */
+.feastDocHeader { margin-bottom: 10px; }
+.feastDocFrNote { font-size: 12px; font-style: italic; }
+.feastDocSearch { width: 100%; box-sizing: border-box; border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; font-size: 14px; font-family: inherit; margin-bottom: 8px; position: sticky; top: 0; background: #fff; }
+.feastDocColHead { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 6px; font-size: 11px; font-weight: 900; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; padding: 0 4px 4px; }
+.feastDocRegion { border: 1px solid var(--line); border-radius: 14px; margin-bottom: 8px; overflow: hidden; }
+.feastDocRegion summary { padding: 10px 12px; font-weight: 900; cursor: pointer; background: var(--accentSoft); }
+.feastDocRow { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 6px; padding: 8px 12px; border-top: 1px solid var(--line); font-size: 13px; align-items: start; }
+.feastDocSite { font-weight: 850; }
+.feastDocCell { color: var(--muted); }
+.feastDocBlank { color: var(--muted); font-style: italic; }
+.feastDocRowHighlight { background: var(--accentSoft); }
+
 /* === DATA NOTICES === */
 .dataNotice { background: #fff8e5; border: 1px solid #eadba6; color: #5d4212; border-radius: 14px; padding: 9px 11px; margin: 8px 0 10px; font-size: 13px; font-weight: 850; }
 .dataNotice[hidden] { display: none; }

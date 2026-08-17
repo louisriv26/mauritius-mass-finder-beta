@@ -1,9 +1,9 @@
 {
-  "version": "27.4.8",
-  "release_name": "Remove 9 Masses absent from the diocese pages",
+  "version": "27.5.0",
+  "release_name": "Feast Document Viewer",
   "build": "2026-08-17",
-  "build_id": "27.4.8-1",
+  "build_id": "27.5.0-1",
   "data_version": "2026-08-17",
-  "cache_version": "mmf-beta-v27-4-8",
-  "notes": "Removed 9 Mass rows that no diocese page lists, on Louis explicit instruction after reviewing each one. This overrides the default reading of C-DATA-02 (absence is not evidence of removal) as a deliberate editorial choice that the app mirrors the official site. Removed rows archived in pipeline/removed_rows_2026-08-17.json and restorable. Two sites disappear entirely: Bon-Pasteur/Baie du Tombeau and Dans les quartiers/Plaine Magnien. Four other corpus-only rows were deliberately NOT removed - the pages do publish them and the scraper had misclassified them as non-Mass."
+  "cache_version": "mmf-beta-v27-5-0",
+  "notes": "Adds a read-only viewer for the diocese's feast-day Mass schedule document (e.g. Assomption), reached only via a contextual link on a feast-affected card, hero, or results strip - never a standing menu item. Shows the diocese's own region/site table verbatim (no translation, no classification of entries), with a search box and a link back to the original PDF. Deep-links to the row for the card the user came from when a per-site mapping is known. Pipeline: ingest_feast_pdf.py now also emits data/feast-doc-<id>.json and its site_uid index, independently of the override-approval gate, so the facsimile is available even before overrides are approved. meta.feast_dates entries in master_corpus.json now carry an id field (toussaint-2026, noel-2026); no doc has been ingested for either yet, so the viewer has no live document to show in production until a real PDF is processed."
 }

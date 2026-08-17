@@ -31,6 +31,7 @@ import {
 import {requestLocation,initGeo,locationRequestInFlight} from './modules/geo.js';
 import {registerSW,checkUpdate,forceUpdate,manualCheckUpdate} from './modules/sw-bridge.js';
 import {CACHE_NAME,APP_VERSION} from './modules/constants.js';
+import {openFeastDocFor} from './modules/feastdoc.js';
 
 initApp(render, stateUrl);
 
@@ -106,6 +107,7 @@ function handleDelegatedAction(e){
   const nextAction=e.target.closest('[data-next-action]'); if(nextAction){e.preventDefault(); const a=nextAction.dataset.nextAction; if(a==='locate')requestLocation(); if(a==='share'&&state.next)shareResult(state.next); if(a==='save'&&state.next)toggleSave(state.next); return}
   const detailAction=e.target.closest('[data-detail-action]'); if(detailAction){e.preventDefault(); const r=state.detailRow; if(!r)return; const a=detailAction.dataset.detailAction; if(a==='share')shareResult(r); if(a==='save')toggleSave(r); if(a==='all-times'){closeDetailSheet();showSite(r)} return}
   const more=e.target.closest('[data-more-section]'); if(more){e.preventDefault(); openMoreSection(more.dataset.moreSection,false); return}
+  const feastDocBtn=e.target.closest('[data-feastdoc]'); if(feastDocBtn){e.preventDefault(); const fid=feastDocBtn.dataset.feastdoc; const su=feastDocBtn.dataset.feastdocSite||null; const feast=(state.feastDates||[]).find(f=>f.doc===fid); if(feast)openFeastDocFor(feast,su); return}
   const footer=e.target.closest('[data-footer-target]'); if(footer){e.preventDefault(); openMoreSection(footer.dataset.footerTarget); return}
   const share=e.target.closest('[data-share-app]'); if(share){e.preventDefault(); shareApp(); return}
   const appAction=e.target.closest('[data-app-action]'); if(appAction){e.preventDefault(); if(appAction.dataset.appAction==='checkUpdate')manualCheckUpdate(); return}

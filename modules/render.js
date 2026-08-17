@@ -23,6 +23,7 @@ import {
   annotateRowForRanking,rankResults
 } from './search.js';
 import {locationRequestInFlight} from './geo.js';
+import {feastDocInfo,renderFeastDocSection} from './feastdoc.js';
 let deferredInstallPrompt=null;
 let installPromptDismissedUntilSession=0;
 let firstVisitSeenSession=false;
@@ -121,6 +122,11 @@ export function openMoreSection(section='help',shouldScroll=true){
 export function renderFooter(){const f=$('#appFooter'); if(!f)return; f.innerHTML=`<span>${esc(tr('version'))} ${APP_VERSION}</span><span aria-hidden="true">•</span><button type="button" data-footer-target="help">${esc(tr('helpTitle'))}</button><span aria-hidden="true">•</span><button type="button" data-footer-target="install">${esc(tr('installTab'))}</button><span aria-hidden="true">•</span><button type="button" data-footer-target="about">${esc(tr('about'))}</button><span aria-hidden="true">•</span><button type="button" data-footer-target="update">${esc(tr('howUpdate'))}</button><span aria-hidden="true">•</span><button type="button" data-footer-target="report">${esc(tr('reportIssue'))}</button>`;}
 export function openUpdateHelp(){openMoreSection('update')}
 export function moreSectionContent(){
+  if(state.moreSection==='feastdoc'){
+    const doc=state.feastDoc;
+    const title=doc?(state.lang==='fr'?doc.label_fr:doc.label_en):tr('feastDocLoading');
+    return {id:'feastDocSection',title,body:renderFeastDocSection()};
+  }
   const sections={
     help:{id:'helpSection',title:tr('helpTitle'),body:tr('helpHtml')},
     install:{id:'installSection',title:tr('installTab'),body:installInstructionsHtml()},
@@ -135,7 +141,14 @@ export function renderMore(){
   if(state.mode!=='more'){box.hidden=true;box.innerHTML='';return}
   const section=moreSectionContent();
   box.hidden=false;
+  const activeEl=document.activeElement;
+  const wasSearchFocused=activeEl&&activeEl.id==='feastDocSearch';
+  const selStart=wasSearchFocused?activeEl.selectionStart:null;
   box.innerHTML=`<section class="panel morePanelContent" tabindex="-1" aria-labelledby="${esc(section.id)}"><h2>${esc(tr('moreTitle'))}</h2><div class="moreTabs" role="tablist" aria-label="${esc(tr('moreTitle'))}"><button type="button" data-more-section="help" class="tag ${state.moreSection==='help'?'active':''}">${esc(tr('helpTitle'))}</button><button type="button" data-more-section="install" class="tag ${state.moreSection==='install'?'active':''}">${esc(tr('installTab'))}</button><button type="button" data-more-section="about" class="tag ${state.moreSection==='about'?'active':''}">${esc(tr('about'))}</button><button type="button" data-more-section="update" class="tag ${state.moreSection==='update'?'active':''}">${esc(tr('howUpdate'))}</button><button type="button" data-more-section="report" class="tag ${state.moreSection==='report'?'active':''}">${esc(tr('reportIssue'))}</button></div><h3 id="${esc(section.id)}">${esc(section.title)}</h3>${section.body}<h3>${esc(tr('trustTitle'))}</h3><p>${esc(tr('trustText'))}</p><p>${esc(tr('version'))}: ${APP_VERSION}</p><button class="btn primary" data-share-app="1">${esc(tr('share'))}</button></section>`;
+  if(wasSearchFocused){
+    const el=$('#feastDocSearch');
+    if(el){el.focus(); if(selStart!=null)el.setSelectionRange(selStart,selStart)}
+  }
 }
 export function renderNext(){
   const root=$('#modeHero');
@@ -145,10 +158,15 @@ export function renderNext(){
   const r=state.next; if(!r){root.innerHTML='';return}
   const dist=r._dist!=null?distanceLabel(r,r._dist):'';
   const nearMeta=state.near?nearRecommendationLabel(r,state.nearScope):'';
-  const feastBand=r._feast?`<div class="ruleBanner">${esc(tr('feastHeroWarning',{feast:feastLabel(r._feast)}))}</div>`:'';root.innerHTML=`<section class="nextCard">${feastBand}<div class="nextTop"><div><div class="eyebrow">${esc(state.near?tr('nearTitle'):tr('nextUseful'))}</div>${state.near?`<div class="meta">${esc(nearMeta||tr('sortedHintNear'))}</div>`:''}<div class="nextTime">${esc(r.time_24h)}</div><div class="relative">${esc(rel(r._delta))}${dist?' · '+esc(dist):''}</div></div><div style="font-size:26px">⛪</div></div><div class="siteName">${esc(visibleSiteName(r))}</div><div class="meta">${esc([r.town,r.parish_label||r.parish_name,r.region].filter(Boolean).join(' · '))}</div><div class="actions"><a class="btn primary" target="_blank" rel="noopener" href="${esc(mapsUrl(r))}">${esc(tr('directions'))}</a><button class="btn" data-next-action="share">${esc(tr('share'))}</button><button class="btn" data-next-action="save">${esc(state.saved.has(r.site_uid)?tr('saved'):tr('save'))} ${state.saved.has(r.site_uid)?'★':'☆'}</button></div></section>`;
+  const feastBand=r._feast?`<div class="ruleBanner">${esc(tr('feastHeroWarning',{feast:feastLabel(r._feast)}))}${feastDocLinkButton(r._feast,r.site_uid)}</div>`:'';root.innerHTML=`<section class="nextCard">${feastBand}<div class="nextTop"><div><div class="eyebrow">${esc(state.near?tr('nearTitle'):tr('nextUseful'))}</div>${state.near?`<div class="meta">${esc(nearMeta||tr('sortedHintNear'))}</div>`:''}<div class="nextTime">${esc(r.time_24h)}</div><div class="relative">${esc(rel(r._delta))}${dist?' · '+esc(dist):''}</div></div><div style="font-size:26px">⛪</div></div><div class="siteName">${esc(visibleSiteName(r))}</div><div class="meta">${esc([r.town,r.parish_label||r.parish_name,r.region].filter(Boolean).join(' · '))}</div><div class="actions"><a class="btn primary" target="_blank" rel="noopener" href="${esc(mapsUrl(r))}">${esc(tr('directions'))}</a><button class="btn" data-next-action="share">${esc(tr('share'))}</button><button class="btn" data-next-action="save">${esc(state.saved.has(r.site_uid)?tr('saved'):tr('save'))} ${state.saved.has(r.site_uid)?'★':'☆'}</button></div></section>`;
 }
 
-export function feastCardBanner(r){return r._feast?`<div class="ruleBanner">${esc(tr('feastCardBadge',{feast:feastLabel(r._feast)}))}</div>`:''}
+export function feastDocLinkButton(feast,siteUid){
+  const docId=feastDocInfo(feast);
+  if(!docId)return '';
+  return ` <button type="button" class="linkBtn" data-feastdoc="${esc(docId)}" data-feastdoc-site="${esc(siteUid||'')}">${esc(tr('feastDocViewLink'))}</button>`;
+}
+export function feastCardBanner(r){return r._feast?`<div class="ruleBanner">${esc(tr('feastCardBadge',{feast:feastLabel(r._feast)}))}${feastDocLinkButton(r._feast,r.site_uid)}</div>`:''}
 export function renderCard(r,i){
   const dist=r._dist!=null?distanceLabel(r,r._dist):'';
   const lang=languageBadge(r);
@@ -222,7 +240,7 @@ export function renderResults(){
     const text=exactNoMatch?tr('noExactTimeMatchText'):tr('noResultsText');
     root.className=''; root.innerHTML=`<div class="empty"><h3>${esc(title)}</h3><p>${esc(text)}</p></div>`; return
   }
-  root.className='resultsGrid'; const MAX_CARDS=60; const sundayNote=(effectiveDay()==='Dimanche'&&effectiveDayMode()==='sunday_obligation'&&arr.some(isSundayEligible))?`<div class="resultNotice">${esc(tr('sundayExplain'))}</div>`:''; const nearNotice=state.near&&state.location?nearScopeNotice(state.nearScope):''; const nearNote=nearNotice?`<div class="resultNotice ${state.nearScope==='all'?'warn':''}">${esc(nearNotice)}</div>`:''; const feastHit=arr.find(r=>r._feast)?._feast||null; const feastNote=feastHit?`<div class="resultNotice warn">${esc(tr('feastStripNotice',{feast:feastLabel(feastHit)}))}</div>`:''; const upcoming=arr.filter(r=>!r._inProgress);const underway=arr.filter(r=>r._inProgress);const underwaySlice=underway.slice(0,Math.min(10,underway.length));const upcomingSlice=upcoming.slice(0,Math.max(0,MAX_CARDS-underwaySlice.length));const totalShown=upcomingSlice.length+underwaySlice.length;const capped=arr.length>totalShown; const capNote=capped?`<div class="resultNotice warn">${esc(tr('resultCap',{n:arr.length}))}</div>`:''; const underwayHtml=underwaySlice.length?`<div class="sectionSep">${esc(tr('sectionUnderway'))}</div>`+renderCardsWithDateSeparators(underwaySlice,underwaySlice.length):'';root.innerHTML=feastNote+nearNote+sundayNote+capNote+renderCardsWithDateSeparators(upcomingSlice,upcomingSlice.length)+underwayHtml;
+  root.className='resultsGrid'; const MAX_CARDS=60; const sundayNote=(effectiveDay()==='Dimanche'&&effectiveDayMode()==='sunday_obligation'&&arr.some(isSundayEligible))?`<div class="resultNotice">${esc(tr('sundayExplain'))}</div>`:''; const nearNotice=state.near&&state.location?nearScopeNotice(state.nearScope):''; const nearNote=nearNotice?`<div class="resultNotice ${state.nearScope==='all'?'warn':''}">${esc(nearNotice)}</div>`:''; const feastHit=arr.find(r=>r._feast)?._feast||null; const feastNote=feastHit?`<div class="resultNotice warn">${esc(tr('feastStripNotice',{feast:feastLabel(feastHit)}))}${feastDocLinkButton(feastHit)}</div>`:''; const upcoming=arr.filter(r=>!r._inProgress);const underway=arr.filter(r=>r._inProgress);const underwaySlice=underway.slice(0,Math.min(10,underway.length));const upcomingSlice=upcoming.slice(0,Math.max(0,MAX_CARDS-underwaySlice.length));const totalShown=upcomingSlice.length+underwaySlice.length;const capped=arr.length>totalShown; const capNote=capped?`<div class="resultNotice warn">${esc(tr('resultCap',{n:arr.length}))}</div>`:''; const underwayHtml=underwaySlice.length?`<div class="sectionSep">${esc(tr('sectionUnderway'))}</div>`+renderCardsWithDateSeparators(underwaySlice,underwaySlice.length):'';root.innerHTML=feastNote+nearNote+sundayNote+capNote+renderCardsWithDateSeparators(upcomingSlice,upcomingSlice.length)+underwayHtml;
 }
 export function renderChips(){const root=$('#intentChips'); if(!root)return; const chips=[...(state.parsed.chips||[])].filter(c=>c.k!=='near'||state.near||locationRequestInFlight); const has=k=>chips.some(c=>c.k===k); if(state.near&&!has('near'))chips.unshift({k:'near',label:tr('quickNear')}); const day=effectiveDay(),mode=effectiveDayMode(),time=effectiveTime(); if(day&&!has('day'))chips.push({k:'day',label:mode==='today'?tr('today'):mode==='tomorrow'?tr('tomorrow'):mode==='sunday_obligation'?tr('sunday'):dayName(day)}); if(time&&!has('time'))chips.push({k:'time',label:tr(time)||time}); if(state.filters.region)chips.push({k:'region',label:state.filters.region}); if(effectiveType()==='all')chips.push({k:'type',label:tr('includeOther')}); if(state.filters.siteUid)chips.push({k:'site',label:tr('allTimes')}); root.innerHTML=chips.map(c=>`<span class="intentChip">${esc(c.label)}<button type="button" aria-label="Remove ${esc(c.label)}" data-chip="${esc(c.k)}">×</button></span>`).join('')}
 
