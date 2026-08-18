@@ -1,9 +1,9 @@
 {
-  "version": "27.5.2",
-  "release_name": "Notre-Dame-des-Victoires, Midlands (with coordinate)",
+  "version": "27.5.3",
+  "release_name": "Help: feast days, conditional Masses, trust wording",
   "build": "2026-08-18",
-  "build_id": "27.5.2-1",
+  "build_id": "27.5.3-1",
   "data_version": "2026-08-18",
-  "cache_version": "mmf-beta-v27-5-2",
-  "notes": "Adds one missing Mass: Notre-Dame-des-Victoires, Midlands - Saturday 17:30, third Saturday of the month only, a chapel of the Sainte-Therese-d'Avila parish (Hautes Plaines Wilhems). Found while reviewing the Assomption feast crosswalk: the chapel has its own diocese page publishing that time, but had no row in the corpus. Corpus is now 414 rows / 117 sites. Coordinate sourced from OpenStreetMap node 7291417486 (amenity=place_of_worship, 'Chapelle Notre Dame des Victoires', Belle Rive, Midlands) - 5.55 km from the parish church, which is why the parish coordinate was not reused. utils.js: precisionLabel now returns nothing when a row has no coordinate at all, rather than claiming 'Approx. location'; kept as defensive behaviour for any future row awaiting a coordinate."
+  "cache_version": "mmf-beta-v27-5-3",
+  "notes": "Help was accurate for the app as it stood two releases ago. Adds three sections in both languages, taking Help from 8 to 10 sections: (1) Feast days and special schedules - explains the feast warning, the View the diocese document link, that a blank entry means no time was published rather than no Mass, and that both disappear after the feast; (2) Masses on certain dates only - covers the 22 rows carrying rules like Third Saturday only and the 24 marked English Mass, and states the app already applies those rules when computing the next Mass; (3) Sources and reliability, expanded - explains what Batch reconciled means and what Lower confidence - check source means, which 54 rows display. Also adds a line to the update guide pointing at the Repair app button that already sits below it. No feature or data change."
 }
