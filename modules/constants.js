@@ -1,6 +1,6 @@
-export const APP_VERSION='27.5.3';
-export const CACHE_NAME='mmf-beta-v27-5-3';
-export const BUILD_ID='27.5.3-1';
+export const APP_VERSION='27.5.4';
+export const CACHE_NAME='mmf-beta-v27-5-4';
+export const BUILD_ID='27.5.4-1';
 export const NEAR_RADIUS_KM=12;
 export const DAYS=['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'];
 export const DAY_EN={Dimanche:'Sunday',Lundi:'Monday',Mardi:'Tuesday',Mercredi:'Wednesday',Jeudi:'Thursday',Vendredi:'Friday',Samedi:'Saturday'};

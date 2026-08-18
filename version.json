@@ -1,9 +1,9 @@
 {
-  "version": "27.5.3",
-  "release_name": "Help: feast days, conditional Masses, trust wording",
+  "version": "27.5.4",
+  "release_name": "Coordinate audit — 4 corrections",
   "build": "2026-08-18",
-  "build_id": "27.5.3-1",
+  "build_id": "27.5.4-1",
   "data_version": "2026-08-18",
-  "cache_version": "mmf-beta-v27-5-3",
-  "notes": "Help was accurate for the app as it stood two releases ago. Adds three sections in both languages, taking Help from 8 to 10 sections: (1) Feast days and special schedules - explains the feast warning, the View the diocese document link, that a blank entry means no time was published rather than no Mass, and that both disappear after the feast; (2) Masses on certain dates only - covers the 22 rows carrying rules like Third Saturday only and the 24 marked English Mass, and states the app already applies those rules when computing the next Mass; (3) Sources and reliability, expanded - explains what Batch reconciled means and what Lower confidence - check source means, which 54 rows display. Also adds a line to the update guide pointing at the Repair app button that already sits below it. No feature or data change."
+  "cache_version": "mmf-beta-v27-5-4",
+  "notes": "Full audit of all 117 church coordinates against OpenStreetMap. Two were wrong and are corrected: Sacre-Coeur Beau-Bassin was pinned on the Montmartre chapel in Rose-Hill - a different church already in this corpus 39 m away - and moves 1.54 km to its own mapped building; Notre-Dame-de-la-Delivrande was at Cap Malheureux, 20 km from its stated town and 0.9 km from Notre-Dame-Auxiliatrice, and moves 18.6 km to the village of Notre Dame near Montagne Longue that the diocese page names. Two further coordinates were upgraded from approximate to the mapped church building: Saint-Odile Camp-Levieux (272 m) and Saint-Maurice Poste-de-Flacq (1.12 km). 23 rows changed, no schedule data touched. After the fix no two churches share a coordinate, none sit within 60 m of each other, and no town has sites scattered more than 10 km apart."
 }
