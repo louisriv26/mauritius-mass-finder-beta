@@ -1,9 +1,9 @@
 {
-  "version": "27.5.1",
-  "release_name": "Add Notre-Dame-des-Victoires, Midlands",
+  "version": "27.5.2",
+  "release_name": "Notre-Dame-des-Victoires, Midlands (with coordinate)",
   "build": "2026-08-18",
-  "build_id": "27.5.1-1",
+  "build_id": "27.5.2-1",
   "data_version": "2026-08-18",
-  "cache_version": "mmf-beta-v27-5-1",
-  "notes": "Adds one missing Mass: Notre-Dame-des-Victoires, Midlands - Saturday 17:30, third Saturday of the month only, a chapel of the Sainte-Therese-d'Avila parish (Hautes Plaines Wilhems). Found while reviewing the Assomption feast crosswalk: the chapel has its own diocese page (https://dioceseportlouis.org/paroisses-messes/notre-dame-des-victoires-midlands/) publishing that time, but had no row in the corpus. This is a new site, taking the corpus to 414 rows / 117 sites. Coordinates are deliberately left empty: the diocese publishes none, and reusing the parish coordinate (Curepipe) would misplace the chapel in Near-me, since Midlands is a separate locality - Directions fall back to a maps_query text search until a coordinate is sourced. Also checked in the same pass: 8 other churches named in the Assomption PDF but absent from the corpus. Six have a diocese page that publishes no Mass times at all (four say 'Pas de messes' outright), and two - Saint Victor and Fraternite Franciscaine - have no diocese page. None of them needed a row."
+  "cache_version": "mmf-beta-v27-5-2",
+  "notes": "Adds one missing Mass: Notre-Dame-des-Victoires, Midlands - Saturday 17:30, third Saturday of the month only, a chapel of the Sainte-Therese-d'Avila parish (Hautes Plaines Wilhems). Found while reviewing the Assomption feast crosswalk: the chapel has its own diocese page publishing that time, but had no row in the corpus. Corpus is now 414 rows / 117 sites. Coordinate sourced from OpenStreetMap node 7291417486 (amenity=place_of_worship, 'Chapelle Notre Dame des Victoires', Belle Rive, Midlands) - 5.55 km from the parish church, which is why the parish coordinate was not reused. utils.js: precisionLabel now returns nothing when a row has no coordinate at all, rather than claiming 'Approx. location'; kept as defensive behaviour for any future row awaiting a coordinate."
 }
