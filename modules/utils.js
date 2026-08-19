@@ -193,6 +193,7 @@ export function ruleKind(raw){
   if(/third sunday only|3rd sunday only|troisieme.*dimanche.*seulement/.test(t))return 'third_sunday_only';
   if(/fourth sunday only|4th sunday only|quatrieme.*dimanche.*seulement/.test(t))return 'fourth_sunday_only';
   if(/third and fourth wednesday only|3rd and 4th wednesday|troisieme.*quatrieme.*mercredi/.test(t))return 'third_fourth_wednesday_only';
+  if(/second wednesday only|2nd wednesday only|deuxieme.*mercredi.*seulement/.test(t))return 'second_wednesday_only';
   if(/third saturday only|3rd saturday only|troisieme.*samedi.*seulement/.test(t))return 'third_saturday_only';
   if(/first tuesday only|1st tuesday only|premier.*mardi.*seulement/.test(t))return 'first_tuesday_only';
   if(/every two weeks|every other week|fortnight|toutes les deux semaines|une semaine sur deux/.test(t))return 'every_two_weeks';
@@ -229,6 +230,7 @@ export function localizedRuleText(raw){
   if(kind==='second_sunday_only')return _ruleLabel('Second Sunday of the month only','Deuxième dimanche du mois seulement');
   if(kind==='third_sunday_only')return _ruleLabel('Third Sunday of the month only','Troisième dimanche du mois seulement');
   if(kind==='fourth_sunday_only')return _ruleLabel('Fourth Sunday of the month only','Quatrième dimanche du mois seulement');
+  if(kind==='second_wednesday_only')return _ruleLabel('Second Wednesday of the month only','Deuxième mercredi du mois seulement');
   if(kind==='third_fourth_wednesday_only')return _ruleLabel('Third and fourth Wednesday of the month only','Troisième et quatrième mercredi du mois seulement');
   if(kind==='third_saturday_only')return _ruleLabel('Third Saturday of the month only','Troisième samedi du mois seulement');
   if(kind==='first_tuesday_only')return _ruleLabel('First Tuesday of the month only','Premier mardi du mois seulement');

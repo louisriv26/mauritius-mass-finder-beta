@@ -1,9 +1,9 @@
 {
-  "version": "27.5.5",
-  "release_name": "Coordinate refinement — 6 more moved onto the church",
-  "build": "2026-08-18",
-  "build_id": "27.5.5-1",
-  "data_version": "2026-08-18",
-  "cache_version": "mmf-beta-v27-5-5",
-  "notes": "Second coordinate pass. The first OSM query had silently dropped churches mapped only as building=church, so the reference set was incomplete; widening it (390 -> 446 features) surfaced six more churches whose coordinate pointed at the village rather than the building. All six now sit on the mapped church: Notre-Dame-de-l Assomption Roches-Noires (1552 m), Saint-Dominique Quatre-Cocos (1157 m), Notre-Dame-de-l Esperance Piton (950 m), Emmaus Coromandel (791 m), Saint-Louis Grand-Bois (646 m, mapped as grounds so recorded as exact_compound), Le-Seigneur-de-la-Peche-Miraculeuse La Gaulette (248 m). 10 rows changed, no schedule data touched. Churches shown with an exact location rise from 17 to 25 of 117. Three further candidates were rejected rather than applied: two were roads named Church Road and La Chapel Road, and Notre-Dame-de-Fatima Petite-Riviere-Noire was offered a feature tagged only landuse=religious with no religion or denomination, which is not evidence it is that church."
+  "version": "27.6.0",
+  "release_name": "Diocese-confirmed corrections",
+  "build": "2026-08-19",
+  "build_id": "27.6.0-1",
+  "data_version": "2026-08-19",
+  "cache_version": "mmf-beta-v27-6-0",
+  "notes": "All changes confirmed directly by the Diocese of Port-Louis (Virginie Julien, Public Relations Officer) on 2026-08-19, and re-read from the corrected diocese pages afterwards. Two times corrected: L Eau Vive Chebel Sunday 08h00 -> 07h30, and Saint-Benoit Tamarin Sunday English Mass (1st Sunday) 18h00 -> 17h30; the diocese fixed the disagreement between its own pages, which now match. One Mass restored: the Monday 19h00 Messe dans les quartiers at Plaine-Magnien, removed on 2026-08-17 because no page listed it - the diocese confirmed it does take place and reinstated it. Two churches added whose pages previously had an empty schedule: Beatitudes, Bati, Grand-Gaube (Sunday 08h00) and Notre-Dame-du-Grand-Pouvoir, Cap-Malheureux (Wednesday 18h00, second Wednesday of the month only, and flagged lower confidence because the diocese states it is not regular and asks people to confirm first). The other six Masses queried were confirmed as no longer celebrated, so their removal was correct, and Saint Victor and Fraternite Franciscaine were confirmed not to be places of worship. Corpus 414 -> 417 rows, 117 -> 120 sites."
 }
