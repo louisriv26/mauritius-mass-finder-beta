@@ -1,9 +1,9 @@
 {
-  "version": "27.6.0",
-  "release_name": "Diocese-confirmed corrections",
+  "version": "27.6.1",
+  "release_name": "Explicit warning for irregular Masses",
   "build": "2026-08-19",
-  "build_id": "27.6.0-1",
+  "build_id": "27.6.1-1",
   "data_version": "2026-08-19",
-  "cache_version": "mmf-beta-v27-6-0",
-  "notes": "All changes confirmed directly by the Diocese of Port-Louis (Virginie Julien, Public Relations Officer) on 2026-08-19, and re-read from the corrected diocese pages afterwards. Two times corrected: L Eau Vive Chebel Sunday 08h00 -> 07h30, and Saint-Benoit Tamarin Sunday English Mass (1st Sunday) 18h00 -> 17h30; the diocese fixed the disagreement between its own pages, which now match. One Mass restored: the Monday 19h00 Messe dans les quartiers at Plaine-Magnien, removed on 2026-08-17 because no page listed it - the diocese confirmed it does take place and reinstated it. Two churches added whose pages previously had an empty schedule: Beatitudes, Bati, Grand-Gaube (Sunday 08h00) and Notre-Dame-du-Grand-Pouvoir, Cap-Malheureux (Wednesday 18h00, second Wednesday of the month only, and flagged lower confidence because the diocese states it is not regular and asks people to confirm first). The other six Masses queried were confirmed as no longer celebrated, so their removal was correct, and Saint Victor and Fraternite Franciscaine were confirmed not to be places of worship. Corpus 414 -> 417 rows, 117 -> 120 sites."
+  "cache_version": "mmf-beta-v27-6-1",
+  "notes": "Makes the caution on an irregularly-celebrated Mass explicit instead of implied. Previously Notre-Dame-du-Grand-Pouvoir Cap-Malheureux showed only a generic lower-confidence line, and the diocese actual words - that the Mass is not regular and people should confirm with the parish first - were stored but never displayed. Adds a controlled advisory field, deliberately separate from context_note, which holds internal editorial notes that must never be shown to users. The card, the detail sheet and the saved-church card now carry a red banner reading, in the user language: The diocese states that this Mass is not held regularly - please confirm with the parish before travelling. Only one row currently carries it."
 }
