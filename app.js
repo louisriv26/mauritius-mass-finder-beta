@@ -35,9 +35,11 @@ import {openFeastDocFor} from './modules/feastdoc.js';
 
 initApp(render, stateUrl);
 
-function clearNearFailureState(){
-  setState({near:false,nearExpanded:false,nearScope:'',mode:'home',query:removeQueryIntent(state.query,'near')},{url:true});
-  toast(tr('locationDenied'));
+function clearNearFailureState(reason){
+  // Previously this switched Near-me off and returned Home, which destroyed the
+  // persistent panel render.js already provides for this exact case and left only a
+  // 1.8s toast. Stay in Near-me, record why, and let the panel explain it.
+  setState({locationStatus:reason||'unavailable',near:true,mode:'near'},{url:true});
 }
 initGeo(clearNearFailureState);
 
@@ -104,7 +106,7 @@ function handleDelegatedAction(e){
   const saveBtn=e.target.closest('[data-save-key]'); if(saveBtn){e.preventDefault(); const k=saveBtn.dataset.saveKey; const r=state.results.find(x=>x.id===k||(x.id==null&&rowKey(x)===k)); if(r)toggleSave(r); return}
   const showSiteBtn=e.target.closest('[data-show-site]'); if(showSiteBtn){e.preventDefault(); const g=savedGroups()[+showSiteBtn.dataset.showSite]; if(g)showSite(g.first); return}
   const unsaveBtn=e.target.closest('[data-unsave-site]'); if(unsaveBtn){e.preventDefault(); const g=savedGroups()[+unsaveBtn.dataset.unsaveSite]; if(g)toggleSave(g.first); return}
-  const nextAction=e.target.closest('[data-next-action]'); if(nextAction){e.preventDefault(); const a=nextAction.dataset.nextAction; if(a==='locate')requestLocation(); if(a==='share'&&state.next)shareResult(state.next); if(a==='save'&&state.next)toggleSave(state.next); return}
+  const nextAction=e.target.closest('[data-next-action]'); if(nextAction){e.preventDefault(); const a=nextAction.dataset.nextAction; if(a==='locate')requestLocation(); if(a==='location-dismiss'){setState({near:false,nearExpanded:false,nearScope:'',mode:'home',locationStatus:'',query:removeQueryIntent(state.query,'near')},{url:true});return} if(a==='share'&&state.next)shareResult(state.next); if(a==='save'&&state.next)toggleSave(state.next); return}
   const detailAction=e.target.closest('[data-detail-action]'); if(detailAction){e.preventDefault(); const r=state.detailRow; if(!r)return; const a=detailAction.dataset.detailAction; if(a==='share')shareResult(r); if(a==='save')toggleSave(r); if(a==='all-times'){closeDetailSheet();showSite(r)} return}
   const more=e.target.closest('[data-more-section]'); if(more){e.preventDefault(); openMoreSection(more.dataset.moreSection,false); return}
   const feastDocBtn=e.target.closest('[data-feastdoc]'); if(feastDocBtn){e.preventDefault(); const fid=feastDocBtn.dataset.feastdoc; const su=feastDocBtn.dataset.feastdocSite||null; const feast=(state.feastDates||[]).find(f=>f.doc===fid); if(feast)openFeastDocFor(feast,su); return}

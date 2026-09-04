@@ -300,7 +300,7 @@ export function sourceLabel(r){
   return tr('source');
 }
 export function scheduleScopeLabel(r){return tr('parishSchedule')}
-export function toast(msg){const t=$('#toast'); if(!t)return; t.textContent=msg;t.classList.add('show');clearTimeout(toast._t);toast._t=setTimeout(()=>t.classList.remove('show'),1800)}
+export function toast(msg){const t=$('#toast'); if(!t)return; t.textContent=msg;t.classList.add('show');clearTimeout(toast._t);toast._t=setTimeout(()=>t.classList.remove('show'),Math.min(7000,Math.max(1800,900+String(msg).length*55)))}
 export function markSwipeHintSeen(){
   storageSet('mmf_swipe_hint_seen','1');
   document.body.classList.add('quickHintSeen');

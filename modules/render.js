@@ -154,7 +154,7 @@ export function renderNext(){
   const root=$('#modeHero');
   if(state.mode==='more'){root.innerHTML='';return}
   if(state.mode==='saved'){root.innerHTML=`<section class="nextCard"><div class="eyebrow">${esc(tr('savedTitle'))}</div><div class="siteName">${esc(tr('savedSub'))}</div></section>`;return}
-  if(state.mode==='near'&&!state.location){root.innerHTML=`<section class="nextCard"><div class="eyebrow">${esc(tr('nearTitle'))}</div><div class="siteName">${esc(tr('locationAsk'))}</div><div class="meta">${esc(tr('locationNotEnabled'))}</div><div class="actions"><button class="btn primary" data-next-action="locate">${esc(tr('nearUse'))}</button></div></section>`;return}
+  if(state.mode==='near'&&!state.location){const lp=locationPanel();root.innerHTML=`<section class="nextCard"><div class="eyebrow">${esc(tr('nearTitle'))}</div><div class="siteName">${esc(lp.title)}</div><div class="locationHelp">${esc(lp.body)}</div><div class="actions"><button class="btn primary" data-next-action="locate">${esc(lp.retry)}</button><button class="btn" data-next-action="location-dismiss">${esc(tr('locationShowAll'))}</button></div></section>`;return}
   const r=state.next; if(!r){root.innerHTML='';return}
   const dist=r._dist!=null?distanceLabel(r,r._dist):'';
   const nearMeta=state.near?nearRecommendationLabel(r,state.nearScope):'';
@@ -167,6 +167,16 @@ export function feastDocLinkButton(feast,siteUid){
   return ` <button type="button" class="linkBtn" data-feastdoc="${esc(docId)}" data-feastdoc-site="${esc(siteUid||'')}">${esc(tr('feastDocViewLink'))}</button>`;
 }
 export function advisoryBanner(r){return (r&&r.advisory==='confirm_not_regular')?`<div class="ruleBanner danger">${esc(tr('advisoryNotRegular'))}</div>`:''}
+export function locationPanel(){
+  // A denial cannot be re-prompted by script, so say what happened and how to undo it,
+  // persistently - not as a toast that disappears before it can be read.
+  const st=state.locationStatus||'';
+  const denied=st==='denied'||st==='unsupported';
+  const title=st?tr(denied?'locationBlocked':'locationUnavailable'):tr('nearTitle');
+  const body=st?tr(denied?'locationBlockedHelp':'locationUnavailableHelp'):tr('locationAsk');
+  const retry=st?tr('locationRetry'):tr('nearUse');
+  return {title,body,retry};
+}
 export function feastCardBanner(r){return r._feast?`<div class="ruleBanner">${esc(tr('feastCardBadge',{feast:feastLabel(r._feast)}))}${feastDocLinkButton(r._feast,r.site_uid)}</div>`:''}
 export function renderCard(r,i){
   const dist=r._dist!=null?distanceLabel(r,r._dist):'';
@@ -226,7 +236,7 @@ export function renderResults(){
   const root=$('#results'); const head=$('#resultCount'); const ctx=$('#contextLabel'); if(ctx)ctx.textContent=currentContextLabel();
   if(state.mode==='more'){root.innerHTML='';head.textContent='';return}
   if(state.loadError&&!state.rows.length){head.textContent='';root.className='';root.innerHTML=`<div class="empty error"><h3>${esc(tr('error'))}</h3><p>${esc(tr('loadDataError'))}</p></div>`;return}
-  if(state.near&&!state.location){head.textContent='';root.className='';root.innerHTML=`<div class="empty"><h3>${esc(tr('nearTitle'))}</h3><p>${esc(tr('locationAsk'))}</p><button class="btn primary" type="button" data-next-action="locate">${esc(tr('nearUse'))}</button></div>`;return}
+  if(state.near&&!state.location){const lp=locationPanel();head.textContent='';root.className='';root.innerHTML=`<div class="empty"><h3>${esc(lp.title)}</h3><p class="locationHelp">${esc(lp.body)}</p><div class="actions"><button class="btn primary" type="button" data-next-action="locate">${esc(lp.retry)}</button><button class="btn" type="button" data-next-action="location-dismiss">${esc(tr('locationShowAll'))}</button></div></div>`;return}
   if(state.mode==='saved'){
     const groups=savedGroups(); const n=groups.length; head.innerHTML=`<b>${n}</b> ${esc(n===1?tr('result'):tr('results'))} ${esc(tr('shown'))}<span class="sortHint"> · ${esc(state.near?tr('sortedHintNear'):tr('sortedHint'))}</span>`;
     if(!n){root.className=''; root.innerHTML=`<div class="empty"><h3>${esc(tr('noSaved'))}</h3><p>${esc(tr('noSavedText'))}</p></div>`; return}

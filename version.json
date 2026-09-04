@@ -1,9 +1,9 @@
 {
-  "version": "27.6.1",
-  "release_name": "Explicit warning for irregular Masses",
+  "version": "27.6.2",
+  "release_name": "Near me: readable, persistent location message",
   "build": "2026-08-19",
-  "build_id": "27.6.1-1",
+  "build_id": "27.6.2-1",
   "data_version": "2026-08-19",
-  "cache_version": "mmf-beta-v27-6-1",
-  "notes": "Makes the caution on an irregularly-celebrated Mass explicit instead of implied. Previously Notre-Dame-du-Grand-Pouvoir Cap-Malheureux showed only a generic lower-confidence line, and the diocese actual words - that the Mass is not regular and people should confirm with the parish first - were stored but never displayed. Adds a controlled advisory field, deliberately separate from context_note, which holds internal editorial notes that must never be shown to users. The card, the detail sheet and the saved-church card now carry a red banner reading, in the user language: The diocese states that this Mass is not held regularly - please confirm with the parish before travelling. Only one row currently carries it."
+  "cache_version": "mmf-beta-v27-6-2",
+  "notes": "Fixes two problems reported on iPhone when location is refused. (1) The message was a toast that vanished after 1.8 seconds and, being a pill with no maximum width, wrapped into a black blob over the results. (2) Pressing Near me again only reproduced it, with no way to recover. Root cause of the second: once a user taps Do not Allow, the browser remembers the refusal and every later request fails instantly without a prompt - no script can re-ask, by design. On top of that the app made it worse: on failure it switched Near me off and returned Home, which destroyed the persistent panel the app already had for exactly this case and left only the toast. Now the app stays in Near me and shows that panel, with wording matched to the real cause (the error code was previously discarded, so a refusal, a timeout and a GPS failure all produced the same text). A refusal explains that the device is blocking it and how to re-enable it in Settings; a timeout says to check signal and retry. Try again works the moment the user re-enables it, and Show all Masses instead prevents a dead end. Toast also given a maximum width, a softer radius and a duration that scales with message length."
 }
