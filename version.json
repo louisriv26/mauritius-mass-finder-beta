@@ -1,9 +1,9 @@
 {
-  "version": "27.6.14",
-  "release_name": "Updates that reload; location that refreshes",
+  "version": "27.6.15",
+  "release_name": "Tell the new worker to activate only once it can hear us",
   "build": "2026-08-19",
-  "build_id": "27.6.14-1",
+  "build_id": "27.6.15-1",
   "data_version": "2026-08-19",
-  "cache_version": "mmf-beta-v27-6-14",
-  "notes": "Three fixes, one of them found only by testing the first two. (1) forceUpdate is now driven by the controllerchange EVENT rather than by the function still being on the stack. Previously an event arriving after the 6-second deadline set a local flag that nothing read, because the function had already returned - the update completed and the page never reloaded, leaving the banner up. That path became MORE likely after v27.6.7, because install now re-downloads every CORE asset. The 6s point now only shows a slow-update hint; the reload can still happen, with a real 60s give-up that leaves the app able to retry, truthful reporting on a rejected update, and a guard so repeated taps cannot arm a second listener or timer. (2) THE RELOAD ITSELF WAS A NO-OP: location.replace() to a URL identical to the current one does not reload, so even a fully successful update left the user on the old page with the banner still showing - the exact symptom the update was meant to clear. It now reloads when there is no query string to drop and replaces only when there is. This was not on the list of known problems; it surfaced while testing the state machine. (3) Geolocation: the watchdog now retires the request id, so a callback arriving after a reported timeout can no longer drag the user back into Near me from wherever they had moved on to; and a deliberate action - tapping Near me or Retry - re-acquires the position instead of reusing the first fix of the session, which meant someone travelling across the island was still sorted by where they started. No data change: 426 rows."
+  "cache_version": "mmf-beta-v27-6-15",
+  "notes": "Closes the last known hole in the update path. SKIP_WAITING was posted to reg.installing||reg.waiting the moment reg.update() resolved. A worker that is still INSTALLING may not have its message handler running yet, so the message could simply be dropped - the worker then sat in waiting forever, no controllerchange fired, and the user waited out the full give-up timeout for an update that had actually downloaded fine. The message is now held until the worker reports installed, and updatefound is armed BEFORE calling update() because update() can resolve before the new worker appears. Verified: with a worker in the installing state nothing is posted, and exactly one SKIP_WAITING is sent the moment it reaches installed; a worker already installed is still told immediately. This bug predates the v27.6.14 rewrite - it was flagged there rather than fixed, which left the mechanism that delivers every other fix with a known hole. No data change: 426 rows."
 }

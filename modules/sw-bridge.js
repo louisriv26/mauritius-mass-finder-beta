@@ -50,9 +50,23 @@ export async function forceUpdate(){
   try{
     const reg=await navigator.serviceWorker.getRegistration();
     if(!reg){clearTimeout(hintTimer);clearTimeout(giveUpTimer);navigator.serviceWorker.removeEventListener('controllerchange',onController);_updating=false;showFallback();return}
+    // A worker that is still INSTALLING may not have its message handler running yet, so
+    // a SKIP_WAITING posted to it can simply be dropped. It then sits in `waiting`
+    // forever, no controllerchange ever fires, and the user waits out the whole give-up
+    // timeout for an update that had actually downloaded fine. Wait for `installed`.
+    // reg.update() can also resolve before the new worker appears, so arm updatefound
+    // BEFORE calling it rather than only inspecting reg afterwards.
+    const tellToSkip=w=>{
+      if(!w||w.__mmfSkipArmed)return;
+      w.__mmfSkipArmed=true;
+      const post=()=>{try{w.postMessage({type:'SKIP_WAITING'})}catch(e){}};
+      if(w.state==='installing')w.addEventListener('statechange',()=>{if(w.state==='installed')post()});
+      else post();
+    };
+    reg.addEventListener('updatefound',()=>tellToSkip(reg.installing));
     await reg.update();
     const worker=reg.installing||reg.waiting;
-    if(worker)worker.postMessage({type:'SKIP_WAITING'});
+    tellToSkip(worker);
     // If the worker was already active and controlling, no controllerchange will ever
     // fire; nothing to swap in, so reload straight away rather than waiting out the 60s.
     if(!worker&&reg.active&&navigator.serviceWorker.controller===reg.active){
