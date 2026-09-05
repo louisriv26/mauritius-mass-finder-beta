@@ -1,9 +1,9 @@
 {
-  "version": "27.6.4",
-  "release_name": "Near me: only a real refusal traps you",
+  "version": "27.6.5",
+  "release_name": "Test: minimal-ui display mode for iOS geolocation",
   "build": "2026-08-19",
-  "build_id": "27.6.4-1",
+  "build_id": "27.6.5-1",
   "data_version": "2026-08-19",
-  "cache_version": "mmf-beta-v27-6-4",
-  "notes": "Splits the location-failure handling by cause, as requested after review of v27.6.2/3. A real refusal (or no geolocation API at all) is structural - nothing the user can do in the app fixes it, only a trip to Settings will - so those two cases keep the persistent explanation panel. A timeout or a momentary \"position unavailable\" is usually just a weak signal, and the very next attempt often just works; trapping the user in Near me for that was an over-correction, so those two cases now fall back to normal results exactly as the app always did before v27.6.2, but with the toast that can actually be read (the width and duration fix already shipped). Verified all four reasons independently: denied and unsupported still trap with the panel; timeout and position-unavailable now return to Home with 60 normal results showing and a readable toast, neither one showing the persistent panel."
+  "cache_version": "mmf-beta-v27-6-5",
+  "notes": "Diagnostic release, not a confirmed fix. Real-device testing (with Louis) ruled out every other explanation for Near me being permanently blocked on an installed iOS Home Screen icon: no per-app Settings entry exists anywhere, the global Safari Websites switch was already permissive, clearing Safari site data for the origin had no effect, and a genuinely freshly deleted-and-reinstalled icon still failed identically. Location DOES work correctly in a plain Safari tab at the same address, which rules out the origin/website itself being blocked. The one explanation that fits every result: iOS has a known limitation where a \"standalone\" display-mode home screen web app can be structurally unable to show the geolocation permission prompt at all, distinct from a normal browser tab. manifest.json display changed from standalone to minimal-ui, the documented workaround, which trades the fully chrome-less look for a thin Safari toolbar in exchange for full API parity with a browser tab. Needs the icon deleted and re-added fresh to pick up the new manifest (manifests are read at Add to Home Screen time, not on existing icons), then Near me tested again from the new icon. If this fixes it, the trade-off is a decision for Louis on whether to accept it; if it does not, standalone mode is not the correct explanation after all."
 }
