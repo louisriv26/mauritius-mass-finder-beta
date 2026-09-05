@@ -4,7 +4,7 @@
   "description": "Find a Catholic Mass quickly anywhere in Mauritius.",
   "start_url": "./",
   "scope": "./",
-  "display": "minimal-ui",
+  "display": "standalone",
   "background_color": "#fbf7f2",
   "theme_color": "#6f2c2c",
   "orientation": "portrait-primary",
@@ -35,6 +35,6 @@
       "purpose": "maskable"
     }
   ],
-  "version": "27.6.5",
+  "version": "27.6.6",
   "id": "./"
 }
