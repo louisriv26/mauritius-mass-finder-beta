@@ -36,9 +36,19 @@ import {openFeastDocFor} from './modules/feastdoc.js';
 initApp(render, stateUrl);
 
 function clearNearFailureState(reason){
-  // Previously this switched Near-me off and returned Home, which destroyed the
-  // persistent panel render.js already provides for this exact case and left only a
-  // 1.8s toast. Stay in Near-me, record why, and let the panel explain it.
+  // A real refusal (or no geolocation API at all) is structural: nothing the user does
+  // here will fix it, only a trip to Settings will, so stay in Near me and show the
+  // persistent explanation panel. A timeout or a momentary "position unavailable" is
+  // usually just a weak signal - the very next attempt often just works - so trapping
+  // the user in Near me for that would be an over-correction. Fall back to normal
+  // results with a toast instead, exactly as the app always did before v27.6.2, but
+  // now with a toast that can actually be read (see the width/duration fix in styles.css
+  // and utils.js).
+  if(reason==='timeout'||reason==='unavailable'){
+    setState({near:false,nearExpanded:false,nearScope:'',mode:'home',locationStatus:'',query:removeQueryIntent(state.query,'near')},{url:true});
+    toast(tr('locationDenied'));
+    return;
+  }
   setState({locationStatus:reason||'unavailable',near:true,mode:'near'},{url:true});
 }
 initGeo(clearNearFailureState);

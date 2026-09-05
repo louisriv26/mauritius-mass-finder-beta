@@ -1,9 +1,9 @@
 {
-  "version": "27.6.3",
-  "release_name": "Near me: watchdog + iOS-specific Settings path",
+  "version": "27.6.4",
+  "release_name": "Near me: only a real refusal traps you",
   "build": "2026-08-19",
-  "build_id": "27.6.3-1",
+  "build_id": "27.6.4-1",
   "data_version": "2026-08-19",
-  "cache_version": "mmf-beta-v27-6-3",
-  "notes": "Follow-up to v27.6.2. Two further fixes to the location-refused flow, both found by checking rather than assuming the previous fix was complete. (1) locationRequestInFlight was only ever reset inside the two browser callbacks; iOS home-screen web apps have a known history of never invoking either one for a blocked permission, which would leave it stuck true forever and make every later tap of Try again a genuine no-op - no re-render, nothing. Added an independent 9-second watchdog, plus a request-id guard so an abandoned requests late callback can never overwrite whatever a subsequent retry already produced. (2) The refusal message previously said only to open Settings and find this app or your browser - correct but vague. It now detects standalone (Home Screen installed) mode and gives the actual iOS path: Settings, scroll to the app (same name as its icon, since the manifest name is English-only and could not be asserted with confidence), tap Location, choose While Using the App; with the Privacy & Security -> Location Services route as a fallback if not listed. A plain browser tab still gets the original, more general wording. Verified: a hung request self-resolves after 9s with a real message instead of staying stuck; a genuinely stale late callback is correctly ignored once a newer request has taken over; both languages correctly switch to the Home Screen wording only when standalone mode is detected, and a plain browser tab keeps the original text."
+  "cache_version": "mmf-beta-v27-6-4",
+  "notes": "Splits the location-failure handling by cause, as requested after review of v27.6.2/3. A real refusal (or no geolocation API at all) is structural - nothing the user can do in the app fixes it, only a trip to Settings will - so those two cases keep the persistent explanation panel. A timeout or a momentary \"position unavailable\" is usually just a weak signal, and the very next attempt often just works; trapping the user in Near me for that was an over-correction, so those two cases now fall back to normal results exactly as the app always did before v27.6.2, but with the toast that can actually be read (the width and duration fix already shipped). Verified all four reasons independently: denied and unsupported still trap with the panel; timeout and position-unavailable now return to Home with 60 normal results showing and a readable toast, neither one showing the persistent panel."
 }
