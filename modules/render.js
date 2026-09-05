@@ -173,7 +173,11 @@ export function locationPanel(){
   const st=state.locationStatus||'';
   const denied=st==='denied'||st==='unsupported';
   const title=st?tr(denied?'locationBlocked':'locationUnavailable'):tr('nearTitle');
-  const body=st?tr(denied?'locationBlockedHelp':'locationUnavailableHelp'):tr('locationAsk');
+  // A Home Screen install gets its own permanent entry in the device's own Settings app,
+  // exactly like a native app - a plain browser tab's permission is looser. Give the
+  // precise path only when we can tell it is actually installed; otherwise the generic
+  // wording (which mentions the browser) still fits.
+  const body=st?tr(denied?(isStandaloneMode()?'locationBlockedHelpApp':'locationBlockedHelp'):'locationUnavailableHelp'):tr('locationAsk');
   const retry=st?tr('locationRetry'):tr('nearUse');
   return {title,body,retry};
 }
