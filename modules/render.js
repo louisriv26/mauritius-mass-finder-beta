@@ -166,7 +166,20 @@ export function feastDocLinkButton(feast,siteUid){
   if(!docId)return '';
   return ` <button type="button" class="linkBtn" data-feastdoc="${esc(docId)}" data-feastdoc-site="${esc(siteUid||'')}">${esc(tr('feastDocViewLink'))}</button>`;
 }
-export function advisoryBanner(r){return (r&&r.advisory==='confirm_not_regular')?`<div class="ruleBanner danger">${esc(tr('advisoryNotRegular'))}</div>`:''}
+export function advisoryBanner(r){
+  if(!r||!r.advisory)return '';
+  // 'confirm_not_regular' quotes the DIOCESE, so it may only be used where the diocesan
+  // page actually says so. A site the diocese does not list at all (e.g. a monastery)
+  // must not borrow that wording - it would put words in their mouth, and claim the Mass
+  // is irregular when it is simply movable.
+  if(r.advisory==='confirm_not_regular')return `<div class="ruleBanner danger">${esc(tr('advisoryNotRegular'))}</div>`;
+  if(r.advisory==='time_may_vary'){
+    const tel=(r.contact_phone||'').trim();
+    const call=tel?` ${esc(tr('advisoryCallToConfirm'))} <a href="tel:${esc(tel.replace(/[^0-9+]/g,''))}">${esc(tel)}</a>`:'';
+    return `<div class="ruleBanner danger">${esc(tr('advisoryTimeMayVary'))}${call}</div>`;
+  }
+  return '';
+}
 export function locationPanel(){
   // A denial cannot be re-prompted by script, so say what happened and how to undo it,
   // persistently - not as a toast that disappears before it can be read.
