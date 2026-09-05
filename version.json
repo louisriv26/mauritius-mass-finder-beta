@@ -1,9 +1,9 @@
 {
-  "version": "27.6.12",
-  "release_name": "Three more coordinates and a wrong town corrected",
+  "version": "27.6.13",
+  "release_name": "Truthful update-check message; corrected iOS location guidance",
   "build": "2026-08-19",
-  "build_id": "27.6.12-1",
+  "build_id": "27.6.13-1",
   "data_version": "2026-08-19",
-  "cache_version": "mmf-beta-v27-6-12",
-  "notes": "Re-ran the remaining locality-level sites using the PARENT PARISH CHURCH coordinate as both the map-search bias and the acceptance reference, replacing the unreliable village geocoding. Three more sites located: Sainte-Jeanne-d Arc (Alma), whose Google Plus Code address reads QH7C+3PW, Alma; Sainte-Anne (Bonne-Mere), reverse-geocoding to Camp Bonne Mere, Queen Victoria, Flacq; and Saint-Coeur-de-Marie, which reverse-geocodes to Royal Road, Petite Riviere. That last one also exposed a data error: five rows carried the town Bambous, but the diocesan page is titled Saint-Coeur-de-Marie, Petite-Riviere and lists only this church and Notre-Dame-de-la-Mer, with no Bambous site at all. The town is corrected to Petite-Riviere. Sainte-Anne (Bonne-Mere) was found by accident while searching for a different chapel, which is a fair summary of how thin Google coverage is for the remainder. 27 sites remain at locality level and most now look genuinely unmapped: searches for them return a football club (Saint Georges FC for Saint-Georges, Camp-Diable), a neighbouring parish church, or nothing. Those need a local answer rather than more searching. No schedule data changed: 426 rows."
+  "cache_version": "mmf-beta-v27-6-13",
+  "notes": "Fixes two strings that actively misled users. (1) manualCheckUpdate reported Already up to date from inside its own catch block, so a failed network or JSON check told the user the opposite of the truth. A failed check now says the check could not be made and to try again when connected. (2) The Home Screen location guidance told users to open Settings and find an entry for this app - an entry Louis confirmed does not exist on his phone. Replaced with what was actually established by device testing: iOS gives no way to re-enable it from inside the app and there may be no Settings entry at all; location still works normally in the browser; and to keep a Home Screen icon, re-add it with Open as Web App turned OFF. Both verified live in English and French. Also re-ran the full website-versus-corpus comparison after this run of data edits: 506 of 534 website entries now match a corpus row exactly, 94.8 percent, up from 93 percent. All six remaining named-site mismatches were traced to the comparison script normalising names, not to gaps in the data - the corpus was confirmed to hold every one of them. No schedule data changed: 426 rows."
 }
