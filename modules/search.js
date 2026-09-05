@@ -195,7 +195,9 @@ export function toggleQuickTime(value){
 export function toggleNearMode(){
   if(state.near){clearIntent('near',{url:true});return}
   setState({mode:'near',near:true,nearExpanded:false,nearScope:''},{url:true});
-  if(!state.location)requestLocation();
+  // Deliberately entering Near me re-acquires: a position held from earlier in the
+  // session can be many kilometres stale.
+  requestLocation({force:true});
 }
 export function clearIntent(k,options={url:true}){
   const nextFilters={...state.filters};
