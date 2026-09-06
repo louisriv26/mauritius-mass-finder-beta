@@ -1,8 +1,8 @@
-const CACHE_NAME='mmf-beta-v27-6-23';
+const CACHE_NAME='mmf-beta-v27-6-24';
 // Everything the app needs to boot and run offline. Any one of these missing means a broken
 // app, so a failure here must fail the whole install rather than leave a half-cached app
 // that looks fine until it is actually used.
-const CORE_REQUIRED=['./','index.html','styles.css','app.js','config.js','version.json','manifest.json','data/masses.json','fallback-data.js','recover.html','modules/constants.js','modules/translations.js','modules/state.js','modules/utils.js','modules/geo.js','modules/search.js','modules/render.js','modules/feastdoc.js','modules/sheets.js','modules/sw-bridge.js','modules/__deliberately_missing__.js'];
+const CORE_REQUIRED=['./','index.html','styles.css','app.js','config.js','version.json','manifest.json','data/masses.json','fallback-data.js','recover.html','modules/constants.js','modules/translations.js','modules/state.js','modules/utils.js','modules/geo.js','modules/search.js','modules/render.js','modules/feastdoc.js','modules/sheets.js','modules/sw-bridge.js'];
 // Home-screen icons. Worth having offline; never worth failing a release over.
 const CORE_ICONS=['icon.svg','icons/icon-192.png','icons/icon-512.png','icons/icon-maskable-192.png','icons/icon-maskable-512.png'];
 const CORE=CORE_REQUIRED.concat(CORE_ICONS);
@@ -26,7 +26,15 @@ self.addEventListener('install',event=>{event.waitUntil((async()=>{
   const got=await Promise.all(CORE_REQUIRED.map(u=>cachePut(c,u,3)));
   await Promise.all(CORE_ICONS.map(u=>cachePut(c,u,2)));
   const missing=CORE_REQUIRED.filter((u,i)=>!got[i]);
-  if(missing.length)throw new Error('precache failed: '+missing.join(' '));
+  if(missing.length){
+    // A failed install leaves a HALF-POPULATED cache behind, and because the worker never
+    // activates, its activate handler never runs to clean it up. The fetch handler uses the
+    // global caches.match(), which searches every cache in the origin - so orphaned partial
+    // caches are exactly how stale content starts being served (see the G4 note in the gate).
+    // Found by deploying a deliberately broken build to beta and watching the install fail.
+    await caches.delete(CACHE_NAME);
+    throw new Error('precache failed: '+missing.join(' '));
+  }
 })());});
 self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE_NAME&&k.startsWith('mmf-beta-')).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
 self.addEventListener('message',event=>{if(event.data&&event.data.type==='SKIP_WAITING')self.skipWaiting();});

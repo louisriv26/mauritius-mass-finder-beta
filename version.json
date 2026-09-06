@@ -1,9 +1,9 @@
 {
-  "version": "27.6.23",
-  "release_name": "TEST BUILD - deliberately broken install, do not promote",
+  "version": "27.6.24",
+  "release_name": "A stuck update banner, from three directions",
   "build": "2026-09-06",
-  "build_id": "27.6.23-1",
+  "build_id": "27.6.24-1",
   "data_version": "2026-08-19",
-  "cache_version": "mmf-beta-v27-6-23",
-  "notes": "Throwaway beta build. CORE_REQUIRED lists a file that does not exist so the service worker install cannot complete, to prove the app reports a failed install instead of sitting silently on the update banner. Replaced immediately by a clean build."
+  "cache_version": "mmf-beta-v27-6-24",
+  "notes": "Fixes the update failure reported from a real phone on v27.6.19, where the update banner stayed up until Repair was used. Three defects, all now closed and all proven on the live beta origin rather than argued. (1) install used cache.addAll(), which is all-or-nothing: one dropped request aborted the whole install and the new worker went straight to redundant, while the app - listening only for installed - said nothing and waited out its 60s timeout. Assets are now fetched individually with retries, and the five home-screen icons may fail without failing the release. (2) forceUpdate() waited on controllerchange alone, which iOS does not reliably fire for a worker that called skipWaiting() while running standalone from the Home Screen. Proven by swallowing controllerchange on the live beta: the old code would have hung, the new code still completed the update from 27.6.21 to 27.6.22 via a registration poll. (3) Found by deploying a deliberately broken build: a failed install left a half-populated cache behind, and since the worker never activates, nothing ever cleaned it up. The fetch handler searches every cache in the origin, so that orphan is how stale content starts being served. A failed install now deletes its own cache. A failed install is also reported honestly now - a broken beta showed 'The update could not be downloaded' after 4.6s with a working recover link, instead of silence. The 6s message no longer offers Repair, which used to invite the user to throw away a healthy install still in progress. Measured, not assumed: the whole precache is 116.5 KB gzipped over the wire, not the ~1 MB first estimated. Gate gains G11, G12 and an opt-in G13 live-serving probe; G3 now reads both CORE arrays, since a single-array regex would have silently checked nothing after the split. Carries the v27.6.20 accessibility work. No data change: 426 rows."
 }
