@@ -1,4 +1,4 @@
-const CACHE_NAME='mmf-beta-v27-6-24';
+const CACHE_NAME='mmf-beta-v27-6-25';
 // Everything the app needs to boot and run offline. Any one of these missing means a broken
 // app, so a failure here must fail the whole install rather than leave a half-cached app
 // that looks fine until it is actually used.

@@ -225,6 +225,10 @@ function bind(){
     const banner=$('#updateBanner');
     if(banner){storageSet('mmf_update_dismissed_'+(banner.dataset.latestBuildId||banner.dataset.latestVersion||APP_VERSION),'1');banner.classList.remove('show')}
   });
-  $('#updateHelp').addEventListener('click',()=>openMoreSection('updateHelp'));
+  // 'updateHelp' is not a section key - moreSectionContent() knows help/install/about/
+  // update/report, so it fell through to its `||sections.help` default. The one button
+  // offered to someone whose update is stuck opened the SEARCH TIPS, with no tab
+  // highlighted and neither "Check for update" nor the Repair link on screen.
+  $('#updateHelp').addEventListener('click',()=>openMoreSection('update'));
 }
 document.addEventListener('DOMContentLoaded',()=>{try{resetInteractionState();installDelegatedActions();bind();bindSheetDrag();renderInstallOnboarding();loadData();registerSW();checkUpdate();setInterval(checkUpdate,30*60*1000)}catch(e){showInitFailure(e)}});

@@ -120,7 +120,9 @@ export function openMoreSection(section='help',shouldScroll=true){
   if(shouldScroll&&panel){setTimeout(()=>{panel.scrollIntoView({behavior:'smooth',block:'start'}); $('.morePanelContent')?.focus({preventScroll:true})},0)}
 }
 export function renderFooter(){const f=$('#appFooter'); if(!f)return; f.innerHTML=`<span>${esc(tr('version'))} ${APP_VERSION}</span><span aria-hidden="true">•</span><button type="button" data-footer-target="help">${esc(tr('helpTitle'))}</button><span aria-hidden="true">•</span><button type="button" data-footer-target="install">${esc(tr('installTab'))}</button><span aria-hidden="true">•</span><button type="button" data-footer-target="about">${esc(tr('about'))}</button><span aria-hidden="true">•</span><button type="button" data-footer-target="update">${esc(tr('howUpdate'))}</button><span aria-hidden="true">•</span><button type="button" data-footer-target="report">${esc(tr('reportIssue'))}</button>`;}
-export function openUpdateHelp(){openMoreSection('update')}
+// (openUpdateHelp() lived here and did exactly the right thing, but nothing ever called it
+// while the live call site inlined a section key that did not exist. Two ways to do one
+// thing is how that bug survived; there is now one.)
 export function moreSectionContent(){
   if(state.moreSection==='feastdoc'){
     const doc=state.feastDoc;
