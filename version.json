@@ -1,9 +1,9 @@
 {
-  "version": "27.6.15",
-  "release_name": "Tell the new worker to activate only once it can hear us",
+  "version": "27.6.16",
+  "release_name": "A monthly exposition was being shown every week",
   "build": "2026-08-19",
-  "build_id": "27.6.15-1",
+  "build_id": "27.6.16-1",
   "data_version": "2026-08-19",
-  "cache_version": "mmf-beta-v27-6-15",
-  "notes": "Closes the last known hole in the update path. SKIP_WAITING was posted to reg.installing||reg.waiting the moment reg.update() resolved. A worker that is still INSTALLING may not have its message handler running yet, so the message could simply be dropped - the worker then sat in waiting forever, no controllerchange fired, and the user waited out the full give-up timeout for an update that had actually downloaded fine. The message is now held until the worker reports installed, and updatefound is armed BEFORE calling update() because update() can resolve before the new worker appears. Verified: with a worker in the installing state nothing is posted, and exactly one SKIP_WAITING is sent the moment it reaches installed; a worker already installed is still told immediately. This bug predates the v27.6.14 rewrite - it was flagged there rather than fixed, which left the mechanism that delivers every other fix with a known hole. No data change: 426 rows."
+  "cache_version": "mmf-beta-v27-6-16",
+  "notes": "Found by testing the occurrence-rule engine for the first time - 28 ruled rows evaluated across 1,249 dates against an independently written expectation. 26 were correct; 2 were wrong on 40 of 52 Fridays. row-0398 (Saint-Paul, Phoenix) and row-0399 (Saint-Patrice, Plaine Magnien) both carried First Friday only; Exposition du Saint-Sacrement in special_rule with occurrence_rule left empty. isOccurrenceRuleCandidate() deliberately rejects any special_rule mentioning exposition, adoration, celebration or prayer, so that a description is never mistaken for a schedule rule - but here the same string carried BOTH, so the rule was discarded and isRuleValidForDate() returned true for every Friday. The app advertised a monthly exposition all 52 weeks of the year. The exclusion is correct in principle and is unchanged; the ordinal now lives in occurrence_rule, which is what the field is for and what all 26 working rows already do. Verified: both rows now valid only on the first Friday (3 Sept, 1 Oct), and all 28 ruled rows pass across 1,249 date checks. A new gate check G9 fails the build if an ordinal is ever again left in special_rule beside an excluded word with no occurrence_rule. Both rows are Non-Mass, so they surface only when other celebrations are included. No Mass time changed: 426 rows."
 }
