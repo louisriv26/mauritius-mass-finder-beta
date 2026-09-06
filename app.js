@@ -202,7 +202,24 @@ function bind(){
     trapSheetFocus(e);
     trapDetailFocus(e);
   });
-  window.addEventListener('popstate',()=>restoreStateFromHash());
+  // popstate fires for back/forward. Navigating to a DIFFERENT fragment of the same page -
+  // which is what tapping a shared link does while the app is already open - fires only
+  // hashchange. Binding popstate alone meant a shared Mass link did nothing.
+  const onHashNavigation=()=>{
+    restoreStateFromHash();
+    // A shared Mass link opened while the app is ALREADY running only changes the hash - the
+    // page does not reload - so openHashRowIfNeeded() never runs again. Previously the Mass
+    // that was already on screen simply stayed there, and the shared one never opened: the
+    // recipient could act on a different Mass from the one they were sent.
+    const want=new URLSearchParams(location.hash.slice(1)).get('row')||'';
+    const showing=state.detailRow?rowKey(state.detailRow):'';
+    if(showing!==want){
+      if(state.detailRow)closeDetailSheet();
+      if(want)openHashRowIfNeeded();
+    }
+  };
+  window.addEventListener('popstate',onHashNavigation);
+  window.addEventListener('hashchange',onHashNavigation);
   $('#updateRefresh').addEventListener('click',()=>forceUpdate());
   $('#updateDismiss').addEventListener('click',()=>{
     const banner=$('#updateBanner');
