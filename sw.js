@@ -1,8 +1,8 @@
-const CACHE_NAME='mmf-beta-v27-6-22';
+const CACHE_NAME='mmf-beta-v27-6-23';
 // Everything the app needs to boot and run offline. Any one of these missing means a broken
 // app, so a failure here must fail the whole install rather than leave a half-cached app
 // that looks fine until it is actually used.
-const CORE_REQUIRED=['./','index.html','styles.css','app.js','config.js','version.json','manifest.json','data/masses.json','fallback-data.js','recover.html','modules/constants.js','modules/translations.js','modules/state.js','modules/utils.js','modules/geo.js','modules/search.js','modules/render.js','modules/feastdoc.js','modules/sheets.js','modules/sw-bridge.js'];
+const CORE_REQUIRED=['./','index.html','styles.css','app.js','config.js','version.json','manifest.json','data/masses.json','fallback-data.js','recover.html','modules/constants.js','modules/translations.js','modules/state.js','modules/utils.js','modules/geo.js','modules/search.js','modules/render.js','modules/feastdoc.js','modules/sheets.js','modules/sw-bridge.js','modules/__deliberately_missing__.js'];
 // Home-screen icons. Worth having offline; never worth failing a release over.
 const CORE_ICONS=['icon.svg','icons/icon-192.png','icons/icon-512.png','icons/icon-maskable-192.png','icons/icon-maskable-512.png'];
 const CORE=CORE_REQUIRED.concat(CORE_ICONS);

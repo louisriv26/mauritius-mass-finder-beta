@@ -1,9 +1,9 @@
 {
-  "version": "27.6.22",
-  "release_name": "A stuck update banner, from two directions",
+  "version": "27.6.23",
+  "release_name": "TEST BUILD - deliberately broken install, do not promote",
   "build": "2026-09-06",
-  "build_id": "27.6.22-1",
+  "build_id": "27.6.23-1",
   "data_version": "2026-08-19",
-  "cache_version": "mmf-beta-v27-6-22",
-  "notes": "Fixes the update failure reported from a real phone on v27.6.19, where the update banner stayed up until Repair was used. Two independent causes, both now closed. (1) install used cache.addAll(), which is all-or-nothing: one dropped request on a mobile connection aborted the whole install and the new worker went straight to redundant. Assets are now fetched individually with retries, the five home-screen icons are allowed to fail without failing the release, and a redundant worker is now reported to the user as a failed download instead of silently looking like a slow one. (2) forceUpdate() waited only on controllerchange, which iOS does not reliably fire for a worker that called skipWaiting() while running standalone from the Home Screen - so an update that installed and activated perfectly well never reloaded the page. It now also watches the registration itself and reloads once a new worker reaches activated. The 6s message no longer offers Repair, which used to invite the user to throw away a healthy install still in progress. Verified: all 25 precached assets serve 200 from both origins, total 116.5 KB gzipped on the wire. Gate gains G11, G12 and an opt-in G13 live-serving probe. Also carries the v27.6.20 accessibility work. No data change: 426 rows. v27.6.22 adds: a failed install is now reported as a failed download even when reg.update() rejects before the redundant statechange lands - that path previously said \"taking too long\", which was untrue. Build byproducts (build_manifest.json, release_local_diff.json) are no longer published to the site."
+  "cache_version": "mmf-beta-v27-6-23",
+  "notes": "Throwaway beta build. CORE_REQUIRED lists a file that does not exist so the service worker install cannot complete, to prove the app reports a failed install instead of sitting silently on the update banner. Replaced immediately by a clean build."
 }
