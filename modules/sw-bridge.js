@@ -76,7 +76,11 @@ export async function forceUpdate(){
       else post();
     };
     reg.addEventListener('updatefound',()=>watch(reg.installing));
-    await reg.update();
+    // update() REJECTS when the new worker fails to install, and it can win the race against
+    // the `redundant` statechange above. Letting that fall through to the generic catch
+    // reported a failed download as "taking too long", which is simply untrue.
+    try{await reg.update()}
+    catch(e){finish(()=>{_updating=false;showFailed()});return}
     watch(reg.installing||reg.waiting);
 
     // Do NOT depend on controllerchange alone. iOS in particular does not reliably fire it
