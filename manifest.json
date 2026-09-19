@@ -40,7 +40,7 @@
     "browser"
   ],
   "version": "v102.0",
-  "build_revision": "R13",
-  "release_sequence": 102000013,
-  "release_id": "24h-v102.0-r13-20260919-5540c021d1a3"
+  "build_revision": "R14",
+  "release_sequence": 102000014,
+  "release_id": "24h-v102.0-r14-20260919-889789ce9500"
 }

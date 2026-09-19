@@ -1,15 +1,15 @@
 {
   "app_version": "v102.0",
   "build_date": "2026-09-19",
-  "cache_name": "scope-derived:luisa-24h-<scope-fingerprint>-v102-0-r13",
+  "cache_name": "scope-derived:luisa-24h-<scope-fingerprint>-v102-0-r14",
   "storage_schema": 8,
   "personal_snapshot": 5,
   "ldc_source_public_version": "COMPOSITE_29_62_65_PLUS_FAST_MODE_DERIVATIVE_SYNC",
   "ldc_source_app_version": "LDC_CURRENT_SYNC_AUTHORITY",
   "ldc_source_package_sha256": null,
-  "release_scope": "Bounded R13 source-critical successor of exact frozen R12. Applies only the independently verified corrections in the authorized 46-candidate P4C programme, with bounded documentary-presentation offset rebinding required by those text-length changes. Stable-ID topology, Search semantics, personal-state/storage schema, backup/import/export behavior, Update-v2 architecture, icons and provenance UI remain unchanged.",
-  "real_device_status": "R13 source-critical internal closure is complete on the exact successor bytes. Physical installed-PWA/live-origin/cold-offline/cross-device/Larger-Text/assistive-technology evidence remains external and must not be inferred from internal harnesses.",
-  "overall_release_status": "V1020_R13_SOURCE_CRITICAL__INTERNAL_CLOSURE_PASS__PHYSICAL_DEVICE_LIVE_ORIGIN_CAMPAIGN_EXTERNAL__PROVENANCE_UI_NOT_IMPLEMENTED",
+  "release_scope": "Bounded R14 Source et validation successor of exact frozen R13. Adds only the deterministic frozen-P5 public provenance projection, accessible per-Hour disclosure and methodology/source view. R13 devotional text, linked-text content, stable IDs, Search corpus, storage schema, backup payload, personal state and Update-v2 behavior remain unchanged.",
+  "real_device_status": "R14 provenance UI internal closure PASS on exact successor bytes. Physical installed-PWA/live-origin/cold-offline/cross-device/Larger-Text/VoiceOver/TalkBack evidence remains external and is not claimed.",
+  "overall_release_status": "V1020_R14_PROVENANCE_UI__INTERNAL_CLOSURE_PASS__PHYSICAL_DEVICE_LIVE_ORIGIN_CAMPAIGN_EXTERNAL",
   "known_blockers": [
     "physical installed-PWA migration verification to the exact final qualified successor on iPhone and iPad, including one-tap Actualiser behavior from governed predecessor lineages",
     "true standalone iPhone/iPad/Samsung verification on exact qualified bytes",
@@ -31,8 +31,8 @@
   "ldc_source_alignment_generation": "COMPOSITE__SEE_ldc_current_sync_authority",
   "ldc_source_enriched_generation": "COMPOSITE__SEE_ldc_current_sync_authority",
   "ldc_source_corpus_manifest_sha256": null,
-  "postfreeze_reopen_evidence": "R13 exact ZIP remains subject to controlled physical/live/offline/transfer/assistive-technology verification; internal harness evidence must not be converted into physical-device PASS claims.",
-  "build_revision": "R13",
+  "postfreeze_reopen_evidence": "R14 exact ZIP remains subject to controlled physical/live/offline/transfer/assistive-technology verification; internal harness evidence must not be converted into physical-device PASS claims.",
+  "build_revision": "R14",
   "forced_colors_stage7": "TEST_ONLY__PASS_EMULATED_CHROMIUM__23_23_WAVE_SLICE__ZERO_MUTATION__EXTERNAL_WAVE_QA_PACK",
   "stage7_authorization_proposal_sha256": "42126e52c63d114d1b3a42bdf2bcac8f19e88dc70417fd95accfe33f809312a6",
   "stage7_predecessor_zip_sha256": "3eb86f5d9f1686a8851664020be4060c85dbf20228351d1d1c442e583c8ece5c",
@@ -46,39 +46,39 @@
   "search_projection_version": "24h-search-v2-reader-projection-r1",
   "search_predecessor_zip_sha256": "3f69f8b948494d70e728287998efe6a0fefafa649ac9e0a7759934fbcefe458a",
   "scroll_performance_predecessor_zip_sha256": "f9bee241f08181a31b63e4284bc82422f5cdc820a2d4033017ef5c1d95004478",
-  "release_sequence": 102000013,
-  "release_id": "24h-v102.0-r13-20260919-5540c021d1a3",
+  "release_sequence": 102000014,
+  "release_id": "24h-v102.0-r14-20260919-889789ce9500",
   "canonical_shell": "./luisa_24_heures.html",
-  "canonical_shell_sha256": "e0bda8b371828989122ad22038fd6f7aa39ade630dce17739c3a3295d159b503",
+  "canonical_shell_sha256": "10a5dc4bf486c609eec3972f9108e2ce2d3f9fee2c8f03af7951a6cbb2909353",
   "update_protocol": 2,
   "pwa_update_predecessor_version": "v101.156",
   "pwa_update_predecessor_zip_sha256": "9b73b16dfc26c6b5cc1efaa652cdf7264b3331040022477bcbed6ddecabfdc9a",
-  "pwa_update_architecture": "verified_prepare_commit_v2_waiting_worker_explicit_activation__R13_PRESERVES_R12_UPDATE_V2_BEHAVIOR_UNCHANGED_EXCEPT_SUCCESSOR_IDENTITY_HASH_CACHE_COMMENT",
-  "legacy_bootstrap": "R13 preserves the R12/R11 unique-lineage Update-v2 architecture. Automatic install does not claim clients; only a verified explicit user commit arms same-scope takeover.",
+  "pwa_update_architecture": "verified_prepare_commit_v2_waiting_worker_explicit_activation__R14_PRESERVES_R13_UPDATE_V2_BEHAVIOR_UNCHANGED_EXCEPT_SUCCESSOR_IDENTITY_HASH_CACHE_COMMENT",
+  "legacy_bootstrap": "R14 preserves the R13/R12/R11 unique-lineage Update-v2 architecture. Automatic install does not claim clients; only a verified explicit user commit arms same-scope takeover.",
   "rollback_policy": "No downgrade. Candidate verification fails closed; predecessor cache retained until matching successor BOOT_OK. Functional rollback must be shipped as a new higher release_sequence.",
   "manifest_identity_binding": "version/build/release_sequence/release_id/start_url verified by installing worker; index.html must hash-identically match canonical shell",
   "functional_convergence_predecessor_version": "v101.156 R1",
   "functional_convergence_predecessor_zip_sha256": "9b73b16dfc26c6b5cc1efaa652cdf7264b3331040022477bcbed6ddecabfdc9a",
   "functional_convergence_scope": [
     "R9 760px Reader shell and R8 467/555/643/760px prose measures preserved unchanged",
-    "R11 unique fork convergence remains the immediate runtime predecessor",
+    "R11 unique fork convergence remains in the governed lineage; R13 is the immediate runtime predecessor",
     "Update-v2 explicit commit, successor claim and requester controller verification preserved unchanged in behavior",
     "R10/R11 narrow Reader-tab and prayer-trigger containment retained",
     "20px Très-grand Reader-tab typography preserved; no Reader-tab shrink-to-fit workaround",
     "R12 bottom navigation uses geometry redistribution rather than font suppression at normal supported phone widths",
     "R12 bottom-navigation geometry behavior inherited unchanged",
-    "R13 release identity, cache and CSP script hash mechanically rebound to exact successor bytes"
+    "R14 release identity, cache and CSP script/style hashes mechanically rebound to exact successor bytes"
   ],
-  "functional_freeze_status": "FROZEN_R13_SOURCE_CRITICAL_SCOPE__ONLY_AUTHORIZED_46_PROGRAMME_AND_REQUIRED_PRESENTATION_REBINDING_MUTATED__PROVENANCE_UI_NOT_IMPLEMENTED",
-  "security_stage_status": "R13_CSP3_ARCHITECTURE_PRESERVED__SCRIPT_HASH_REBOUND_FOR_EXACT_R13_BYTES__STYLE_HASHES_UNCHANGED__UPDATE_V2_SEMANTICS_UNCHANGED",
+  "functional_freeze_status": "FROZEN_R14_PROVENANCE_UI_SCOPE__INTERNAL_CLOSURE_PASS__R13_DEVOTIONAL_AND_PERSONAL_STATE_SURFACES_PROTECTED",
+  "security_stage_status": "R13_CSP3_ARCHITECTURE_PRESERVED__SCRIPT_HASH_REBOUND_FOR_EXACT_R14_BYTES__STYLE_HASHES_RECOMPUTED_FOR_R14_PROVENANCE_UI__UPDATE_V2_SEMANTICS_UNCHANGED",
   "security_predecessor_version": "v102.0 R4",
   "security_predecessor_zip_sha256": "79d8d88ed80622841dcf989edc5d777e2c2c6e3f5f3e17cad9042a679e7b5fc4",
   "security_csp_strategy": "CSP3 split directives: hash-locked script/style elements; inline handler/style attributes retained for compatibility and mature architecture; legacy script-src/style-src fallback retained.",
-  "security_inline_script_sha256_base64": "sha256-T2Qm7n3ZvW57Bx9ExsIZ74jAsmojauGioeDyo8KwDAY=",
+  "security_inline_script_sha256_base64": "sha256-00cvSUbwKgjvEUQgIe52e0NQQmHw9zkNtJd9chMoyQU=",
   "security_inline_style_sha256_base64": [
     "sha256-UQ2LZMV8vpixa50rjbFhb0lgGCv04EY1sB1SyGNLL0k=",
     "sha256-WyCjSjoZlniD7cXjcP9QqT5C4Dz6KLmxUT5+Bl3LiBg=",
-    "sha256-HMMhmfcA7wDDERFaEzQdbHZtkWJ187qQbrn8c5bCXXM="
+    "sha256-wmttxvJtX9lwQQdEqK27TS/ULv7/a/735nMD55UyGSQ="
   ],
   "blind_adversarial_r3_predecessor_version": "v102.0 R2",
   "blind_adversarial_r3_predecessor_zip_sha256": "9c2a565bde543f22b7050d0dee05b41c53db250e5044c38d56bac6ae358af739",
@@ -304,7 +304,7 @@
     "stable_id_topology": "PRESERVED",
     "provenance_ui": "NOT_IMPLEMENTED_IN_R13"
   },
-  "canonical_shell_inline_script_sha256_csp": "sha256-T2Qm7n3ZvW57Bx9ExsIZ74jAsmojauGioeDyo8KwDAY=",
+  "canonical_shell_inline_script_sha256_csp": "sha256-00cvSUbwKgjvEUQgIe52e0NQQmHw9zkNtJd9chMoyQU=",
   "r13_documentary_integrity_set_contract": "SHA256_UTF8_NFC_SORTED_KEYS_COMPACT_JSON_ARRAY_ORDER_PRESERVED_OF_72_RECORD_ARRAY__ledger_id_content_presentation_linked_source_documentary_assertion",
   "r13_documentary_integrity_set_sha256": "50c3509c87887150d484a3e0b186e0ac718f447befd1f96164c4b03681f689f0",
   "r13_documentary_changed_counts": {
@@ -312,5 +312,23 @@
     "presentation": 11,
     "linked_source_identity": 0,
     "documentary_assertion": 25
-  }
+  },
+  "provenance_ui_status": "IMPLEMENTED_FROM_FROZEN_P5__INTERNAL_CLOSURE_PASS",
+  "r14_provenance": {
+    "predecessor_release_id": "24h-v102.0-r13-20260919-5540c021d1a3",
+    "predecessor_deploy_sha256": "effff5ca9d48d1a3730506327612d43a3ee9568863bbac6ebce926144e71a1b0",
+    "p5_frozen_package_sha256": "9fc9bc6307138ffc4834bb7a5b12ab1442e765d6152a1127e5116c4341f5ebf8",
+    "public_projection_sha256": "d6a6f5de9c01be8baac79e0a927b9ec2f849068ac7ada0cc9814ef77c998a495",
+    "projection_record_count": 72,
+    "documentary_note_records": [
+      "H08.REFLECTIONS_PRACTICE",
+      "H23.MEDITATION",
+      "H24.MEDITATION"
+    ],
+    "search_index_inclusion": false,
+    "accordion_state_persisted": false
+  },
+  "provenance_public_projection_sha256": "d6a6f5de9c01be8baac79e0a927b9ec2f849068ac7ada0cc9814ef77c998a495",
+  "provenance_p5_package_sha256": "9fc9bc6307138ffc4834bb7a5b12ab1442e765d6152a1127e5116c4341f5ebf8",
+  "provenance_r13_documentary_integrity_set_sha256": "50c3509c87887150d484a3e0b186e0ac718f447befd1f96164c4b03681f689f0"
 }
