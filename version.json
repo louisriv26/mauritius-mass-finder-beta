@@ -1,15 +1,15 @@
 {
   "app_version": "v102.0",
-  "build_date": "2026-09-19",
-  "cache_name": "scope-derived:luisa-24h-<scope-fingerprint>-v102-0-r14",
+  "build_date": "2026-09-20",
+  "cache_name": "scope-derived:luisa-24h-<scope-fingerprint>-v102-0-r21",
   "storage_schema": 8,
   "personal_snapshot": 5,
   "ldc_source_public_version": "COMPOSITE_29_62_65_PLUS_FAST_MODE_DERIVATIVE_SYNC",
   "ldc_source_app_version": "LDC_CURRENT_SYNC_AUTHORITY",
   "ldc_source_package_sha256": null,
-  "release_scope": "Bounded R14 Source et validation successor of exact frozen R13. Adds only the deterministic frozen-P5 public provenance projection, accessible per-Hour disclosure and methodology/source view. R13 devotional text, linked-text content, stable IDs, Search corpus, storage schema, backup payload, personal state and Update-v2 behavior remain unchanged.",
-  "real_device_status": "R14 provenance UI internal closure PASS on exact successor bytes. Physical installed-PWA/live-origin/cold-offline/cross-device/Larger-Text/VoiceOver/TalkBack evidence remains external and is not claimed.",
-  "overall_release_status": "V1020_R14_PROVENANCE_UI__INTERNAL_CLOSURE_PASS__PHYSICAL_DEVICE_LIVE_ORIGIN_CAMPAIGN_EXTERNAL",
+  "release_scope": "Bounded R21 successor of exact R20 bytes. Repairs only: font-preset active-state scoping; content-weighted selected-text toolbar geometry; R13 52/52 stable-ID count correction; explicit H23 RPN-008/C0071 same-paragraph sequential-correction wording; auxiliary CSP metadata rebinding. Devotional text and unrelated behavior remain protected.",
+  "real_device_status": "R21 has internal static/runtime/reopened-ZIP verification only. Physical installed iPhone/iPad/PWA confirmation remains external.",
+  "overall_release_status": "V1020_R21_BOUNDED_REPAIR__INTERNAL_VERIFICATION_PENDING__PHYSICAL_EXTERNAL",
   "known_blockers": [
     "physical installed-PWA migration verification to the exact final qualified successor on iPhone and iPad, including one-tap Actualiser behavior from governed predecessor lineages",
     "true standalone iPhone/iPad/Samsung verification on exact qualified bytes",
@@ -31,8 +31,8 @@
   "ldc_source_alignment_generation": "COMPOSITE__SEE_ldc_current_sync_authority",
   "ldc_source_enriched_generation": "COMPOSITE__SEE_ldc_current_sync_authority",
   "ldc_source_corpus_manifest_sha256": null,
-  "postfreeze_reopen_evidence": "R14 exact ZIP remains subject to controlled physical/live/offline/transfer/assistive-technology verification; internal harness evidence must not be converted into physical-device PASS claims.",
-  "build_revision": "R14",
+  "postfreeze_reopen_evidence": "R21 is the bounded repair authorized after the independent R20 audit; no devotional corpus mutation is authorized.",
+  "build_revision": "R21",
   "forced_colors_stage7": "TEST_ONLY__PASS_EMULATED_CHROMIUM__23_23_WAVE_SLICE__ZERO_MUTATION__EXTERNAL_WAVE_QA_PACK",
   "stage7_authorization_proposal_sha256": "42126e52c63d114d1b3a42bdf2bcac8f19e88dc70417fd95accfe33f809312a6",
   "stage7_predecessor_zip_sha256": "3eb86f5d9f1686a8851664020be4060c85dbf20228351d1d1c442e583c8ece5c",
@@ -46,15 +46,15 @@
   "search_projection_version": "24h-search-v2-reader-projection-r1",
   "search_predecessor_zip_sha256": "3f69f8b948494d70e728287998efe6a0fefafa649ac9e0a7759934fbcefe458a",
   "scroll_performance_predecessor_zip_sha256": "f9bee241f08181a31b63e4284bc82422f5cdc820a2d4033017ef5c1d95004478",
-  "release_sequence": 102000014,
-  "release_id": "24h-v102.0-r14-20260919-889789ce9500",
+  "release_sequence": 102000021,
+  "release_id": "24h-v102.0-r21-20260920-6c1807b13aa6",
   "canonical_shell": "./luisa_24_heures.html",
-  "canonical_shell_sha256": "10a5dc4bf486c609eec3972f9108e2ce2d3f9fee2c8f03af7951a6cbb2909353",
+  "canonical_shell_sha256": "73fca44b2ac5f3ec971c40c6fb01b0ce4d459862a18039ca1a03b4270291d0cd",
   "update_protocol": 2,
   "pwa_update_predecessor_version": "v101.156",
   "pwa_update_predecessor_zip_sha256": "9b73b16dfc26c6b5cc1efaa652cdf7264b3331040022477bcbed6ddecabfdc9a",
-  "pwa_update_architecture": "verified_prepare_commit_v2_waiting_worker_explicit_activation__R14_PRESERVES_R13_UPDATE_V2_BEHAVIOR_UNCHANGED_EXCEPT_SUCCESSOR_IDENTITY_HASH_CACHE_COMMENT",
-  "legacy_bootstrap": "R14 preserves the R13/R12/R11 unique-lineage Update-v2 architecture. Automatic install does not claim clients; only a verified explicit user commit arms same-scope takeover.",
+  "pwa_update_architecture": "verified_prepare_commit_v2_waiting_worker_explicit_activation__R21_PRESERVES_R20_UPDATE_V2_BEHAVIOR_UNCHANGED_EXCEPT_SUCCESSOR_IDENTITY_HASH_CACHE_COMMENT",
+  "legacy_bootstrap": "R15 preserves the R14/R13/R12/R11 unique-lineage Update-v2 architecture. Automatic install does not claim clients; only a verified explicit user commit arms same-scope takeover.",
   "rollback_policy": "No downgrade. Candidate verification fails closed; predecessor cache retained until matching successor BOOT_OK. Functional rollback must be shipped as a new higher release_sequence.",
   "manifest_identity_binding": "version/build/release_sequence/release_id/start_url verified by installing worker; index.html must hash-identically match canonical shell",
   "functional_convergence_predecessor_version": "v101.156 R1",
@@ -69,16 +69,16 @@
     "R12 bottom-navigation geometry behavior inherited unchanged",
     "R14 release identity, cache and CSP script/style hashes mechanically rebound to exact successor bytes"
   ],
-  "functional_freeze_status": "FROZEN_R14_PROVENANCE_UI_SCOPE__INTERNAL_CLOSURE_PASS__R13_DEVOTIONAL_AND_PERSONAL_STATE_SURFACES_PROTECTED",
-  "security_stage_status": "R13_CSP3_ARCHITECTURE_PRESERVED__SCRIPT_HASH_REBOUND_FOR_EXACT_R14_BYTES__STYLE_HASHES_RECOMPUTED_FOR_R14_PROVENANCE_UI__UPDATE_V2_SEMANTICS_UNCHANGED",
+  "functional_freeze_status": "FROZEN_R21_FIVE_REPAIR_SCOPE__R20_DEVOTIONAL_DATA__SEARCH_STATE_UPDATE_BEHAVIOR_PROTECTED",
+  "security_stage_status": "R14_CSP3_ARCHITECTURE_PRESERVED__SCRIPT_AND_STYLE_HASHES_REBOUND_TO_EXACT_R21_BYTES__UPDATE_V2_SEMANTICS_UNCHANGED",
   "security_predecessor_version": "v102.0 R4",
   "security_predecessor_zip_sha256": "79d8d88ed80622841dcf989edc5d777e2c2c6e3f5f3e17cad9042a679e7b5fc4",
   "security_csp_strategy": "CSP3 split directives: hash-locked script/style elements; inline handler/style attributes retained for compatibility and mature architecture; legacy script-src/style-src fallback retained.",
-  "security_inline_script_sha256_base64": "sha256-00cvSUbwKgjvEUQgIe52e0NQQmHw9zkNtJd9chMoyQU=",
+  "security_inline_script_sha256_base64": "sha256-LaoX4JM90lHqxCeiAKWux3GJgzmFjH1eqN3/CL1C1uY=",
   "security_inline_style_sha256_base64": [
     "sha256-UQ2LZMV8vpixa50rjbFhb0lgGCv04EY1sB1SyGNLL0k=",
-    "sha256-WyCjSjoZlniD7cXjcP9QqT5C4Dz6KLmxUT5+Bl3LiBg=",
-    "sha256-wmttxvJtX9lwQQdEqK27TS/ULv7/a/735nMD55UyGSQ="
+    "sha256-PpjtDyVw1yv1jlLAwLaCwFXSRPTjEp+1EJBnNPMT4aY=",
+    "sha256-BbmQrUqmliOvwXB9TqVE8CNPeEm1pJXI1s/ojC3OFPU="
   ],
   "blind_adversarial_r3_predecessor_version": "v102.0 R2",
   "blind_adversarial_r3_predecessor_zip_sha256": "9c2a565bde543f22b7050d0dee05b41c53db250e5044c38d56bac6ae358af739",
@@ -304,7 +304,7 @@
     "stable_id_topology": "PRESERVED",
     "provenance_ui": "NOT_IMPLEMENTED_IN_R13"
   },
-  "canonical_shell_inline_script_sha256_csp": "sha256-00cvSUbwKgjvEUQgIe52e0NQQmHw9zkNtJd9chMoyQU=",
+  "canonical_shell_inline_script_sha256_csp": "sha256-LaoX4JM90lHqxCeiAKWux3GJgzmFjH1eqN3/CL1C1uY=",
   "r13_documentary_integrity_set_contract": "SHA256_UTF8_NFC_SORTED_KEYS_COMPACT_JSON_ARRAY_ORDER_PRESERVED_OF_72_RECORD_ARRAY__ledger_id_content_presentation_linked_source_documentary_assertion",
   "r13_documentary_integrity_set_sha256": "50c3509c87887150d484a3e0b186e0ac718f447befd1f96164c4b03681f689f0",
   "r13_documentary_changed_counts": {
@@ -313,7 +313,7 @@
     "linked_source_identity": 0,
     "documentary_assertion": 25
   },
-  "provenance_ui_status": "IMPLEMENTED_FROM_FROZEN_P5__INTERNAL_CLOSURE_PASS",
+  "provenance_ui_status": "R18_PLAIN_LANGUAGE_WORDING__THREE_LEVEL_EVIDENCE_ARCHITECTURE__WITNESS_ROLE_CALIBRATION__OPEN_ISSUE_TRANSPARENCY__INTERNAL_VERIFICATION_PASS",
   "r14_provenance": {
     "predecessor_release_id": "24h-v102.0-r13-20260919-5540c021d1a3",
     "predecessor_deploy_sha256": "effff5ca9d48d1a3730506327612d43a3ee9568863bbac6ebce926144e71a1b0",
@@ -328,7 +328,148 @@
     "search_index_inclusion": false,
     "accordion_state_persisted": false
   },
-  "provenance_public_projection_sha256": "d6a6f5de9c01be8baac79e0a927b9ec2f849068ac7ada0cc9814ef77c998a495",
+  "provenance_public_projection_sha256": "0de47bbce8d64df7de23854a4843ca62d92ea2541a4a4d6f4786532395cabf9f",
   "provenance_p5_package_sha256": "9fc9bc6307138ffc4834bb7a5b12ab1442e765d6152a1127e5116c4341f5ebf8",
-  "provenance_r13_documentary_integrity_set_sha256": "50c3509c87887150d484a3e0b186e0ac718f447befd1f96164c4b03681f689f0"
+  "provenance_r13_documentary_integrity_set_sha256": "50c3509c87887150d484a3e0b186e0ac718f447befd1f96164c4b03681f689f0",
+  "r15_provenance": {
+    "predecessor_release_id": "24h-v102.0-r14-20260919-889789ce9500",
+    "predecessor_deploy_sha256": "5d4e8ebb5790d820305b25d4575630160b3de2ba7392bcab683ffe87bfc254fa",
+    "h23_v2_report_sha256": "7eb85778e524fae4d7ad3835a8ffa5256afb998c350023d7da80aec31075e6d3",
+    "source_critical_master_dossier_sha256": "1baf12467328f395a13f05917358b1cec7047dda47356a8d128e442cd2f898ea",
+    "public_projection_sha256": "54530c05fdce35f9b1894090c7cd40c2400cc1cb13b6e677de94f8f72730b272",
+    "projection_record_count": 72,
+    "documentary_note_records": [
+      "H08.REFLECTIONS_PRACTICE",
+      "H23.MEDITATION",
+      "H23.REFLECTIONS_PRACTICE",
+      "H24.MEDITATION"
+    ],
+    "new_issue_id": "OPEN_H23_REFLECTION_SHORT_EXPANDED_GENEALOGY",
+    "devotional_mutation_authority": "NONE",
+    "source_detail_change": "SPECIFIC_SOURCE_NAMES_AND_ROLES_ADDED_WITHOUT_EXPANDING_EVIDENCE_CLAIMS",
+    "search_index_inclusion": false,
+    "accordion_state_persisted": false
+  },
+  "provenance_h23_v2_report_sha256": "7eb85778e524fae4d7ad3835a8ffa5256afb998c350023d7da80aec31075e6d3",
+  "provenance_source_critical_master_dossier_sha256": "1baf12467328f395a13f05917358b1cec7047dda47356a8d128e442cd2f898ea",
+  "r16_provenance": {
+    "predecessor_release_id": "24h-v102.0-r15-20260919-2662b75198c9",
+    "predecessor_deploy_sha256": "78a3a9cc9513377908cb3f6863dcbaa14040a97a5365670ed0b4fcdc7a35e790",
+    "public_projection_sha256": "f6c1d88aefa5fd9b35c599dd0fae293a00455a9571697b6dec6cc090d798c93d",
+    "projection_record_count": 72,
+    "documentary_note_records": [
+      "H08.REFLECTIONS_PRACTICE",
+      "H23.MEDITATION",
+      "H23.REFLECTIONS_PRACTICE",
+      "H24.MEDITATION"
+    ],
+    "scope": "STRUCTURED_SOURCE_CHAIN_AND_PUBLIC_PROVENANCE_CLARITY_ONLY",
+    "devotional_mutation_authority": "NONE",
+    "systematic_evidence_chain": [
+      "GE/Lumen Luminis 2021",
+      "Italian critical master R3 (IT174/IT364/ITDV + targeted ITPM)",
+      "AFLP 27 complete 24/24 + 48/48 photo-verified control"
+    ],
+    "secondary_targeted_controls": [
+      "English Hours of the Passion",
+      "additional Italian/French witnesses",
+      "historical/archival materials at difficult loci"
+    ],
+    "multilingual_search_caveat": "Search/discovery breadth is not represented as validation evidence unless an identifiable source was acquired and adjudicated."
+  },
+  "r17_provenance": {
+    "predecessor_release_id": "24h-v102.0-r16-20260919-61e3b0c2d742",
+    "predecessor_deploy_sha256": "7713b1e753888249dabb97128bdf01216ff5de811544ae256b0255d319dbe7b7",
+    "public_projection_sha256": "7c5d56af2c7cc26649091fdbc0201200a01f91113ce9e0c09e5ddfefb371eb70",
+    "projection_record_count": 72,
+    "documentary_note_records": [
+      "H08.REFLECTIONS_PRACTICE",
+      "H23.MEDITATION",
+      "H23.REFLECTIONS_PRACTICE",
+      "H24.MEDITATION"
+    ],
+    "scope": "EVIDENCE_ARCHITECTURE_AND_PUBLIC_PROVENANCE_UX_ONLY",
+    "devotional_mutation_authority": "NONE",
+    "systematic_evidence_chain": [
+      "GE/Lumen Luminis 2021 target lineage",
+      "Italian critical master R3 (IT174 base + IT364/ITDV comparisons + targeted ITPM)",
+      "AFLP 27 complete 24/24 + 48/48 photo-verified French control"
+    ],
+    "targeted_controls": [
+      "English Hours of the Passion",
+      "additional Italian/French witnesses",
+      "H23 Résiac 1999 / Form A provenance / Form B witnesses / item 05681 / boundary materials",
+      "multilingual discovery only when acquired/adjudicated"
+    ],
+    "r16_identity_defect_corrected": "R16 shell embedded APP_RELEASE_SEQUENCE 102000015 and R15 release_id while manifest/version/SW identified R16. R17 binds shell, manifest, version and SW coherently.",
+    "internal_verification": "PASS__STATIC_135_CHECKS__BROWSER_576_STATES__JS_SYNTAX_PASS__DETERMINISTIC_ZIP_PASS"
+  },
+  "r18_provenance": {
+    "predecessor_release_id": "24h-v102.0-r17-20260919-1ddd8b5e24d1",
+    "predecessor_deploy_sha256": "e66c91842d678359d00c1aed50194245278e8a6dd901260c7e86751259e7ef75",
+    "public_projection_sha256": "0de47bbce8d64df7de23854a4843ca62d92ea2541a4a4d6f4786532395cabf9f",
+    "projection_record_count": 72,
+    "documentary_note_records": [
+      "H08.REFLECTIONS_PRACTICE",
+      "H23.MEDITATION",
+      "H23.REFLECTIONS_PRACTICE",
+      "H24.MEDITATION"
+    ],
+    "scope": "AUTHORIZED_PUBLIC_WORDING_REFINEMENT_AND_THREE_LEVEL_EVIDENCE_PRESENTATION_ONLY",
+    "devotional_mutation_authority": "NONE",
+    "public_heading": "Sources et validation documentaire",
+    "terminology_change": "Public UI uses “référence italienne de travail R3”; “corpus critique italien R3” removed from ordinary public wording.",
+    "witness_independence_rule": "IT174/IT364/ITDV agreement is not presented as three historically independent confirmations.",
+    "h23_governance": "Meditation A/B, reflection short/expanded, and H23/H24 boundary are explicitly separated; no devotional macro-text mutation.",
+    "technical_evidence_layer": "Witness codes, evidence filenames, page counts and SHA-256 values available in nested methodology disclosure."
+  },
+  "r19_reader_repairs": {
+    "scope": "authorized_two_fix_successor",
+    "predecessor": "v102.0 R18",
+    "h24_target": "PASSION24.HOUR.24.DESOL.P081",
+    "h24_canonical_text_mutated": false,
+    "h24_display_segments": 9,
+    "browser_header_fix": "browser layouts >=769px: header/progress remain outside scrolling content and are promoted above an explicit lower .main stacking context; unnecessary .content compositor transform removed in this width band; narrow/mobile scroll-shell rules remain unchanged",
+    "protected": "R18 provenance projection; CORPUS canonical bytes; TEXT_LIBRARY; SPEECH_DATA; Search; personal state/storage schema; backup format; Update-v2 behavior",
+    "h24_display_punctuation_patches": [
+      {
+        "from": "et seule je ne peux, ni ne veux vivre",
+        "to": "et seule, je ne peux ni ne veux vivre",
+        "reason": "punctuation_coordination",
+        "length_preserving": true
+      },
+      {
+        "from": "non seulement tu les sens cloués, mais comme arrachés",
+        "to": "tu les sens non seulement cloués, mais comme arrachés",
+        "reason": "syntax_parallelism",
+        "length_preserving": true
+      },
+      {
+        "from": "épées. D’autant plus qu’ayant en toi",
+        "to": "épées, d’autant que tu portes en toi",
+        "reason": "syntax_participle_clause",
+        "length_preserving": true
+      },
+      {
+        "from": "battements de tous, à chaque",
+        "to": "battements de tous. À chaque",
+        "reason": "sentence_boundary",
+        "length_preserving": true
+      }
+    ]
+  },
+  "provenance_projection_version": "R21-R13-52IDS-H23-OVERLAP-CORRECTED-R1",
+  "provenance_projection_sha256": "bd0487795e64c6d393fda43559f4bf9a86260736358a1ccbc8e7fa31866f082a",
+  "provenance_wording_candidate_sha256": "31c26c0fc329e3540acb0d4bf2d950400c022f5876b311e427ed8ee00d143156",
+  "provenance_r13_reconciliation_ledger_sha256": "7470bb080125b1fa987f4f7c66b03c120384c8bd4d895559016094f81414c32d",
+  "r21_repair": {
+    "predecessor_release_id": "24h-v102.0-r20-20260920-7f1c6b911d5d",
+    "predecessor_deploy_sha256": "77fbc57cc4d3ac0a8720f42c9962ad313cd713d61fc0f92012c88b4130f5428a",
+    "scope_tag": "R21|font-button-scope|toolbar-content-flex|r13-52ids|h23-rpn008|csp-meta",
+    "r13_apply_rows": 46,
+    "r13_target_entries": 52,
+    "r13_distinct_stable_ids": 52,
+    "h23_overlap": "RPN-008/C0071 same stable paragraph, distinct sequential corrections",
+    "devotional_mutation_authority": "NONE"
+  }
 }
