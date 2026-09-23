@@ -1,19 +1,19 @@
-/* v105.0 R28 — minimal iOS native-selection correction; R27 release-integrity binding and protected content retained */
+/* v106.0 R29 — direct continuity-follower selection hardening; R28 native iOS selection correction, R27 release-integrity binding and protected content retained */
 function scopeFingerprint(scope) {
   let h = 2166136261;
   const text = String(scope || '');
   for (let i = 0; i < text.length; i++) { h ^= text.charCodeAt(i); h = Math.imul(h, 16777619); }
   return (h >>> 0).toString(16).padStart(8, '0');
 }
-const APP_VERSION = 'v105.0';
-const BUILD_REVISION = 'R28';
-const RELEASE_SEQUENCE = 105000028;
-const RELEASE_ID = '24h-v105.0-r28-20260922-b10b49665183';
+const APP_VERSION = 'v106.0';
+const BUILD_REVISION = 'R29';
+const RELEASE_SEQUENCE = 106000029;
+const RELEASE_ID = '24h-v106.0-r29-20260923-6bb530929add';
 const CANONICAL_SHELL = './luisa_24_heures.html';
-const CANONICAL_SHELL_SHA256 = '2beec45a3623f611257ef92a2709a68f3c3e92c8ddbb0b3cc7381badcc02647a';
+const CANONICAL_SHELL_SHA256 = '8cabbfc879c5ea7c726bcce05ef7b3842e02e29f16351c7f998d49aa160f3a05';
 const SCOPE_FINGERPRINT = scopeFingerprint(self.registration.scope);
 const CACHE_PREFIX = `luisa-24h-${SCOPE_FINGERPRINT}-`;
-const CACHE_NAME = `${CACHE_PREFIX}v105-0-r28`;
+const CACHE_NAME = `${CACHE_PREFIX}v106-0-r29`;
 const META_CACHE_NAME = `${CACHE_PREFIX}update-meta-v2`;
 const LEGACY_MIGRATION_BASELINE_CACHE = `${CACHE_PREFIX}v101-153-r1`;
 const META_KEY = new URL('./__lp24_update_meta_v2__', self.registration.scope).href;
