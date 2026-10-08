@@ -1,8 +1,8 @@
 {
   "schema": "ldc-curated-wip-package-manifest-v1",
   "app": "Livre du Ciel",
-  "source_commit": "7c292d6221bb350fac3aeaa83750b8784706d45c",
-  "public_version": "142.18",
+  "source_commit": "0542656639432481c32bd70f354a6271b63dd93e",
+  "public_version": "142.19",
   "usage": "UNRELEASED ENGINEERING WIP—DO NOT DEPLOY WITHOUT SEPARATE WRITTEN AUTHORITY",
   "app_test_authority": "NONE",
   "production_authority": "NONE",
@@ -1164,8 +1164,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 936861,
-      "sha256": "88e5c30d20175956dbf8c0d50d3acaa9b0c5ba5fe38e03132fe6278ae01d24a2"
+      "bytes": 936819,
+      "sha256": "9fa8bce35a794be20eb856d82f22848f6aaa8fafdb9588d88f1488deec75a71f"
     },
     {
       "path": "interaction_anchor.js",
@@ -1184,8 +1184,8 @@
     },
     {
       "path": "offline_manifest.json",
-      "bytes": 59976,
-      "sha256": "cf65b9bd1891ac9f97254e59ec3173a3418e62fc65f3932d32c2b62a5a7eeebb"
+      "bytes": 60255,
+      "sha256": "d610e20b62618955dd7fbcabdae016787875bccf27d439a4870d88cb6ba77f12"
     },
     {
       "path": "pls_v15/model/config.json",
@@ -1369,13 +1369,13 @@
     },
     {
       "path": "sw.js",
-      "bytes": 32245,
-      "sha256": "e1325ff22ecbcb91b3da0806917f0744a02d803b1fe414e05eb8d796b33fab3e"
+      "bytes": 32221,
+      "sha256": "0b2d9ee95084d57d933d447eff06f0201db59021c4bd7972759e8df22c14f4ff"
     },
     {
       "path": "version.json",
-      "bytes": 258823,
-      "sha256": "87f0ecd8c9bd0dd644cc8faf3bb10c28c43fbc03725678d6ab357c52b3e03e07"
+      "bytes": 260051,
+      "sha256": "fc88c17f19dfb991275e385051ebdc0a8339551e22315fe2f74f586139310798"
     }
   ]
 }
