@@ -1,0 +1,11 @@
+{
+  "algorithm": "SHA-256",
+  "basis": "sha256(sorted path + TAB + Git blob SHA + LF for every final branch blob except deploy-rev.json)",
+  "deploy_rev": "53ea939912dfea89f5c6d24d798346d56701d38baf5f5dfdd00d3f6353dbb758",
+  "excluded_self": "deploy-rev.json",
+  "hashed_file_count": 22,
+  "total_file_count": 23,
+  "schema_version": 2,
+  "source_predecessor_commit": "edde0ee96eff09a511c01921a2ca56ee576dddb6",
+  "branch": "massfinder-beta-root-r2-test"
+}
