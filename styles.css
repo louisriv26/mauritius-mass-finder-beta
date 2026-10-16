@@ -274,6 +274,24 @@ main {
   background: var(--hub-surface);
 }
 
+.install-invitation p {
+  margin: .2rem 0 0;
+  font-size: .85rem;
+  line-height: 1.3;
+}
+
+.installation-home-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-weight: 700;
+}
+
+.installation-return { margin-top: .75rem; }
+
+.installation-guide details > p,
+.installation-guide details > h3 { margin-inline: .9rem; }
+
 .install-invitation h2 {
   margin: 0;
   font-family: var(--font-display);

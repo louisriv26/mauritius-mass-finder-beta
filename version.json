@@ -1,14 +1,14 @@
 {
   "app_id": "luisa-hub",
   "app_version": "1.0.7",
-  "build_date": "2026-10-15",
+  "build_date": "2026-10-16",
   "manifest_id": "/mauritius-mass-finder-beta/",
   "public_url": "https://louisriv26.github.io/mauritius-mass-finder-beta/",
   "schema_version": 2,
-  "shell_rev": "918d31d810e282538a429fae9f7df0c32d933f00b751495131549191e630cc31",
+  "shell_rev": "fed1e5551d88424fb3c45c97f79a138c0de5b0c60bd18340be3261c5fe5aaa89",
   "shell_rev_algorithm": "sha256(sorted path + TAB + Git blob SHA + LF for the 12 SHELL_ASSETS; sw.js and generated identity files excluded)",
   "source_predecessor_commit": "edde0ee96eff09a511c01921a2ca56ee576dddb6",
-  "source_checkpoint_commit": null,
-  "source_checkpoint_role": "unbound local R2 review successor",
-  "branch": "massfinder-beta-root-r2-test"
+  "source_checkpoint_commit": "3c493edeed0cbada18999665058e8ab0c3da5742",
+  "source_checkpoint_role": "exact preceding MassFinderBeta main commit for bounded installation copy update",
+  "branch": "main"
 }

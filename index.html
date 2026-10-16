@@ -17,9 +17,9 @@
   <meta name="theme-color" content="#F9F6F0" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#171717" media="(prefers-color-scheme: dark)">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; worker-src 'self'; manifest-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
-  <meta name="x-build-profile" content="staging-review">
+  <meta name="x-build-profile" content="beta-qualification">
   <meta name="x-app-version" content="1.0.7">
-  <meta name="x-build-date" content="2026-10-15">
+  <meta name="x-build-date" content="2026-10-16">
   <title>Collection Luisa</title>
   <script src="boot.js"></script>
   <link rel="manifest" href="manifest.webmanifest">
@@ -45,11 +45,12 @@
 
       <nav class="home-quick-nav" aria-label="Aide et installation">
         <a href="help.html">Aide</a>
-        <a href="help.html#installation">Installer</a>
+        <a href="help.html#installation" aria-label="Voir les instructions pour installer Collection Luisa">Installer</a>
       </nav>
 
       <section id="install-invitation" class="install-invitation" aria-labelledby="install-invitation-title" hidden>
-        <h2 id="install-invitation-title">Installez l’application</h2>
+        <h2 id="install-invitation-title">Installer Collection Luisa</h2>
+        <p>Retrouvez facilement les quatre applications depuis une icône sur votre appareil.</p>
         <div class="install-invitation__actions">
           <a id="install-invitation-guide" href="help.html#installation">Comment installer ?</a>
           <button id="install-invitation-dismiss" type="button" aria-label="Fermer l’invitation d’installation">Fermer</button>
