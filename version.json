@@ -5,10 +5,10 @@
   "manifest_id": "/mauritius-mass-finder-beta/",
   "public_url": "https://louisriv26.github.io/mauritius-mass-finder-beta/",
   "schema_version": 2,
-  "shell_rev": "fed1e5551d88424fb3c45c97f79a138c0de5b0c60bd18340be3261c5fe5aaa89",
+  "shell_rev": "fa40196d918bac62422f1db6fc9509a43c1a75effcb24f77cbcbf2374e3584d6",
   "shell_rev_algorithm": "sha256(sorted path + TAB + Git blob SHA + LF for the 12 SHELL_ASSETS; sw.js and generated identity files excluded)",
   "source_predecessor_commit": "edde0ee96eff09a511c01921a2ca56ee576dddb6",
-  "source_checkpoint_commit": "3c493edeed0cbada18999665058e8ab0c3da5742",
-  "source_checkpoint_role": "exact preceding MassFinderBeta main commit for bounded installation copy update",
+  "source_checkpoint_commit": "f38606fa584f8c5a8d225653c86971aa22043130",
+  "source_checkpoint_role": "latest observed beta main; frozen R3 predecessor of local R4",
   "branch": "main"
 }
